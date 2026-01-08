@@ -1314,7 +1314,7 @@
     "href": "chapters/B-development-tools.html#local-development-setup",
     "title": "15  Development Tools",
     "section": "16.2 Local Development Setup",
-    "text": "16.2 Local Development Setup\n\n16.2.1 Prerequisites\n\nInstall Quarto: Download from quarto.org\nInstall VS Code: Download from code.visualstudio.com\nInstall Git: Download from git-scm.com\nInstall Quarto VS Code Extension: Search “Quarto” in VS Code extensions\n\n\n\n16.2.2 Clone the Repository\ngit clone https://github.com/yourusername/Bridgeframe-Toolkit.git\ncd Bridgeframe-Toolkit\n\n\n16.2.3 Preview Locally\nquarto preview\nThis starts a local server and opens the book in your browser. Changes to .qmd files automatically refresh.\n\n\n16.2.4 Render the Book\nquarto render\nOutput is generated in the _book/ directory.",
+    "text": "16.2 Local Development Setup\n\n16.2.1 Prerequisites\n\nInstall Quarto: Download from quarto.org\nInstall VS Code: Download from code.visualstudio.com\nInstall Git: Download from git-scm.com\nInstall Quarto VS Code Extension: Search “Quarto” in VS Code extensions\n\n\n\n16.2.2 Clone the Repository\ngit clone https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit.git\ncd Bridgeframe-Toolkit\n\n\n16.2.3 Preview Locally\nquarto preview\nThis starts a local server and opens the book in your browser. Changes to .qmd files automatically refresh.\n\n\n16.2.4 Render the Book\nquarto render\nOutput is generated in the _book/ directory.",
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Development Tools</span>"
