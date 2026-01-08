@@ -2,11 +2,11 @@
 title: "Terminology Dictionary"
 ---
 
-# The BA-PH Translation Guide
+## The BA-PH Translation Guide
 
 This chapter provides a comprehensive mapping between Business Analysis (BA) terminology and Public Health (PH) equivalents. Use this as a reference throughout your work on hybrid projects.
 
-## Core Process Mapping
+### Core Process Mapping
 
 The BA lifecycle aligns with public health program phases:
 
@@ -17,9 +17,9 @@ The BA lifecycle aligns with public health program phases:
 | **Solution Evaluation** | **Program Evaluation (CDC Framework)** | Measure outcomes against targets |
 | **Change Management** | **Implementation Science** | CFIR, RE-AIM for adoption barriers |
 
-## Terminology Translation Table
+### Terminology Translation Table
 
-### Planning & Strategy Terms
+#### Planning & Strategy Terms
 
 | BA / Agile Term | Public Health Equivalent | Context / Nuance |
 |:----------------|:-------------------------|:-----------------|
@@ -47,7 +47,7 @@ While "stakeholder" is standard in BA/Agile contexts (and used throughout this b
 When writing for mixed audiences, acknowledge both terms. When writing for public health audiences exclusively, favor the alternatives.
 :::
 
-### Requirements & Analysis Terms
+#### Requirements & Analysis Terms
 
 | BA / Agile Term | Public Health Equivalent | Context / Nuance |
 |:----------------|:-------------------------|:-----------------|
@@ -59,7 +59,7 @@ When writing for mixed audiences, acknowledge both terms. When writing for publi
 | **Data Model / Schema** | **Case Definition / Data Dictionary** | ER diagrams vs epidemiological case criteria |
 | **Use Case Diagram** | **Patient Journey Map** | UML diagrams vs mapping patient experience through care continuum |
 
-### Agile & Iteration Terms
+#### Agile & Iteration Terms
 
 | BA / Agile Term | Public Health Equivalent | Context / Nuance |
 |:----------------|:-------------------------|:-----------------|
@@ -68,7 +68,7 @@ When writing for mixed audiences, acknowledge both terms. When writing for publi
 | **Sprint Review / Demo** | **Progress Reporting** | Often aligned with grant reporting periods |
 | **Retrospective** | **After-Action Review** | Systematic reflection on what worked and what needs improvement |
 
-### Quality & Evaluation Terms
+#### Quality & Evaluation Terms
 
 | BA / Agile Term | Public Health Equivalent | Context / Nuance |
 |:----------------|:-------------------------|:-----------------|
@@ -78,7 +78,7 @@ When writing for mixed audiences, acknowledge both terms. When writing for publi
 | **Bug / Defect** | **Adverse Event / Variance** | System error vs deviation from expected health outcome |
 | **Lessons Learned** | **After-Action Review** | Retrospective analysis, sharing successes and gaps across organization |
 
-### Design & Implementation Terms
+#### Design & Implementation Terms
 
 | BA / Agile Term | Public Health Equivalent | Context / Nuance |
 |:----------------|:-------------------------|:-----------------|
@@ -87,11 +87,11 @@ When writing for mixed audiences, acknowledge both terms. When writing for publi
 | **Go-Live** | **Program Launch / Rollout** | System deployment vs intervention implementation |
 | **Training Plan** | **Capacity Building** | End-user training vs workforce development |
 
-## Alternative User Story Formats for Public Health
+### Alternative User Story Formats for Public Health
 
 The standard "As a [user], I want [feature], so that [benefit]" format often fails in clinical contexts. Use these alternatives:
 
-### GPS Format (Given-Person-Should)
+#### GPS Format (Given-Person-Should)
 
 > "Given [clinical context], the [health worker role] should [specific action] to [health outcome]."
 
@@ -99,19 +99,19 @@ The standard "As a [user], I want [feature], so that [benefit]" format often fai
 
 > "Given a positive TB test result, the contact tracer should initiate household investigation within 48 hours to prevent secondary transmission."
 
-### Service-User Scenario
+#### Service-User Scenario
 
 A narrative vignette describing a patient's journey through the system:
 
 > "Maria, a 45-year-old farmworker, visits a mobile clinic for diabetes screening. She speaks primarily Spanish and has no regular primary care provider. The system must support her preferred language, connect her to follow-up care, and track her screening results for population health reporting."
 
-### Situational Protocol
+#### Situational Protocol
 
 Context-specific workflow tied to clinical guidelines:
 
 > "When a laboratory reports a confirmed measles case, the system shall generate a contact list and notify the assigned epidemiologist within 4 hours."
 
-## The Logic Model as Requirements Framework
+### The Logic Model as Requirements Framework
 
 In public health, the **Logic Model** serves a similar purpose to a requirements specification. Understanding this mapping helps BA professionals communicate with PH colleagues:
 
@@ -143,7 +143,7 @@ In CancerSurv, the Logic Model framing helped translate between teams:
 - **Impact**: Accurate survival statistics, targeted prevention resources
 :::
 
-## Data Standards as Requirements
+### Data Standards as Requirements
 
 In public health IT, data standards are non-negotiable requirements, not optional "technical details":
 
@@ -156,7 +156,7 @@ In public health IT, data standards are non-negotiable requirements, not optiona
 | **SNOMED CT** | Clinical terminology | Concept mapping specifications |
 | **LOINC** | Lab test coding | Interface specifications |
 
-## Quick Reference Card
+### Quick Reference Card
 
 For easy access during meetings, here are the most commonly needed translations:
 

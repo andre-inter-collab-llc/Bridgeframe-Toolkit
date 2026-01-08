@@ -2,11 +2,11 @@
 title: "Tools Comparison"
 ---
 
-# Commercial vs. Open Source/Public Health Tools
+## Commercial vs. Open Source/Public Health Tools
 
 Public health agencies often operate with constrained budgets while managing sensitive health data. This chapter compares commercial enterprise tools with open source and public health-specific alternatives, helping you select the right tools for your context.
 
-## Selection Criteria
+### Selection Criteria
 
 When evaluating tools, consider:
 
@@ -19,9 +19,9 @@ When evaluating tools, consider:
 | **Data Sovereignty** | Vendor-managed | Organization-controlled |
 | **Sustainability** | Vendor roadmap | Community-driven |
 
-## Tool Categories
+### Tool Categories
 
-### Project Management
+#### Project Management
 
 | Capability | Commercial Options | OSS/PH Options |
 |:-----------|:-------------------|:---------------|
@@ -45,7 +45,7 @@ Choose open source when:
 - Customization is needed beyond commercial options
 :::
 
-### Requirements and Documentation
+#### Requirements and Documentation
 
 | Capability | Commercial Options | OSS/PH Options |
 |:-----------|:-------------------|:---------------|
@@ -59,7 +59,7 @@ Choose open source when:
 - **Requirements:** GitHub Issues sufficient for most projects; integrates with development
 - **Collaboration:** Consider data sensitivity; Nextcloud for on-premise control
 
-### Diagramming
+#### Diagramming
 
 | Capability | Commercial Options | OSS/PH Options |
 |:-----------|:-------------------|:---------------|
@@ -72,7 +72,7 @@ Choose open source when:
 - **diagrams.net** is the de facto standard in public sector: free, web-based, exports to multiple formats, works offline
 - **Mermaid** for diagrams in documentation (renders from text, version-controllable)
 
-### Data Collection
+#### Data Collection
 
 | Capability | Commercial Options | OSS/PH Options |
 |:-----------|:-------------------|:---------------|
@@ -100,7 +100,7 @@ For the CancerSurv project, data collection tools include:
 - **Native CancerSurv**: Case abstraction (built into the platform)
 :::
 
-### Data Analysis
+#### Data Analysis
 
 | Capability | Commercial Options | OSS/PH Options |
 |:-----------|:-------------------|:---------------|
@@ -140,7 +140,7 @@ cancer_data %>%
   ageadjust.direct(count = cases, pop = population, stdpop = us_std_pop)
 ```
 
-### Visualization
+#### Visualization
 
 | Capability | Commercial Options | OSS/PH Options |
 |:-----------|:-------------------|:---------------|
@@ -157,7 +157,7 @@ R Shiny enables interactive dashboards without JavaScript expertise:
 - Can be deployed on-premise or Shinyapps.io
 - Many public health templates available
 
-### GIS and Mapping
+#### GIS and Mapping
 
 | Capability | Commercial Options | OSS/PH Options |
 |:-----------|:-------------------|:---------------|
@@ -189,7 +189,7 @@ CancerSurv analytics stack:
 | Ad-hoc queries | Apache Superset | Self-service for epidemiologists |
 :::
 
-### Data Standards and Interoperability
+#### Data Standards and Interoperability
 
 | Standard | Commercial Tools | OSS Tools |
 |:---------|:-----------------|:----------|
@@ -206,9 +206,9 @@ Mirth Connect is widely used in public health for health information exchange:
 - Visual interface builder
 - Used by many state health departments
 
-## Building Your Stack
+### Building Your Stack
 
-### Small Public Health Program
+#### Small Public Health Program
 
 | Function | Recommended Tool | Notes |
 |:---------|:-----------------|:------|
@@ -219,7 +219,7 @@ Mirth Connect is widely used in public health for health information exchange:
 | Analysis | R + RStudio | Free, extensive packages |
 | Visualization | R Shiny or Excel | Depends on technical capacity |
 
-### Large State Health Department
+#### Large State Health Department
 
 | Function | Recommended Tool | Notes |
 |:---------|:-----------------|:------|
@@ -233,9 +233,9 @@ Mirth Connect is widely used in public health for health information exchange:
 | GIS | QGIS + PostGIS | Full spatial capabilities |
 | Integration | Mirth Connect | HL7/FHIR integration |
 
-## Considerations for Tool Selection
+### Considerations for Tool Selection
 
-### Total Cost of Ownership
+#### Total Cost of Ownership
 
 Free software is not always cheaper:
 
@@ -248,7 +248,7 @@ Free software is not always cheaper:
 | Customization | Limited | Unlimited but costly |
 | Infrastructure | Cloud included or on-prem | You manage |
 
-### Compliance and Security
+#### Compliance and Security
 
 | Consideration | Commercial | Open Source |
 |:--------------|:-----------|:------------|
@@ -257,7 +257,7 @@ Free software is not always cheaper:
 | Security updates | Vendor manages | You monitor and apply |
 | Audit trails | Built-in | May require configuration |
 
-### Sustainability
+#### Sustainability
 
 Consider long-term viability:
 
@@ -265,6 +265,6 @@ Consider long-term viability:
 - Open Source: Community may lose momentum; check activity levels
 - Hybrid: Consider tools with both commercial and open source options
 
-## Summary
+### Summary
 
 The choice between commercial and open source tools depends on your context: budget, technical capacity, data sensitivity, and compliance requirements. Public health has excellent open source options, particularly for data collection (REDCap), analysis (R), mapping (QGIS), and integration (Mirth Connect). Evaluate total cost of ownership, not just license fees.

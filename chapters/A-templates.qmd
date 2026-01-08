@@ -2,11 +2,11 @@
 title: "Templates & Checklists"
 ---
 
-# Templates and Checklists
+## Templates and Checklists
 
 This appendix provides ready-to-use templates for hybrid BA/PH projects. Each template is presented in both BA and PH framings where appropriate.
 
-## Stakeholder / Community Partner Matrix
+### Stakeholder / Community Partner Matrix
 
 Use this template to identify and analyze project participants:
 
@@ -18,14 +18,14 @@ Use this template to identify and analyze project participants:
 | *CDC/NPCR* | Governance | Funder/Standards Body | High | High | Formal reporting, compliance reviews |
 | *Cancer Survivors* | Indirect Stakeholders | Rights Holders/Beneficiaries | Low | Low | Advisory input, outcome focus |
 
-### Analysis Questions
+#### Analysis Questions
 
 - Who might be missing from this list?
 - Are marginalized voices represented?
 - Who has formal authority vs. informal influence?
 - What are the potential conflicts of interest?
 
-## Logic Model Template
+### Logic Model Template
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -63,7 +63,7 @@ Use this template to identify and analyze project participants:
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### CancerSurv Logic Model Example
+#### CancerSurv Logic Model Example
 
 | Inputs | Activities | Outputs | Short-term Outcomes | Long-term Impact |
 |:-------|:-----------|:--------|:--------------------|:-----------------|
@@ -72,9 +72,9 @@ Use this template to identify and analyze project participants:
 | Hospital data feeds | Data integration | Electronic data capture | Increased data completeness | Health disparity identification |
 | NAACCR standards | Quality assurance | Validated records | Timely NPCR submission | Evidence-based cancer policy |
 
-## Requirements Specification Template
+### Requirements Specification Template
 
-### Functional Requirement
+#### Functional Requirement
 
 | Field | Content |
 |:------|:--------|
@@ -87,7 +87,7 @@ Use this template to identify and analyze project participants:
 | **Acceptance Criteria** | Given [context], when [action], then [expected result] |
 | **Dependencies** | [Other requirements this depends on or enables] |
 
-### Non-Functional Requirement
+#### Non-Functional Requirement
 
 | Field | Content |
 |:------|:--------|
@@ -99,7 +99,7 @@ Use this template to identify and analyze project participants:
 | **Measurement** | [How compliance will be verified] |
 | **Priority** | Must / Should / Could |
 
-### Example: CancerSurv Requirement
+#### Example: CancerSurv Requirement
 
 | Field | Content |
 |:------|:--------|
@@ -112,11 +112,11 @@ Use this template to identify and analyze project participants:
 | **Acceptance Criteria** | Given a new case entry, when patient identifiers match an existing case with confidence >80%, then the system displays potential duplicates for review before saving |
 | **Dependencies** | FR-101 (Patient search) |
 
-## CFIR Readiness Assessment Checklist
+### CFIR Readiness Assessment Checklist
 
 Use this checklist to assess implementation readiness:
 
-### Intervention Characteristics
+#### Intervention Characteristics
 
 - [ ] Evidence of effectiveness documented and communicated
 - [ ] Relative advantage over current practice clearly articulated
@@ -124,14 +124,14 @@ Use this checklist to assess implementation readiness:
 - [ ] Complexity minimized; training plan addresses remaining complexity
 - [ ] Pilot/trialability planned
 
-### Outer Setting
+#### Outer Setting
 
 - [ ] Regulatory requirements identified (HIPAA, CDC, state)
 - [ ] External stakeholder needs understood
 - [ ] Interoperability requirements documented
 - [ ] Peer organization experiences reviewed
 
-### Inner Setting
+#### Inner Setting
 
 - [ ] Leadership commitment secured
 - [ ] Resources allocated (budget, staff, time)
@@ -139,35 +139,35 @@ Use this checklist to assess implementation readiness:
 - [ ] Communication plan developed
 - [ ] Organizational culture alignment assessed
 
-### Characteristics of Individuals
+#### Characteristics of Individuals
 
 - [ ] User attitudes toward change assessed
 - [ ] Training needs identified
 - [ ] Champions identified and engaged
 - [ ] Self-efficacy barriers addressed
 
-### Process
+#### Process
 
 - [ ] Detailed implementation plan developed
 - [ ] Key milestones and decision points defined
 - [ ] Monitoring and feedback mechanisms established
 - [ ] Contingency plans for common risks
 
-## User Story Templates
+### User Story Templates
 
-### Standard Format
+#### Standard Format
 
 > As a [role], I want [feature/capability], so that [benefit/value].
 
-### GPS Format (Clinical Contexts)
+#### GPS Format (Clinical Contexts)
 
 > Given [clinical context/trigger], the [health worker role] should [specific action] to [health outcome].
 
-### Service-User Scenario Format
+#### Service-User Scenario Format
 
 > [Name], a [demographic description], [presents with situation]. The system must [support their need] while [addressing constraints]. Success means [outcome].
 
-### Example Set: CancerSurv
+#### Example Set: CancerSurv
 
 **Standard:**
 > As a cancer registrar, I want to search existing cases before creating a new record, so that I avoid creating duplicate entries.
@@ -178,7 +178,7 @@ Use this checklist to assess implementation readiness:
 **Service-User Scenario:**
 > Maria is a senior registrar abstracting cases from a high-volume hospital. She receives 50 pathology reports daily and needs to quickly determine if each represents a new case or an existing patient. The system must support rapid searching with fuzzy matching while flagging potential duplicates. Success means Maria can process her daily queue in under 4 hours with less than 1% duplicate creation rate.
 
-## Test Case Template
+### Test Case Template
 
 | Field | Content |
 |:------|:--------|
@@ -193,7 +193,7 @@ Use this checklist to assess implementation readiness:
 | **Pass/Fail** | [ ] |
 | **Notes** | [Observations, defect IDs if failed] |
 
-## Project Charter Template (Dual-Frame)
+### Project Charter Template (Dual-Frame)
 
 | Section | BA Content | PH Content |
 |:--------|:-----------|:-----------|
@@ -208,7 +208,7 @@ Use this checklist to assess implementation readiness:
 | **Risks** | [Project risks] | **Implementation Barriers**: [CFIR-informed risks] |
 | **Governance** | [Decision structure] | **Oversight**: [Funder, advisory board] |
 
-## Evaluation Plan Template
+### Evaluation Plan Template
 
 | Component | Content |
 |:----------|:--------|
@@ -221,7 +221,7 @@ Use this checklist to assess implementation readiness:
 | **Responsibilities** | Who will conduct evaluation? |
 | **Use of Findings** | How will results inform decisions? |
 
-### RE-AIM Evaluation Matrix
+#### RE-AIM Evaluation Matrix
 
 | Dimension | Indicator | Data Source | Target | Actual |
 |:----------|:----------|:------------|:-------|:-------|

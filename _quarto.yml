@@ -43,7 +43,7 @@ book:
     search: true
   
   repo-url: https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit
-  repo-actions: [edit, issue]
+  repo-actions: [edit]
 
 bibliography: assets/references/references.bib
 csl: assets/references/apa.csl

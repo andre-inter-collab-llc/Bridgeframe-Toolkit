@@ -2,8 +2,6 @@
 title: "Glossary"
 ---
 
-# Complete BA-PH Glossary
-
 This glossary provides comprehensive terminology mapping between Business Analysis (BA) and Public Health (PH) domains. Terms are organized alphabetically with cross-references.
 
 ## A

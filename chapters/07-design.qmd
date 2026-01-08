@@ -2,11 +2,11 @@
 title: "Design & Solution Definition"
 ---
 
-# Design & Solution Definition / Intervention Design
+## Design & Solution Definition / Intervention Design
 
 With requirements defined, we move to designing the solution. In business analysis, this is **Solution Design** or **Design Definition**. In public health, it parallels **Intervention Design** and **Implementation Planning**. Both involve translating requirements into a blueprint for action.
 
-## The Dual Framework
+### The Dual Framework
 
 | BA Perspective | PH Perspective |
 |:---------------|:---------------|
@@ -16,9 +16,9 @@ With requirements defined, we move to designing the solution. In business analys
 | Integration Design | Health Information Exchange |
 | Change Management Plan | Implementation Strategy (CFIR) |
 
-## Architecture and Framework
+### Architecture and Framework
 
-### Solution Architecture
+#### Solution Architecture
 
 BA solution architecture defines:
 
@@ -28,7 +28,7 @@ BA solution architecture defines:
 - Data flow between components
 - Security architecture
 
-### Intervention Framework
+#### Intervention Framework
 
 PH intervention design defines:
 
@@ -66,9 +66,9 @@ CancerSurv delivers the surveillance intervention through:
 - **Target population**: State cancer registries, hospital tumor registrars
 :::
 
-## Design Patterns
+### Design Patterns
 
-### User Interface Design
+#### User Interface Design
 
 Both domains emphasize user-centered design:
 
@@ -86,7 +86,7 @@ Both domains emphasize user-centered design:
 - Health literacy assessment
 - Equity impact analysis
 
-### Key Design Principles
+#### Key Design Principles
 
 | Principle | BA Application | PH Application |
 |:----------|:---------------|:---------------|
@@ -96,9 +96,9 @@ Both domains emphasize user-centered design:
 | **Error Prevention** | Validation before submission | Built-in clinical decision support |
 | **Flexibility** | Customizable views, workflows | Adaptable to local context |
 
-## Integration Design
+### Integration Design
 
-### Connecting Systems
+#### Connecting Systems
 
 Health IT projects require extensive integration:
 
@@ -125,7 +125,7 @@ flowchart LR
     Core -->|XML| N
 ```
 
-### Integration Standards
+#### Integration Standards
 
 | Standard | Use Case | Design Consideration |
 |:---------|:---------|:---------------------|
@@ -134,9 +134,9 @@ flowchart LR
 | **NAACCR XML** | Cancer registry exchange | Schema validation, field mapping |
 | **Direct Protocol** | Secure health messaging | Certificate management |
 
-## Implementation Readiness Assessment
+### Implementation Readiness Assessment
 
-### CFIR for Design Validation
+#### CFIR for Design Validation
 
 The Consolidated Framework for Implementation Research (CFIR) provides a lens for evaluating design decisions:
 
@@ -160,9 +160,9 @@ The Consolidated Framework for Implementation Research (CFIR) provides a lens fo
 | Self-Efficacy | Embedded training, help system | Build user confidence |
 :::
 
-## Prototyping and Validation
+### Prototyping and Validation
 
-### Iterative Design
+#### Iterative Design
 
 Design should be validated before full development:
 
@@ -180,7 +180,7 @@ Design should be validated before full development:
 - Rapid cycle evaluation (PDSA)
 - Fidelity assessment
 
-### Prototype Fidelity Levels
+#### Prototype Fidelity Levels
 
 | Level | BA Artifact | PH Artifact | Purpose |
 |:------|:------------|:------------|:--------|
@@ -188,9 +188,9 @@ Design should be validated before full development:
 | **Medium** | Clickable mockups | Pilot at 1-2 sites | Workflow validation |
 | **High** | Working prototype | Multi-site pilot | Full process validation |
 
-## Change Management Planning
+### Change Management Planning
 
-### Preparing for Transition
+#### Preparing for Transition
 
 Design must include plans for organizational change:
 
@@ -220,9 +220,9 @@ Design must include plans for organizational change:
 | **Rollout** | Phase 1: High-volume hospitals; Phase 2: Remaining facilities; Phase 3: Full operation |
 :::
 
-## Design Documentation
+### Design Documentation
 
-### What to Document
+#### What to Document
 
 Design documentation bridges requirements and implementation:
 
@@ -235,7 +235,7 @@ Design documentation bridges requirements and implementation:
 | **Security Design** | Access controls, encryption | Privacy protections, consent |
 | **Transition Plan** | Deployment, training, support | Implementation, capacity building |
 
-## Deliverables from This Phase
+### Deliverables from This Phase
 
 | BA Deliverable | PH Deliverable | Purpose |
 |:---------------|:---------------|:--------|
@@ -245,6 +245,6 @@ Design documentation bridges requirements and implementation:
 | Prototype | Pilot Protocol | Validate design |
 | Change Management Plan | Implementation Strategy | Prepare organization |
 
-## Moving Forward
+### Moving Forward
 
 With design complete, the next phase focuses on **Implementation**: building, deploying, and rolling out the solution while managing the organizational change required for adoption.

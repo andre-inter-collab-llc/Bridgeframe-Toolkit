@@ -2,11 +2,11 @@
 title: "Implementation Science"
 ---
 
-# CFIR and Implementation Frameworks
+## CFIR and Implementation Frameworks
 
 Why do evidence-based interventions fail to achieve expected outcomes when deployed in the real world? Implementation science provides the answer: the gap between efficacy (works under ideal conditions) and effectiveness (works in practice) is bridged by understanding implementation context. This chapter introduces key frameworks that help business analysts anticipate and address adoption barriers.
 
-## Why Implementation Science Matters for BA
+### Why Implementation Science Matters for BA
 
 Traditional requirements focus on what a system must do. Implementation science asks: **Will people actually use it?** This question is critical because:
 
@@ -21,7 +21,7 @@ For the business analyst, implementation science provides:
 - Frameworks for designing implementation strategies
 - Metrics for measuring adoption, not just deployment
 
-## The Consolidated Framework for Implementation Research (CFIR)
+### The Consolidated Framework for Implementation Research (CFIR)
 
 CFIR is the most widely used implementation science framework. It organizes factors influencing implementation into five domains:
 
@@ -44,7 +44,7 @@ flowchart TB
     E --> F
 ```
 
-### Domain 1: Intervention Characteristics
+#### Domain 1: Intervention Characteristics
 
 Properties of the intervention itself that influence adoption:
 
@@ -68,7 +68,7 @@ Properties of the intervention itself that influence adoption:
 | Trialability | High: pilot sites planned | 8-week pilot with 3 hospitals |
 :::
 
-### Domain 2: Outer Setting
+#### Domain 2: Outer Setting
 
 External context influencing the implementing organization:
 
@@ -87,7 +87,7 @@ For public health IT projects, outer setting often includes:
 - Grant funder expectations
 - NAACCR standards (for cancer registries)
 
-### Domain 3: Inner Setting
+#### Domain 3: Inner Setting
 
 Internal organizational context:
 
@@ -107,7 +107,7 @@ Internal organizational context:
 - Are staff held accountable for adoption?
 - Are early adopters rewarded?
 
-### Domain 4: Characteristics of Individuals
+#### Domain 4: Characteristics of Individuals
 
 Attributes of people involved in implementation:
 
@@ -118,7 +118,7 @@ Attributes of people involved in implementation:
 | **Individual Stage of Change** | Readiness to adopt | Tailored engagement by readiness level |
 | **Individual Identification** | Relationship with organization | Leverage organizational loyalty |
 
-### Domain 5: Process
+#### Domain 5: Process
 
 The implementation process itself:
 
@@ -136,7 +136,7 @@ The implementation process itself:
 - **Implementation Leaders**: Those formally responsible
 - **External Change Agents**: Consultants, vendors supporting implementation
 
-## Mapping NFRs to CFIR
+### Mapping NFRs to CFIR
 
 A practical application of CFIR is translating non-functional requirements into implementation characteristics:
 
@@ -150,7 +150,7 @@ A practical application of CFIR is translating non-functional requirements into 
 | **Interoperability** | Cosmopolitanism | "HL7 FHIR APIs for health information exchange" |
 | **Accessibility** | Self-Efficacy | "WCAG 2.1 AA compliance; support for screen readers" |
 
-## RE-AIM Framework
+### RE-AIM Framework
 
 RE-AIM provides a complementary framework focused on public health impact:
 
@@ -172,33 +172,33 @@ RE-AIM provides a complementary framework focused on public health impact:
 | **Maintenance** | Active users at 12 mo | 90% | 94% |
 :::
 
-## Applying Implementation Science in Practice
+### Applying Implementation Science in Practice
 
-### During Planning
+#### During Planning
 
 - Conduct CFIR-based readiness assessment
 - Identify potential barriers across all domains
 - Design implementation strategies to address barriers
 
-### During Design
+#### During Design
 
 - Ensure intervention characteristics support adoption
 - Build in adaptability for local context
 - Minimize complexity; maximize relative advantage
 
-### During Implementation
+#### During Implementation
 
 - Engage champions and opinion leaders
 - Monitor adoption, not just deployment
 - Use PDSA cycles to address emerging barriers
 
-### During Evaluation
+#### During Evaluation
 
 - Assess both implementation outcomes and intervention outcomes
 - Use RE-AIM dimensions for comprehensive evaluation
 - Document lessons for future implementations
 
-## Implementation Strategies
+### Implementation Strategies
 
 When barriers are identified, select appropriate implementation strategies:
 
@@ -211,7 +211,7 @@ When barriers are identified, select appropriate implementation strategies:
 | Resource constraints | Infrastructure | Dedicated staff, protected time |
 | Complexity | Intervention Modification | Simplified views, guided workflows |
 
-## Summary
+### Summary
 
 Implementation science provides business analysts with frameworks to anticipate and address the human and organizational factors that determine whether a technically sound solution actually achieves its intended outcomes. By incorporating CFIR assessment into requirements gathering and using RE-AIM for evaluation, hybrid BA/PH projects can bridge the gap between deployment and adoption.
 

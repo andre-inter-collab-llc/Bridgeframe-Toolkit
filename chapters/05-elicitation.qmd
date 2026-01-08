@@ -2,11 +2,11 @@
 title: "Elicitation & Engagement"
 ---
 
-# Elicitation & Stakeholder Engagement
+## Elicitation & Stakeholder Engagement
 
 Once the problem is defined, we must gather detailed information about needs, constraints, and context. In business analysis, this is **Elicitation**. In public health, it is **Stakeholder Engagement** or **Community-Based Participatory Research**. Both involve systematic approaches to learning from people who will use, be affected by, or govern the solution.
 
-## The Dual Framework
+### The Dual Framework
 
 | BA Perspective | PH Perspective |
 |:---------------|:---------------|
@@ -17,9 +17,9 @@ Once the problem is defined, we must gather detailed information about needs, co
 | Observation | Ethnography, Site Visits |
 | Prototyping | Pilot Testing, Formative Research |
 
-## Elicitation Techniques Mapped
+### Elicitation Techniques Mapped
 
-### Interviews
+#### Interviews
 
 Both domains rely heavily on one-on-one conversations with knowledgeable individuals:
 
@@ -65,7 +65,7 @@ Group sessions enable collaborative discovery:
 - May surface unanticipated needs or concerns
 - Emphasizes inclusive participation
 
-### Document Analysis
+#### Document Analysis
 
 Existing documentation provides essential context:
 
@@ -77,7 +77,7 @@ Existing documentation provides essential context:
 | Training materials | Health education materials |
 | Audit reports | Program evaluations |
 
-### Observation
+#### Observation
 
 Watching work happen reveals what interviews miss:
 
@@ -99,9 +99,9 @@ Watching work happen reveals what interviews miss:
 The Lean concept of "Gemba" (going to the actual place where work happens) applies to both domains. For CancerSurv, this means spending time in the registry office watching abstractors work, not just interviewing them in a conference room.
 :::
 
-## Engaging Diverse Voices
+### Engaging Diverse Voices
 
-### The Equity Imperative
+#### The Equity Imperative
 
 Public health emphasizes inclusive engagement, ensuring marginalized voices are heard. This principle benefits IT projects as well:
 
@@ -112,7 +112,7 @@ Public health emphasizes inclusive engagement, ensuring marginalized voices are 
 - What barriers prevent participation (language, location, schedule)?
 - How do we ensure power imbalances do not silence important perspectives?
 
-### Community-Based Participatory Research (CBPR)
+#### Community-Based Participatory Research (CBPR)
 
 CBPR principles can strengthen BA elicitation:
 
@@ -123,9 +123,9 @@ CBPR principles can strengthen BA elicitation:
 | Balance research and action | Deliver incremental value during elicitation |
 | Long-term commitment | Maintain relationships beyond project end |
 
-## Translating What You Hear
+### Translating What You Hear
 
-### From Needs to Requirements
+#### From Needs to Requirements
 
 Elicitation produces raw material that must be translated into actionable requirements:
 
@@ -140,7 +140,7 @@ flowchart LR
     E --> F[Approved<br/>Requirements]
 ```
 
-### Common Translation Challenges
+#### Common Translation Challenges
 
 | What Stakeholders Say | What They Might Mean | Requirement Implication |
 |:----------------------|:---------------------|:------------------------|
@@ -162,23 +162,23 @@ flowchart LR
 **Refined requirement:** "The case search function shall return results within 3 seconds for queries returning up to 1,000 records, to support efficient case lookup during abstraction."
 :::
 
-## Documentation Approaches
+### Documentation Approaches
 
-### BA Requirements Documentation
+#### BA Requirements Documentation
 
 - User Stories (Agile)
 - Use Cases (UML)
 - Requirements Specifications (Waterfall)
 - Acceptance Criteria
 
-### PH Program Documentation
+#### PH Program Documentation
 
 - Logic Models
 - Intervention Protocols
 - Evaluation Plans
 - Implementation Guides
 
-### Bridging the Formats
+#### Bridging the Formats
 
 For hybrid projects, consider dual documentation:
 
@@ -189,9 +189,9 @@ For hybrid projects, consider dual documentation:
 | Funders (CDC, grants) | Logic Model | Inputs, activities, outputs, outcomes |
 | Governance | Requirements Traceability Matrix | Links requirements to objectives |
 
-## Validation and Confirmation
+### Validation and Confirmation
 
-### Ensuring Accuracy
+#### Ensuring Accuracy
 
 Elicitation is iterative. Validate what you heard:
 
@@ -209,9 +209,9 @@ Elicitation is iterative. Validate what you heard:
 - Pilot testing
 - Expert review panels
 
-## Managing Conflicting Needs
+### Managing Conflicting Needs
 
-### When Stakeholders Disagree
+#### When Stakeholders Disagree
 
 Conflicts are inevitable. Resolution approaches include:
 
@@ -233,7 +233,7 @@ Conflicts are inevitable. Resolution approaches include:
 - Analytics fields: Populated from other sources, not requiring registrar entry
 :::
 
-## Deliverables from This Phase
+### Deliverables from This Phase
 
 | BA Deliverable | PH Deliverable | Purpose |
 |:---------------|:---------------|:--------|
@@ -242,6 +242,6 @@ Conflicts are inevitable. Resolution approaches include:
 | User Stories / Use Cases | Service-User Scenarios | Actionable descriptions |
 | Stakeholder Feedback Log | Community Input Register | Track all input received |
 
-## Moving Forward
+### Moving Forward
 
 With needs elicited and documented, the next phase focuses on **Requirements Analysis**: organizing, prioritizing, and specifying the detailed requirements that will guide solution design.

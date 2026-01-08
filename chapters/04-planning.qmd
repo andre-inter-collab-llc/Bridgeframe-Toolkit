@@ -2,11 +2,11 @@
 title: "Planning & Needs Assessment"
 ---
 
-# Planning & Strategy / Needs Assessment
+## Planning & Strategy / Needs Assessment
 
 Every successful project begins with understanding the problem. In business analysis, this phase is called **Strategy Analysis** or **Planning**. In public health, it is the **Needs Assessment** or **Community Health Assessment**. Both seek to answer the same fundamental question: What problem are we solving, and for whom?
 
-## The Dual Framework
+### The Dual Framework
 
 | BA Perspective | PH Perspective |
 |:---------------|:---------------|
@@ -16,9 +16,9 @@ Every successful project begins with understanding the problem. In business anal
 | Stakeholder Identification | Community Partner Mapping |
 | Feasibility Assessment | Resource & Capacity Analysis |
 
-## Defining the Problem
+### Defining the Problem
 
-### Business Analysis Approach
+#### Business Analysis Approach
 
 In traditional BA, the business need emerges from organizational pain points:
 
@@ -30,7 +30,7 @@ In traditional BA, the business need emerges from organizational pain points:
 
 The BA documents this in a **Business Case** that quantifies the problem, proposes solutions, and projects return on investment.
 
-### Public Health Approach
+#### Public Health Approach
 
 In public health, the need emerges from population health data:
 
@@ -50,9 +50,9 @@ The epidemiologist documents this in a **Needs Assessment** that quantifies heal
 Both framings describe the same project. The BA framing emphasizes operational efficiency; the PH framing emphasizes health outcomes. Effective planning addresses both.
 :::
 
-## Current State Analysis
+### Current State Analysis
 
-### Documenting What Exists
+#### Documenting What Exists
 
 Before defining requirements, understand what currently exists. The approaches differ in emphasis but serve the same purpose:
 
@@ -72,7 +72,7 @@ Before defining requirements, understand what currently exists. The approaches d
 - Health equity indicators
 - Environmental and social determinants
 
-### Data Sources for Current State
+#### Data Sources for Current State
 
 | BA Data Sources | PH Data Sources |
 |:----------------|:----------------|
@@ -82,9 +82,9 @@ Before defining requirements, understand what currently exists. The approaches d
 | Financial reports | Grant reports, program evaluations |
 | Vendor assessments | CDC/state health department data |
 
-## Future State Vision
+### Future State Vision
 
-### Defining Success
+#### Defining Success
 
 The future state describes what success looks like. Again, the framing differs:
 
@@ -104,7 +104,7 @@ The future state describes what success looks like. Again, the framing differs:
 - Quality metrics
 - Population health indicators
 
-### SMART Objectives
+#### SMART Objectives
 
 Both domains benefit from SMART objective setting:
 
@@ -126,9 +126,9 @@ Both domains benefit from SMART objective setting:
 Both objectives are valid; both should appear in project documentation.
 :::
 
-## Stakeholder / Community Partner Identification
+### Stakeholder / Community Partner Identification
 
-### Mapping the Landscape
+#### Mapping the Landscape
 
 Identifying who participates in the project requires understanding both organizational and community perspectives:
 
@@ -168,7 +168,7 @@ flowchart TB
     K --> C
 ```
 
-### Power-Interest Analysis
+#### Power-Interest Analysis
 
 The classic BA power-interest grid maps to PH community engagement levels:
 
@@ -179,9 +179,9 @@ The classic BA power-interest grid maps to PH community engagement levels:
 | Low Power, High Interest | Keep informed | Empower and involve |
 | Low Power, Low Interest | Monitor | Ensure representation |
 
-## Feasibility Assessment
+### Feasibility Assessment
 
-### Can We Do This?
+#### Can We Do This?
 
 Both domains assess feasibility before committing resources:
 
@@ -204,7 +204,7 @@ Both domains assess feasibility before committing resources:
 When presenting feasibility to mixed audiences, address both technical and programmatic dimensions. A system that is technically feasible but lacks community buy-in will fail. An intervention with strong evidence but no technical infrastructure cannot scale.
 :::
 
-## Deliverables from This Phase
+### Deliverables from This Phase
 
 | BA Deliverable | PH Deliverable | Purpose |
 |:---------------|:---------------|:--------|
@@ -214,7 +214,7 @@ When presenting feasibility to mixed audiences, address both technical and progr
 | Future State Vision | Program Goals | Define success |
 | Feasibility Study | Readiness Assessment | Confirm viability |
 
-## Common Pitfalls
+### Common Pitfalls
 
 **For BA professionals entering PH:**
 
@@ -230,6 +230,6 @@ When presenting feasibility to mixed audiences, address both technical and progr
 - Underspecifying data quality needs
 - Ignoring change management complexity
 
-## Moving Forward
+### Moving Forward
 
 With the problem defined and feasibility confirmed, the next phase focuses on **Elicitation**: gathering detailed information from stakeholders and community partners about their specific needs and constraints.

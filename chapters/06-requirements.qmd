@@ -2,11 +2,11 @@
 title: "Requirements & Data Analysis"
 ---
 
-# Requirements Analysis & Data Analysis
+## Requirements Analysis & Data Analysis
 
 Raw elicitation findings must be organized, analyzed, and specified in detail. In business analysis, this is **Requirements Analysis and Design Definition**. In public health, it maps to **Data Analysis** and **Logic Model Development**. Both processes transform unstructured input into structured, actionable specifications.
 
-## The Dual Framework
+### The Dual Framework
 
 | BA Perspective | PH Perspective |
 |:---------------|:---------------|
@@ -17,9 +17,9 @@ Raw elicitation findings must be organized, analyzed, and specified in detail. I
 | Data Requirements | Case Definitions, Data Dictionaries |
 | Business Rules | Clinical Guidelines, Protocols |
 
-## Types of Requirements
+### Types of Requirements
 
-### Functional Requirements
+#### Functional Requirements
 
 **BA Definition:** What the system must do. Capabilities, features, functions.
 
@@ -37,7 +37,7 @@ Raw elicitation findings must be organized, analyzed, and specified in detail. I
 Both describe "what happens" but at different levels of specificity.
 :::
 
-### Non-Functional Requirements (NFRs)
+#### Non-Functional Requirements (NFRs)
 
 **BA Definition:** Quality attributes, constraints, performance characteristics.
 
@@ -62,7 +62,7 @@ Both describe "what happens" but at different levels of specificity.
 > The CancerSurv platform must demonstrate high reliability to maintain registrar confidence and ensure continuous data collection, critical during cancer awareness campaigns when reporting volumes increase.
 :::
 
-### Data Requirements
+#### Data Requirements
 
 Data specifications are central to both domains:
 
@@ -107,7 +107,7 @@ erDiagram
     }
 ```
 
-### Business Rules / Clinical Guidelines
+#### Business Rules / Clinical Guidelines
 
 Rules governing system behavior and data processing:
 
@@ -117,7 +117,7 @@ Rules governing system behavior and data processing:
 | "Discount applies if quantity > 100" | "Stage is unknown if pathology report unavailable within 4 months" |
 | "Manager approval required for refunds > $500" | "Multiple primary rules apply per SEER guidelines" |
 
-## The Logic Model as Requirements Framework
+### The Logic Model as Requirements Framework
 
 Public health uses the **Logic Model** to specify program components. This structure maps directly to requirements categories:
 
@@ -163,9 +163,9 @@ flowchart LR
 | Outcomes | Success Metrics, Acceptance Criteria |
 | Impact | Strategic Objectives, Business Value |
 
-## Prioritization
+### Prioritization
 
-### Methods for Ranking Requirements
+#### Methods for Ranking Requirements
 
 Not all requirements are equal. Prioritization ensures critical needs are addressed first:
 
@@ -206,9 +206,9 @@ Assign weights to criteria (business value, regulatory requirement, user impact)
 - Integration with research databases
 :::
 
-## Requirements Traceability
+### Requirements Traceability
 
-### Linking Requirements to Objectives
+#### Linking Requirements to Objectives
 
 Traceability ensures every requirement connects to a business need or program goal:
 
@@ -232,9 +232,9 @@ flowchart TB
 | FR-102 | ICD-O-3 coding validation | NAACCR standards | Must | TC-103 |
 | NFR-201 | 99.9% uptime | SLA requirements | Must | TC-201 |
 
-## Specification Formats
+### Specification Formats
 
-### Writing Good Requirements
+#### Writing Good Requirements
 
 Regardless of format, good requirements share characteristics:
 
@@ -246,7 +246,7 @@ Regardless of format, good requirements share characteristics:
 | **Verifiable** | Can be tested | Measurable acceptance criteria |
 | **Traceable** | Links to source and test | Includes requirement ID |
 
-### User Story Format
+#### User Story Format
 
 For Agile projects:
 
@@ -256,7 +256,7 @@ For Agile projects:
 
 - Given [context], when [action], then [result]
 
-### GPS Format for Clinical Contexts
+#### GPS Format for Clinical Contexts
 
 > Given [clinical context], the [health worker role] should [specific action] to [health outcome].
 
@@ -275,7 +275,7 @@ For Agile projects:
 - Given a patient with no existing cases, when the registrar searches, then a "No matches found" message displays with option to create new case
 :::
 
-## Deliverables from This Phase
+### Deliverables from This Phase
 
 | BA Deliverable | PH Deliverable | Purpose |
 |:---------------|:---------------|:--------|
@@ -285,6 +285,6 @@ For Agile projects:
 | Traceability Matrix | Evaluation Framework | Link requirements to objectives |
 | Prioritized Backlog | Workplan | Order implementation work |
 
-## Moving Forward
+### Moving Forward
 
 With requirements analyzed, prioritized, and specified, the next phase focuses on **Design**: defining how the solution will be built to meet these requirements.

@@ -1,32 +1,36 @@
 ---
 title: "Preface"
 ---
+Throughout my career, I've watched brilliant teams stumble, not because they lacked expertise, but because they were speaking entirely different professional languages.
 
-# Preface {.unnumbered}
+My formal training is in social sciences and public health, where business analysis concepts weren't part of the curriculum. But my career path led me through various technical roles (working for technology companies and alongside them) where I absorbed the terminology, tools, software, and processes that business analysts and project managers use daily. This dual exposure showed me both the value and the difficulty of blending these perspectives.
 
-I wrote this book because I have lived the frustration it addresses.
+## The Translation Challenge
 
-Early in my career as an epidemiologist, I found myself in a meeting room with a software development team tasked with building a disease surveillance system. I had clear ideas about what the system needed to do: track case counts, generate epidemic curves, alert us to outbreaks. The developers had their own framework: user stories, acceptance criteria, sprint planning. We were speaking past each other.
+When I joined projects bridging IT and public health, I saw the same friction points repeatedly:
 
-When I said "case definition," they heard "database schema." When they said "non-functional requirements," I thought they meant optional features. The project eventually succeeded, but not without weeks of miscommunication that could have been avoided with a shared vocabulary.
+- Business analysts asking for "user stories" while epidemiologists stared blankly
+- Developers requesting "non-functional requirements" while program managers wondered if that related to grant compliance
+- Agile sprints clashing with PDSA cycles or action research, even though both are iterative improvement frameworks
+- Stakeholder maps that missed community partners because they weren't "decision-makers" in the traditional IT sense
 
-That experience set me on a path to understand both worlds. I learned Agile methodologies, earned certifications in business analysis, and read the BABOK cover to cover. I also deepened my public health training, studying program evaluation frameworks, implementation science, and the CDC's approach to health informatics. What I discovered was that these disciplines are not as different as they first appear. They are parallel processes, asking the same fundamental questions in different languages.
+The IT world optimizes for efficiency and profit. Public health optimizes for equity and outcomes. Both are rigorous disciplines with systematic frameworks. Yet when they collaborate, the translation gap creates delays, misaligned expectations, and sometimes outright project failure.
 
-## Why Bridgeframe?
+## Lessons from Both Sides
 
-The name reflects the book's purpose: to build a **bridge** between two **frames** of reference. A logic model and a requirements specification are both attempts to define inputs, activities, outputs, and outcomes. A sprint retrospective and a PDSA cycle both seek continuous improvement through structured reflection. The concepts map; only the terminology differs.
+I've experienced this challenge from multiple angles:
 
-Public health agencies increasingly rely on technology: electronic lab reporting, immunization information systems, syndromic surveillance platforms. Yet many IT professionals entering this space lack context for the regulatory environment, the grant-driven funding model, and the equity-centered mission of public health. Similarly, public health professionals often struggle to articulate their needs in terms that software teams understand.
+**Introducing IT tools to public health teams.** I've worked with groups who had strong public health backgrounds and wanted to streamline collaboration, tracking, and communication. I introduced project management software (including Azure DevOps, because it was the best tool available to us). But I ran into constant friction translating the software's terminology (sprints, agile, user stories, backlogs) into concepts that made sense for public health professionals and their workflows.
 
-This book is my attempt to close that gap.
+**Watching tech-dominated engagements produce suboptimal products.** I've also seen the reverse: public health organizations relying heavily on technology vendors where the frameworks, project management styles, and terminology of business analysts dominated the engagement. The public health perspective got lost, and the resulting products didn't fit how health departments actually operate.
 
-## A Note on Terminology
+## Finding Common Ground
 
-Throughout this book, I use "stakeholder" as a term of convenience, recognizing its ubiquity in business analysis. However, I want to acknowledge that this word carries colonial connotations and implies power dynamics that may not serve community-centered public health work. In practice, I encourage the use of more specific alternatives: beneficiaries, community partners, rights holders, or simply "the people we serve." Chapter 3 discusses this nuance in detail.
+Bridgeframe exists because I needed it. Every time I translated a clinical workflow into a requirements document, or explained why a "user story" doesn't capture a patient journey, I wished for a reference guide that mapped these concepts clearly.
 
-## Acknowledgments
+This toolkit distills what I've learned from CDC surveillance systems, COVID-19 contact tracing implementations, tuberculosis intervention trials, and countless cross-functional team meetings. It's designed for the health informatician sitting between two worlds: ensuring the IT team's technical specifications align with the health department's programmatic goals.
 
-This book would not exist without the colleagues who have taught me to see through both lenses. To the epidemiologists who patiently explained case definitions to puzzled developers, and to the business analysts who helped me see the elegance of well-structured requirements: thank you. You are the original bridge builders.
+My hope is that Bridgeframe helps others avoid the lost-in-translation moments I experienced, and accelerates the collaboration our public health infrastructure desperately needs.
 
 André van Zyl  
 Intersect Collaborations

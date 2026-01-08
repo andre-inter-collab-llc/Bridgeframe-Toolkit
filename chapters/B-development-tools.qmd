@@ -2,11 +2,11 @@
 title: "Development Tools"
 ---
 
-# Development Tools for Toolkit Contributors
+## Development Tools for Toolkit Contributors
 
 This appendix documents the tools used to build and maintain the Bridgeframe Toolkit. This information is for contributors who want to modify or extend the toolkit, not for practitioners using the toolkit content.
 
-## Technology Stack
+### Technology Stack
 
 The Bridgeframe Toolkit is built with:
 
@@ -18,23 +18,23 @@ The Bridgeframe Toolkit is built with:
 | **GitHub Actions** | Automated publishing | N/A |
 | **Mermaid** | Diagram generation | Built into Quarto |
 
-## Local Development Setup
+### Local Development Setup
 
-### Prerequisites
+#### Prerequisites
 
 1. **Install Quarto**: Download from [quarto.org](https://quarto.org)
 2. **Install VS Code**: Download from [code.visualstudio.com](https://code.visualstudio.com)
 3. **Install Git**: Download from [git-scm.com](https://git-scm.com)
 4. **Install Quarto VS Code Extension**: Search "Quarto" in VS Code extensions
 
-### Clone the Repository
+#### Clone the Repository
 
 ```bash
 git clone https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit.git
 cd Bridgeframe-Toolkit
 ```
 
-### Preview Locally
+#### Preview Locally
 
 ```bash
 quarto preview
@@ -42,7 +42,7 @@ quarto preview
 
 This starts a local server and opens the book in your browser. Changes to `.qmd` files automatically refresh.
 
-### Render the Book
+#### Render the Book
 
 ```bash
 quarto render
@@ -50,7 +50,7 @@ quarto render
 
 Output is generated in the `_book/` directory.
 
-## Repository Structure
+### Repository Structure
 
 ```
 Bridgeframe-Toolkit/
@@ -74,9 +74,9 @@ Bridgeframe-Toolkit/
 └── _book/                # Generated output (gitignored)
 ```
 
-## Configuration Files
+### Configuration Files
 
-### _quarto.yml
+#### _quarto.yml
 
 The main configuration file controls:
 
@@ -111,7 +111,7 @@ format:
     reference-doc: assets/branding/templates/IntersectCollab-reference-doc.docx
 ```
 
-### _brand.yml
+#### _brand.yml
 
 Controls visual branding:
 
@@ -135,9 +135,9 @@ logo:
   medium: assets/branding/logos/intersect-logo.png
 ```
 
-## Writing Content
+### Writing Content
 
-### Quarto Markdown Basics
+#### Quarto Markdown Basics
 
 Quarto uses extended Markdown. Key features:
 
@@ -175,7 +175,7 @@ Warning content...
 According to the BABOK [@babok2015], requirements should be...
 ```
 
-### Mermaid Diagrams
+#### Mermaid Diagrams
 
 Diagrams are created with Mermaid syntax in code blocks:
 
@@ -196,7 +196,7 @@ Common diagram types:
 - `erDiagram`: Data models
 - `gantt`: Project timelines
 
-### Cross-References
+#### Cross-References
 
 Reference figures, tables, and sections:
 
@@ -205,13 +205,13 @@ See @fig-example for the diagram.
 As discussed in @sec-planning...
 ```
 
-## Publishing
+### Publishing
 
-### GitHub Pages Deployment
+#### GitHub Pages Deployment
 
 The book automatically publishes to GitHub Pages when changes are pushed to `main`. The workflow (`.github/workflows/publish.yml`) handles rendering and deployment.
 
-### Manual Publishing
+#### Manual Publishing
 
 To publish manually:
 
@@ -221,7 +221,7 @@ quarto publish gh-pages
 
 This creates/updates the `gh-pages` branch with rendered content.
 
-### Initial Setup
+#### Initial Setup
 
 For first-time setup:
 
@@ -230,15 +230,15 @@ For first-time setup:
 3. Commit the generated `_publish.yml` file
 4. Enable GitHub Pages in repository settings (source: `gh-pages` branch)
 
-## Contributing
+### Contributing
 
-### Branch Strategy
+#### Branch Strategy
 
 - `main`: Production-ready content
 - Feature branches: For new content or significant changes
 - Pull requests: For review before merging to main
 
-### Content Guidelines
+#### Content Guidelines
 
 1. Follow the BA-PH dual framing throughout
 2. Include CancerSurv examples in callout boxes
@@ -246,16 +246,16 @@ For first-time setup:
 4. Avoid em dashes and en dashes; rewrite sentences instead
 5. Every `.qmd` file needs YAML frontmatter with at least a `title`
 
-### Style Guidelines
+#### Style Guidelines
 
 - First-person voice only in Preface and personal sections
 - Professional/instructional tone for toolkit content
 - Academic yet accessible language
 - Ground claims in evidence where possible
 
-## Troubleshooting
+### Troubleshooting
 
-### Common Issues
+#### Common Issues
 
 **Quarto preview not updating:**
 - Check for syntax errors in YAML frontmatter
@@ -275,7 +275,7 @@ For first-time setup:
 - Check citation key matches bib entry
 - Ensure `bibliography` field in `_quarto.yml` is correct
 
-## Resources
+### Resources
 
 - [Quarto Documentation](https://quarto.org/docs/guide/)
 - [Quarto Books Guide](https://quarto.org/docs/books/)

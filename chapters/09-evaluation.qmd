@@ -2,11 +2,11 @@
 title: "Evaluation & Improvement"
 ---
 
-# Evaluation & Continuous Improvement
+## Evaluation & Continuous Improvement
 
 Did we solve the problem? Are outcomes improving? What should we do differently? In business analysis, this phase encompasses **Solution Evaluation** and **Continuous Improvement**. In public health, it maps to **Program Evaluation** using frameworks like the CDC Evaluation Framework. Both seek to measure value delivered and inform future action.
 
-## The Dual Framework
+### The Dual Framework
 
 | BA Perspective | PH Perspective |
 |:---------------|:---------------|
@@ -16,7 +16,7 @@ Did we solve the problem? Are outcomes improving? What should we do differently?
 | Lessons Learned | After-Action Review |
 | Continuous Improvement | Quality Improvement (QI) |
 
-## The CDC Evaluation Framework
+### The CDC Evaluation Framework
 
 Public health evaluation follows a well-established framework that parallels BA evaluation practices:
 
@@ -41,16 +41,16 @@ flowchart LR
 | Justify Conclusions | Analyze data, determine value delivered |
 | Ensure Use and Share Lessons | Communicate results, inform decisions |
 
-## Types of Evaluation
+### Types of Evaluation
 
-### Formative vs. Summative
+#### Formative vs. Summative
 
 | Type | When | Purpose | BA Example | PH Example |
 |:-----|:-----|:--------|:-----------|:-----------|
 | **Formative** | During implementation | Improve the intervention | Sprint reviews, usability testing | PDSA cycles, pilot feedback |
 | **Summative** | After implementation | Judge overall value | Post-implementation review | Annual program evaluation |
 
-### Process vs. Outcome
+#### Process vs. Outcome
 
 | Type | Focus | Questions | Metrics |
 |:-----|:------|:----------|:--------|
@@ -78,9 +78,9 @@ flowchart LR
 - Has the data informed state cancer plan priorities?
 :::
 
-## Defining Metrics
+### Defining Metrics
 
-### KPIs and Health Indicators
+#### KPIs and Health Indicators
 
 Metrics should be SMART (Specific, Measurable, Achievable, Relevant, Time-bound):
 
@@ -92,7 +92,7 @@ Metrics should be SMART (Specific, Measurable, Achievable, Relevant, Time-bound)
 | Error rate | Data quality | % records with errors |
 | User satisfaction | Acceptability | Survey scores |
 
-### Building a Balanced Scorecard
+#### Building a Balanced Scorecard
 
 Consider multiple dimensions of value:
 
@@ -103,9 +103,9 @@ Consider multiple dimensions of value:
 | **Internal Process** | Efficiency gains, quality | Data completeness, timeliness |
 | **Learning & Growth** | Skill development, innovation | Workforce capacity, continuous improvement |
 
-## Data Collection for Evaluation
+### Data Collection for Evaluation
 
-### Sources of Evidence
+#### Sources of Evidence
 
 | Source | BA Application | PH Application |
 |:-------|:---------------|:---------------|
@@ -116,7 +116,7 @@ Consider multiple dimensions of value:
 | **Observation** | Usability testing | Workflow observation |
 | **Administrative Data** | Support tickets, defects | Program records, health data |
 
-### Evaluation Plan Components
+#### Evaluation Plan Components
 
 | Component | Description | CancerSurv Example |
 |:----------|:------------|:-------------------|
@@ -127,9 +127,9 @@ Consider multiple dimensions of value:
 | **Timeline** | When will we measure? | Baseline, 6 months, 12 months |
 | **Responsibilities** | Who will do it? | Registry data quality manager |
 
-## Analysis and Interpretation
+### Analysis and Interpretation
 
-### Comparing to Baseline
+#### Comparing to Baseline
 
 Effective evaluation requires baseline data:
 
@@ -144,7 +144,7 @@ xychart-beta
     line [95, 95, 95, 95, 95]
 ```
 
-### Interpreting Results
+#### Interpreting Results
 
 | Result | Interpretation | Action |
 |:-------|:---------------|:-------|
@@ -153,9 +153,9 @@ xychart-beta
 | Below target, improving | Progress; maintain effort | Identify accelerators; address barriers |
 | Below target, flat/declining | Concern; intervention needed | Root cause analysis; corrective action |
 
-## Communicating Results
+### Communicating Results
 
-### Tailoring Messages
+#### Tailoring Messages
 
 | Audience | Interest | Format | Content Emphasis |
 |:---------|:---------|:-------|:-----------------|
@@ -164,7 +164,7 @@ xychart-beta
 | Project team | Detailed performance | Working reports, retrospectives | Specific metrics, lessons learned |
 | End users | How it helps them | Newsletters, town halls | Efficiency gains, new features |
 
-### Visualization Best Practices
+#### Visualization Best Practices
 
 - Use clear, simple charts
 - Show trends, not just snapshots
@@ -172,9 +172,9 @@ xychart-beta
 - Highlight key takeaways
 - Make data accessible
 
-## Continuous Improvement
+### Continuous Improvement
 
-### The QI Cycle
+#### The QI Cycle
 
 Evaluation feeds continuous improvement:
 
@@ -193,7 +193,7 @@ flowchart LR
     H --> A
 ```
 
-### Retrospectives and After-Action Reviews
+#### Retrospectives and After-Action Reviews
 
 | Element | Agile Retrospective | PH After-Action Review |
 |:--------|:--------------------|:-----------------------|
@@ -226,9 +226,9 @@ flowchart LR
 3. Implement redundant infrastructure for high availability
 :::
 
-## Sustaining Value
+### Sustaining Value
 
-### From Project to Operations
+#### From Project to Operations
 
 Evaluation supports the transition from project mode to operations:
 
@@ -240,7 +240,7 @@ Evaluation supports the transition from project mode to operations:
 | Go-live success | Ongoing performance |
 | Project budget | Operating budget |
 
-### Governance for Continuous Improvement
+#### Governance for Continuous Improvement
 
 Establish ongoing governance:
 
@@ -250,7 +250,7 @@ Establish ongoing governance:
 - Performance monitoring
 - Periodic comprehensive evaluations
 
-## Deliverables from This Phase
+### Deliverables from This Phase
 
 | BA Deliverable | PH Deliverable | Purpose |
 |:---------------|:---------------|:--------|
@@ -260,6 +260,6 @@ Establish ongoing governance:
 | Improvement Recommendations | QI Action Plan | Drive continuous improvement |
 | Transition Documentation | Sustainability Plan | Enable long-term success |
 
-## Moving Forward
+### Moving Forward
 
 With the core analysis process complete, the following chapters provide additional resources: tools comparison (Chapter 10), implementation science frameworks (Chapter 11), templates (Appendix A), and a comprehensive glossary (Appendix C).

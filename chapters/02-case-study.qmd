@@ -2,15 +2,15 @@
 title: "Meet CancerSurv"
 ---
 
-# The CancerSurv Case Study
+## The CancerSurv Case Study
 
 Throughout this book, we use a single comprehensive case study to illustrate concepts: **CancerSurv**, a cloud-based cancer surveillance and registry system. This chapter introduces the project context, stakeholders, and objectives that will appear in examples across all subsequent chapters.
 
-## Project Overview
+### Project Overview
 
 A state public health department partners with TechHealth Solutions, a health IT company, to develop CancerSurv: a modern, cloud-based platform for cancer surveillance and registry operations.
 
-### The Business Context
+#### The Business Context
 
 | Attribute | Detail |
 |:----------|:-------|
@@ -20,7 +20,7 @@ A state public health department partners with TechHealth Solutions, a health IT
 | **Timeline** | 18-month phased implementation |
 | **Scope** | Replace legacy mainframe system with modern cloud solution |
 
-### The Public Health Context
+#### The Public Health Context
 
 Cancer registries serve a critical public health function. They collect, process, and analyze data on cancer incidence, treatment, and outcomes. This data informs:
 
@@ -32,7 +32,7 @@ Cancer registries serve a critical public health function. They collect, process
 
 The state's current system, built on 1990s mainframe technology, cannot meet modern demands for interoperability, real-time analytics, and remote access.
 
-## Stakeholder Landscape
+### Stakeholder Landscape
 
 Understanding who participates in this project requires seeing stakeholders through both BA and PH lenses:
 
@@ -48,11 +48,11 @@ Understanding who participates in this project requires seeing stakeholders thro
 While we use "stakeholder" here for its familiarity in BA contexts, public health practitioners often prefer alternatives: community partners, interest holders, rights holders, or beneficiaries. The choice of term signals values: "stakeholder" implies an interest or stake, while "rights holder" acknowledges inherent claims and dignity. See Chapter 3 for detailed discussion.
 :::
 
-## System Functions
+### System Functions
 
 CancerSurv must support five core functional areas:
 
-### Case Abstraction
+#### Case Abstraction
 
 Cancer registrars enter and code cancer cases from medical records. This involves:
 
@@ -61,7 +61,7 @@ Cancer registrars enter and code cancer cases from medical records. This involve
 - Staging tumors using TNM and SEER summary staging
 - Linking cases to patients across multiple treatment facilities
 
-### Data Quality
+#### Data Quality
 
 Automated processes ensure data completeness and accuracy:
 
@@ -70,7 +70,7 @@ Automated processes ensure data completeness and accuracy:
 - Linkage to vital records for death clearance
 - Inter-rater reliability monitoring
 
-### Reporting
+#### Reporting
 
 The registry must meet external reporting requirements:
 
@@ -79,7 +79,7 @@ The registry must meet external reporting requirements:
 - Ad-hoc queries for researchers (with appropriate IRB approval)
 - Public health reports for state legislature and media
 
-### Analytics Dashboard
+#### Analytics Dashboard
 
 Modern surveillance requires real-time analytics:
 
@@ -88,7 +88,7 @@ Modern surveillance requires real-time analytics:
 - Survival analysis and outcomes tracking
 - Health disparity indicators
 
-### Interoperability
+#### Interoperability
 
 CancerSurv must integrate with external systems:
 
@@ -97,7 +97,7 @@ CancerSurv must integrate with external systems:
 - Vital records linkage for death data
 - National data exchange protocols
 
-## Project Phases
+### Project Phases
 
 The 18-month implementation follows a phased approach, which we will revisit throughout the book:
 
@@ -121,7 +121,7 @@ gantt
     Post-Implementation    :2026-01, 3M
 ```
 
-## How CancerSurv Appears in This Book
+### How CancerSurv Appears in This Book
 
 Each chapter includes CancerSurv examples demonstrating concepts in practice:
 
@@ -136,7 +136,7 @@ Each chapter includes CancerSurv examples demonstrating concepts in practice:
 When reading subsequent chapters, refer back to this overview to ground abstract concepts in the CancerSurv context. The case study makes the BA-PH bridge tangible.
 :::
 
-## The Dual Mandate
+### The Dual Mandate
 
 CancerSurv illustrates the fundamental tension bridged by this book. The project must simultaneously satisfy:
 

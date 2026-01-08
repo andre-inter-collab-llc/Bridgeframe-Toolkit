@@ -2,11 +2,11 @@
 title: "Implementation & Execution"
 ---
 
-# Implementation & Program Execution
+## Implementation & Program Execution
 
 Design becomes reality through implementation. In business analysis, this phase involves **Solution Delivery** and **Change Management**. In public health, it is **Program Implementation** guided by frameworks like **PDSA** (Plan-Do-Study-Act). Both require managing complexity while maintaining focus on outcomes.
 
-## The Dual Framework
+### The Dual Framework
 
 | BA Perspective | PH Perspective |
 |:---------------|:---------------|
@@ -16,7 +16,7 @@ Design becomes reality through implementation. In business analysis, this phase 
 | Go-Live | Program Launch |
 | Defect Management | Variance/Adverse Event Tracking |
 
-## The Double Loop of Agile in Public Health
+### The Double Loop of Agile in Public Health
 
 Standard Agile focuses on product improvement: Build → Measure → Learn. Public health adds a second loop: Surveillance → Intervention → Evaluation.
 
@@ -43,9 +43,9 @@ flowchart LR
 
 The BA must ensure both loops are synchronized: software releases should align with epidemiological reporting cycles.
 
-## Agile Practices Adapted
+### Agile Practices Adapted
 
-### Sprint Planning
+#### Sprint Planning
 
 **Traditional Agile:**
 
@@ -77,7 +77,7 @@ The BA must ensure both loops are synchronized: software releases should align w
 | Audit log for merges | 3 | Compliance |
 :::
 
-### PDSA Cycles
+#### PDSA Cycles
 
 PDSA provides a structured approach to continuous improvement:
 
@@ -88,7 +88,7 @@ PDSA provides a structured approach to continuous improvement:
 | **Study** | Analyze results | Compare entry times before/after; gather feedback |
 | **Act** | Adopt, adapt, or abandon | Feature reduced time by 1.5 minutes; adopt with UI adjustments |
 
-### Mapping Sprints to PDSA
+#### Mapping Sprints to PDSA
 
 | Sprint Element | PDSA Element |
 |:---------------|:-------------|
@@ -98,9 +98,9 @@ PDSA provides a structured approach to continuous improvement:
 | Retrospective | Act |
 | Backlog Refinement | Next Plan cycle |
 
-## Testing in Health IT
+### Testing in Health IT
 
-### Testing Levels
+#### Testing Levels
 
 | Level | BA Focus | PH Focus |
 |:------|:---------|:---------|
@@ -110,7 +110,7 @@ PDSA provides a structured approach to continuous improvement:
 | **User Acceptance Testing** | Users approve functionality | Clinical workflows validated |
 | **Operational Testing** | System performs under load | Handles reporting surge periods |
 
-### UAT for Clinical Systems
+#### UAT for Clinical Systems
 
 User Acceptance Testing in public health requires clinical validation:
 
@@ -137,9 +137,9 @@ User Acceptance Testing in public health requires clinical validation:
 | UAT-103 | NPCR export | Generate submission file | Valid NAACCR XML produced | Passes CDC validator tool |
 :::
 
-## Managing Change
+### Managing Change
 
-### Organizational Readiness
+#### Organizational Readiness
 
 Implementation fails without organizational change management:
 
@@ -160,7 +160,7 @@ Implementation fails without organizational change management:
 | Infrastructure | Hardware/network issues | Rural sites lack bandwidth |
 | Workflow | Process changes required | Clinical protocols affected |
 
-### Training Approaches
+#### Training Approaches
 
 | Approach | When to Use | CancerSurv Example |
 |:---------|:------------|:-------------------|
@@ -169,9 +169,9 @@ Implementation fails without organizational change management:
 | **Simulation** | High-stakes processes | Practice mode for case abstraction |
 | **Peer Support** | Ongoing questions | Super-user network |
 
-## Deployment Strategies
+### Deployment Strategies
 
-### Phased vs. Big Bang
+#### Phased vs. Big Bang
 
 | Strategy | Pros | Cons | When to Use |
 |:---------|:-----|:-----|:------------|
@@ -191,9 +191,9 @@ Implementation fails without organizational change management:
 | Phase 3 | Full operation, legacy decommission | 4 weeks | Legacy system retired |
 :::
 
-## Monitoring During Implementation
+### Monitoring During Implementation
 
-### What to Track
+#### What to Track
 
 | Category | BA Metrics | PH Metrics |
 |:---------|:-----------|:-----------|
@@ -203,7 +203,7 @@ Implementation fails without organizational change management:
 | **Satisfaction** | User surveys, support tickets | Registrar feedback, NPS scores |
 | **Outcomes** | Feature delivery, velocity | Grant milestone achievement |
 
-### Issue Escalation
+#### Issue Escalation
 
 ```{mermaid}
 %%| label: fig-escalation
@@ -221,9 +221,9 @@ flowchart TB
     S4 --> R
 ```
 
-## Communication During Implementation
+### Communication During Implementation
 
-### Stakeholder Updates
+#### Stakeholder Updates
 
 | Audience | Frequency | Content | Channel |
 |:---------|:----------|:--------|:--------|
@@ -232,7 +232,7 @@ flowchart TB
 | End Users | Weekly during rollout | Training, go-live dates, support | Email, newsletter |
 | External Partners | As needed | Integration status, requirements | Meeting, documentation |
 
-## Deliverables from This Phase
+### Deliverables from This Phase
 
 | BA Deliverable | PH Deliverable | Purpose |
 |:---------------|:---------------|:--------|
@@ -242,6 +242,6 @@ flowchart TB
 | Release Notes | Implementation Updates | Communicate changes |
 | Support Documentation | Operational Guides | Enable ongoing use |
 
-## Moving Forward
+### Moving Forward
 
 With the solution implemented, the next phase focuses on **Evaluation**: measuring outcomes, assessing value delivered, and identifying opportunities for continuous improvement.

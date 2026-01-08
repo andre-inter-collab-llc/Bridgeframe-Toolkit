@@ -2,13 +2,13 @@
 title: "Introduction"
 ---
 
-# Why Bridgeframe Exists
+## Why Bridgeframe Exists
 
 Public health and information technology are increasingly intertwined. Disease surveillance systems, immunization registries, electronic lab reporting, and health analytics platforms all require collaboration between two groups that often struggle to understand each other: **business analysts** and **public health professionals**.
 
 This chapter explains the problem, introduces the Bridgeframe approach, and sets the stage for the detailed guidance that follows.
 
-## The Silo Problem
+### The Silo Problem
 
 Consider a typical scenario: A state health department receives funding to modernize its disease surveillance system. They contract with a software vendor whose project team includes experienced business analysts, developers, and testers. The health department brings epidemiologists, program managers, and data analysts. Both sides are competent in their respective domains. Yet within weeks, the project is mired in confusion.
 
@@ -16,7 +16,7 @@ The vendor's BA asks for "user stories." The epidemiologist provides a detailed 
 
 This is not a failure of intelligence or good faith. It is a failure of translation.
 
-## Two Parallel Worlds
+### Two Parallel Worlds
 
 Business analysis, as codified in the BABOK (Business Analysis Body of Knowledge), provides a rigorous framework for understanding needs, defining requirements, and ensuring solutions deliver value. Public health analysis, guided by CDC frameworks and epidemiological methods, provides an equally rigorous approach to assessing community needs, designing interventions, and evaluating outcomes.
 
@@ -33,7 +33,7 @@ These frameworks are parallel, not incompatible:
 
 The concepts align; the terminology diverges. Bridgeframe provides the translation layer.
 
-## The Cost of Miscommunication
+### The Cost of Miscommunication
 
 When BA and PH professionals cannot communicate effectively, projects suffer:
 
@@ -45,7 +45,7 @@ When BA and PH professionals cannot communicate effectively, projects suffer:
 
 More importantly, health outcomes suffer. A delayed surveillance system means delayed outbreak response. A poorly designed immunization registry means children missing vaccines.
 
-## The Bridgeframe Solution
+### The Bridgeframe Solution
 
 Bridgeframe offers a structured approach to bridging these domains:
 
@@ -54,7 +54,7 @@ Bridgeframe offers a structured approach to bridging these domains:
 3. **Practical Examples**: The CancerSurv case study (Chapter 2) demonstrates concepts in action
 4. **Implementation Science**: Chapter 11 introduces CFIR and other frameworks for addressing adoption barriers
 
-## Who Should Use This Book
+### Who Should Use This Book
 
 This book serves multiple audiences:
 
@@ -80,13 +80,13 @@ This book serves multiple audiences:
 Throughout this book, we follow the CancerSurv project: a state health department modernizing its cancer registry system. In the Introduction, the challenge is framed as both a **Business Need** (replace aging mainframe with modern cloud platform) and a **Public Health Challenge** (ensure timely, complete cancer data for prevention planning and disparity identification).
 :::
 
-## What Bridgeframe Is Not
+### What Bridgeframe Is Not
 
 This book does not replace domain-specific training. Business analysts should still study the BABOK and pursue relevant certifications. Public health professionals should still learn epidemiology, biostatistics, and program evaluation. Bridgeframe provides the bridge between these bodies of knowledge, not a substitute for them.
 
 Similarly, this book does not cover software development practices, database design, or clinical medicine in depth. It focuses specifically on the analysis phase: understanding needs, defining requirements, and evaluating solutions.
 
-## Moving Forward
+### Moving Forward
 
 The following chapter introduces CancerSurv in detail, providing the context you will need to engage with examples throughout the book. Chapter 3 then provides the terminology dictionary, a reference you will return to often. From there, we proceed phase by phase through the analysis lifecycle.
 
