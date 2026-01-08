@@ -312,14 +312,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#why-bridgeframe" id="toc-why-bridgeframe" class="nav-link" data-scroll-target="#why-bridgeframe"><span class="header-section-number">2.1</span> Why Bridgeframe?</a></li>
-  <li><a href="#a-note-on-terminology" id="toc-a-note-on-terminology" class="nav-link" data-scroll-target="#a-note-on-terminology"><span class="header-section-number">2.2</span> A Note on Terminology</a></li>
-  <li><a href="#acknowledgments" id="toc-acknowledgments" class="nav-link" data-scroll-target="#acknowledgments"><span class="header-section-number">2.3</span> Acknowledgments</a></li>
-  </ul></li>
+  <li><a href="#the-translation-challenge" id="toc-the-translation-challenge" class="nav-link active" data-scroll-target="#the-translation-challenge"><span class="header-section-number">2.1</span> The Translation Challenge</a></li>
+  <li><a href="#lessons-from-both-sides" id="toc-lessons-from-both-sides" class="nav-link" data-scroll-target="#lessons-from-both-sides"><span class="header-section-number">2.2</span> Lessons from Both Sides</a></li>
+  <li><a href="#finding-common-ground" id="toc-finding-common-ground" class="nav-link" data-scroll-target="#finding-common-ground"><span class="header-section-number">2.3</span> Finding Common Ground</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/edit/main/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/edit/main/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -343,32 +340,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>I wrote this book because I have lived the frustration it addresses.</p>
-<p>Early in my career as an epidemiologist, I found myself in a meeting room with a software development team tasked with building a disease surveillance system. I had clear ideas about what the system needed to do: track case counts, generate epidemic curves, alert us to outbreaks. The developers had their own framework: user stories, acceptance criteria, sprint planning. We were speaking past each other.</p>
-<p>When I said “case definition,” they heard “database schema.” When they said “non-functional requirements,” I thought they meant optional features. The project eventually succeeded, but not without weeks of miscommunication that could have been avoided with a shared vocabulary.</p>
-<p>That experience set me on a path to understand both worlds. I learned Agile methodologies, earned certifications in business analysis, and read the BABOK cover to cover. I also deepened my public health training, studying program evaluation frameworks, implementation science, and the CDC’s approach to health informatics. What I discovered was that these disciplines are not as different as they first appear. They are parallel processes, asking the same fundamental questions in different languages.</p>
-<section id="why-bridgeframe" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="why-bridgeframe"><span class="header-section-number">2.1</span> Why Bridgeframe?</h2>
-<p>The name reflects the book’s purpose: to build a <strong>bridge</strong> between two <strong>frames</strong> of reference. A logic model and a requirements specification are both attempts to define inputs, activities, outputs, and outcomes. A sprint retrospective and a PDSA cycle both seek continuous improvement through structured reflection. The concepts map; only the terminology differs.</p>
-<p>Public health agencies increasingly rely on technology: electronic lab reporting, immunization information systems, syndromic surveillance platforms. Yet many IT professionals entering this space lack context for the regulatory environment, the grant-driven funding model, and the equity-centered mission of public health. Similarly, public health professionals often struggle to articulate their needs in terms that software teams understand.</p>
-<p>This book is my attempt to close that gap.</p>
+<p>Throughout my career, I’ve watched brilliant teams stumble, not because they lacked expertise, but because they were speaking entirely different professional languages.</p>
+<p>My formal training is in social sciences and public health, where business analysis concepts weren’t part of the curriculum. But my career path led me through various technical roles (working for technology companies and alongside them) where I absorbed the terminology, tools, software, and processes that business analysts and project managers use daily. This dual exposure showed me both the value and the difficulty of blending these perspectives.</p>
+<section id="the-translation-challenge" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-translation-challenge"><span class="header-section-number">2.1</span> The Translation Challenge</h2>
+<p>When I joined projects bridging IT and public health, I saw the same friction points repeatedly:</p>
+<ul>
+<li>Business analysts asking for “user stories” while epidemiologists stared blankly</li>
+<li>Developers requesting “non-functional requirements” while program managers wondered if that related to grant compliance</li>
+<li>Agile sprints clashing with PDSA cycles or action research, even though both are iterative improvement frameworks</li>
+<li>Stakeholder maps that missed community partners because they weren’t “decision-makers” in the traditional IT sense</li>
+</ul>
+<p>The IT world optimizes for efficiency and profit. Public health optimizes for equity and outcomes. Both are rigorous disciplines with systematic frameworks. Yet when they collaborate, the translation gap creates delays, misaligned expectations, and sometimes outright project failure.</p>
 </section>
-<section id="a-note-on-terminology" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="a-note-on-terminology"><span class="header-section-number">2.2</span> A Note on Terminology</h2>
-<p>Throughout this book, I use “stakeholder” as a term of convenience, recognizing its ubiquity in business analysis. However, I want to acknowledge that this word carries colonial connotations and implies power dynamics that may not serve community-centered public health work. In practice, I encourage the use of more specific alternatives: beneficiaries, community partners, rights holders, or simply “the people we serve.” Chapter 3 discusses this nuance in detail.</p>
+<section id="lessons-from-both-sides" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="lessons-from-both-sides"><span class="header-section-number">2.2</span> Lessons from Both Sides</h2>
+<p>I’ve experienced this challenge from multiple angles:</p>
+<p><strong>Introducing IT tools to public health teams.</strong> I’ve worked with groups who had strong public health backgrounds and wanted to streamline collaboration, tracking, and communication. I introduced project management software (including Azure DevOps, because it was the best tool available to us). But I ran into constant friction translating the software’s terminology (sprints, agile, user stories, backlogs) into concepts that made sense for public health professionals and their workflows.</p>
+<p><strong>Watching tech-dominated engagements produce suboptimal products.</strong> I’ve also seen the reverse: public health organizations relying heavily on technology vendors where the frameworks, project management styles, and terminology of business analysts dominated the engagement. The public health perspective got lost, and the resulting products didn’t fit how health departments actually operate.</p>
 </section>
-<section id="acknowledgments" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="acknowledgments"><span class="header-section-number">2.3</span> Acknowledgments</h2>
-<p>This book would not exist without the colleagues who have taught me to see through both lenses. To the epidemiologists who patiently explained case definitions to puzzled developers, and to the business analysts who helped me see the elegance of well-structured requirements: thank you. You are the original bridge builders.</p>
+<section id="finding-common-ground" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="finding-common-ground"><span class="header-section-number">2.3</span> Finding Common Ground</h2>
+<p>Bridgeframe exists because I needed it. Every time I translated a clinical workflow into a requirements document, or explained why a “user story” doesn’t capture a patient journey, I wished for a reference guide that mapped these concepts clearly.</p>
+<p>This toolkit distills what I’ve learned from CDC surveillance systems, COVID-19 contact tracing implementations, tuberculosis intervention trials, and countless cross-functional team meetings. It’s designed for the health informatician sitting between two worlds: ensuring the IT team’s technical specifications align with the health department’s programmatic goals.</p>
+<p>My hope is that Bridgeframe helps others avoid the lost-in-translation moments I experienced, and accelerates the collaboration our public health infrastructure desperately needs.</p>
 <p>André van Zyl<br>
 Intersect Collaborations</p>
 
 
 <!-- -->
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -838,39 +839,43 @@ Intersect Collaborations</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Preface"</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Preface {.unnumbered}</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>I wrote this book because I have lived the frustration it addresses.</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Early in my career as an epidemiologist, I found myself in a meeting room with a software development team tasked with building a disease surveillance system. I had clear ideas about what the system needed to do: track case counts, generate epidemic curves, alert us to outbreaks. The developers had their own framework: user stories, acceptance criteria, sprint planning. We were speaking past each other.</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>When I said "case definition," they heard "database schema." When they said "non-functional requirements," I thought they meant optional features. The project eventually succeeded, but not without weeks of miscommunication that could have been avoided with a shared vocabulary.</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>That experience set me on a path to understand both worlds. I learned Agile methodologies, earned certifications in business analysis, and read the BABOK cover to cover. I also deepened my public health training, studying program evaluation frameworks, implementation science, and the CDC's approach to health informatics. What I discovered was that these disciplines are not as different as they first appear. They are parallel processes, asking the same fundamental questions in different languages.</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">## Why Bridgeframe?</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Throughout my career, I've watched brilliant teams stumble, not because they lacked expertise, but because they were speaking entirely different professional languages.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>My formal training is in social sciences and public health, where business analysis concepts weren't part of the curriculum. But my career path led me through various technical roles (working for technology companies and alongside them) where I absorbed the terminology, tools, software, and processes that business analysts and project managers use daily. This dual exposure showed me both the value and the difficulty of blending these perspectives.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Translation Challenge</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>When I joined projects bridging IT and public health, I saw the same friction points repeatedly:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Business analysts asking for "user stories" while epidemiologists stared blankly</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Developers requesting "non-functional requirements" while program managers wondered if that related to grant compliance</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Agile sprints clashing with PDSA cycles or action research, even though both are iterative improvement frameworks</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Stakeholder maps that missed community partners because they weren't "decision-makers" in the traditional IT sense</span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>The name reflects the book's purpose: to build a **bridge** between two **frames** of reference. A logic model and a requirements specification are both attempts to define inputs, activities, outputs, and outcomes. A sprint retrospective and a PDSA cycle both seek continuous improvement through structured reflection. The concepts map; only the terminology differs.</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>The IT world optimizes for efficiency and profit. Public health optimizes for equity and outcomes. Both are rigorous disciplines with systematic frameworks. Yet when they collaborate, the translation gap creates delays, misaligned expectations, and sometimes outright project failure.</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Public health agencies increasingly rely on technology: electronic lab reporting, immunization information systems, syndromic surveillance platforms. Yet many IT professionals entering this space lack context for the regulatory environment, the grant-driven funding model, and the equity-centered mission of public health. Similarly, public health professionals often struggle to articulate their needs in terms that software teams understand.</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Lessons from Both Sides</span></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>This book is my attempt to close that gap.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>I've experienced this challenge from multiple angles:</span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## A Note on Terminology</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>**Introducing IT tools to public health teams.** I've worked with groups who had strong public health backgrounds and wanted to streamline collaboration, tracking, and communication. I introduced project management software (including Azure DevOps, because it was the best tool available to us). But I ran into constant friction translating the software's terminology (sprints, agile, user stories, backlogs) into concepts that made sense for public health professionals and their workflows.</span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>Throughout this book, I use "stakeholder" as a term of convenience, recognizing its ubiquity in business analysis. However, I want to acknowledge that this word carries colonial connotations and implies power dynamics that may not serve community-centered public health work. In practice, I encourage the use of more specific alternatives: beneficiaries, community partners, rights holders, or simply "the people we serve." Chapter 3 discusses this nuance in detail.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>**Watching tech-dominated engagements produce suboptimal products.** I've also seen the reverse: public health organizations relying heavily on technology vendors where the frameworks, project management styles, and terminology of business analysts dominated the engagement. The public health perspective got lost, and the resulting products didn't fit how health departments actually operate.</span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Acknowledgments</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="fu">## Finding Common Ground</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>This book would not exist without the colleagues who have taught me to see through both lenses. To the epidemiologists who patiently explained case definitions to puzzled developers, and to the business analysts who helped me see the elegance of well-structured requirements: thank you. You are the original bridge builders.</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>Bridgeframe exists because I needed it. Every time I translated a clinical workflow into a requirements document, or explained why a "user story" doesn't capture a patient journey, I wished for a reference guide that mapped these concepts clearly.</span>
 <span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>André van Zyl  </span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>Intersect Collaborations</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>This toolkit distills what I've learned from CDC surveillance systems, COVID-19 contact tracing implementations, tuberculosis intervention trials, and countless cross-functional team meetings. It's designed for the health informatician sitting between two worlds: ensuring the IT team's technical specifications align with the health department's programmatic goals.</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>My hope is that Bridgeframe helps others avoid the lost-in-translation moments I experienced, and accelerates the collaboration our public health infrastructure desperately needs.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>André van Zyl  </span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Intersect Collaborations</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/edit/main/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/edit/main/preface.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li></ul></div></div></div></footer></body></html>
