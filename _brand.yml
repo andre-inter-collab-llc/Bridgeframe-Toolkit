@@ -20,8 +20,8 @@ color:
   secondary: teal
 
 logo:
-  small: assets/branding/icons/favicon.png
-  medium: assets/branding/logos/intersect-logo.png
+  small: assets/branding/icons/intesect icon v1.png
+  medium: assets/branding/logos/intesect_logo_v1.png
 
 typography:
   fonts:

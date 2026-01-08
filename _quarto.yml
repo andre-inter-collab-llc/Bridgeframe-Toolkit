@@ -42,7 +42,7 @@ book:
   sidebar:
     search: true
   
-  repo-url: https://github.com/yourusername/Bridgeframe-Toolkit
+  repo-url: https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit
   repo-actions: [edit, issue]
 
 bibliography: assets/references/references.bib
@@ -65,4 +65,5 @@ format:
   docx:
     reference-doc: assets/branding/templates/IntersectCollab-reference-doc.docx
     toc: true
-    number-sections: true
+    number-sections: false
+    toc-depth: 3

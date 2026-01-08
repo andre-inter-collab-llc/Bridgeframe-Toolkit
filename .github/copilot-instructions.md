@@ -269,7 +269,7 @@ book:
   sidebar:
     search: true
   
-  repo-url: https://github.com/yourusername/Bridgeframe-Toolkit
+  repo-url: https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit
   repo-actions: [edit, issue]
 
 bibliography: assets/references/references.bib

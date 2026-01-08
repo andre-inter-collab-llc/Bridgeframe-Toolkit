@@ -30,7 +30,7 @@ The Bridgeframe Toolkit is built with:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/Bridgeframe-Toolkit.git
+git clone https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit.git
 cd Bridgeframe-Toolkit
 ```
 
