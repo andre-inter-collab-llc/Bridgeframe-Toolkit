@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12&nbsp; Tools Comparison – Bridgeframe</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../chapters/11-implementation-science.html" rel="next">
+<link href="../chapters/09-evaluation.html" rel="prev">
+<link href="../assets/branding/icons/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9c3682d5fde4964396e4ada689836294.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2aaf298298d3c4d86eb955b9fd3a786c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-9c3682d5fde4964396e4ada689836294.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-14f82c463c8fe26062a60e93003a4987.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-31e31e4e7d1317add0186254dcf5e9b9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-14f82c463c8fe26062a60e93003a4987.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-tools.html">Putting It Into Practice</a></li><li class="breadcrumb-item"><a href="../chapters/10-tools.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tools Comparison</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets\branding\logos\intersect-logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../assets\branding\logos\intersect-logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Bridgeframe</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/yourusername/Bridgeframe-Toolkit" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="../Bridgeframe.docx" title="Download Docx" class="quarto-navigation-tool px-1" aria-label="Download Docx"><i class="bi bi-file-word"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Bridgeframe</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../preface.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preface</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Foundations</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/02-case-study.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Meet CancerSurv</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/03-terminology.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Terminology Dictionary</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">The Analysis Process</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/04-planning.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Planning &amp; Needs Assessment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/05-elicitation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Elicitation &amp; Engagement</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/06-requirements.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Requirements &amp; Data Analysis</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/07-design.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Design &amp; Solution Definition</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/08-implementation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Implementation &amp; Execution</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/09-evaluation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Evaluation &amp; Improvement</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Putting It Into Practice</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/10-tools.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tools Comparison</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/11-implementation-science.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Implementation Science</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/A-templates.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Templates &amp; Checklists</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/B-development-tools.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Development Tools</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/C-glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">References</span></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#commercial-vs.-open-sourcepublic-health-tools" id="toc-commercial-vs.-open-sourcepublic-health-tools" class="nav-link active" data-scroll-target="#commercial-vs.-open-sourcepublic-health-tools"><span class="header-section-number">13</span> Commercial vs.&nbsp;Open Source/Public Health Tools</a>
+  <ul class="collapse">
+  <li><a href="#selection-criteria" id="toc-selection-criteria" class="nav-link" data-scroll-target="#selection-criteria"><span class="header-section-number">13.1</span> Selection Criteria</a></li>
+  <li><a href="#tool-categories" id="toc-tool-categories" class="nav-link" data-scroll-target="#tool-categories"><span class="header-section-number">13.2</span> Tool Categories</a>
+  <ul class="collapse">
+  <li><a href="#project-management" id="toc-project-management" class="nav-link" data-scroll-target="#project-management"><span class="header-section-number">13.2.1</span> Project Management</a></li>
+  <li><a href="#requirements-and-documentation" id="toc-requirements-and-documentation" class="nav-link" data-scroll-target="#requirements-and-documentation"><span class="header-section-number">13.2.2</span> Requirements and Documentation</a></li>
+  <li><a href="#diagramming" id="toc-diagramming" class="nav-link" data-scroll-target="#diagramming"><span class="header-section-number">13.2.3</span> Diagramming</a></li>
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection"><span class="header-section-number">13.2.4</span> Data Collection</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis"><span class="header-section-number">13.2.5</span> Data Analysis</a></li>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">13.2.6</span> Visualization</a></li>
+  <li><a href="#gis-and-mapping" id="toc-gis-and-mapping" class="nav-link" data-scroll-target="#gis-and-mapping"><span class="header-section-number">13.2.7</span> GIS and Mapping</a></li>
+  <li><a href="#data-standards-and-interoperability" id="toc-data-standards-and-interoperability" class="nav-link" data-scroll-target="#data-standards-and-interoperability"><span class="header-section-number">13.2.8</span> Data Standards and Interoperability</a></li>
+  </ul></li>
+  <li><a href="#building-your-stack" id="toc-building-your-stack" class="nav-link" data-scroll-target="#building-your-stack"><span class="header-section-number">13.3</span> Building Your Stack</a>
+  <ul class="collapse">
+  <li><a href="#small-public-health-program" id="toc-small-public-health-program" class="nav-link" data-scroll-target="#small-public-health-program"><span class="header-section-number">13.3.1</span> Small Public Health Program</a></li>
+  <li><a href="#large-state-health-department" id="toc-large-state-health-department" class="nav-link" data-scroll-target="#large-state-health-department"><span class="header-section-number">13.3.2</span> Large State Health Department</a></li>
+  </ul></li>
+  <li><a href="#considerations-for-tool-selection" id="toc-considerations-for-tool-selection" class="nav-link" data-scroll-target="#considerations-for-tool-selection"><span class="header-section-number">13.4</span> Considerations for Tool Selection</a>
+  <ul class="collapse">
+  <li><a href="#total-cost-of-ownership" id="toc-total-cost-of-ownership" class="nav-link" data-scroll-target="#total-cost-of-ownership"><span class="header-section-number">13.4.1</span> Total Cost of Ownership</a></li>
+  <li><a href="#compliance-and-security" id="toc-compliance-and-security" class="nav-link" data-scroll-target="#compliance-and-security"><span class="header-section-number">13.4.2</span> Compliance and Security</a></li>
+  <li><a href="#sustainability" id="toc-sustainability" class="nav-link" data-scroll-target="#sustainability"><span class="header-section-number">13.4.3</span> Sustainability</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">13.5</span> Summary</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/yourusername/Bridgeframe-Toolkit/edit/main/chapters/10-tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/yourusername/Bridgeframe-Toolkit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-tools.html">Putting It Into Practice</a></li><li class="breadcrumb-item"><a href="../chapters/10-tools.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tools Comparison</span></a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Tools Comparison</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="commercial-vs.-open-sourcepublic-health-tools" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Commercial vs.&nbsp;Open Source/Public Health Tools</h1>
+<p>Public health agencies often operate with constrained budgets while managing sensitive health data. This chapter compares commercial enterprise tools with open source and public health-specific alternatives, helping you select the right tools for your context.</p>
+<section id="selection-criteria" class="level2" data-number="13.1">
+<h2 data-number="13.1" class="anchored" data-anchor-id="selection-criteria"><span class="header-section-number">13.1</span> Selection Criteria</h2>
+<p>When evaluating tools, consider:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Criterion</th>
+<th style="text-align: left;">Commercial Advantage</th>
+<th style="text-align: left;">OSS/PH Advantage</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Cost</strong></td>
+<td style="text-align: left;">Predictable licensing</td>
+<td style="text-align: left;">No license fees</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Support</strong></td>
+<td style="text-align: left;">Vendor SLAs</td>
+<td style="text-align: left;">Community + self-reliance</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Features</strong></td>
+<td style="text-align: left;">Polished, integrated</td>
+<td style="text-align: left;">Customizable, extensible</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Compliance</strong></td>
+<td style="text-align: left;">Often pre-certified</td>
+<td style="text-align: left;">Full control over data</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Data Sovereignty</strong></td>
+<td style="text-align: left;">Vendor-managed</td>
+<td style="text-align: left;">Organization-controlled</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Sustainability</strong></td>
+<td style="text-align: left;">Vendor roadmap</td>
+<td style="text-align: left;">Community-driven</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tool-categories" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="tool-categories"><span class="header-section-number">13.2</span> Tool Categories</h2>
+<section id="project-management" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="project-management"><span class="header-section-number">13.2.1</span> Project Management</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 41%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Capability</th>
+<th style="text-align: left;">Commercial Options</th>
+<th style="text-align: left;">OSS/PH Options</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Full PM Suite</strong></td>
+<td style="text-align: left;">Jira, Azure DevOps, MS Project</td>
+<td style="text-align: left;">OpenProject, Redmine, Taiga</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Kanban Boards</strong></td>
+<td style="text-align: left;">Trello (paid), Monday.com</td>
+<td style="text-align: left;">Trello (free tier), Wekan, Kanboard</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Agile Planning</strong></td>
+<td style="text-align: left;">Jira, Rally, VersionOne</td>
+<td style="text-align: left;">Taiga, OpenProject</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Grant Management</strong></td>
+<td style="text-align: left;">Smartsheet, Asana</td>
+<td style="text-align: left;">OpenProject with custom fields</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation for Public Health:</strong></p>
+<ul>
+<li><strong>Small teams (&lt;10):</strong> Trello free tier or Taiga for simple Kanban/Scrum</li>
+<li><strong>Larger programs:</strong> OpenProject for full PM capabilities with data sovereignty</li>
+<li><strong>CDC/Federal projects:</strong> Often require Azure DevOps or Jira per contract</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="When to Choose OSS">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>When to Choose OSS
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Choose open source when:</p>
+<ul>
+<li>Budget is constrained</li>
+<li>Data sovereignty is critical (cannot store project data externally)</li>
+<li>Technical staff can support installation and maintenance</li>
+<li>Customization is needed beyond commercial options</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="requirements-and-documentation" class="level3" data-number="13.2.2">
+<h3 data-number="13.2.2" class="anchored" data-anchor-id="requirements-and-documentation"><span class="header-section-number">13.2.2</span> Requirements and Documentation</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 41%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Capability</th>
+<th style="text-align: left;">Commercial Options</th>
+<th style="text-align: left;">OSS/PH Options</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Wiki/Docs</strong></td>
+<td style="text-align: left;">Confluence, SharePoint</td>
+<td style="text-align: left;">BookStack, MediaWiki, GitHub Wiki</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Requirements Management</strong></td>
+<td style="text-align: left;">Jama, Helix RM, DOORS</td>
+<td style="text-align: left;">GitHub Issues, GitLab, Notion (free)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Collaborative Editing</strong></td>
+<td style="text-align: left;">MS 365, Google Workspace</td>
+<td style="text-align: left;">Nextcloud, CryptPad, HedgeDoc</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation for Public Health:</strong></p>
+<ul>
+<li><strong>Documentation:</strong> BookStack provides Confluence-like experience without licensing</li>
+<li><strong>Requirements:</strong> GitHub Issues sufficient for most projects; integrates with development</li>
+<li><strong>Collaboration:</strong> Consider data sensitivity; Nextcloud for on-premise control</li>
+</ul>
+</section>
+<section id="diagramming" class="level3" data-number="13.2.3">
+<h3 data-number="13.2.3" class="anchored" data-anchor-id="diagramming"><span class="header-section-number">13.2.3</span> Diagramming</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 41%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Capability</th>
+<th style="text-align: left;">Commercial Options</th>
+<th style="text-align: left;">OSS/PH Options</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>General Diagramming</strong></td>
+<td style="text-align: left;">Visio, Lucidchart</td>
+<td style="text-align: left;">diagrams.net (draw.io), Mermaid</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Process Modeling (BPMN)</strong></td>
+<td style="text-align: left;">Visio, Bizagi</td>
+<td style="text-align: left;">diagrams.net, Camunda Modeler</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Architecture</strong></td>
+<td style="text-align: left;">Lucidchart, Visio</td>
+<td style="text-align: left;">diagrams.net, PlantUML</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommendation for Public Health:</strong></p>
+<ul>
+<li><strong>diagrams.net</strong> is the de facto standard in public sector: free, web-based, exports to multiple formats, works offline</li>
+<li><strong>Mermaid</strong> for diagrams in documentation (renders from text, version-controllable)</li>
+</ul>
+</section>
+<section id="data-collection" class="level3" data-number="13.2.4">
+<h3 data-number="13.2.4" class="anchored" data-anchor-id="data-collection"><span class="header-section-number">13.2.4</span> Data Collection</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 41%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Capability</th>
+<th style="text-align: left;">Commercial Options</th>
+<th style="text-align: left;">OSS/PH Options</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Surveys</strong></td>
+<td style="text-align: left;">Qualtrics, SurveyMonkey</td>
+<td style="text-align: left;">LimeSurvey, KoBoToolbox</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Clinical/Research Data</strong></td>
+<td style="text-align: left;">REDCap (free for research)</td>
+<td style="text-align: left;">REDCap, ODK, DHIS2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Forms</strong></td>
+<td style="text-align: left;">Microsoft Forms, Google Forms</td>
+<td style="text-align: left;">KoBoToolbox, ODK Collect</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Case Management</strong></td>
+<td style="text-align: left;">Salesforce</td>
+<td style="text-align: left;">DHIS2, CommCare</td>
+</tr>
+</tbody>
+</table>
+<p><strong>REDCap: The Public Health Standard</strong></p>
+<p>REDCap (Research Electronic Data Capture) deserves special mention:</p>
+<ul>
+<li>Free for non-profit research institutions</li>
+<li>HIPAA-compliant, 21 CFR Part 11 capable</li>
+<li>Supports complex branching logic, validation</li>
+<li>Built-in audit trails</li>
+<li>Consortium of 6,000+ institutions</li>
+<li>CDC and NIH approved</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="CancerSurv Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>CancerSurv Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For the CancerSurv project, data collection tools include:</p>
+<ul>
+<li><strong>REDCap</strong>: Pilot site feedback surveys, user satisfaction assessments</li>
+<li><strong>KoBoToolbox</strong>: Field data collection for mobile cancer screening events</li>
+<li><strong>Native CancerSurv</strong>: Case abstraction (built into the platform)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="data-analysis" class="level3" data-number="13.2.5">
+<h3 data-number="13.2.5" class="anchored" data-anchor-id="data-analysis"><span class="header-section-number">13.2.5</span> Data Analysis</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 41%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Capability</th>
+<th style="text-align: left;">Commercial Options</th>
+<th style="text-align: left;">OSS/PH Options</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Statistical Analysis</strong></td>
+<td style="text-align: left;">SAS, SPSS, Stata</td>
+<td style="text-align: left;">R, Python (pandas, scipy)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Epidemiological Analysis</strong></td>
+<td style="text-align: left;">SAS, Stata</td>
+<td style="text-align: left;">R (epitools), Epi Info</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Data Wrangling</strong></td>
+<td style="text-align: left;">Alteryx, Trifacta</td>
+<td style="text-align: left;">R (tidyverse), Python (pandas)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Notebooks</strong></td>
+<td style="text-align: left;">Databricks, SAS Studio</td>
+<td style="text-align: left;">Jupyter, RStudio, Quarto</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Epi Info: CDC’s Free Epidemiology Tool</strong></p>
+<p>Epi Info is developed by CDC specifically for outbreak investigation:</p>
+<ul>
+<li>Free download, no installation fees</li>
+<li>Built-in epidemiological statistics (odds ratios, relative risks)</li>
+<li>Epidemic curve generation</li>
+<li>Geographic mapping</li>
+<li>Survey development and analysis</li>
+<li>7-day moving averages, case fatality rates</li>
+</ul>
+<p><strong>R for Public Health</strong></p>
+<p>R has become the standard for public health analytics:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: Calculate age-adjusted incidence rate</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epitools)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>cancer_data <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county, year) <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">cases =</span> <span class="fu">n</span>(),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">population =</span> <span class="fu">first</span>(population),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">crude_rate =</span> cases <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Age adjustment using standard population</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ageadjust.direct</span>(<span class="at">count =</span> cases, <span class="at">pop =</span> population, <span class="at">stdpop =</span> us_std_pop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="visualization" class="level3" data-number="13.2.6">
+<h3 data-number="13.2.6" class="anchored" data-anchor-id="visualization"><span class="header-section-number">13.2.6</span> Visualization</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 41%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Capability</th>
+<th style="text-align: left;">Commercial Options</th>
+<th style="text-align: left;">OSS/PH Options</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Dashboards</strong></td>
+<td style="text-align: left;">Tableau, Power BI</td>
+<td style="text-align: left;">R Shiny, Dash (Python), Apache Superset</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Static Visualization</strong></td>
+<td style="text-align: left;">Tableau, Excel</td>
+<td style="text-align: left;">R (ggplot2), Python (matplotlib, plotly)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Interactive Charts</strong></td>
+<td style="text-align: left;">Tableau, Power BI</td>
+<td style="text-align: left;">Plotly, Highcharts (free for non-commercial)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>R Shiny for Public Health Dashboards</strong></p>
+<p>R Shiny enables interactive dashboards without JavaScript expertise:</p>
+<ul>
+<li>Free and open source</li>
+<li>Integrates with R analysis pipelines</li>
+<li>Can be deployed on-premise or Shinyapps.io</li>
+<li>Many public health templates available</li>
+</ul>
+</section>
+<section id="gis-and-mapping" class="level3" data-number="13.2.7">
+<h3 data-number="13.2.7" class="anchored" data-anchor-id="gis-and-mapping"><span class="header-section-number">13.2.7</span> GIS and Mapping</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Capability</th>
+<th style="text-align: left;">Commercial Options</th>
+<th style="text-align: left;">OSS/PH Options</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Desktop GIS</strong></td>
+<td style="text-align: left;">ArcGIS Pro</td>
+<td style="text-align: left;">QGIS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Web Mapping</strong></td>
+<td style="text-align: left;">ArcGIS Online, Mapbox</td>
+<td style="text-align: left;">Leaflet, OpenLayers</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Spatial Analysis</strong></td>
+<td style="text-align: left;">ArcGIS, ESRI</td>
+<td style="text-align: left;">QGIS, R (sf package), PostGIS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Geocoding</strong></td>
+<td style="text-align: left;">Google, ESRI</td>
+<td style="text-align: left;">Nominatim, US Census Geocoder</td>
+</tr>
+</tbody>
+</table>
+<p><strong>QGIS for Disease Mapping</strong></p>
+<p>QGIS is essential for spatial epidemiology:</p>
+<ul>
+<li>Free, cross-platform</li>
+<li>Full-featured GIS capabilities</li>
+<li>Disease mapping and cluster detection</li>
+<li>Integrates with R for spatial statistics</li>
+<li>Active public health user community</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="CancerSurv Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>CancerSurv Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>CancerSurv analytics stack:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 22%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">Tool</th>
+<th style="text-align: left;">Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Case data storage</td>
+<td style="text-align: left;">PostgreSQL</td>
+<td style="text-align: left;">Open source, HIPAA-capable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ETL/Data pipeline</td>
+<td style="text-align: left;">Apache Airflow</td>
+<td style="text-align: left;">Orchestration of data flows</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Statistical analysis</td>
+<td style="text-align: left;">R (tidyverse, survival)</td>
+<td style="text-align: left;">Standard for cancer epidemiology</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dashboards</td>
+<td style="text-align: left;">R Shiny</td>
+<td style="text-align: left;">Interactive, deployable on-premise</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Geographic mapping</td>
+<td style="text-align: left;">QGIS + Leaflet</td>
+<td style="text-align: left;">Cancer cluster visualization</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ad-hoc queries</td>
+<td style="text-align: left;">Apache Superset</td>
+<td style="text-align: left;">Self-service for epidemiologists</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="data-standards-and-interoperability" class="level3" data-number="13.2.8">
+<h3 data-number="13.2.8" class="anchored" data-anchor-id="data-standards-and-interoperability"><span class="header-section-number">13.2.8</span> Data Standards and Interoperability</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Standard</th>
+<th style="text-align: left;">Commercial Tools</th>
+<th style="text-align: left;">OSS Tools</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>HL7 FHIR</strong></td>
+<td style="text-align: left;">Rhapsody, Corepoint</td>
+<td style="text-align: left;">HAPI FHIR, LinuxForHealth</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>HL7 v2.x</strong></td>
+<td style="text-align: left;">Rhapsody, Mirth</td>
+<td style="text-align: left;">Mirth Connect (open source), HAPI</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>CDA/C-CDA</strong></td>
+<td style="text-align: left;">Various EHR vendors</td>
+<td style="text-align: left;">MDHT, Reference CDA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mirth Connect</strong></p>
+<p>Mirth Connect is widely used in public health for health information exchange:</p>
+<ul>
+<li>Open source (NextGen Healthcare)</li>
+<li>HL7 v2, FHIR, CDA support</li>
+<li>Visual interface builder</li>
+<li>Used by many state health departments</li>
+</ul>
+</section>
+</section>
+<section id="building-your-stack" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="building-your-stack"><span class="header-section-number">13.3</span> Building Your Stack</h2>
+<section id="small-public-health-program" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="small-public-health-program"><span class="header-section-number">13.3.1</span> Small Public Health Program</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">Recommended Tool</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Project Management</td>
+<td style="text-align: left;">Trello or Taiga</td>
+<td style="text-align: left;">Free tier sufficient</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Documentation</td>
+<td style="text-align: left;">GitHub Wiki or BookStack</td>
+<td style="text-align: left;">Version-controlled</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Diagramming</td>
+<td style="text-align: left;">diagrams.net</td>
+<td style="text-align: left;">Free, export to any format</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Data Collection</td>
+<td style="text-align: left;">REDCap</td>
+<td style="text-align: left;">Standard for research</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Analysis</td>
+<td style="text-align: left;">R + RStudio</td>
+<td style="text-align: left;">Free, extensive packages</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Visualization</td>
+<td style="text-align: left;">R Shiny or Excel</td>
+<td style="text-align: left;">Depends on technical capacity</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="large-state-health-department" class="level3" data-number="13.3.2">
+<h3 data-number="13.3.2" class="anchored" data-anchor-id="large-state-health-department"><span class="header-section-number">13.3.2</span> Large State Health Department</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">Recommended Tool</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Project Management</td>
+<td style="text-align: left;">Azure DevOps or OpenProject</td>
+<td style="text-align: left;">Enterprise scale</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Documentation</td>
+<td style="text-align: left;">Confluence or BookStack</td>
+<td style="text-align: left;">Team collaboration</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Requirements</td>
+<td style="text-align: left;">Jira or GitHub</td>
+<td style="text-align: left;">Integrated with development</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Data Collection</td>
+<td style="text-align: left;">REDCap + DHIS2</td>
+<td style="text-align: left;">Research + program monitoring</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Data Platform</td>
+<td style="text-align: left;">PostgreSQL + Airflow</td>
+<td style="text-align: left;">Scalable, HIPAA-capable</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Analysis</td>
+<td style="text-align: left;">R + Python</td>
+<td style="text-align: left;">Comprehensive capabilities</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Visualization</td>
+<td style="text-align: left;">R Shiny + Superset</td>
+<td style="text-align: left;">Dashboards + self-service</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">GIS</td>
+<td style="text-align: left;">QGIS + PostGIS</td>
+<td style="text-align: left;">Full spatial capabilities</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Integration</td>
+<td style="text-align: left;">Mirth Connect</td>
+<td style="text-align: left;">HL7/FHIR integration</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="considerations-for-tool-selection" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="considerations-for-tool-selection"><span class="header-section-number">13.4</span> Considerations for Tool Selection</h2>
+<section id="total-cost-of-ownership" class="level3" data-number="13.4.1">
+<h3 data-number="13.4.1" class="anchored" data-anchor-id="total-cost-of-ownership"><span class="header-section-number">13.4.1</span> Total Cost of Ownership</h3>
+<p>Free software is not always cheaper:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Cost Factor</th>
+<th style="text-align: left;">Commercial</th>
+<th style="text-align: left;">Open Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">License fees</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Implementation</td>
+<td style="text-align: left;">Vendor/partner</td>
+<td style="text-align: left;">Internal/consultant</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Training</td>
+<td style="text-align: left;">Often included</td>
+<td style="text-align: left;">Self-directed or purchased</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Support</td>
+<td style="text-align: left;">Included in license</td>
+<td style="text-align: left;">Community or purchased</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Customization</td>
+<td style="text-align: left;">Limited</td>
+<td style="text-align: left;">Unlimited but costly</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Infrastructure</td>
+<td style="text-align: left;">Cloud included or on-prem</td>
+<td style="text-align: left;">You manage</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="compliance-and-security" class="level3" data-number="13.4.2">
+<h3 data-number="13.4.2" class="anchored" data-anchor-id="compliance-and-security"><span class="header-section-number">13.4.2</span> Compliance and Security</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 30%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Consideration</th>
+<th style="text-align: left;">Commercial</th>
+<th style="text-align: left;">Open Source</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">HIPAA compliance</td>
+<td style="text-align: left;">Often certified</td>
+<td style="text-align: left;">Your responsibility to configure</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SOC 2 certification</td>
+<td style="text-align: left;">Common</td>
+<td style="text-align: left;">Rare; your responsibility</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Security updates</td>
+<td style="text-align: left;">Vendor manages</td>
+<td style="text-align: left;">You monitor and apply</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Audit trails</td>
+<td style="text-align: left;">Built-in</td>
+<td style="text-align: left;">May require configuration</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sustainability" class="level3" data-number="13.4.3">
+<h3 data-number="13.4.3" class="anchored" data-anchor-id="sustainability"><span class="header-section-number">13.4.3</span> Sustainability</h3>
+<p>Consider long-term viability:</p>
+<ul>
+<li>Commercial: Vendor may be acquired, change pricing, sunset product</li>
+<li>Open Source: Community may lose momentum; check activity levels</li>
+<li>Hybrid: Consider tools with both commercial and open source options</li>
+</ul>
+</section>
+</section>
+<section id="summary" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="summary"><span class="header-section-number">13.5</span> Summary</h2>
+<p>The choice between commercial and open source tools depends on your context: budget, technical capacity, data sensitivity, and compliance requirements. Public health has excellent open source options, particularly for data collection (REDCap), analysis (R), mapping (QGIS), and integration (Mirth Connect). Evaluate total cost of ownership, not just license fees.</p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../chapters/09-evaluation.html" class="pagination-link" aria-label="Evaluation &amp; Improvement">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Evaluation &amp; Improvement</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../chapters/11-implementation-science.html" class="pagination-link" aria-label="Implementation Science">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Implementation Science</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Tools Comparison"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu"># Commercial vs. Open Source/Public Health Tools</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Public health agencies often operate with constrained budgets while managing sensitive health data. This chapter compares commercial enterprise tools with open source and public health-specific alternatives, helping you select the right tools for your context.</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Selection Criteria</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>When evaluating tools, consider:</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Criterion <span class="pp">|</span> Commercial Advantage <span class="pp">|</span> OSS/PH Advantage <span class="pp">|</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|:----------|:---------------------|:-----------------|</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Cost** <span class="pp">|</span> Predictable licensing <span class="pp">|</span> No license fees <span class="pp">|</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Support** <span class="pp">|</span> Vendor SLAs <span class="pp">|</span> Community + self-reliance <span class="pp">|</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Features** <span class="pp">|</span> Polished, integrated <span class="pp">|</span> Customizable, extensible <span class="pp">|</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Compliance** <span class="pp">|</span> Often pre-certified <span class="pp">|</span> Full control over data <span class="pp">|</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data Sovereignty** <span class="pp">|</span> Vendor-managed <span class="pp">|</span> Organization-controlled <span class="pp">|</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Sustainability** <span class="pp">|</span> Vendor roadmap <span class="pp">|</span> Community-driven <span class="pp">|</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tool Categories</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a><span class="fu">### Project Management</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Full PM Suite** <span class="pp">|</span> Jira, Azure DevOps, MS Project <span class="pp">|</span> OpenProject, Redmine, Taiga <span class="pp">|</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Kanban Boards** <span class="pp">|</span> Trello (paid), Monday.com <span class="pp">|</span> Trello (free tier), Wekan, Kanboard <span class="pp">|</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Agile Planning** <span class="pp">|</span> Jira, Rally, VersionOne <span class="pp">|</span> Taiga, OpenProject <span class="pp">|</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Grant Management** <span class="pp">|</span> Smartsheet, Asana <span class="pp">|</span> OpenProject with custom fields <span class="pp">|</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>**Recommendation for Public Health:**</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Small teams (&lt;10):** Trello free tier or Taiga for simple Kanban/Scrum</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Larger programs:** OpenProject for full PM capabilities with data sovereignty</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**CDC/Federal projects:** Often require Azure DevOps or Jira per contract</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="When to Choose OSS"}</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>Choose open source when:</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Budget is constrained</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Data sovereignty is critical (cannot store project data externally)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Technical staff can support installation and maintenance</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Customization is needed beyond commercial options</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirements and Documentation</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Wiki/Docs** <span class="pp">|</span> Confluence, SharePoint <span class="pp">|</span> BookStack, MediaWiki, GitHub Wiki <span class="pp">|</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Requirements Management** <span class="pp">|</span> Jama, Helix RM, DOORS <span class="pp">|</span> GitHub Issues, GitLab, Notion (free) <span class="pp">|</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Collaborative Editing** <span class="pp">|</span> MS 365, Google Workspace <span class="pp">|</span> Nextcloud, CryptPad, HedgeDoc <span class="pp">|</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>**Recommendation for Public Health:**</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Documentation:** BookStack provides Confluence-like experience without licensing</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Requirements:** GitHub Issues sufficient for most projects; integrates with development</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Collaboration:** Consider data sensitivity; Nextcloud for on-premise control</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="fu">### Diagramming</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **General Diagramming** <span class="pp">|</span> Visio, Lucidchart <span class="pp">|</span> diagrams.net (draw.io), Mermaid <span class="pp">|</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Process Modeling (BPMN)** <span class="pp">|</span> Visio, Bizagi <span class="pp">|</span> diagrams.net, Camunda Modeler <span class="pp">|</span></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Architecture** <span class="pp">|</span> Lucidchart, Visio <span class="pp">|</span> diagrams.net, PlantUML <span class="pp">|</span></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>**Recommendation for Public Health:**</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**diagrams.net** is the de facto standard in public sector: free, web-based, exports to multiple formats, works offline</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Mermaid** for diagrams in documentation (renders from text, version-controllable)</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Collection</span></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Surveys** <span class="pp">|</span> Qualtrics, SurveyMonkey <span class="pp">|</span> LimeSurvey, KoBoToolbox <span class="pp">|</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Clinical/Research Data** <span class="pp">|</span> REDCap (free for research) <span class="pp">|</span> REDCap, ODK, DHIS2 <span class="pp">|</span></span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Forms** <span class="pp">|</span> Microsoft Forms, Google Forms <span class="pp">|</span> KoBoToolbox, ODK Collect <span class="pp">|</span></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Case Management** <span class="pp">|</span> Salesforce <span class="pp">|</span> DHIS2, CommCare <span class="pp">|</span></span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>**REDCap: The Public Health Standard**</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>REDCap (Research Electronic Data Capture) deserves special mention:</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Free for non-profit research institutions</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>HIPAA-compliant, 21 CFR Part 11 capable</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Supports complex branching logic, validation</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Built-in audit trails</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Consortium of 6,000+ institutions</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CDC and NIH approved</span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>For the CancerSurv project, data collection tools include:</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**REDCap**: Pilot site feedback surveys, user satisfaction assessments</span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**KoBoToolbox**: Field data collection for mobile cancer screening events</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Native CancerSurv**: Case abstraction (built into the platform)</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Analysis</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Statistical Analysis** <span class="pp">|</span> SAS, SPSS, Stata <span class="pp">|</span> R, Python (pandas, scipy) <span class="pp">|</span></span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Epidemiological Analysis** <span class="pp">|</span> SAS, Stata <span class="pp">|</span> R (epitools), Epi Info <span class="pp">|</span></span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data Wrangling** <span class="pp">|</span> Alteryx, Trifacta <span class="pp">|</span> R (tidyverse), Python (pandas) <span class="pp">|</span></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Notebooks** <span class="pp">|</span> Databricks, SAS Studio <span class="pp">|</span> Jupyter, RStudio, Quarto <span class="pp">|</span></span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>**Epi Info: CDC's Free Epidemiology Tool**</span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>Epi Info is developed by CDC specifically for outbreak investigation:</span>
+<span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Free download, no installation fees</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Built-in epidemiological statistics (odds ratios, relative risks)</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Epidemic curve generation</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Geographic mapping</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Survey development and analysis</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>7-day moving averages, case fatality rates</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>**R for Public Health**</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>R has become the standard for public health analytics:</span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a><span class="co"># Example: Calculate age-adjusted incidence rate</span></span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(epitools)</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>cancer_data <span class="sc">%&gt;%</span></span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(county, year) <span class="sc">%&gt;%</span></span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>    <span class="at">cases =</span> <span class="fu">n</span>(),</span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>    <span class="at">population =</span> <span class="fu">first</span>(population),</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a>    <span class="at">crude_rate =</span> cases <span class="sc">/</span> population <span class="sc">*</span> <span class="dv">100000</span></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Age adjustment using standard population</span></span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ageadjust.direct</span>(<span class="at">count =</span> cases, <span class="at">pop =</span> population, <span class="at">stdpop =</span> us_std_pop)</span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a><span class="fu">### Visualization</span></span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Dashboards** <span class="pp">|</span> Tableau, Power BI <span class="pp">|</span> R Shiny, Dash (Python), Apache Superset <span class="pp">|</span></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Static Visualization** <span class="pp">|</span> Tableau, Excel <span class="pp">|</span> R (ggplot2), Python (matplotlib, plotly) <span class="pp">|</span></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Interactive Charts** <span class="pp">|</span> Tableau, Power BI <span class="pp">|</span> Plotly, Highcharts (free for non-commercial) <span class="pp">|</span></span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>**R Shiny for Public Health Dashboards**</span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>R Shiny enables interactive dashboards without JavaScript expertise:</span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Free and open source</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integrates with R analysis pipelines</span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Can be deployed on-premise or Shinyapps.io</span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Many public health templates available</span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="fu">### GIS and Mapping</span></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Desktop GIS** <span class="pp">|</span> ArcGIS Pro <span class="pp">|</span> QGIS <span class="pp">|</span></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Web Mapping** <span class="pp">|</span> ArcGIS Online, Mapbox <span class="pp">|</span> Leaflet, OpenLayers <span class="pp">|</span></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Spatial Analysis** <span class="pp">|</span> ArcGIS, ESRI <span class="pp">|</span> QGIS, R (sf package), PostGIS <span class="pp">|</span></span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Geocoding** <span class="pp">|</span> Google, ESRI <span class="pp">|</span> Nominatim, US Census Geocoder <span class="pp">|</span></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>**QGIS for Disease Mapping**</span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>QGIS is essential for spatial epidemiology:</span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Free, cross-platform</span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Full-featured GIS capabilities</span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Disease mapping and cluster detection</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integrates with R for spatial statistics</span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Active public health user community</span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>CancerSurv analytics stack:</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> Tool <span class="pp">|</span> Rationale <span class="pp">|</span></span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----|:----------|</span></span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Case data storage <span class="pp">|</span> PostgreSQL <span class="pp">|</span> Open source, HIPAA-capable <span class="pp">|</span></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ETL/Data pipeline <span class="pp">|</span> Apache Airflow <span class="pp">|</span> Orchestration of data flows <span class="pp">|</span></span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Statistical analysis <span class="pp">|</span> R (tidyverse, survival) <span class="pp">|</span> Standard for cancer epidemiology <span class="pp">|</span></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Dashboards <span class="pp">|</span> R Shiny <span class="pp">|</span> Interactive, deployable on-premise <span class="pp">|</span></span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Geographic mapping <span class="pp">|</span> QGIS + Leaflet <span class="pp">|</span> Cancer cluster visualization <span class="pp">|</span></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Ad-hoc queries <span class="pp">|</span> Apache Superset <span class="pp">|</span> Self-service for epidemiologists <span class="pp">|</span></span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Standards and Interoperability</span></span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Standard <span class="pp">|</span> Commercial Tools <span class="pp">|</span> OSS Tools <span class="pp">|</span></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----------------|:----------|</span></span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **HL7 FHIR** <span class="pp">|</span> Rhapsody, Corepoint <span class="pp">|</span> HAPI FHIR, LinuxForHealth <span class="pp">|</span></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **HL7 v2.x** <span class="pp">|</span> Rhapsody, Mirth <span class="pp">|</span> Mirth Connect (open source), HAPI <span class="pp">|</span></span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **CDA/C-CDA** <span class="pp">|</span> Various EHR vendors <span class="pp">|</span> MDHT, Reference CDA <span class="pp">|</span></span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>**Mirth Connect**</span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>Mirth Connect is widely used in public health for health information exchange:</span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Open source (NextGen Healthcare)</span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>HL7 v2, FHIR, CDA support</span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visual interface builder</span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Used by many state health departments</span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a><span class="fu">## Building Your Stack</span></span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a><span class="fu">### Small Public Health Program</span></span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> Recommended Tool <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----------------|:------|</span></span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Project Management <span class="pp">|</span> Trello or Taiga <span class="pp">|</span> Free tier sufficient <span class="pp">|</span></span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Documentation <span class="pp">|</span> GitHub Wiki or BookStack <span class="pp">|</span> Version-controlled <span class="pp">|</span></span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Diagramming <span class="pp">|</span> diagrams.net <span class="pp">|</span> Free, export to any format <span class="pp">|</span></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Collection <span class="pp">|</span> REDCap <span class="pp">|</span> Standard for research <span class="pp">|</span></span>
+<span id="cb2-219"><a href="#cb2-219" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Analysis <span class="pp">|</span> R + RStudio <span class="pp">|</span> Free, extensive packages <span class="pp">|</span></span>
+<span id="cb2-220"><a href="#cb2-220" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Visualization <span class="pp">|</span> R Shiny or Excel <span class="pp">|</span> Depends on technical capacity <span class="pp">|</span></span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a><span class="fu">### Large State Health Department</span></span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> Recommended Tool <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----------------|:------|</span></span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Project Management <span class="pp">|</span> Azure DevOps or OpenProject <span class="pp">|</span> Enterprise scale <span class="pp">|</span></span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Documentation <span class="pp">|</span> Confluence or BookStack <span class="pp">|</span> Team collaboration <span class="pp">|</span></span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Requirements <span class="pp">|</span> Jira or GitHub <span class="pp">|</span> Integrated with development <span class="pp">|</span></span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Collection <span class="pp">|</span> REDCap + DHIS2 <span class="pp">|</span> Research + program monitoring <span class="pp">|</span></span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Platform <span class="pp">|</span> PostgreSQL + Airflow <span class="pp">|</span> Scalable, HIPAA-capable <span class="pp">|</span></span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Analysis <span class="pp">|</span> R + Python <span class="pp">|</span> Comprehensive capabilities <span class="pp">|</span></span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Visualization <span class="pp">|</span> R Shiny + Superset <span class="pp">|</span> Dashboards + self-service <span class="pp">|</span></span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> GIS <span class="pp">|</span> QGIS + PostGIS <span class="pp">|</span> Full spatial capabilities <span class="pp">|</span></span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Integration <span class="pp">|</span> Mirth Connect <span class="pp">|</span> HL7/FHIR integration <span class="pp">|</span></span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a><span class="fu">## Considerations for Tool Selection</span></span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a><span class="fu">### Total Cost of Ownership</span></span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>Free software is not always cheaper:</span>
+<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Cost Factor <span class="pp">|</span> Commercial <span class="pp">|</span> Open Source <span class="pp">|</span></span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------------|:-----------|:------------|</span></span>
+<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> License fees <span class="pp">|</span> Yes <span class="pp">|</span> No <span class="pp">|</span></span>
+<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Implementation <span class="pp">|</span> Vendor/partner <span class="pp">|</span> Internal/consultant <span class="pp">|</span></span>
+<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Training <span class="pp">|</span> Often included <span class="pp">|</span> Self-directed or purchased <span class="pp">|</span></span>
+<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Support <span class="pp">|</span> Included in license <span class="pp">|</span> Community or purchased <span class="pp">|</span></span>
+<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Customization <span class="pp">|</span> Limited <span class="pp">|</span> Unlimited but costly <span class="pp">|</span></span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Infrastructure <span class="pp">|</span> Cloud included or on-prem <span class="pp">|</span> You manage <span class="pp">|</span></span>
+<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a><span class="fu">### Compliance and Security</span></span>
+<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Consideration <span class="pp">|</span> Commercial <span class="pp">|</span> Open Source <span class="pp">|</span></span>
+<span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a><span class="pp">|:--------------|:-----------|:------------|</span></span>
+<span id="cb2-255"><a href="#cb2-255" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> HIPAA compliance <span class="pp">|</span> Often certified <span class="pp">|</span> Your responsibility to configure <span class="pp">|</span></span>
+<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> SOC 2 certification <span class="pp">|</span> Common <span class="pp">|</span> Rare; your responsibility <span class="pp">|</span></span>
+<span id="cb2-257"><a href="#cb2-257" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Security updates <span class="pp">|</span> Vendor manages <span class="pp">|</span> You monitor and apply <span class="pp">|</span></span>
+<span id="cb2-258"><a href="#cb2-258" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Audit trails <span class="pp">|</span> Built-in <span class="pp">|</span> May require configuration <span class="pp">|</span></span>
+<span id="cb2-259"><a href="#cb2-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-260"><a href="#cb2-260" aria-hidden="true" tabindex="-1"></a><span class="fu">### Sustainability</span></span>
+<span id="cb2-261"><a href="#cb2-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-262"><a href="#cb2-262" aria-hidden="true" tabindex="-1"></a>Consider long-term viability:</span>
+<span id="cb2-263"><a href="#cb2-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-264"><a href="#cb2-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Commercial: Vendor may be acquired, change pricing, sunset product</span>
+<span id="cb2-265"><a href="#cb2-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Open Source: Community may lose momentum; check activity levels</span>
+<span id="cb2-266"><a href="#cb2-266" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hybrid: Consider tools with both commercial and open source options</span>
+<span id="cb2-267"><a href="#cb2-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-268"><a href="#cb2-268" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb2-269"><a href="#cb2-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-270"><a href="#cb2-270" aria-hidden="true" tabindex="-1"></a>The choice between commercial and open source tools depends on your context: budget, technical capacity, data sensitivity, and compliance requirements. Public health has excellent open source options, particularly for data collection (REDCap), analysis (R), mapping (QGIS), and integration (Mirth Connect). Evaluate total cost of ownership, not just license fees.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/yourusername/Bridgeframe-Toolkit/edit/main/chapters/10-tools.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/yourusername/Bridgeframe-Toolkit/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
