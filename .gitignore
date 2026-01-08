@@ -1,0 +1,37 @@
+# Quarto build output
+_book/
+_freeze/
+
+# R
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/settings.json
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+/.quarto/
+**/*.quarto_ipynb

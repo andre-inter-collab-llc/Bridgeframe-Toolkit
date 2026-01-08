@@ -1,0 +1,32 @@
+---
+title: "Preface"
+---
+
+# Preface {.unnumbered}
+
+I wrote this book because I have lived the frustration it addresses.
+
+Early in my career as an epidemiologist, I found myself in a meeting room with a software development team tasked with building a disease surveillance system. I had clear ideas about what the system needed to do: track case counts, generate epidemic curves, alert us to outbreaks. The developers had their own framework: user stories, acceptance criteria, sprint planning. We were speaking past each other.
+
+When I said "case definition," they heard "database schema." When they said "non-functional requirements," I thought they meant optional features. The project eventually succeeded, but not without weeks of miscommunication that could have been avoided with a shared vocabulary.
+
+That experience set me on a path to understand both worlds. I learned Agile methodologies, earned certifications in business analysis, and read the BABOK cover to cover. I also deepened my public health training, studying program evaluation frameworks, implementation science, and the CDC's approach to health informatics. What I discovered was that these disciplines are not as different as they first appear. They are parallel processes, asking the same fundamental questions in different languages.
+
+## Why Bridgeframe?
+
+The name reflects the book's purpose: to build a **bridge** between two **frames** of reference. A logic model and a requirements specification are both attempts to define inputs, activities, outputs, and outcomes. A sprint retrospective and a PDSA cycle both seek continuous improvement through structured reflection. The concepts map; only the terminology differs.
+
+Public health agencies increasingly rely on technology: electronic lab reporting, immunization information systems, syndromic surveillance platforms. Yet many IT professionals entering this space lack context for the regulatory environment, the grant-driven funding model, and the equity-centered mission of public health. Similarly, public health professionals often struggle to articulate their needs in terms that software teams understand.
+
+This book is my attempt to close that gap.
+
+## A Note on Terminology
+
+Throughout this book, I use "stakeholder" as a term of convenience, recognizing its ubiquity in business analysis. However, I want to acknowledge that this word carries colonial connotations and implies power dynamics that may not serve community-centered public health work. In practice, I encourage the use of more specific alternatives: beneficiaries, community partners, rights holders, or simply "the people we serve." Chapter 3 discusses this nuance in detail.
+
+## Acknowledgments
+
+This book would not exist without the colleagues who have taught me to see through both lenses. To the epidemiologists who patiently explained case definitions to puzzled developers, and to the business analysts who helped me see the elegance of well-structured requirements: thank you. You are the original bridge builders.
+
+André van Zyl  
+Intersect Collaborations

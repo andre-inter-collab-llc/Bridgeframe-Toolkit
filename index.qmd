@@ -1,0 +1,49 @@
+---
+title: "Bridgeframe"
+subtitle: "Bridging Business Analysis and Public Health"
+---
+
+# Welcome {.unnumbered}
+
+**Bridgeframe** is a practical toolkit for professionals who work at the intersection of information technology and public health. Whether you are a business analyst stepping into your first health department project, or a public health professional learning to collaborate with software teams, this book provides the translation layer you need.
+
+## The Challenge
+
+Two disciplines. Two languages. One shared goal: building systems that improve health outcomes.
+
+**Business analysts** speak of user stories, sprints, and requirements traceability. **Public health professionals** speak of logic models, PDSA cycles, and program evaluation. Both are trying to define problems, design solutions, and measure success, yet their terminology creates friction rather than collaboration.
+
+## The Solution
+
+Bridgeframe provides:
+
+- **A terminology dictionary** mapping IT/Agile concepts to their public health equivalents
+- **Phase-by-phase guidance** aligning the BABOK lifecycle with CDC frameworks
+- **A running case study** (CancerSurv) demonstrating concepts in practice
+- **Templates and tools** for hybrid teams
+
+## Who This Book Is For
+
+- **IT Business Analysts** entering the public health sector
+- **Public Health Informaticians** collaborating with software vendors
+- **Project Managers** overseeing health IT implementations
+- **Data Scientists** working with epidemiological systems
+- **Students** in health informatics or public health programs
+
+## How to Use This Book
+
+This book is organized into three parts:
+
+1. **Foundations**: Core concepts, terminology mapping, and the CancerSurv case study
+2. **The Analysis Process**: Phase-by-phase guidance from planning through evaluation
+3. **Putting It Into Practice**: Tools comparison and implementation science frameworks
+
+Each chapter includes CancerSurv examples in callout boxes, making abstract concepts concrete.
+
+::: {.callout-tip title="Getting Started"}
+If you are new to this intersection, start with [Chapter 1: Introduction](chapters/01-introduction.qmd) and the [Terminology Dictionary](chapters/03-terminology.qmd). If you are already working on a project, jump to the relevant phase chapter.
+:::
+
+## About the Author
+
+**André van Zyl** is an epidemiologist and data scientist who has spent years bridging the gap between public health programs and the technology teams that support them. As founder of Intersect Collaborations, he helps organizations translate between these two worlds.

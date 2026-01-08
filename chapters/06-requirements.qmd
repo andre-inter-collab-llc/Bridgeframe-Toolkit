@@ -1,0 +1,290 @@
+---
+title: "Requirements & Data Analysis"
+---
+
+# Requirements Analysis & Data Analysis
+
+Raw elicitation findings must be organized, analyzed, and specified in detail. In business analysis, this is **Requirements Analysis and Design Definition**. In public health, it maps to **Data Analysis** and **Logic Model Development**. Both processes transform unstructured input into structured, actionable specifications.
+
+## The Dual Framework
+
+| BA Perspective | PH Perspective |
+|:---------------|:---------------|
+| Requirements Analysis | Data Analysis |
+| Requirements Specification | Logic Model / Theory of Change |
+| Functional Requirements | Program Activities |
+| Non-Functional Requirements | Implementation Characteristics |
+| Data Requirements | Case Definitions, Data Dictionaries |
+| Business Rules | Clinical Guidelines, Protocols |
+
+## Types of Requirements
+
+### Functional Requirements
+
+**BA Definition:** What the system must do. Capabilities, features, functions.
+
+**PH Equivalent:** Program activities, intervention components, service delivery specifications.
+
+::: {.callout-note title="CancerSurv Example"}
+**Functional Requirement (BA format):**
+
+> FR-101: The system shall allow users to search for cases by patient name, medical record number, or social security number.
+
+**Program Activity (PH format):**
+
+> Cancer registrars will abstract and code incident cases from hospital pathology reports within 6 months of diagnosis date.
+
+Both describe "what happens" but at different levels of specificity.
+:::
+
+### Non-Functional Requirements (NFRs)
+
+**BA Definition:** Quality attributes, constraints, performance characteristics.
+
+**PH Equivalent:** Implementation characteristics (per CFIR framework).
+
+| NFR Category | BA Focus | PH Focus (CFIR Domain) |
+|:-------------|:---------|:-----------------------|
+| **Performance** | Response time, throughput | Efficiency of intervention delivery |
+| **Security** | Access control, encryption | HIPAA compliance, trust |
+| **Scalability** | Growth capacity | Outbreak surge response |
+| **Usability** | User interface design | Complexity, ease of adoption |
+| **Reliability** | Uptime, fault tolerance | Service continuity |
+| **Interoperability** | API standards, data exchange | Health information exchange |
+
+::: {.callout-note title="CancerSurv Example"}
+**NFR (BA format):**
+
+> NFR-201: The system shall maintain 99.9% uptime during business hours (8 AM to 6 PM Eastern).
+
+**Implementation Characteristic (PH format):**
+
+> The CancerSurv platform must demonstrate high reliability to maintain registrar confidence and ensure continuous data collection, critical during cancer awareness campaigns when reporting volumes increase.
+:::
+
+### Data Requirements
+
+Data specifications are central to both domains:
+
+**BA Data Model:**
+
+- Entity-Relationship diagrams
+- Database schemas
+- Data dictionaries
+- Validation rules
+
+**PH Case Definitions:**
+
+- Diagnostic criteria
+- Inclusion/exclusion criteria
+- Coding standards (ICD-O-3, TNM)
+- Data quality metrics
+
+```{mermaid}
+%%| label: fig-data-model
+%%| fig-cap: "CancerSurv Simplified Data Model"
+erDiagram
+    PATIENT ||--o{ TUMOR : has
+    TUMOR ||--o{ TREATMENT : receives
+    TUMOR ||--|| DIAGNOSIS : "classified by"
+    FACILITY ||--o{ TUMOR : reports
+    
+    PATIENT {
+        string patient_id PK
+        string name
+        date birth_date
+        string ssn
+        string address
+    }
+    
+    TUMOR {
+        string tumor_id PK
+        string patient_id FK
+        date diagnosis_date
+        string primary_site
+        string histology
+        string stage
+    }
+```
+
+### Business Rules / Clinical Guidelines
+
+Rules governing system behavior and data processing:
+
+| BA Business Rule | PH Clinical Guideline |
+|:-----------------|:----------------------|
+| "Order cannot be placed if credit limit exceeded" | "Case is reportable if primary site is within state jurisdiction" |
+| "Discount applies if quantity > 100" | "Stage is unknown if pathology report unavailable within 4 months" |
+| "Manager approval required for refunds > $500" | "Multiple primary rules apply per SEER guidelines" |
+
+## The Logic Model as Requirements Framework
+
+Public health uses the **Logic Model** to specify program components. This structure maps directly to requirements categories:
+
+```{mermaid}
+%%| label: fig-logic-requirements
+%%| fig-cap: "Logic Model Components Mapped to Requirements"
+flowchart LR
+    subgraph Inputs["Inputs (Resources)"]
+        I1[Funding]
+        I2[Staff]
+        I3[Data feeds]
+        I4[Infrastructure]
+    end
+    
+    subgraph Activities["Activities (Functions)"]
+        A1[Case abstraction]
+        A2[Data quality checks]
+        A3[Report generation]
+        A4[Analytics]
+    end
+    
+    subgraph Outputs["Outputs (Deliverables)"]
+        O1[Complete case records]
+        O2[Quality reports]
+        O3[NPCR submissions]
+        O4[Dashboards]
+    end
+    
+    subgraph Outcomes["Outcomes (Success Metrics)"]
+        OC1[95% completeness]
+        OC2[Timely reporting]
+        OC3[User satisfaction]
+    end
+    
+    Inputs --> Activities --> Outputs --> Outcomes
+```
+
+| Logic Model Component | Requirements Category |
+|:----------------------|:----------------------|
+| Inputs | Constraints, Assumptions, Dependencies |
+| Activities | Functional Requirements |
+| Outputs | System Deliverables, Features |
+| Outcomes | Success Metrics, Acceptance Criteria |
+| Impact | Strategic Objectives, Business Value |
+
+## Prioritization
+
+### Methods for Ranking Requirements
+
+Not all requirements are equal. Prioritization ensures critical needs are addressed first:
+
+**MoSCoW Method:**
+
+- **Must have**: Essential for go-live
+- **Should have**: Important but not critical
+- **Could have**: Desirable if time permits
+- **Won't have**: Out of scope for this release
+
+**Weighted Scoring:**
+
+Assign weights to criteria (business value, regulatory requirement, user impact) and score each requirement.
+
+**Kano Model:**
+
+- Basic needs (expected, cause dissatisfaction if missing)
+- Performance needs (more is better)
+- Delighters (unexpected features that excite)
+
+::: {.callout-note title="CancerSurv Example"}
+**Must Have:**
+
+- Case entry and coding functionality
+- HIPAA-compliant security
+- NPCR data submission capability
+
+**Should Have:**
+
+- Real-time analytics dashboard
+- Mobile-friendly interface
+- Automated duplicate detection
+
+**Could Have:**
+
+- Machine learning for coding assistance
+- Patient portal for self-reported outcomes
+- Integration with research databases
+:::
+
+## Requirements Traceability
+
+### Linking Requirements to Objectives
+
+Traceability ensures every requirement connects to a business need or program goal:
+
+```{mermaid}
+%%| label: fig-traceability
+%%| fig-cap: "Requirements Traceability Structure"
+flowchart TB
+    BN[Business Need /<br/>Program Goal] --> FR[Functional<br/>Requirement]
+    BN --> NFR[Non-Functional<br/>Requirement]
+    FR --> TC[Test Case]
+    NFR --> TC
+    FR --> US[User Story]
+    TC --> TR[Test Result]
+```
+
+**Traceability Matrix Example:**
+
+| Requirement ID | Description | Source | Priority | Test Case |
+|:---------------|:------------|:-------|:---------|:----------|
+| FR-101 | Case search functionality | Registrar interviews | Must | TC-101, TC-102 |
+| FR-102 | ICD-O-3 coding validation | NAACCR standards | Must | TC-103 |
+| NFR-201 | 99.9% uptime | SLA requirements | Must | TC-201 |
+
+## Specification Formats
+
+### Writing Good Requirements
+
+Regardless of format, good requirements share characteristics:
+
+| Characteristic | Description | Example |
+|:---------------|:------------|:--------|
+| **Complete** | Contains all necessary information | Includes error handling, edge cases |
+| **Consistent** | Does not contradict other requirements | Uses standard terminology |
+| **Unambiguous** | Only one interpretation possible | "Within 3 seconds" not "quickly" |
+| **Verifiable** | Can be tested | Measurable acceptance criteria |
+| **Traceable** | Links to source and test | Includes requirement ID |
+
+### User Story Format
+
+For Agile projects:
+
+> As a [role], I want [feature], so that [benefit].
+
+**Acceptance Criteria:**
+
+- Given [context], when [action], then [result]
+
+### GPS Format for Clinical Contexts
+
+> Given [clinical context], the [health worker role] should [specific action] to [health outcome].
+
+::: {.callout-note title="CancerSurv Example"}
+**User Story:**
+
+> As a cancer registrar, I want to search for existing cases before creating a new record, so that I avoid creating duplicate entries.
+
+**GPS Format:**
+
+> Given a new pathology report, the registrar should search existing cases by patient identifiers before abstracting, to maintain data integrity and accurate incidence counts.
+
+**Acceptance Criteria:**
+
+- Given a patient name, when the registrar searches, then matching cases display within 3 seconds
+- Given a patient with no existing cases, when the registrar searches, then a "No matches found" message displays with option to create new case
+:::
+
+## Deliverables from This Phase
+
+| BA Deliverable | PH Deliverable | Purpose |
+|:---------------|:---------------|:--------|
+| Requirements Specification | Logic Model | Document what must be built |
+| Data Dictionary | Case Definition / Data Standards | Specify data structures |
+| Business Rules Catalog | Clinical Protocol | Define processing rules |
+| Traceability Matrix | Evaluation Framework | Link requirements to objectives |
+| Prioritized Backlog | Workplan | Order implementation work |
+
+## Moving Forward
+
+With requirements analyzed, prioritized, and specified, the next phase focuses on **Design**: defining how the solution will be built to meet these requirements.

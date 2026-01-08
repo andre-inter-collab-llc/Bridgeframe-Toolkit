@@ -1,0 +1,270 @@
+---
+title: "Tools Comparison"
+---
+
+# Commercial vs. Open Source/Public Health Tools
+
+Public health agencies often operate with constrained budgets while managing sensitive health data. This chapter compares commercial enterprise tools with open source and public health-specific alternatives, helping you select the right tools for your context.
+
+## Selection Criteria
+
+When evaluating tools, consider:
+
+| Criterion | Commercial Advantage | OSS/PH Advantage |
+|:----------|:---------------------|:-----------------|
+| **Cost** | Predictable licensing | No license fees |
+| **Support** | Vendor SLAs | Community + self-reliance |
+| **Features** | Polished, integrated | Customizable, extensible |
+| **Compliance** | Often pre-certified | Full control over data |
+| **Data Sovereignty** | Vendor-managed | Organization-controlled |
+| **Sustainability** | Vendor roadmap | Community-driven |
+
+## Tool Categories
+
+### Project Management
+
+| Capability | Commercial Options | OSS/PH Options |
+|:-----------|:-------------------|:---------------|
+| **Full PM Suite** | Jira, Azure DevOps, MS Project | OpenProject, Redmine, Taiga |
+| **Kanban Boards** | Trello (paid), Monday.com | Trello (free tier), Wekan, Kanboard |
+| **Agile Planning** | Jira, Rally, VersionOne | Taiga, OpenProject |
+| **Grant Management** | Smartsheet, Asana | OpenProject with custom fields |
+
+**Recommendation for Public Health:**
+
+- **Small teams (<10):** Trello free tier or Taiga for simple Kanban/Scrum
+- **Larger programs:** OpenProject for full PM capabilities with data sovereignty
+- **CDC/Federal projects:** Often require Azure DevOps or Jira per contract
+
+::: {.callout-tip title="When to Choose OSS"}
+Choose open source when:
+
+- Budget is constrained
+- Data sovereignty is critical (cannot store project data externally)
+- Technical staff can support installation and maintenance
+- Customization is needed beyond commercial options
+:::
+
+### Requirements and Documentation
+
+| Capability | Commercial Options | OSS/PH Options |
+|:-----------|:-------------------|:---------------|
+| **Wiki/Docs** | Confluence, SharePoint | BookStack, MediaWiki, GitHub Wiki |
+| **Requirements Management** | Jama, Helix RM, DOORS | GitHub Issues, GitLab, Notion (free) |
+| **Collaborative Editing** | MS 365, Google Workspace | Nextcloud, CryptPad, HedgeDoc |
+
+**Recommendation for Public Health:**
+
+- **Documentation:** BookStack provides Confluence-like experience without licensing
+- **Requirements:** GitHub Issues sufficient for most projects; integrates with development
+- **Collaboration:** Consider data sensitivity; Nextcloud for on-premise control
+
+### Diagramming
+
+| Capability | Commercial Options | OSS/PH Options |
+|:-----------|:-------------------|:---------------|
+| **General Diagramming** | Visio, Lucidchart | diagrams.net (draw.io), Mermaid |
+| **Process Modeling (BPMN)** | Visio, Bizagi | diagrams.net, Camunda Modeler |
+| **Architecture** | Lucidchart, Visio | diagrams.net, PlantUML |
+
+**Recommendation for Public Health:**
+
+- **diagrams.net** is the de facto standard in public sector: free, web-based, exports to multiple formats, works offline
+- **Mermaid** for diagrams in documentation (renders from text, version-controllable)
+
+### Data Collection
+
+| Capability | Commercial Options | OSS/PH Options |
+|:-----------|:-------------------|:---------------|
+| **Surveys** | Qualtrics, SurveyMonkey | LimeSurvey, KoBoToolbox |
+| **Clinical/Research Data** | REDCap (free for research) | REDCap, ODK, DHIS2 |
+| **Forms** | Microsoft Forms, Google Forms | KoBoToolbox, ODK Collect |
+| **Case Management** | Salesforce | DHIS2, CommCare |
+
+**REDCap: The Public Health Standard**
+
+REDCap (Research Electronic Data Capture) deserves special mention:
+
+- Free for non-profit research institutions
+- HIPAA-compliant, 21 CFR Part 11 capable
+- Supports complex branching logic, validation
+- Built-in audit trails
+- Consortium of 6,000+ institutions
+- CDC and NIH approved
+
+::: {.callout-note title="CancerSurv Example"}
+For the CancerSurv project, data collection tools include:
+
+- **REDCap**: Pilot site feedback surveys, user satisfaction assessments
+- **KoBoToolbox**: Field data collection for mobile cancer screening events
+- **Native CancerSurv**: Case abstraction (built into the platform)
+:::
+
+### Data Analysis
+
+| Capability | Commercial Options | OSS/PH Options |
+|:-----------|:-------------------|:---------------|
+| **Statistical Analysis** | SAS, SPSS, Stata | R, Python (pandas, scipy) |
+| **Epidemiological Analysis** | SAS, Stata | R (epitools), Epi Info |
+| **Data Wrangling** | Alteryx, Trifacta | R (tidyverse), Python (pandas) |
+| **Notebooks** | Databricks, SAS Studio | Jupyter, RStudio, Quarto |
+
+**Epi Info: CDC's Free Epidemiology Tool**
+
+Epi Info is developed by CDC specifically for outbreak investigation:
+
+- Free download, no installation fees
+- Built-in epidemiological statistics (odds ratios, relative risks)
+- Epidemic curve generation
+- Geographic mapping
+- Survey development and analysis
+- 7-day moving averages, case fatality rates
+
+**R for Public Health**
+
+R has become the standard for public health analytics:
+
+```r
+# Example: Calculate age-adjusted incidence rate
+library(epitools)
+library(tidyverse)
+
+cancer_data %>%
+  group_by(county, year) %>%
+  summarize(
+    cases = n(),
+    population = first(population),
+    crude_rate = cases / population * 100000
+  ) %>%
+  # Age adjustment using standard population
+  ageadjust.direct(count = cases, pop = population, stdpop = us_std_pop)
+```
+
+### Visualization
+
+| Capability | Commercial Options | OSS/PH Options |
+|:-----------|:-------------------|:---------------|
+| **Dashboards** | Tableau, Power BI | R Shiny, Dash (Python), Apache Superset |
+| **Static Visualization** | Tableau, Excel | R (ggplot2), Python (matplotlib, plotly) |
+| **Interactive Charts** | Tableau, Power BI | Plotly, Highcharts (free for non-commercial) |
+
+**R Shiny for Public Health Dashboards**
+
+R Shiny enables interactive dashboards without JavaScript expertise:
+
+- Free and open source
+- Integrates with R analysis pipelines
+- Can be deployed on-premise or Shinyapps.io
+- Many public health templates available
+
+### GIS and Mapping
+
+| Capability | Commercial Options | OSS/PH Options |
+|:-----------|:-------------------|:---------------|
+| **Desktop GIS** | ArcGIS Pro | QGIS |
+| **Web Mapping** | ArcGIS Online, Mapbox | Leaflet, OpenLayers |
+| **Spatial Analysis** | ArcGIS, ESRI | QGIS, R (sf package), PostGIS |
+| **Geocoding** | Google, ESRI | Nominatim, US Census Geocoder |
+
+**QGIS for Disease Mapping**
+
+QGIS is essential for spatial epidemiology:
+
+- Free, cross-platform
+- Full-featured GIS capabilities
+- Disease mapping and cluster detection
+- Integrates with R for spatial statistics
+- Active public health user community
+
+::: {.callout-note title="CancerSurv Example"}
+CancerSurv analytics stack:
+
+| Function | Tool | Rationale |
+|:---------|:-----|:----------|
+| Case data storage | PostgreSQL | Open source, HIPAA-capable |
+| ETL/Data pipeline | Apache Airflow | Orchestration of data flows |
+| Statistical analysis | R (tidyverse, survival) | Standard for cancer epidemiology |
+| Dashboards | R Shiny | Interactive, deployable on-premise |
+| Geographic mapping | QGIS + Leaflet | Cancer cluster visualization |
+| Ad-hoc queries | Apache Superset | Self-service for epidemiologists |
+:::
+
+### Data Standards and Interoperability
+
+| Standard | Commercial Tools | OSS Tools |
+|:---------|:-----------------|:----------|
+| **HL7 FHIR** | Rhapsody, Corepoint | HAPI FHIR, LinuxForHealth |
+| **HL7 v2.x** | Rhapsody, Mirth | Mirth Connect (open source), HAPI |
+| **CDA/C-CDA** | Various EHR vendors | MDHT, Reference CDA |
+
+**Mirth Connect**
+
+Mirth Connect is widely used in public health for health information exchange:
+
+- Open source (NextGen Healthcare)
+- HL7 v2, FHIR, CDA support
+- Visual interface builder
+- Used by many state health departments
+
+## Building Your Stack
+
+### Small Public Health Program
+
+| Function | Recommended Tool | Notes |
+|:---------|:-----------------|:------|
+| Project Management | Trello or Taiga | Free tier sufficient |
+| Documentation | GitHub Wiki or BookStack | Version-controlled |
+| Diagramming | diagrams.net | Free, export to any format |
+| Data Collection | REDCap | Standard for research |
+| Analysis | R + RStudio | Free, extensive packages |
+| Visualization | R Shiny or Excel | Depends on technical capacity |
+
+### Large State Health Department
+
+| Function | Recommended Tool | Notes |
+|:---------|:-----------------|:------|
+| Project Management | Azure DevOps or OpenProject | Enterprise scale |
+| Documentation | Confluence or BookStack | Team collaboration |
+| Requirements | Jira or GitHub | Integrated with development |
+| Data Collection | REDCap + DHIS2 | Research + program monitoring |
+| Data Platform | PostgreSQL + Airflow | Scalable, HIPAA-capable |
+| Analysis | R + Python | Comprehensive capabilities |
+| Visualization | R Shiny + Superset | Dashboards + self-service |
+| GIS | QGIS + PostGIS | Full spatial capabilities |
+| Integration | Mirth Connect | HL7/FHIR integration |
+
+## Considerations for Tool Selection
+
+### Total Cost of Ownership
+
+Free software is not always cheaper:
+
+| Cost Factor | Commercial | Open Source |
+|:------------|:-----------|:------------|
+| License fees | Yes | No |
+| Implementation | Vendor/partner | Internal/consultant |
+| Training | Often included | Self-directed or purchased |
+| Support | Included in license | Community or purchased |
+| Customization | Limited | Unlimited but costly |
+| Infrastructure | Cloud included or on-prem | You manage |
+
+### Compliance and Security
+
+| Consideration | Commercial | Open Source |
+|:--------------|:-----------|:------------|
+| HIPAA compliance | Often certified | Your responsibility to configure |
+| SOC 2 certification | Common | Rare; your responsibility |
+| Security updates | Vendor manages | You monitor and apply |
+| Audit trails | Built-in | May require configuration |
+
+### Sustainability
+
+Consider long-term viability:
+
+- Commercial: Vendor may be acquired, change pricing, sunset product
+- Open Source: Community may lose momentum; check activity levels
+- Hybrid: Consider tools with both commercial and open source options
+
+## Summary
+
+The choice between commercial and open source tools depends on your context: budget, technical capacity, data sensitivity, and compliance requirements. Public health has excellent open source options, particularly for data collection (REDCap), analysis (R), mapping (QGIS), and integration (Mirth Connect). Evaluate total cost of ownership, not just license fees.

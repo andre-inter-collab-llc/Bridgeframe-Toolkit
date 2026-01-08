@@ -1,0 +1,224 @@
+---
+title: "Implementation Science"
+---
+
+# CFIR and Implementation Frameworks
+
+Why do evidence-based interventions fail to achieve expected outcomes when deployed in the real world? Implementation science provides the answer: the gap between efficacy (works under ideal conditions) and effectiveness (works in practice) is bridged by understanding implementation context. This chapter introduces key frameworks that help business analysts anticipate and address adoption barriers.
+
+## Why Implementation Science Matters for BA
+
+Traditional requirements focus on what a system must do. Implementation science asks: **Will people actually use it?** This question is critical because:
+
+- 70% of change initiatives fail to achieve their objectives
+- Clinical guidelines take an average of 17 years to become standard practice
+- Technology adoption depends on factors beyond functionality
+
+For the business analyst, implementation science provides:
+
+- A structured way to assess organizational readiness
+- Language for discussing non-technical barriers with stakeholders
+- Frameworks for designing implementation strategies
+- Metrics for measuring adoption, not just deployment
+
+## The Consolidated Framework for Implementation Research (CFIR)
+
+CFIR is the most widely used implementation science framework. It organizes factors influencing implementation into five domains:
+
+```{mermaid}
+%%| label: fig-cfir
+%%| fig-cap: "CFIR Domains"
+flowchart TB
+    subgraph CFIR["CFIR Framework"]
+        A[Intervention<br/>Characteristics]
+        B[Outer<br/>Setting]
+        C[Inner<br/>Setting]
+        D[Characteristics<br/>of Individuals]
+        E[Process]
+    end
+    
+    A --> F[Implementation<br/>Outcome]
+    B --> F
+    C --> F
+    D --> F
+    E --> F
+```
+
+### Domain 1: Intervention Characteristics
+
+Properties of the intervention itself that influence adoption:
+
+| Construct | Definition | BA/Requirements Implication |
+|:----------|:-----------|:----------------------------|
+| **Intervention Source** | Perception of whether intervention is externally vs internally developed | Involve users in design; customize for local context |
+| **Evidence Strength** | Stakeholders' perception of evidence supporting the intervention | Document benefits; reference standards (CDC, NAACCR) |
+| **Relative Advantage** | Perception that the intervention is better than current practice | Quantify improvements; demonstrate in pilot |
+| **Adaptability** | Degree to which intervention can be modified for local needs | Build configurability; separate core from periphery |
+| **Trialability** | Ability to test on a small scale | Support pilot deployments; sandbox environments |
+| **Complexity** | Perceived difficulty of implementation | Simplify UI; phase rollout; provide training |
+| **Design Quality** | Perceived excellence in how intervention is presented | Invest in UX; professional appearance |
+| **Cost** | Costs of implementation and ongoing operation | Document TCO; demonstrate ROI |
+
+::: {.callout-note title="CancerSurv Example: Intervention Characteristics"}
+| Construct | Assessment | Design Response |
+|:----------|:-----------|:----------------|
+| Relative Advantage | High: modern UI, remote access, better analytics | Emphasize in training; demonstrate side-by-side |
+| Complexity | Medium: new workflows, new interface | Phased training; role-based simplified views |
+| Adaptability | Medium: some local customization needed | Configurable report templates; custom fields |
+| Trialability | High: pilot sites planned | 8-week pilot with 3 hospitals |
+:::
+
+### Domain 2: Outer Setting
+
+External context influencing the implementing organization:
+
+| Construct | Definition | BA/Requirements Implication |
+|:----------|:-----------|:----------------------------|
+| **Patient/Community Needs** | Extent to which needs are known and prioritized | Gather community input; equity analysis |
+| **Cosmopolitanism** | Degree of networking with external organizations | Plan for interoperability; support data sharing |
+| **Peer Pressure** | Competitive pressure from peer organizations | Reference successful implementations elsewhere |
+| **External Policies** | External mandates, regulations, guidelines | Document compliance requirements early |
+
+For public health IT projects, outer setting often includes:
+
+- CDC reporting requirements
+- HIPAA regulations
+- State health information exchange policies
+- Grant funder expectations
+- NAACCR standards (for cancer registries)
+
+### Domain 3: Inner Setting
+
+Internal organizational context:
+
+| Construct | Definition | BA/Requirements Implication |
+|:----------|:-----------|:----------------------------|
+| **Structural Characteristics** | Organization size, maturity, structure | Assess readiness; tailor approach |
+| **Networks & Communications** | Information flow within organization | Plan communication strategy |
+| **Culture** | Norms, values, assumptions | Align with organizational culture |
+| **Implementation Climate** | Receptivity to change | Assess readiness; address resistance |
+| **Readiness for Implementation** | Tangible indicators of commitment | Secure resources, leadership support |
+
+**Assessing Implementation Climate:**
+
+- Is there leadership commitment?
+- Are resources allocated?
+- Is there a sense of urgency?
+- Are staff held accountable for adoption?
+- Are early adopters rewarded?
+
+### Domain 4: Characteristics of Individuals
+
+Attributes of people involved in implementation:
+
+| Construct | Definition | BA/Requirements Implication |
+|:----------|:-----------|:----------------------------|
+| **Knowledge & Beliefs** | Attitudes toward the intervention | Education, demonstration, testimonials |
+| **Self-Efficacy** | Confidence in ability to use intervention | Training, support resources, simplification |
+| **Individual Stage of Change** | Readiness to adopt | Tailored engagement by readiness level |
+| **Individual Identification** | Relationship with organization | Leverage organizational loyalty |
+
+### Domain 5: Process
+
+The implementation process itself:
+
+| Construct | Definition | BA/Requirements Implication |
+|:----------|:-----------|:----------------------------|
+| **Planning** | Degree to which implementation is planned | Detailed implementation plan |
+| **Engaging** | Attracting and involving appropriate people | Stakeholder engagement strategy |
+| **Executing** | Carrying out implementation as planned | Project management, monitoring |
+| **Reflecting & Evaluating** | Feedback about progress | PDSA cycles, metrics, retrospectives |
+
+**Key Roles in Process:**
+
+- **Champions**: Individuals who advocate for the intervention
+- **Opinion Leaders**: Respected individuals who influence peers
+- **Implementation Leaders**: Those formally responsible
+- **External Change Agents**: Consultants, vendors supporting implementation
+
+## Mapping NFRs to CFIR
+
+A practical application of CFIR is translating non-functional requirements into implementation characteristics:
+
+| NFR Category | CFIR Mapping | Requirement Example |
+|:-------------|:-------------|:--------------------|
+| **Performance** | Complexity, Design Quality | "Response time <3 seconds to maintain workflow efficiency" |
+| **Usability** | Complexity, Self-Efficacy | "Interface requires <4 hours training for basic proficiency" |
+| **Reliability** | Relative Advantage | "99.9% uptime to maintain user confidence" |
+| **Scalability** | Adaptability | "Support 2x current case volume for outbreak surge" |
+| **Security** | External Policies | "HIPAA-compliant access controls" |
+| **Interoperability** | Cosmopolitanism | "HL7 FHIR APIs for health information exchange" |
+| **Accessibility** | Self-Efficacy | "WCAG 2.1 AA compliance; support for screen readers" |
+
+## RE-AIM Framework
+
+RE-AIM provides a complementary framework focused on public health impact:
+
+| Dimension | Definition | Metric Examples |
+|:----------|:-----------|:----------------|
+| **Reach** | Proportion of target population participating | % registrars using system; % facilities connected |
+| **Effectiveness** | Impact on outcomes | Data completeness; abstraction time |
+| **Adoption** | Proportion of settings/staff adopting | % hospitals submitting electronically |
+| **Implementation** | Fidelity to protocol; consistency | Adherence to data standards; training completion |
+| **Maintenance** | Sustainability over time | Continued use at 12 months; staff turnover impact |
+
+::: {.callout-note title="CancerSurv Example: RE-AIM Evaluation"}
+| Dimension | Indicator | Target | Actual (12 mo) |
+|:----------|:----------|:-------|:---------------|
+| **Reach** | % registrars trained | 100% | 98% |
+| **Effectiveness** | Data completeness | 95% | 96% |
+| **Adoption** | % hospitals on ELR | 90% | 87% |
+| **Implementation** | Training completion rate | 95% | 92% |
+| **Maintenance** | Active users at 12 mo | 90% | 94% |
+:::
+
+## Applying Implementation Science in Practice
+
+### During Planning
+
+- Conduct CFIR-based readiness assessment
+- Identify potential barriers across all domains
+- Design implementation strategies to address barriers
+
+### During Design
+
+- Ensure intervention characteristics support adoption
+- Build in adaptability for local context
+- Minimize complexity; maximize relative advantage
+
+### During Implementation
+
+- Engage champions and opinion leaders
+- Monitor adoption, not just deployment
+- Use PDSA cycles to address emerging barriers
+
+### During Evaluation
+
+- Assess both implementation outcomes and intervention outcomes
+- Use RE-AIM dimensions for comprehensive evaluation
+- Document lessons for future implementations
+
+## Implementation Strategies
+
+When barriers are identified, select appropriate implementation strategies:
+
+| Barrier | Strategy Category | Example Strategies |
+|:--------|:------------------|:-------------------|
+| Lack of knowledge | Training & Education | Workshops, e-learning, job aids |
+| Low self-efficacy | Support | Help desk, super-users, mentoring |
+| Resistance to change | Stakeholder Engagement | Champions, leadership messaging |
+| Workflow disruption | Planning | Phased rollout, parallel operation |
+| Resource constraints | Infrastructure | Dedicated staff, protected time |
+| Complexity | Intervention Modification | Simplified views, guided workflows |
+
+## Summary
+
+Implementation science provides business analysts with frameworks to anticipate and address the human and organizational factors that determine whether a technically sound solution actually achieves its intended outcomes. By incorporating CFIR assessment into requirements gathering and using RE-AIM for evaluation, hybrid BA/PH projects can bridge the gap between deployment and adoption.
+
+Key takeaways:
+
+1. Requirements must address adoption, not just functionality
+2. CFIR provides a comprehensive lens for assessing implementation context
+3. NFRs should map to implementation characteristics
+4. RE-AIM offers a framework for evaluating public health impact
+5. Implementation strategies should target specific barriers

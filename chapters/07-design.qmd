@@ -1,0 +1,250 @@
+---
+title: "Design & Solution Definition"
+---
+
+# Design & Solution Definition / Intervention Design
+
+With requirements defined, we move to designing the solution. In business analysis, this is **Solution Design** or **Design Definition**. In public health, it parallels **Intervention Design** and **Implementation Planning**. Both involve translating requirements into a blueprint for action.
+
+## The Dual Framework
+
+| BA Perspective | PH Perspective |
+|:---------------|:---------------|
+| Solution Architecture | Intervention Framework |
+| System Design | Program Design |
+| Interface Design | Service Delivery Model |
+| Integration Design | Health Information Exchange |
+| Change Management Plan | Implementation Strategy (CFIR) |
+
+## Architecture and Framework
+
+### Solution Architecture
+
+BA solution architecture defines:
+
+- System components and their relationships
+- Technology stack selection
+- Integration points with existing systems
+- Data flow between components
+- Security architecture
+
+### Intervention Framework
+
+PH intervention design defines:
+
+- Core intervention components
+- Delivery mechanisms
+- Target populations
+- Adaptable vs. core elements
+- Contextual considerations
+
+::: {.callout-note title="CancerSurv Example"}
+**Solution Architecture (BA):**
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    CancerSurv Platform                   │
+├──────────────┬──────────────┬──────────────┬────────────┤
+│  Web UI      │  API Layer   │  Analytics   │  Reporting │
+│  (React)     │  (REST/FHIR) │  (R/Python)  │  Engine    │
+├──────────────┴──────────────┴──────────────┴────────────┤
+│                    Core Services                         │
+│  Case Management │ Data Quality │ User Management        │
+├─────────────────────────────────────────────────────────┤
+│                    Data Layer                            │
+│  PostgreSQL │ Document Store │ Data Warehouse           │
+└─────────────────────────────────────────────────────────┘
+```
+
+**Intervention Framework (PH):**
+
+CancerSurv delivers the surveillance intervention through:
+
+- **Core components**: Case abstraction, data quality, NPCR reporting (non-negotiable)
+- **Adaptable elements**: Dashboard customization, local report templates
+- **Delivery mechanism**: Cloud-based SaaS with local training support
+- **Target population**: State cancer registries, hospital tumor registrars
+:::
+
+## Design Patterns
+
+### User Interface Design
+
+Both domains emphasize user-centered design:
+
+**BA UI/UX Approach:**
+
+- Wireframes and mockups
+- User journey mapping
+- Usability testing
+- Accessibility compliance (WCAG)
+
+**PH Service Design Approach:**
+
+- Patient journey mapping
+- Cultural competency review
+- Health literacy assessment
+- Equity impact analysis
+
+### Key Design Principles
+
+| Principle | BA Application | PH Application |
+|:----------|:---------------|:---------------|
+| **Simplicity** | Minimize clicks, clear navigation | Reduce complexity for adoption |
+| **Consistency** | Standard UI patterns | Consistent with clinical workflows |
+| **Feedback** | Visual confirmation of actions | Clear outcome indicators |
+| **Error Prevention** | Validation before submission | Built-in clinical decision support |
+| **Flexibility** | Customizable views, workflows | Adaptable to local context |
+
+## Integration Design
+
+### Connecting Systems
+
+Health IT projects require extensive integration:
+
+```{mermaid}
+%%| label: fig-integration
+%%| fig-cap: "CancerSurv Integration Landscape"
+flowchart LR
+    subgraph External["External Systems"]
+        H[Hospital EHRs]
+        L[Lab Systems]
+        V[Vital Records]
+        N[NPCR/CDC]
+    end
+    
+    subgraph CancerSurv["CancerSurv Platform"]
+        API[Integration Layer]
+        Core[Core System]
+    end
+    
+    H -->|HL7 FHIR| API
+    L -->|HL7 v2| API
+    V -->|Batch| API
+    API --> Core
+    Core -->|XML| N
+```
+
+### Integration Standards
+
+| Standard | Use Case | Design Consideration |
+|:---------|:---------|:---------------------|
+| **HL7 FHIR** | Real-time EHR integration | REST APIs, JSON payloads |
+| **HL7 v2.x** | Legacy lab interfaces | Message parsing, acknowledgments |
+| **NAACCR XML** | Cancer registry exchange | Schema validation, field mapping |
+| **Direct Protocol** | Secure health messaging | Certificate management |
+
+## Implementation Readiness Assessment
+
+### CFIR for Design Validation
+
+The Consolidated Framework for Implementation Research (CFIR) provides a lens for evaluating design decisions:
+
+| CFIR Domain | Design Questions |
+|:------------|:-----------------|
+| **Intervention Characteristics** | Is the design evidence-based? Is it adaptable? |
+| **Outer Setting** | Does it meet regulatory requirements? Does it connect to external systems? |
+| **Inner Setting** | Does it fit organizational workflows? Is infrastructure adequate? |
+| **Individuals** | Will users accept it? What training is needed? |
+| **Process** | How will it be implemented? Who champions it? |
+
+::: {.callout-note title="CancerSurv Example"}
+**CFIR-Informed Design Review:**
+
+| CFIR Construct | CancerSurv Design Decision | Rationale |
+|:---------------|:---------------------------|:----------|
+| Relative Advantage | Modern UI, mobile access | Clear improvement over mainframe |
+| Complexity | Phased rollout, role-based views | Reduce cognitive load |
+| Adaptability | Configurable data fields | Support local registry needs |
+| Available Resources | Cloud-hosted, vendor support | Minimize IT infrastructure burden |
+| Self-Efficacy | Embedded training, help system | Build user confidence |
+:::
+
+## Prototyping and Validation
+
+### Iterative Design
+
+Design should be validated before full development:
+
+**BA Prototyping:**
+
+- Low-fidelity wireframes for concept validation
+- High-fidelity mockups for detailed feedback
+- Interactive prototypes for workflow testing
+- MVP (Minimum Viable Product) for market validation
+
+**PH Piloting:**
+
+- Formative research with target population
+- Pilot testing in representative sites
+- Rapid cycle evaluation (PDSA)
+- Fidelity assessment
+
+### Prototype Fidelity Levels
+
+| Level | BA Artifact | PH Artifact | Purpose |
+|:------|:------------|:------------|:--------|
+| **Low** | Paper sketches, Balsamiq | Concept paper, draft protocol | Concept validation |
+| **Medium** | Clickable mockups | Pilot at 1-2 sites | Workflow validation |
+| **High** | Working prototype | Multi-site pilot | Full process validation |
+
+## Change Management Planning
+
+### Preparing for Transition
+
+Design must include plans for organizational change:
+
+**BA Change Management:**
+
+- Stakeholder impact analysis
+- Communication plan
+- Training plan
+- Resistance management
+- Transition strategy
+
+**PH Implementation Planning:**
+
+- Capacity building
+- Technical assistance model
+- Sustainability planning
+- Scale-up strategy
+
+::: {.callout-note title="CancerSurv Example"}
+**Change Management Elements:**
+
+| Element | Plan |
+|:--------|:-----|
+| **Training** | 3-tier approach: super-users (in-person), all users (webinar), ongoing (self-paced modules) |
+| **Communication** | Monthly newsletters, demo sessions at registrar conferences |
+| **Support** | Help desk during business hours; online knowledge base; user community forum |
+| **Rollout** | Phase 1: High-volume hospitals; Phase 2: Remaining facilities; Phase 3: Full operation |
+:::
+
+## Design Documentation
+
+### What to Document
+
+Design documentation bridges requirements and implementation:
+
+| Document | BA Content | PH Content |
+|:---------|:-----------|:-----------|
+| **Architecture Document** | System components, technology stack | Intervention components, delivery model |
+| **Interface Specifications** | Screen layouts, navigation flows | Service user touchpoints |
+| **Integration Specifications** | APIs, message formats | Data exchange protocols |
+| **Data Design** | Database schema, data flows | Data collection instruments |
+| **Security Design** | Access controls, encryption | Privacy protections, consent |
+| **Transition Plan** | Deployment, training, support | Implementation, capacity building |
+
+## Deliverables from This Phase
+
+| BA Deliverable | PH Deliverable | Purpose |
+|:---------------|:---------------|:--------|
+| Solution Architecture | Intervention Framework | Define solution structure |
+| UI/UX Design | Service Delivery Model | Specify user experience |
+| Integration Design | HIE Specifications | Define system connections |
+| Prototype | Pilot Protocol | Validate design |
+| Change Management Plan | Implementation Strategy | Prepare organization |
+
+## Moving Forward
+
+With design complete, the next phase focuses on **Implementation**: building, deploying, and rolling out the solution while managing the organizational change required for adoption.

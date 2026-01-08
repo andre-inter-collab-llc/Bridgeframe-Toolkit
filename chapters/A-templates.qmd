@@ -1,0 +1,232 @@
+---
+title: "Templates & Checklists"
+---
+
+# Templates and Checklists
+
+This appendix provides ready-to-use templates for hybrid BA/PH projects. Each template is presented in both BA and PH framings where appropriate.
+
+## Stakeholder / Community Partner Matrix
+
+Use this template to identify and analyze project participants:
+
+| Name/Group | BA Role | PH Role | Interest Level | Influence Level | Engagement Strategy |
+|:-----------|:--------|:--------|:---------------|:----------------|:--------------------|
+| *Registry Director* | Executive Sponsor | State Epidemiologist | High | High | Monthly briefings, decision authority |
+| *Cancer Registrars* | End Users | Frontline Data Collectors | High | Medium | Training, feedback sessions, super-users |
+| *Hospital IT* | Technical SMEs | Data Partners | Medium | Medium | Integration meetings, testing |
+| *CDC/NPCR* | Governance | Funder/Standards Body | High | High | Formal reporting, compliance reviews |
+| *Cancer Survivors* | Indirect Stakeholders | Rights Holders/Beneficiaries | Low | Low | Advisory input, outcome focus |
+
+### Analysis Questions
+
+- Who might be missing from this list?
+- Are marginalized voices represented?
+- Who has formal authority vs. informal influence?
+- What are the potential conflicts of interest?
+
+## Logic Model Template
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                              LOGIC MODEL                                     │
+│  Program: _______________________________________________                    │
+│  Date: __________________________________________________                    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  INPUTS              ACTIVITIES           OUTPUTS            OUTCOMES        │
+│  (Resources)         (What we do)         (Products)         (Changes)       │
+│                                                                              │
+│  ┌──────────┐       ┌──────────┐        ┌──────────┐       ┌──────────┐     │
+│  │          │       │          │        │          │       │ Short-   │     │
+│  │ Funding  │──────▶│ Develop  │───────▶│ Working  │──────▶│ term     │     │
+│  │          │       │ system   │        │ software │       │          │     │
+│  └──────────┘       └──────────┘        └──────────┘       └──────────┘     │
+│                                                                   │          │
+│  ┌──────────┐       ┌──────────┐        ┌──────────┐              ▼          │
+│  │          │       │          │        │          │       ┌──────────┐     │
+│  │ Staff    │──────▶│ Train    │───────▶│ Trained  │──────▶│ Medium-  │     │
+│  │          │       │ users    │        │ users    │       │ term     │     │
+│  └──────────┘       └──────────┘        └──────────┘       └──────────┘     │
+│                                                                   │          │
+│  ┌──────────┐       ┌──────────┐        ┌──────────┐              ▼          │
+│  │          │       │          │        │          │       ┌──────────┐     │
+│  │ Data     │──────▶│ Process  │───────▶│ Quality  │──────▶│ Long-    │     │
+│  │ feeds    │       │ data     │        │ reports  │       │ term     │     │
+│  └──────────┘       └──────────┘        └──────────┘       └──────────┘     │
+│                                                                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  ASSUMPTIONS:                          EXTERNAL FACTORS:                     │
+│  _________________________________     _________________________________     │
+│  _________________________________     _________________________________     │
+│  _________________________________     _________________________________     │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### CancerSurv Logic Model Example
+
+| Inputs | Activities | Outputs | Short-term Outcomes | Long-term Impact |
+|:-------|:-----------|:--------|:--------------------|:-----------------|
+| NPCR grant funding | System development | Operational platform | Improved workflow efficiency | Accurate survival statistics |
+| Registry staff | User training | Trained registrars | Reduced abstraction time | Targeted prevention |
+| Hospital data feeds | Data integration | Electronic data capture | Increased data completeness | Health disparity identification |
+| NAACCR standards | Quality assurance | Validated records | Timely NPCR submission | Evidence-based cancer policy |
+
+## Requirements Specification Template
+
+### Functional Requirement
+
+| Field | Content |
+|:------|:--------|
+| **ID** | FR-XXX |
+| **Title** | [Brief descriptive title] |
+| **Description** | The system shall [action] [object] [condition/constraint] |
+| **Rationale** | [Why this requirement exists; link to business need/program goal] |
+| **Source** | [Stakeholder, document, or session where identified] |
+| **Priority** | Must / Should / Could / Won't (this release) |
+| **Acceptance Criteria** | Given [context], when [action], then [expected result] |
+| **Dependencies** | [Other requirements this depends on or enables] |
+
+### Non-Functional Requirement
+
+| Field | Content |
+|:------|:--------|
+| **ID** | NFR-XXX |
+| **Title** | [Brief descriptive title] |
+| **Category** | Performance / Security / Usability / Reliability / Scalability / Compliance |
+| **Description** | The system shall [quality attribute] [measurable target] |
+| **Rationale** | [Why this matters; CFIR domain if applicable] |
+| **Measurement** | [How compliance will be verified] |
+| **Priority** | Must / Should / Could |
+
+### Example: CancerSurv Requirement
+
+| Field | Content |
+|:------|:--------|
+| **ID** | FR-105 |
+| **Title** | Duplicate Case Detection |
+| **Description** | The system shall identify potential duplicate case records based on patient identifiers (name, DOB, SSN) and tumor characteristics |
+| **Rationale** | Prevents double-counting of cancer incidence; required for accurate epidemiological analysis |
+| **Source** | Registrar interviews; NAACCR standards |
+| **Priority** | Must |
+| **Acceptance Criteria** | Given a new case entry, when patient identifiers match an existing case with confidence >80%, then the system displays potential duplicates for review before saving |
+| **Dependencies** | FR-101 (Patient search) |
+
+## CFIR Readiness Assessment Checklist
+
+Use this checklist to assess implementation readiness:
+
+### Intervention Characteristics
+
+- [ ] Evidence of effectiveness documented and communicated
+- [ ] Relative advantage over current practice clearly articulated
+- [ ] Core vs. adaptable components identified
+- [ ] Complexity minimized; training plan addresses remaining complexity
+- [ ] Pilot/trialability planned
+
+### Outer Setting
+
+- [ ] Regulatory requirements identified (HIPAA, CDC, state)
+- [ ] External stakeholder needs understood
+- [ ] Interoperability requirements documented
+- [ ] Peer organization experiences reviewed
+
+### Inner Setting
+
+- [ ] Leadership commitment secured
+- [ ] Resources allocated (budget, staff, time)
+- [ ] Implementation team identified
+- [ ] Communication plan developed
+- [ ] Organizational culture alignment assessed
+
+### Characteristics of Individuals
+
+- [ ] User attitudes toward change assessed
+- [ ] Training needs identified
+- [ ] Champions identified and engaged
+- [ ] Self-efficacy barriers addressed
+
+### Process
+
+- [ ] Detailed implementation plan developed
+- [ ] Key milestones and decision points defined
+- [ ] Monitoring and feedback mechanisms established
+- [ ] Contingency plans for common risks
+
+## User Story Templates
+
+### Standard Format
+
+> As a [role], I want [feature/capability], so that [benefit/value].
+
+### GPS Format (Clinical Contexts)
+
+> Given [clinical context/trigger], the [health worker role] should [specific action] to [health outcome].
+
+### Service-User Scenario Format
+
+> [Name], a [demographic description], [presents with situation]. The system must [support their need] while [addressing constraints]. Success means [outcome].
+
+### Example Set: CancerSurv
+
+**Standard:**
+> As a cancer registrar, I want to search existing cases before creating a new record, so that I avoid creating duplicate entries.
+
+**GPS:**
+> Given a new pathology report, the registrar should search for existing patient records using at least two identifiers, to prevent duplicate case creation and ensure accurate incidence counts.
+
+**Service-User Scenario:**
+> Maria is a senior registrar abstracting cases from a high-volume hospital. She receives 50 pathology reports daily and needs to quickly determine if each represents a new case or an existing patient. The system must support rapid searching with fuzzy matching while flagging potential duplicates. Success means Maria can process her daily queue in under 4 hours with less than 1% duplicate creation rate.
+
+## Test Case Template
+
+| Field | Content |
+|:------|:--------|
+| **ID** | TC-XXX |
+| **Title** | [Brief descriptive title] |
+| **Requirement(s)** | [FR-XXX, NFR-XXX] |
+| **Preconditions** | [System state before test] |
+| **Test Data** | [Specific data needed] |
+| **Steps** | 1. [Action] 2. [Action] 3. [Action] |
+| **Expected Result** | [What should happen] |
+| **Actual Result** | [Fill in during testing] |
+| **Pass/Fail** | [ ] |
+| **Notes** | [Observations, defect IDs if failed] |
+
+## Project Charter Template (Dual-Frame)
+
+| Section | BA Content | PH Content |
+|:--------|:-----------|:-----------|
+| **Project Name** | [System name] | [Program name] |
+| **Business Need** | [Operational driver] | **Public Health Challenge**: [Health need] |
+| **Objectives** | [Business objectives] | **Program Goals**: [Health objectives] |
+| **Scope** | [In/out of scope] | **Intervention Boundaries**: [Target population, geography] |
+| **Stakeholders** | [Stakeholder list] | **Community Partners**: [Partner list] |
+| **Success Metrics** | [KPIs] | **Health Indicators**: [Outcome measures] |
+| **Timeline** | [Project milestones] | **Grant Milestones**: [Funder deadlines] |
+| **Budget** | [Project budget] | **Funding Source**: [Grant, appropriation] |
+| **Risks** | [Project risks] | **Implementation Barriers**: [CFIR-informed risks] |
+| **Governance** | [Decision structure] | **Oversight**: [Funder, advisory board] |
+
+## Evaluation Plan Template
+
+| Component | Content |
+|:----------|:--------|
+| **Evaluation Questions** | What do we want to know? |
+| **Type** | Formative / Summative / Process / Outcome |
+| **Indicators** | What will we measure? |
+| **Data Sources** | Where will data come from? |
+| **Methods** | How will we collect and analyze? |
+| **Timeline** | When will we measure? |
+| **Responsibilities** | Who will conduct evaluation? |
+| **Use of Findings** | How will results inform decisions? |
+
+### RE-AIM Evaluation Matrix
+
+| Dimension | Indicator | Data Source | Target | Actual |
+|:----------|:----------|:------------|:-------|:-------|
+| **Reach** | | | | |
+| **Effectiveness** | | | | |
+| **Adoption** | | | | |
+| **Implementation** | | | | |
+| **Maintenance** | | | | |

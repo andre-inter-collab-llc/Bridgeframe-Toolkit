@@ -1,0 +1,381 @@
+---
+title: "Glossary"
+---
+
+# Complete BA-PH Glossary
+
+This glossary provides comprehensive terminology mapping between Business Analysis (BA) and Public Health (PH) domains. Terms are organized alphabetically with cross-references.
+
+## A
+
+**Acceptance Criteria** (BA)
+: Conditions that a solution must meet to be accepted by stakeholders. **PH equivalent**: Evaluation protocol measures, success criteria.
+
+**Acceptance Testing** (BA)
+: Formal testing to verify a solution meets acceptance criteria. **PH equivalent**: Pilot evaluation, field testing.
+
+**Activity** (PH)
+: An action taken as part of a program or intervention. **BA equivalent**: Functional requirement, use case step.
+
+**Adaptability** (Implementation Science)
+: Degree to which an intervention can be modified for local context. **BA equivalent**: Configurability, customization capability.
+
+**After-Action Review** (PH)
+: Structured review of what happened, why, and how to improve. **BA equivalent**: Lessons learned, retrospective.
+
+**Agile** (BA)
+: Iterative development methodology emphasizing flexibility and stakeholder collaboration. **PH parallel**: Adaptive management, PDSA cycles.
+
+## B
+
+**Backlog** (BA/Agile)
+: Prioritized list of work items. **PH equivalent**: Workplan, action item list.
+
+**Baseline** (Both)
+: Starting point measurement for comparison. In BA, current state metrics. In PH, epidemiological baseline data.
+
+**Beneficiary** (PH)
+: Person or group intended to benefit from a program. **BA equivalent**: End user, customer.
+
+**BPMN (Business Process Model and Notation)** (BA)
+: Standard for process diagrams. **PH equivalent**: Intervention flowchart, workflow diagram.
+
+**Bug** (BA)
+: Defect in software. **PH equivalent**: Adverse event, variance from protocol.
+
+**Business Case** (BA)
+: Justification for a project based on expected benefits. **PH equivalent**: Needs assessment, funding proposal.
+
+**Business Need** (BA)
+: Problem or opportunity driving a project. **PH equivalent**: Public health challenge, health need.
+
+**Business Rule** (BA)
+: Constraint governing system behavior. **PH equivalent**: Clinical guideline, protocol rule.
+
+## C
+
+**Capacity Building** (PH)
+: Developing skills and resources in individuals and organizations. **BA equivalent**: Training, organizational readiness.
+
+**Case Definition** (PH)
+: Criteria for identifying disease cases. **BA equivalent**: Data validation rules, entity definition.
+
+**CFIR (Consolidated Framework for Implementation Research)** (PH)
+: Framework for understanding implementation context. **BA application**: Assessing organizational readiness, NFR refinement.
+
+**Champion** (Both)
+: Person who advocates for and promotes an initiative. Usage similar in both domains.
+
+**Change Management** (BA)
+: Approach for transitioning organizations to new systems/processes. **PH equivalent**: Implementation strategy, adoption support.
+
+**Community Health Assessment** (PH)
+: Systematic examination of health status and needs. **BA equivalent**: Current state analysis, needs assessment.
+
+**Community Partner** (PH)
+: External organization collaborating on health initiatives. **BA equivalent**: Stakeholder, vendor, integration partner.
+
+**Complexity** (Implementation Science)
+: Perceived difficulty of implementing an intervention. **BA equivalent**: Usability concerns, training requirements.
+
+**Compliance** (Both)
+: Adherence to regulations, standards, or requirements. In PH, often HIPAA, CDC standards. In BA, often regulatory NFRs.
+
+**Constraint** (BA)
+: Limitation on solution options. **PH equivalent**: Policy constraint, resource limitation.
+
+**Current State** (BA)
+: Existing situation before change. **PH equivalent**: Baseline, pre-intervention status.
+
+## D
+
+**Data Dictionary** (Both)
+: Documentation of data elements, definitions, and formats. Used similarly in both domains.
+
+**Data Quality** (Both)
+: Accuracy, completeness, and reliability of data. Critical in both domains.
+
+**Defect** (BA)
+: Flaw in a deliverable. **PH equivalent**: Protocol deviation, adverse event.
+
+**Deliverable** (BA)
+: Output of project work. **PH equivalent**: Program output, product.
+
+**Demo** (BA/Agile)
+: Presentation of completed work. **PH equivalent**: Progress presentation, milestone review.
+
+## E
+
+**Effectiveness** (PH)
+: Degree to which an intervention achieves intended outcomes. **BA equivalent**: Solution value, ROI.
+
+**Elicitation** (BA)
+: Techniques for gathering requirements from stakeholders. **PH equivalent**: Community engagement, data collection.
+
+**Epic** (BA/Agile)
+: Large user story spanning multiple sprints. **PH equivalent**: Grant objective, program goal.
+
+**Epidemiological Baseline** (PH)
+: Pre-intervention disease/health status data. **BA equivalent**: Current state metrics.
+
+**Evaluation** (Both)
+: Assessment of value, outcomes, or quality. In BA, solution evaluation. In PH, program evaluation.
+
+## F
+
+**Feasibility** (Both)
+: Assessment of whether something can be done. Technical, economic, operational (BA) or evidence-based, resource, political (PH).
+
+**Fidelity** (PH)
+: Degree to which an intervention is delivered as designed. **BA equivalent**: Conformance to specifications.
+
+**Focus Group** (Both)
+: Group discussion for gathering perspectives. Used similarly in both domains.
+
+**Functional Requirement** (BA)
+: What a system must do. **PH equivalent**: Program activity, intervention component.
+
+**Future State** (BA)
+: Desired situation after change. **PH equivalent**: Program goals, intended outcomes.
+
+## G
+
+**Gemba** (Lean/Both)
+: Going to the actual place where work happens. Applicable in both BA observation and PH site visits.
+
+**Go-Live** (BA)
+: System deployment to production. **PH equivalent**: Program launch, intervention rollout.
+
+**Governance** (Both)
+: Decision-making structure and authority. Similar usage in both domains.
+
+**GPS Format** (PH-adapted)
+: "Given [context], Person [role] Should [action]" user story format for clinical contexts.
+
+## H
+
+**Health Indicator** (PH)
+: Measurable characteristic of population health. **BA equivalent**: KPI, metric.
+
+**Health Information Exchange (HIE)** (PH)
+: Electronic sharing of health data. **BA equivalent**: System integration, data exchange.
+
+## I
+
+**Impact** (PH)
+: Long-term effects of an intervention. **BA equivalent**: Business value, strategic outcomes.
+
+**Implementation** (Both)
+: Putting a solution or intervention into practice. Similar usage.
+
+**Implementation Climate** (CFIR)
+: Organizational receptivity to change. **BA equivalent**: Organizational readiness.
+
+**Implementation Science** (PH)
+: Study of methods to promote adoption of evidence-based practices. **BA application**: Change management, adoption strategy.
+
+**Indicator** (PH)
+: Measurable variable reflecting status or change. **BA equivalent**: Metric, KPI.
+
+**Inner Setting** (CFIR)
+: Internal organizational context. **BA equivalent**: Organizational environment, culture.
+
+**Input** (PH Logic Model)
+: Resources invested in a program. **BA equivalent**: Resources, constraints.
+
+**Integration** (BA)
+: Connecting systems to work together. **PH equivalent**: Interoperability, HIE.
+
+**Interest Holder** (PH)
+: Person or group with interest in a program. **BA equivalent**: Stakeholder.
+
+**Intervention** (PH)
+: Action taken to improve health. **BA equivalent**: Solution, system, process change.
+
+**Iteration** (BA/Agile)
+: Fixed time period for development work. **PH equivalent**: PDSA cycle, program phase.
+
+## K
+
+**Key Informant** (PH)
+: Person with specialized knowledge consulted for input. **BA equivalent**: Subject matter expert (SME).
+
+**KPI (Key Performance Indicator)** (BA)
+: Metric measuring success. **PH equivalent**: Health indicator, outcome measure.
+
+## L
+
+**Lessons Learned** (BA)
+: Knowledge gained from experience. **PH equivalent**: After-action review findings.
+
+**Logic Model** (PH)
+: Visual representation of program theory (inputs → activities → outputs → outcomes). **BA equivalent**: Requirements traceability, value chain.
+
+## M
+
+**Maintenance** (RE-AIM)
+: Sustainability of an intervention over time. **BA equivalent**: Operational sustainability.
+
+**Milestone** (Both)
+: Significant point in project timeline. In PH, often aligned with grant reporting.
+
+**MVP (Minimum Viable Product)** (BA/Agile)
+: Smallest useful version of a solution. **PH equivalent**: Pilot intervention, proof of concept.
+
+## N
+
+**Needs Assessment** (PH)
+: Systematic identification of needs and gaps. **BA equivalent**: Business analysis, current state assessment.
+
+**NFR (Non-Functional Requirement)** (BA)
+: Quality attribute or constraint. **PH equivalent**: Implementation characteristic (CFIR).
+
+## O
+
+**Outcome** (PH)
+: Change resulting from an intervention. **BA equivalent**: Benefit, value delivered.
+
+**Outer Setting** (CFIR)
+: External context (regulations, networks, peer pressure). **BA equivalent**: External environment, market forces.
+
+**Output** (PH Logic Model)
+: Direct products of program activities. **BA equivalent**: Deliverables, features.
+
+## P
+
+**PDSA (Plan-Do-Study-Act)** (PH)
+: Quality improvement cycle. **BA equivalent**: Sprint/iteration, continuous improvement cycle.
+
+**Pilot** (Both)
+: Small-scale test of a solution or intervention. Similar usage.
+
+**Process Evaluation** (PH)
+: Assessment of how an intervention was implemented. **BA equivalent**: Implementation review.
+
+**Program** (PH)
+: Organized set of activities to achieve health objectives. **BA equivalent**: Solution, system, project.
+
+**Protocol** (PH)
+: Standardized procedure or guideline. **BA equivalent**: Business rule, procedure specification.
+
+**Prototype** (BA)
+: Early model for testing concepts. **PH equivalent**: Pilot, formative testing.
+
+## Q
+
+**Quality Assurance (QA)** (BA)
+: Systematic quality activities. **PH equivalent**: Quality Improvement (QI).
+
+**Quality Improvement (QI)** (PH)
+: Continuous improvement of processes and outcomes. **BA equivalent**: Continuous improvement, QA.
+
+## R
+
+**RE-AIM** (PH)
+: Framework for evaluating public health impact (Reach, Effectiveness, Adoption, Implementation, Maintenance).
+
+**Reach** (RE-AIM)
+: Proportion of target population participating. **BA equivalent**: Adoption rate, market penetration.
+
+**Readiness** (Both)
+: Preparedness for change. Implementation readiness (PH) or organizational readiness (BA).
+
+**Relative Advantage** (CFIR)
+: Perception that intervention is better than current practice. **BA equivalent**: Value proposition.
+
+**Requirements** (BA)
+: Conditions a solution must satisfy. **PH equivalent**: Program specifications, protocols.
+
+**Retrospective** (BA/Agile)
+: Meeting to reflect on past work. **PH equivalent**: After-action review.
+
+**Rights Holder** (PH)
+: Person with inherent claims (alternative to "stakeholder"). **BA equivalent**: Stakeholder (with different connotation).
+
+**Risk** (Both)
+: Potential for adverse outcomes. Similar usage; PH may emphasize community risk.
+
+**ROI (Return on Investment)** (BA)
+: Financial value relative to cost. **PH equivalent**: Cost-effectiveness, cost-benefit.
+
+## S
+
+**Scope** (Both)
+: Boundaries of what is included. Similar usage in both domains.
+
+**Service-User Scenario** (PH-adapted)
+: Narrative description of user journey. **BA equivalent**: User story, use case narrative.
+
+**SME (Subject Matter Expert)** (BA)
+: Person with domain expertise. **PH equivalent**: Key informant, clinical expert.
+
+**Solution** (BA)
+: System or process addressing a business need. **PH equivalent**: Intervention, program.
+
+**Sprint** (BA/Agile)
+: Fixed-length iteration. **PH equivalent**: PDSA cycle, work period.
+
+**Stakeholder** (BA)
+: Person with interest in a project. **PH alternatives**: Interest holder, community partner, rights holder.
+
+**Summative Evaluation** (PH)
+: Assessment of overall outcomes after implementation. **BA equivalent**: Post-implementation review.
+
+**Sustainability** (PH)
+: Ability to maintain intervention over time. **BA equivalent**: Operational viability.
+
+## T
+
+**Test Case** (BA)
+: Specification for verifying a requirement. **PH equivalent**: Evaluation measure, data collection protocol.
+
+**Traceability** (BA)
+: Linking requirements to sources and tests. **PH equivalent**: Theory of change alignment.
+
+**Training** (Both)
+: Building user/staff capability. Similar usage; PH may use "capacity building."
+
+## U
+
+**UAT (User Acceptance Testing)** (BA)
+: Stakeholder verification of solution. **PH equivalent**: Pilot evaluation, field testing.
+
+**Use Case** (BA)
+: Description of system-user interaction. **PH equivalent**: Clinical scenario, patient journey.
+
+**User Story** (BA/Agile)
+: Brief requirement from user perspective. **PH equivalents**: Service-user scenario, GPS format.
+
+## V
+
+**Validation** (Both)
+: Confirming the right thing is built. Similar usage.
+
+**Variance** (PH)
+: Deviation from expected outcome. **BA equivalent**: Defect, exception.
+
+**Verification** (Both)
+: Confirming the thing is built right. Similar usage.
+
+## W
+
+**Workflow** (Both)
+: Sequence of tasks to accomplish work. Similar usage.
+
+**Workplan** (PH)
+: Detailed plan of activities. **BA equivalent**: Project plan, backlog.
+
+---
+
+## Quick Reference: Most Common Translations
+
+| When You Hear... | BA Meaning | PH Meaning |
+|:-----------------|:-----------|:-----------|
+| "Requirements" | System specifications | Program protocols |
+| "Stakeholder" | Anyone with interest | Community partner, rights holder |
+| "Sprint" | 2-week development cycle | PDSA cycle |
+| "User story" | Feature description | Service-user scenario |
+| "KPI" | Business metric | Health indicator |
+| "MVP" | Minimal product | Pilot intervention |
+| "Go-live" | System deployment | Program launch |
+| "Bug" | Software defect | Protocol variance |

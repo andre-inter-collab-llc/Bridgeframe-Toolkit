@@ -1,0 +1,68 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Bridgeframe"
+  subtitle: "Bridging Business Analysis and Public Health"
+  author: "André van Zyl"
+  date: last-modified
+  date-format: "MMMM YYYY"
+  
+  chapters:
+    - index.qmd
+    - preface.qmd
+    - part: "Foundations"
+      chapters:
+        - chapters/01-introduction.qmd
+        - chapters/02-case-study.qmd
+        - chapters/03-terminology.qmd
+    - part: "The Analysis Process"
+      chapters:
+        - chapters/04-planning.qmd
+        - chapters/05-elicitation.qmd
+        - chapters/06-requirements.qmd
+        - chapters/07-design.qmd
+        - chapters/08-implementation.qmd
+        - chapters/09-evaluation.qmd
+    - part: "Putting It Into Practice"
+      chapters:
+        - chapters/10-tools.qmd
+        - chapters/11-implementation-science.qmd
+    - part: "Appendices"
+      chapters:
+        - chapters/A-templates.qmd
+        - chapters/B-development-tools.qmd
+        - chapters/C-glossary.qmd
+    - references.qmd
+  
+  downloads:
+    - docx
+  
+  sidebar:
+    search: true
+  
+  repo-url: https://github.com/yourusername/Bridgeframe-Toolkit
+  repo-actions: [edit, issue]
+
+bibliography: assets/references/references.bib
+csl: assets/references/apa.csl
+
+execute:
+  freeze: auto
+
+format:
+  html:
+    theme:
+      - brand
+      - assets/styles/custom.scss
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: true
+  
+  docx:
+    reference-doc: assets/branding/templates/IntersectCollab-reference-doc.docx
+    toc: true
+    number-sections: true

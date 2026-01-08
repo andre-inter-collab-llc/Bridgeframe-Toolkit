@@ -1,0 +1,172 @@
+---
+title: "Terminology Dictionary"
+---
+
+# The BA-PH Translation Guide
+
+This chapter provides a comprehensive mapping between Business Analysis (BA) terminology and Public Health (PH) equivalents. Use this as a reference throughout your work on hybrid projects.
+
+## Core Process Mapping
+
+The BA lifecycle aligns with public health program phases:
+
+| BA / BABOK Phase | Public Health Equivalent | Key Activities |
+|:-----------------|:-------------------------|:---------------|
+| **Strategy Analysis** | **Community Health Assessment** | Define the problem using epidemiological data vs business metrics |
+| **Requirements Analysis** | **Data Analysis & Logic Models** | Model processes, define indicators |
+| **Solution Evaluation** | **Program Evaluation (CDC Framework)** | Measure outcomes against targets |
+| **Change Management** | **Implementation Science** | CFIR, RE-AIM for adoption barriers |
+
+## Terminology Translation Table
+
+### Planning & Strategy Terms
+
+| BA / Agile Term | Public Health Equivalent | Context / Nuance |
+|:----------------|:-------------------------|:-----------------|
+| **Business Need / Business Case** | **Public Health Challenge / Health Need** | In PH, the driver for change is health equity or social determinants, not profit |
+| **Current State Analysis** | **Epidemiological Baseline** | Document existing conditions: disease incidence, service gaps, health disparities |
+| **Future State / Vision** | **Program Goals & Intended Outcomes** | Define success via improved health indicators, not market share |
+| **Constraints / Assumptions** | **Social Determinants / Policy Constraints** | Include funding limitations, regulatory requirements (HIPAA), cultural barriers, equity considerations |
+
+### Stakeholder & Communication Terms
+
+| BA / Agile Term | Public Health Equivalent | Context / Nuance |
+|:----------------|:-------------------------|:-----------------|
+| **Stakeholder** | **Interest Holder / Community Partner / Rights Holder** | See detailed note below on terminology considerations |
+| **Stakeholder Analysis** | **Community Partner Mapping** | Identify power dynamics, health equity implications |
+| **Requirements Workshop** | **Community Engagement Session** | PH emphasizes participatory approaches and cultural competency |
+
+::: {.callout-warning title="A Note on 'Stakeholder' Terminology"}
+While "stakeholder" is standard in BA/Agile contexts (and used throughout this book for clarity), it carries colonial connotations in public health settings. The term evokes land claims and power imbalances, potentially disempowering Indigenous peoples and marginalized communities.
+
+**Preferred alternatives in public health contexts:**
+
+- **General Use**: Interest Holders, Parties/Affected Parties, Beneficiaries, Actants
+- **Action-Oriented**: Constituents, Key Informants, Knowledge Users, Rights Holders
+
+When writing for mixed audiences, acknowledge both terms. When writing for public health audiences exclusively, favor the alternatives.
+:::
+
+### Requirements & Analysis Terms
+
+| BA / Agile Term | Public Health Equivalent | Context / Nuance |
+|:----------------|:-------------------------|:-----------------|
+| **User Story** | **Service-User Scenario / GPS Format** | GPS = "Given [context], the Person [role] Should [action]" for clinical settings |
+| **Epic** | **Grant Objective / Program Goal** | High-level outcome (e.g., "Reduce TB incidence by 10%") |
+| **Requirements** | **Program Protocols / Clinical Guidelines** | Business rules are often legally or clinically mandated in PH |
+| **NFRs (Non-Functional Requirements)** | **Implementation Characteristics (CFIR)** | Scalability = Outbreak Resilience; Security = HIPAA/Trust |
+| **Process Model (BPMN)** | **Intervention Flowchart / Logic Model** | Visualize Inputs → Activities → Outputs → Outcomes |
+| **Data Model / Schema** | **Case Definition / Data Dictionary** | ER diagrams vs epidemiological case criteria |
+| **Use Case Diagram** | **Patient Journey Map** | UML diagrams vs mapping patient experience through care continuum |
+
+### Agile & Iteration Terms
+
+| BA / Agile Term | Public Health Equivalent | Context / Nuance |
+|:----------------|:-------------------------|:-----------------|
+| **Sprint** | **PDSA Cycle / Adaptive Management** | Plan-Do-Study-Act: cyclic improvement framework |
+| **Backlog** | **Workplan / Action Items** | Prioritized list of features vs outreach tasks |
+| **Sprint Review / Demo** | **Progress Reporting** | Often aligned with grant reporting periods |
+| **Retrospective** | **After-Action Review** | Systematic reflection on what worked and what needs improvement |
+
+### Quality & Evaluation Terms
+
+| BA / Agile Term | Public Health Equivalent | Context / Nuance |
+|:----------------|:-------------------------|:-----------------|
+| **KPI (Key Performance Indicator)** | **Health Indicator** | "15% improvement in customer satisfaction" vs "10% reduction in infection rate" |
+| **Acceptance Test Plan** | **Evaluation Protocol** | Test cases vs data collection and analysis plan |
+| **Quality Assurance** | **Quality Improvement (QI)** | Systematic checks, continuous improvement cycles |
+| **Bug / Defect** | **Adverse Event / Variance** | System error vs deviation from expected health outcome |
+| **Lessons Learned** | **After-Action Review** | Retrospective analysis, sharing successes and gaps across organization |
+
+### Design & Implementation Terms
+
+| BA / Agile Term | Public Health Equivalent | Context / Nuance |
+|:----------------|:-------------------------|:-----------------|
+| **Prototype / Mockup** | **Pilot Study / Field Test** | Software wireframe vs PH intervention pilot in limited population |
+| **Risk Analysis** | **Community Risk Assessment** | Standard risk assessment vs PH frameworks (CFIR, RE-AIM) |
+| **Go-Live** | **Program Launch / Rollout** | System deployment vs intervention implementation |
+| **Training Plan** | **Capacity Building** | End-user training vs workforce development |
+
+## Alternative User Story Formats for Public Health
+
+The standard "As a [user], I want [feature], so that [benefit]" format often fails in clinical contexts. Use these alternatives:
+
+### GPS Format (Given-Person-Should)
+
+> "Given [clinical context], the [health worker role] should [specific action] to [health outcome]."
+
+**Example:**
+
+> "Given a positive TB test result, the contact tracer should initiate household investigation within 48 hours to prevent secondary transmission."
+
+### Service-User Scenario
+
+A narrative vignette describing a patient's journey through the system:
+
+> "Maria, a 45-year-old farmworker, visits a mobile clinic for diabetes screening. She speaks primarily Spanish and has no regular primary care provider. The system must support her preferred language, connect her to follow-up care, and track her screening results for population health reporting."
+
+### Situational Protocol
+
+Context-specific workflow tied to clinical guidelines:
+
+> "When a laboratory reports a confirmed measles case, the system shall generate a contact list and notify the assigned epidemiologist within 4 hours."
+
+## The Logic Model as Requirements Framework
+
+In public health, the **Logic Model** serves a similar purpose to a requirements specification. Understanding this mapping helps BA professionals communicate with PH colleagues:
+
+```{mermaid}
+%%| label: fig-logic-model
+%%| fig-cap: "Logic Model Structure"
+flowchart LR
+    A[Inputs<br/>Resources] --> B[Activities<br/>What we do]
+    B --> C[Outputs<br/>Direct products]
+    C --> D[Outcomes<br/>Short-term]
+    D --> E[Impact<br/>Long-term]
+```
+
+| Logic Model Component | BA Equivalent |
+|:----------------------|:--------------|
+| **Inputs** | Resources, Constraints, Assumptions |
+| **Activities** | Functional Requirements, Use Cases |
+| **Outputs** | Deliverables, System Features |
+| **Outcomes** | Success Metrics, KPIs |
+| **Impact** | Business Value, Strategic Objectives |
+
+::: {.callout-note title="CancerSurv Example"}
+In CancerSurv, the Logic Model framing helped translate between teams:
+
+- **Input**: Grant funding, registrar staff, hospital data feeds
+- **Activity**: Case abstraction, data quality checks, interoperability
+- **Output**: Complete case records, quality reports, data submissions
+- **Outcome**: 95% data completeness, timely NPCR submissions
+- **Impact**: Accurate survival statistics, targeted prevention resources
+:::
+
+## Data Standards as Requirements
+
+In public health IT, data standards are non-negotiable requirements, not optional "technical details":
+
+| Standard | Purpose | BA Implication |
+|:---------|:--------|:---------------|
+| **HL7** | Messaging between systems | Define trigger events (e.g., "ADT A01, Admit Patient") |
+| **FHIR** | Modern API-based exchange | Specify FHIR Resources (Patient, Observation) |
+| **USCDI** | Federal data interoperability | Required for ONC certification |
+| **ICD-10 / ICD-O-3** | Diagnosis coding | Validation rules in requirements |
+| **SNOMED CT** | Clinical terminology | Concept mapping specifications |
+| **LOINC** | Lab test coding | Interface specifications |
+
+## Quick Reference Card
+
+For easy access during meetings, here are the most commonly needed translations:
+
+| When they say... | They might mean... |
+|:-----------------|:-------------------|
+| "What's the user story?" | "What is the service-user scenario or clinical workflow?" |
+| "Let's do a sprint" | "Let's run a PDSA cycle" |
+| "What are the NFRs?" | "What are the implementation characteristics?" |
+| "Stakeholder meeting" | "Community partner engagement session" |
+| "Business case" | "Public health challenge / needs assessment" |
+| "Acceptance criteria" | "Evaluation protocol measures" |
+| "Technical debt" | "System sustainability issues" |
+| "MVP (Minimum Viable Product)" | "Pilot intervention" |

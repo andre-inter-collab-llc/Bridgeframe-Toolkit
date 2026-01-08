@@ -1,0 +1,235 @@
+---
+title: "Planning & Needs Assessment"
+---
+
+# Planning & Strategy / Needs Assessment
+
+Every successful project begins with understanding the problem. In business analysis, this phase is called **Strategy Analysis** or **Planning**. In public health, it is the **Needs Assessment** or **Community Health Assessment**. Both seek to answer the same fundamental question: What problem are we solving, and for whom?
+
+## The Dual Framework
+
+| BA Perspective | PH Perspective |
+|:---------------|:---------------|
+| Business Need | Public Health Challenge |
+| Current State Analysis | Epidemiological Baseline |
+| Future State Vision | Program Goals & Intended Outcomes |
+| Stakeholder Identification | Community Partner Mapping |
+| Feasibility Assessment | Resource & Capacity Analysis |
+
+## Defining the Problem
+
+### Business Analysis Approach
+
+In traditional BA, the business need emerges from organizational pain points:
+
+- Revenue decline
+- Operational inefficiency
+- Compliance gaps
+- Competitive pressure
+- Technology obsolescence
+
+The BA documents this in a **Business Case** that quantifies the problem, proposes solutions, and projects return on investment.
+
+### Public Health Approach
+
+In public health, the need emerges from population health data:
+
+- Disease incidence and prevalence
+- Health disparities across demographics
+- Service access gaps
+- Outbreak patterns
+- Unmet community needs
+
+The epidemiologist documents this in a **Needs Assessment** that quantifies health burden, identifies determinants, and prioritizes interventions.
+
+::: {.callout-note title="CancerSurv Example"}
+**Business Need (BA framing):** The legacy mainframe system is approaching end-of-life. Maintenance costs have increased 40% over three years. The system cannot support modern interoperability requirements or remote work.
+
+**Public Health Challenge (PH framing):** Cancer data completeness has declined to 89%, below the CDC target of 95%. Late-stage diagnoses are increasing in rural counties, suggesting gaps in early detection. The current system cannot support the real-time analytics needed to identify and address disparities.
+
+Both framings describe the same project. The BA framing emphasizes operational efficiency; the PH framing emphasizes health outcomes. Effective planning addresses both.
+:::
+
+## Current State Analysis
+
+### Documenting What Exists
+
+Before defining requirements, understand what currently exists. The approaches differ in emphasis but serve the same purpose:
+
+**BA Current State Analysis:**
+
+- Process maps (BPMN diagrams)
+- System inventories
+- Pain point interviews
+- Performance metrics
+- Technical debt assessment
+
+**PH Epidemiological Baseline:**
+
+- Disease surveillance data
+- Demographic health profiles
+- Service utilization patterns
+- Health equity indicators
+- Environmental and social determinants
+
+### Data Sources for Current State
+
+| BA Data Sources | PH Data Sources |
+|:----------------|:----------------|
+| System logs, usage analytics | Disease registries, vital records |
+| User surveys, interviews | Community health surveys (BRFSS) |
+| Process documentation | Clinical guidelines, protocols |
+| Financial reports | Grant reports, program evaluations |
+| Vendor assessments | CDC/state health department data |
+
+## Future State Vision
+
+### Defining Success
+
+The future state describes what success looks like. Again, the framing differs:
+
+**BA Future State:**
+
+- System capabilities and features
+- Process improvements
+- Performance targets
+- Technical architecture
+- Integration landscape
+
+**PH Program Goals:**
+
+- Health outcome improvements
+- Disparity reductions
+- Service access expansion
+- Quality metrics
+- Population health indicators
+
+### SMART Objectives
+
+Both domains benefit from SMART objective setting:
+
+| Component | BA Example | PH Example |
+|:----------|:-----------|:-----------|
+| **Specific** | Reduce case entry time | Increase early-stage cancer detection |
+| **Measurable** | From 15 to 8 minutes per case | From 45% to 55% of cases |
+| **Achievable** | Based on vendor benchmarks | Based on peer state performance |
+| **Relevant** | Supports registrar productivity | Supports prevention targeting |
+| **Time-bound** | Within 6 months of go-live | Within 2 years of program launch |
+
+::: {.callout-note title="CancerSurv Example"}
+**SMART Objective (Dual Framing):**
+
+*BA:* "Within 6 months of CancerSurv deployment, average case abstraction time will decrease from 15 minutes to 8 minutes, as measured by system audit logs."
+
+*PH:* "Within 2 years of CancerSurv deployment, data completeness will increase from 89% to 95%, enabling accurate survival analysis and disparity identification for the state cancer plan."
+
+Both objectives are valid; both should appear in project documentation.
+:::
+
+## Stakeholder / Community Partner Identification
+
+### Mapping the Landscape
+
+Identifying who participates in the project requires understanding both organizational and community perspectives:
+
+```{mermaid}
+%%| label: fig-stakeholder-map
+%%| fig-cap: "Stakeholder/Community Partner Landscape"
+flowchart TB
+    subgraph Internal["Internal Partners"]
+        A[Registry Director]
+        B[Cancer Registrars]
+        C[Epidemiologists]
+        D[IT Department]
+    end
+    
+    subgraph External["External Partners"]
+        E[Hospitals]
+        F[Laboratories]
+        G[CDC/NPCR]
+        H[Vital Records]
+    end
+    
+    subgraph Community["Community"]
+        I[Cancer Survivors]
+        J[Advocacy Groups]
+        K[Researchers]
+    end
+    
+    A --> B
+    A --> C
+    A --> D
+    E --> B
+    F --> B
+    G --> A
+    H --> C
+    I --> J
+    J --> A
+    K --> C
+```
+
+### Power-Interest Analysis
+
+The classic BA power-interest grid maps to PH community engagement levels:
+
+| Quadrant | BA Approach | PH Approach |
+|:---------|:------------|:------------|
+| High Power, High Interest | Manage closely | Active partnership |
+| High Power, Low Interest | Keep satisfied | Inform and consult |
+| Low Power, High Interest | Keep informed | Empower and involve |
+| Low Power, Low Interest | Monitor | Ensure representation |
+
+## Feasibility Assessment
+
+### Can We Do This?
+
+Both domains assess feasibility before committing resources:
+
+**BA Feasibility Dimensions:**
+
+- Technical feasibility (Can we build it?)
+- Economic feasibility (Can we afford it?)
+- Operational feasibility (Can we run it?)
+- Schedule feasibility (Can we deliver on time?)
+
+**PH Feasibility Dimensions:**
+
+- Evidence base (Does the intervention work?)
+- Resource availability (Do we have funding, staff?)
+- Political will (Is there leadership support?)
+- Community readiness (Will the population engage?)
+- Ethical considerations (Is it equitable?)
+
+::: {.callout-tip title="Bridging Tip"}
+When presenting feasibility to mixed audiences, address both technical and programmatic dimensions. A system that is technically feasible but lacks community buy-in will fail. An intervention with strong evidence but no technical infrastructure cannot scale.
+:::
+
+## Deliverables from This Phase
+
+| BA Deliverable | PH Deliverable | Purpose |
+|:---------------|:---------------|:--------|
+| Business Case | Needs Assessment Report | Justify the project |
+| Stakeholder Register | Community Partner Map | Identify participants |
+| Current State Analysis | Epidemiological Baseline | Document starting point |
+| Future State Vision | Program Goals | Define success |
+| Feasibility Study | Readiness Assessment | Confirm viability |
+
+## Common Pitfalls
+
+**For BA professionals entering PH:**
+
+- Underestimating regulatory constraints (HIPAA, IRB)
+- Ignoring health equity implications
+- Treating clinical workflows like business processes
+- Missing grant-cycle dependencies
+
+**For PH professionals working with BA:**
+
+- Providing needs assessments instead of requirements
+- Assuming IT teams understand clinical context
+- Underspecifying data quality needs
+- Ignoring change management complexity
+
+## Moving Forward
+
+With the problem defined and feasibility confirmed, the next phase focuses on **Elicitation**: gathering detailed information from stakeholders and community partners about their specific needs and constraints.

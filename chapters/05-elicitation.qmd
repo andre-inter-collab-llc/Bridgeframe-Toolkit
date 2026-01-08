@@ -1,0 +1,247 @@
+---
+title: "Elicitation & Engagement"
+---
+
+# Elicitation & Stakeholder Engagement
+
+Once the problem is defined, we must gather detailed information about needs, constraints, and context. In business analysis, this is **Elicitation**. In public health, it is **Stakeholder Engagement** or **Community-Based Participatory Research**. Both involve systematic approaches to learning from people who will use, be affected by, or govern the solution.
+
+## The Dual Framework
+
+| BA Perspective | PH Perspective |
+|:---------------|:---------------|
+| Elicitation Techniques | Community Engagement Methods |
+| Requirements Workshops | Focus Groups, Town Halls |
+| User Interviews | Key Informant Interviews |
+| Document Analysis | Literature Review, Policy Analysis |
+| Observation | Ethnography, Site Visits |
+| Prototyping | Pilot Testing, Formative Research |
+
+## Elicitation Techniques Mapped
+
+### Interviews
+
+Both domains rely heavily on one-on-one conversations with knowledgeable individuals:
+
+**BA User Interviews:**
+
+- Focus on workflow, pain points, desired features
+- Structured around use cases or process steps
+- Document functional and non-functional requirements
+
+**PH Key Informant Interviews:**
+
+- Focus on community needs, barriers, facilitators
+- May explore cultural context, health beliefs
+- Inform intervention design and implementation strategy
+
+::: {.callout-note title="CancerSurv Example"}
+**BA Interview with Registrar:**
+
+"Walk me through your typical day. What tasks take the most time? Where do you encounter errors? What features would make your work easier?"
+
+**PH Interview with Oncologist:**
+
+"How do you currently receive staging information? What data quality issues affect your treatment decisions? How could better surveillance data support tumor board discussions?"
+
+Both interviews inform CancerSurv requirements, but from different perspectives.
+:::
+
+### Workshops and Focus Groups
+
+Group sessions enable collaborative discovery:
+
+**BA Requirements Workshop:**
+
+- Facilitated session with defined agenda
+- Uses techniques like brainstorming, affinity mapping
+- Produces prioritized requirement lists
+- Resolves conflicts through negotiation
+
+**PH Focus Group:**
+
+- Semi-structured group discussion
+- Explores shared experiences and diverse perspectives
+- May surface unanticipated needs or concerns
+- Emphasizes inclusive participation
+
+### Document Analysis
+
+Existing documentation provides essential context:
+
+| BA Documents | PH Documents |
+|:-------------|:-------------|
+| System specifications | Clinical protocols |
+| Process manuals | CDC guidelines |
+| Vendor contracts | Grant requirements |
+| Training materials | Health education materials |
+| Audit reports | Program evaluations |
+
+### Observation
+
+Watching work happen reveals what interviews miss:
+
+**BA Observation (Job Shadowing):**
+
+- Watch users perform tasks
+- Note workarounds and inefficiencies
+- Identify undocumented processes
+- Time critical workflows
+
+**PH Observation (Site Visits, Ethnography):**
+
+- Visit clinics, community settings
+- Understand context and constraints
+- Observe patient-provider interactions
+- Identify environmental factors
+
+::: {.callout-tip title="Gemba Walks"}
+The Lean concept of "Gemba" (going to the actual place where work happens) applies to both domains. For CancerSurv, this means spending time in the registry office watching abstractors work, not just interviewing them in a conference room.
+:::
+
+## Engaging Diverse Voices
+
+### The Equity Imperative
+
+Public health emphasizes inclusive engagement, ensuring marginalized voices are heard. This principle benefits IT projects as well:
+
+**Questions to Ask:**
+
+- Who is missing from our stakeholder list?
+- Whose needs might be overlooked by "typical" users?
+- What barriers prevent participation (language, location, schedule)?
+- How do we ensure power imbalances do not silence important perspectives?
+
+### Community-Based Participatory Research (CBPR)
+
+CBPR principles can strengthen BA elicitation:
+
+| CBPR Principle | BA Application |
+|:---------------|:---------------|
+| Community as equal partner | Users co-design, not just provide input |
+| Build on community strengths | Leverage existing workflows that work |
+| Balance research and action | Deliver incremental value during elicitation |
+| Long-term commitment | Maintain relationships beyond project end |
+
+## Translating What You Hear
+
+### From Needs to Requirements
+
+Elicitation produces raw material that must be translated into actionable requirements:
+
+```{mermaid}
+%%| label: fig-elicitation-flow
+%%| fig-cap: "From Elicitation to Requirements"
+flowchart LR
+    A[Interviews<br/>Observations] --> B[Elicitation Notes]
+    B --> C[Analysis &<br/>Synthesis]
+    C --> D[Requirements<br/>Documentation]
+    D --> E[Validation with<br/>Stakeholders]
+    E --> F[Approved<br/>Requirements]
+```
+
+### Common Translation Challenges
+
+| What Stakeholders Say | What They Might Mean | Requirement Implication |
+|:----------------------|:---------------------|:------------------------|
+| "It should be easy to use" | Current system requires too many clicks | Reduce clicks per task by 50% |
+| "We need real-time data" | Current reports are weeks old | Dashboard updates within 24 hours |
+| "Make it like Excel" | Users are comfortable with Excel | Familiar grid-based interface |
+| "We need better reports" | Current reports lack specific metrics | Add [specific metric] to [report] |
+
+::: {.callout-note title="CancerSurv Example"}
+**Stakeholder statement:** "We need the system to be faster."
+
+**Probing questions:**
+
+- Which specific tasks feel slow?
+- How long do those tasks take now?
+- What would be an acceptable time?
+- What happens when the system is slow?
+
+**Refined requirement:** "The case search function shall return results within 3 seconds for queries returning up to 1,000 records, to support efficient case lookup during abstraction."
+:::
+
+## Documentation Approaches
+
+### BA Requirements Documentation
+
+- User Stories (Agile)
+- Use Cases (UML)
+- Requirements Specifications (Waterfall)
+- Acceptance Criteria
+
+### PH Program Documentation
+
+- Logic Models
+- Intervention Protocols
+- Evaluation Plans
+- Implementation Guides
+
+### Bridging the Formats
+
+For hybrid projects, consider dual documentation:
+
+| Audience | Format | Content |
+|:---------|:-------|:--------|
+| Development team | User Stories | Functional requirements in Agile format |
+| Clinical stakeholders | Service-User Scenarios | Narrative descriptions of clinical workflows |
+| Funders (CDC, grants) | Logic Model | Inputs, activities, outputs, outcomes |
+| Governance | Requirements Traceability Matrix | Links requirements to objectives |
+
+## Validation and Confirmation
+
+### Ensuring Accuracy
+
+Elicitation is iterative. Validate what you heard:
+
+**BA Validation Techniques:**
+
+- Requirements reviews
+- Prototype walkthroughs
+- Structured walkthroughs
+- Sign-off meetings
+
+**PH Validation Techniques:**
+
+- Member checking (returning findings to participants)
+- Community review sessions
+- Pilot testing
+- Expert review panels
+
+## Managing Conflicting Needs
+
+### When Stakeholders Disagree
+
+Conflicts are inevitable. Resolution approaches include:
+
+| Approach | When to Use |
+|:---------|:------------|
+| **Prioritization** | When resources are limited; use MoSCoW or weighted scoring |
+| **Negotiation** | When compromise is possible without losing value |
+| **Escalation** | When authority must resolve; use governance structure |
+| **Phasing** | When both needs are valid; address in different releases |
+| **Alternatives Analysis** | When creative solutions can satisfy both parties |
+
+::: {.callout-note title="CancerSurv Example"}
+**Conflict:** Registrars want a simple, streamlined interface. Epidemiologists want comprehensive data fields for analysis.
+
+**Resolution:** Implement a tiered interface:
+
+- Core fields (required): Streamlined view for registrars
+- Extended fields (optional): Available when needed
+- Analytics fields: Populated from other sources, not requiring registrar entry
+:::
+
+## Deliverables from This Phase
+
+| BA Deliverable | PH Deliverable | Purpose |
+|:---------------|:---------------|:--------|
+| Elicitation Results | Engagement Summary | Raw findings documentation |
+| Requirements Document | Program Protocol | Detailed specifications |
+| User Stories / Use Cases | Service-User Scenarios | Actionable descriptions |
+| Stakeholder Feedback Log | Community Input Register | Track all input received |
+
+## Moving Forward
+
+With needs elicited and documented, the next phase focuses on **Requirements Analysis**: organizing, prioritizing, and specifying the detailed requirements that will guide solution design.

@@ -1,0 +1,157 @@
+---
+title: "Meet CancerSurv"
+---
+
+# The CancerSurv Case Study
+
+Throughout this book, we use a single comprehensive case study to illustrate concepts: **CancerSurv**, a cloud-based cancer surveillance and registry system. This chapter introduces the project context, stakeholders, and objectives that will appear in examples across all subsequent chapters.
+
+## Project Overview
+
+A state public health department partners with TechHealth Solutions, a health IT company, to develop CancerSurv: a modern, cloud-based platform for cancer surveillance and registry operations.
+
+### The Business Context
+
+| Attribute | Detail |
+|:----------|:-------|
+| **Public Health Partner** | State Cancer Registry (Department of Health) |
+| **Technology Partner** | TechHealth Solutions (cloud software vendor) |
+| **Funding Source** | CDC National Program of Cancer Registries (NPCR) grant |
+| **Timeline** | 18-month phased implementation |
+| **Scope** | Replace legacy mainframe system with modern cloud solution |
+
+### The Public Health Context
+
+Cancer registries serve a critical public health function. They collect, process, and analyze data on cancer incidence, treatment, and outcomes. This data informs:
+
+- Prevention program targeting
+- Early detection initiatives
+- Health disparity identification
+- Research and clinical trials
+- Healthcare resource planning
+
+The state's current system, built on 1990s mainframe technology, cannot meet modern demands for interoperability, real-time analytics, and remote access.
+
+## Stakeholder Landscape
+
+Understanding who participates in this project requires seeing stakeholders through both BA and PH lenses:
+
+| Role | BA Term | PH Term | Key Concerns |
+|:-----|:--------|:--------|:-------------|
+| Project Sponsor | Executive Sponsor | Registry Director / State Epidemiologist | Budget, timeline, CDC compliance |
+| End Users | System Users | Cancer Registrars, Epidemiologists, Data Analysts | Usability, efficiency, data quality |
+| Subject Matter Experts | Business SMEs | Oncologists, Pathologists, Tumor Board Members | Clinical accuracy, coding standards |
+| External Partners | Vendors / Integrators | Hospitals, Laboratories, Vital Records | Data submission, interoperability |
+| Oversight Bodies | Governance Board | NPCR Program, NAACCR Standards Committee | Standards compliance, data quality metrics |
+
+::: {.callout-important title="Terminology Note"}
+While we use "stakeholder" here for its familiarity in BA contexts, public health practitioners often prefer alternatives: community partners, interest holders, rights holders, or beneficiaries. The choice of term signals values: "stakeholder" implies an interest or stake, while "rights holder" acknowledges inherent claims and dignity. See Chapter 3 for detailed discussion.
+:::
+
+## System Functions
+
+CancerSurv must support five core functional areas:
+
+### Case Abstraction
+
+Cancer registrars enter and code cancer cases from medical records. This involves:
+
+- Extracting relevant data from pathology reports, discharge summaries, and treatment records
+- Coding diagnoses using ICD-O-3 (International Classification of Diseases for Oncology)
+- Staging tumors using TNM and SEER summary staging
+- Linking cases to patients across multiple treatment facilities
+
+### Data Quality
+
+Automated processes ensure data completeness and accuracy:
+
+- Edit checks flagging inconsistent or missing data
+- Duplicate detection identifying potential duplicate case records
+- Linkage to vital records for death clearance
+- Inter-rater reliability monitoring
+
+### Reporting
+
+The registry must meet external reporting requirements:
+
+- Annual submissions to NPCR (National Program of Cancer Registries)
+- Data exchange with SEER (Surveillance, Epidemiology, and End Results Program)
+- Ad-hoc queries for researchers (with appropriate IRB approval)
+- Public health reports for state legislature and media
+
+### Analytics Dashboard
+
+Modern surveillance requires real-time analytics:
+
+- Cancer incidence trends by site, stage, and demographics
+- Geographic mapping of cancer clusters
+- Survival analysis and outcomes tracking
+- Health disparity indicators
+
+### Interoperability
+
+CancerSurv must integrate with external systems:
+
+- HL7 FHIR APIs for hospital EHR integration
+- Electronic pathology reporting from laboratories
+- Vital records linkage for death data
+- National data exchange protocols
+
+## Project Phases
+
+The 18-month implementation follows a phased approach, which we will revisit throughout the book:
+
+```{mermaid}
+%%| label: fig-phases
+%%| fig-cap: "CancerSurv Implementation Phases"
+gantt
+    title CancerSurv Implementation Timeline
+    dateFormat  YYYY-MM
+    section Planning
+    Needs Assessment       :2025-01, 2M
+    Requirements Gathering :2025-02, 3M
+    section Development
+    Core Platform          :2025-04, 4M
+    Interoperability       :2025-07, 3M
+    Analytics              :2025-09, 2M
+    section Deployment
+    Pilot Testing          :2025-10, 2M
+    Training & Rollout     :2025-11, 3M
+    section Evaluation
+    Post-Implementation    :2026-01, 3M
+```
+
+## How CancerSurv Appears in This Book
+
+Each chapter includes CancerSurv examples demonstrating concepts in practice:
+
+- **Planning (Chapter 4)**: Needs assessment comparing cancer data gaps with CDC reporting requirements
+- **Elicitation (Chapter 5)**: User stories from registrars; clinical guidelines from oncologists
+- **Requirements (Chapter 6)**: Functional specifications for case entry; NFRs for HIPAA compliance
+- **Design (Chapter 7)**: System architecture; CFIR implementation readiness assessment
+- **Implementation (Chapter 8)**: Agile sprints mapped to grant milestones; PDSA cycles for workflow adoption
+- **Evaluation (Chapter 9)**: KPIs (data completeness ≥95%) mapped to health outcomes
+
+::: {.callout-tip title="Using the Case Study"}
+When reading subsequent chapters, refer back to this overview to ground abstract concepts in the CancerSurv context. The case study makes the BA-PH bridge tangible.
+:::
+
+## The Dual Mandate
+
+CancerSurv illustrates the fundamental tension bridged by this book. The project must simultaneously satisfy:
+
+**Technology Requirements:**
+
+- Modern cloud architecture
+- API-first design
+- Agile delivery methodology
+- Vendor best practices
+
+**Public Health Requirements:**
+
+- CDC/NPCR compliance
+- NAACCR data standards
+- HIPAA security
+- Health equity focus
+
+Success requires translation between these worldviews. That is what Bridgeframe provides.

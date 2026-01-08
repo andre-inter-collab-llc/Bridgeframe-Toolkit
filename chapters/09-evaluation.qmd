@@ -1,0 +1,265 @@
+---
+title: "Evaluation & Improvement"
+---
+
+# Evaluation & Continuous Improvement
+
+Did we solve the problem? Are outcomes improving? What should we do differently? In business analysis, this phase encompasses **Solution Evaluation** and **Continuous Improvement**. In public health, it maps to **Program Evaluation** using frameworks like the CDC Evaluation Framework. Both seek to measure value delivered and inform future action.
+
+## The Dual Framework
+
+| BA Perspective | PH Perspective |
+|:---------------|:---------------|
+| Solution Evaluation | Program Evaluation |
+| KPI Tracking | Health Indicator Monitoring |
+| ROI Analysis | Cost-Effectiveness Analysis |
+| Lessons Learned | After-Action Review |
+| Continuous Improvement | Quality Improvement (QI) |
+
+## The CDC Evaluation Framework
+
+Public health evaluation follows a well-established framework that parallels BA evaluation practices:
+
+```{mermaid}
+%%| label: fig-cdc-eval
+%%| fig-cap: "CDC Evaluation Framework Steps"
+flowchart LR
+    A[Engage<br/>Stakeholders] --> B[Describe the<br/>Program]
+    B --> C[Focus the<br/>Evaluation]
+    C --> D[Gather Credible<br/>Evidence]
+    D --> E[Justify<br/>Conclusions]
+    E --> F[Ensure Use &<br/>Share Lessons]
+    F -.-> A
+```
+
+| CDC Step | BA Equivalent |
+|:---------|:--------------|
+| Engage Stakeholders | Identify evaluation stakeholders |
+| Describe the Program | Document solution scope and objectives |
+| Focus the Evaluation | Define evaluation questions and scope |
+| Gather Credible Evidence | Collect metrics and feedback |
+| Justify Conclusions | Analyze data, determine value delivered |
+| Ensure Use and Share Lessons | Communicate results, inform decisions |
+
+## Types of Evaluation
+
+### Formative vs. Summative
+
+| Type | When | Purpose | BA Example | PH Example |
+|:-----|:-----|:--------|:-----------|:-----------|
+| **Formative** | During implementation | Improve the intervention | Sprint reviews, usability testing | PDSA cycles, pilot feedback |
+| **Summative** | After implementation | Judge overall value | Post-implementation review | Annual program evaluation |
+
+### Process vs. Outcome
+
+| Type | Focus | Questions | Metrics |
+|:-----|:------|:----------|:--------|
+| **Process** | How well did we implement? | Was the solution delivered as designed? | Adoption rates, fidelity measures |
+| **Outcome** | What difference did it make? | Did we achieve intended results? | Health indicators, KPIs |
+| **Impact** | Long-term effects | What is the lasting change? | Population health trends |
+
+::: {.callout-note title="CancerSurv Example"}
+**Process Evaluation:**
+
+- Were all registrars trained? (Target: 100%)
+- Are hospitals submitting data electronically? (Target: 90%)
+- Is the system meeting uptime requirements? (Target: 99.9%)
+
+**Outcome Evaluation:**
+
+- Has data completeness improved? (Target: 89% → 95%)
+- Has case abstraction time decreased? (Target: 15 min → 8 min)
+- Are NPCR submissions timely? (Target: 100% on-time)
+
+**Impact Evaluation:**
+
+- Are survival statistics more accurate?
+- Can disparities be identified at the county level?
+- Has the data informed state cancer plan priorities?
+:::
+
+## Defining Metrics
+
+### KPIs and Health Indicators
+
+Metrics should be SMART (Specific, Measurable, Achievable, Relevant, Time-bound):
+
+| BA KPI | PH Health Indicator | Measurement |
+|:-------|:--------------------|:------------|
+| System uptime | Service availability | % time operational |
+| User adoption | Program reach | % target users active |
+| Task completion time | Efficiency | Minutes per case abstraction |
+| Error rate | Data quality | % records with errors |
+| User satisfaction | Acceptability | Survey scores |
+
+### Building a Balanced Scorecard
+
+Consider multiple dimensions of value:
+
+| Dimension | BA Metrics | PH Metrics |
+|:----------|:-----------|:-----------|
+| **Financial** | Cost savings, ROI | Cost per case, grant compliance |
+| **Customer** | User satisfaction, NPS | Registrar satisfaction, partner feedback |
+| **Internal Process** | Efficiency gains, quality | Data completeness, timeliness |
+| **Learning & Growth** | Skill development, innovation | Workforce capacity, continuous improvement |
+
+## Data Collection for Evaluation
+
+### Sources of Evidence
+
+| Source | BA Application | PH Application |
+|:-------|:---------------|:---------------|
+| **System Logs** | Usage analytics, performance data | Data submission tracking |
+| **Surveys** | User satisfaction, feature requests | Registrar feedback, partner surveys |
+| **Interviews** | Detailed user feedback | Key informant perspectives |
+| **Document Review** | Project artifacts, change logs | Reports, protocols |
+| **Observation** | Usability testing | Workflow observation |
+| **Administrative Data** | Support tickets, defects | Program records, health data |
+
+### Evaluation Plan Components
+
+| Component | Description | CancerSurv Example |
+|:----------|:------------|:-------------------|
+| **Questions** | What do we want to know? | Has data quality improved? |
+| **Indicators** | How will we measure? | % records passing NAACCR edits |
+| **Data Sources** | Where will we get data? | CancerSurv quality reports |
+| **Methods** | How will we collect? | Automated monthly extraction |
+| **Timeline** | When will we measure? | Baseline, 6 months, 12 months |
+| **Responsibilities** | Who will do it? | Registry data quality manager |
+
+## Analysis and Interpretation
+
+### Comparing to Baseline
+
+Effective evaluation requires baseline data:
+
+```{mermaid}
+%%| label: fig-trend
+%%| fig-cap: "Data Completeness Trend"
+xychart-beta
+    title "CancerSurv Data Completeness"
+    x-axis [Baseline, Q1, Q2, Q3, Q4]
+    y-axis "Completeness (%)" 85 --> 100
+    line [89, 91, 93, 94, 96]
+    line [95, 95, 95, 95, 95]
+```
+
+### Interpreting Results
+
+| Result | Interpretation | Action |
+|:-------|:---------------|:-------|
+| Exceeds target | Success; potential to raise bar | Document best practices; set stretch goals |
+| Meets target | Success; sustain performance | Continue current approach; monitor |
+| Below target, improving | Progress; maintain effort | Identify accelerators; address barriers |
+| Below target, flat/declining | Concern; intervention needed | Root cause analysis; corrective action |
+
+## Communicating Results
+
+### Tailoring Messages
+
+| Audience | Interest | Format | Content Emphasis |
+|:---------|:---------|:-------|:-----------------|
+| Executive sponsors | Bottom line, strategic alignment | Executive summary, dashboard | ROI, milestone achievement |
+| Funders (CDC, grants) | Compliance, outcomes | Formal reports | Grant objective progress |
+| Project team | Detailed performance | Working reports, retrospectives | Specific metrics, lessons learned |
+| End users | How it helps them | Newsletters, town halls | Efficiency gains, new features |
+
+### Visualization Best Practices
+
+- Use clear, simple charts
+- Show trends, not just snapshots
+- Compare to targets/benchmarks
+- Highlight key takeaways
+- Make data accessible
+
+## Continuous Improvement
+
+### The QI Cycle
+
+Evaluation feeds continuous improvement:
+
+```{mermaid}
+%%| label: fig-qi-cycle
+%%| fig-cap: "Continuous Improvement Cycle"
+flowchart LR
+    A[Identify<br/>Opportunity] --> B[Analyze Root<br/>Cause]
+    B --> C[Design<br/>Improvement]
+    C --> D[Implement<br/>Change]
+    D --> E[Evaluate<br/>Results]
+    E --> F{Successful?}
+    F -->|Yes| G[Standardize]
+    F -->|No| A
+    G --> H[Monitor]
+    H --> A
+```
+
+### Retrospectives and After-Action Reviews
+
+| Element | Agile Retrospective | PH After-Action Review |
+|:--------|:--------------------|:-----------------------|
+| What went well? | Sprint successes | Program strengths |
+| What could improve? | Sprint challenges | Program gaps |
+| What will we do differently? | Action items for next sprint | Recommendations |
+| Who is responsible? | Team member assignments | Action owners |
+
+::: {.callout-note title="CancerSurv Example"}
+**12-Month Evaluation Summary:**
+
+| Metric | Baseline | Target | Actual | Status |
+|:-------|:---------|:-------|:-------|:-------|
+| Data completeness | 89% | 95% | 96% | ✅ Exceeded |
+| Abstraction time | 15 min | 8 min | 9 min | ⚠️ Close |
+| User satisfaction | N/A | 80% | 85% | ✅ Exceeded |
+| NPCR submission | 85% on-time | 100% | 100% | ✅ Met |
+| System uptime | N/A | 99.9% | 99.7% | ⚠️ Close |
+
+**Key Findings:**
+
+1. Data quality improvements exceeded expectations
+2. Abstraction time reduced but not to target; workflow analysis needed
+3. Two outages impacted uptime; infrastructure improvements planned
+
+**Recommendations:**
+
+1. Continue current data quality processes
+2. Conduct workflow study to identify remaining abstraction bottlenecks
+3. Implement redundant infrastructure for high availability
+:::
+
+## Sustaining Value
+
+### From Project to Operations
+
+Evaluation supports the transition from project mode to operations:
+
+| Project Phase | Operational Phase |
+|:--------------|:------------------|
+| Project team manages | Operations team manages |
+| Change requests | Enhancement requests |
+| Implementation metrics | Operational metrics |
+| Go-live success | Ongoing performance |
+| Project budget | Operating budget |
+
+### Governance for Continuous Improvement
+
+Establish ongoing governance:
+
+- Regular metric reviews (monthly/quarterly)
+- User feedback channels
+- Enhancement prioritization process
+- Performance monitoring
+- Periodic comprehensive evaluations
+
+## Deliverables from This Phase
+
+| BA Deliverable | PH Deliverable | Purpose |
+|:---------------|:---------------|:--------|
+| Solution Evaluation Report | Program Evaluation Report | Document outcomes |
+| Lessons Learned | After-Action Review | Capture knowledge |
+| Performance Dashboard | Health Indicator Dashboard | Monitor ongoing performance |
+| Improvement Recommendations | QI Action Plan | Drive continuous improvement |
+| Transition Documentation | Sustainability Plan | Enable long-term success |
+
+## Moving Forward
+
+With the core analysis process complete, the following chapters provide additional resources: tools comparison (Chapter 10), implementation science frameworks (Chapter 11), templates (Appendix A), and a comprehensive glossary (Appendix C).

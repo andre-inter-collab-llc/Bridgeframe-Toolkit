@@ -1,0 +1,247 @@
+---
+title: "Implementation & Execution"
+---
+
+# Implementation & Program Execution
+
+Design becomes reality through implementation. In business analysis, this phase involves **Solution Delivery** and **Change Management**. In public health, it is **Program Implementation** guided by frameworks like **PDSA** (Plan-Do-Study-Act). Both require managing complexity while maintaining focus on outcomes.
+
+## The Dual Framework
+
+| BA Perspective | PH Perspective |
+|:---------------|:---------------|
+| Sprint/Iteration | PDSA Cycle |
+| Release Management | Phased Rollout |
+| User Acceptance Testing | Pilot Evaluation |
+| Go-Live | Program Launch |
+| Defect Management | Variance/Adverse Event Tracking |
+
+## The Double Loop of Agile in Public Health
+
+Standard Agile focuses on product improvement: Build → Measure → Learn. Public health adds a second loop: Surveillance → Intervention → Evaluation.
+
+```{mermaid}
+%%| label: fig-double-loop
+%%| fig-cap: "The Double Loop: Agile + Public Health"
+flowchart LR
+    subgraph Agile["Agile Loop"]
+        A1[Plan Sprint] --> A2[Develop]
+        A2 --> A3[Demo/Review]
+        A3 --> A4[Retrospective]
+        A4 --> A1
+    end
+    
+    subgraph PH["Public Health Loop"]
+        P1[Plan] --> P2[Do]
+        P2 --> P3[Study]
+        P3 --> P4[Act]
+        P4 --> P1
+    end
+    
+    A3 <-.->|Sync| P3
+```
+
+The BA must ensure both loops are synchronized: software releases should align with epidemiological reporting cycles.
+
+## Agile Practices Adapted
+
+### Sprint Planning
+
+**Traditional Agile:**
+
+- Product owner prioritizes backlog
+- Team selects stories for sprint
+- Stories estimated in points
+- Sprint goal defined
+
+**Public Health Adaptation:**
+
+- Program manager prioritizes based on grant milestones
+- Team considers reporting deadlines
+- Stories linked to program objectives
+- Sprint goal aligned with public health impact
+
+::: {.callout-note title="CancerSurv Example"}
+**Sprint Goal (BA):** Complete case search functionality and duplicate detection module.
+
+**Program Alignment (PH):** This sprint supports NPCR Milestone 2: "Data quality infrastructure operational." Completion enables Q2 data submission with duplicate resolution.
+
+**Sprint Backlog:**
+
+| Story | Points | Grant Milestone |
+|:------|:-------|:----------------|
+| Case search by patient ID | 5 | M2 |
+| Case search by name/DOB | 3 | M2 |
+| Duplicate candidate display | 5 | M2 |
+| Merge duplicate records | 8 | M2 |
+| Audit log for merges | 3 | Compliance |
+:::
+
+### PDSA Cycles
+
+PDSA provides a structured approach to continuous improvement:
+
+| Phase | Activities | CancerSurv Example |
+|:------|:-----------|:-------------------|
+| **Plan** | Define change, predict outcomes | "Adding auto-population of demographics will reduce entry time by 2 minutes" |
+| **Do** | Implement on small scale | Enable feature for 3 pilot registrars |
+| **Study** | Analyze results | Compare entry times before/after; gather feedback |
+| **Act** | Adopt, adapt, or abandon | Feature reduced time by 1.5 minutes; adopt with UI adjustments |
+
+### Mapping Sprints to PDSA
+
+| Sprint Element | PDSA Element |
+|:---------------|:-------------|
+| Sprint Planning | Plan |
+| Development | Do |
+| Sprint Review | Study |
+| Retrospective | Act |
+| Backlog Refinement | Next Plan cycle |
+
+## Testing in Health IT
+
+### Testing Levels
+
+| Level | BA Focus | PH Focus |
+|:------|:---------|:---------|
+| **Unit Testing** | Code functions correctly | N/A (technical) |
+| **Integration Testing** | Systems connect properly | Data flows between systems |
+| **System Testing** | Full system works | End-to-end workflows function |
+| **User Acceptance Testing** | Users approve functionality | Clinical workflows validated |
+| **Operational Testing** | System performs under load | Handles reporting surge periods |
+
+### UAT for Clinical Systems
+
+User Acceptance Testing in public health requires clinical validation:
+
+**Standard UAT:**
+
+- Does the system do what was specified?
+- Do users accept the interface?
+- Are performance requirements met?
+
+**Clinical UAT Additions:**
+
+- Do clinical workflows function correctly?
+- Does data quality meet standards?
+- Do edits align with NAACCR rules?
+- Is patient safety protected?
+
+::: {.callout-note title="CancerSurv Example"}
+**UAT Test Case:**
+
+| ID | Scenario | Steps | Expected Result | PH Validation |
+|:---|:---------|:------|:----------------|:--------------|
+| UAT-101 | Duplicate detection | Enter case matching existing patient | System flags potential duplicate | Matches NAACCR duplicate resolution rules |
+| UAT-102 | Stage validation | Enter invalid stage combination | System prevents save with error message | Error references SEER staging manual |
+| UAT-103 | NPCR export | Generate submission file | Valid NAACCR XML produced | Passes CDC validator tool |
+:::
+
+## Managing Change
+
+### Organizational Readiness
+
+Implementation fails without organizational change management:
+
+**Readiness Assessment:**
+
+- Leadership commitment
+- Staff capacity
+- Infrastructure availability
+- Workflow adaptability
+- Cultural alignment
+
+**Common Barriers:**
+
+| Barrier | BA Perspective | PH Perspective |
+|:--------|:---------------|:---------------|
+| Resistance | Users prefer old system | "Not how we've always done it" |
+| Capacity | Training time unavailable | Staff already overburdened |
+| Infrastructure | Hardware/network issues | Rural sites lack bandwidth |
+| Workflow | Process changes required | Clinical protocols affected |
+
+### Training Approaches
+
+| Approach | When to Use | CancerSurv Example |
+|:---------|:------------|:-------------------|
+| **Train-the-Trainer** | Large, distributed user base | Registry supervisors trained first |
+| **Just-in-Time** | Complex, infrequent tasks | Context-sensitive help for staging |
+| **Simulation** | High-stakes processes | Practice mode for case abstraction |
+| **Peer Support** | Ongoing questions | Super-user network |
+
+## Deployment Strategies
+
+### Phased vs. Big Bang
+
+| Strategy | Pros | Cons | When to Use |
+|:---------|:-----|:-----|:------------|
+| **Big Bang** | Single cutover, consistent | High risk, no rollback | Simple systems, urgent deadlines |
+| **Phased** | Lower risk, lessons learned | Longer timeline, parallel systems | Complex systems, distributed users |
+| **Pilot** | Real-world validation | Limited initial impact | New interventions, uncertain adoption |
+| **Parallel** | Safety net available | Resource intensive | Critical systems, high risk tolerance |
+
+::: {.callout-note title="CancerSurv Example"}
+**Deployment Strategy: Phased with Pilot**
+
+| Phase | Scope | Duration | Success Criteria |
+|:------|:------|:---------|:-----------------|
+| Pilot | 3 high-volume hospitals | 8 weeks | >90% user satisfaction; <5% error rate |
+| Phase 1 | Remaining hospitals (20) | 12 weeks | All hospitals submitting data |
+| Phase 2 | Physician offices, labs | 8 weeks | ELR feeds operational |
+| Phase 3 | Full operation, legacy decommission | 4 weeks | Legacy system retired |
+:::
+
+## Monitoring During Implementation
+
+### What to Track
+
+| Category | BA Metrics | PH Metrics |
+|:---------|:-----------|:-----------|
+| **Adoption** | Login counts, feature usage | Sites trained, go-live completion |
+| **Performance** | Response times, error rates | Data submission timeliness |
+| **Quality** | Defect counts, resolution time | Data completeness, accuracy |
+| **Satisfaction** | User surveys, support tickets | Registrar feedback, NPS scores |
+| **Outcomes** | Feature delivery, velocity | Grant milestone achievement |
+
+### Issue Escalation
+
+```{mermaid}
+%%| label: fig-escalation
+%%| fig-cap: "Issue Escalation Path"
+flowchart TB
+    I[Issue Identified] --> T{Severity?}
+    T -->|Low| S1[Support Team]
+    T -->|Medium| S2[Project Team]
+    T -->|High| S3[Steering Committee]
+    T -->|Critical| S4[Executive Sponsor]
+    
+    S1 --> R[Resolution]
+    S2 --> R
+    S3 --> R
+    S4 --> R
+```
+
+## Communication During Implementation
+
+### Stakeholder Updates
+
+| Audience | Frequency | Content | Channel |
+|:---------|:----------|:--------|:--------|
+| Executive Sponsors | Bi-weekly | Milestone status, risks, decisions needed | Meeting, dashboard |
+| Project Team | Daily | Progress, blockers, coordination | Standup, chat |
+| End Users | Weekly during rollout | Training, go-live dates, support | Email, newsletter |
+| External Partners | As needed | Integration status, requirements | Meeting, documentation |
+
+## Deliverables from This Phase
+
+| BA Deliverable | PH Deliverable | Purpose |
+|:---------------|:---------------|:--------|
+| Working Software | Operational Program | Deliver the solution |
+| Test Results | Pilot Evaluation | Validate quality |
+| Training Materials | Capacity Building Resources | Enable users |
+| Release Notes | Implementation Updates | Communicate changes |
+| Support Documentation | Operational Guides | Enable ongoing use |
+
+## Moving Forward
+
+With the solution implemented, the next phase focuses on **Evaluation**: measuring outcomes, assessing value delivered, and identifying opportunities for continuous improvement.

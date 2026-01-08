@@ -1,0 +1,283 @@
+---
+title: "Development Tools"
+---
+
+# Development Tools for Toolkit Contributors
+
+This appendix documents the tools used to build and maintain the Bridgeframe Toolkit. This information is for contributors who want to modify or extend the toolkit, not for practitioners using the toolkit content.
+
+## Technology Stack
+
+The Bridgeframe Toolkit is built with:
+
+| Tool | Purpose | Version |
+|:-----|:--------|:--------|
+| **Quarto** | Document publishing system | 1.4+ |
+| **VS Code** | Code editor | Current |
+| **Git/GitHub** | Version control and hosting | N/A |
+| **GitHub Actions** | Automated publishing | N/A |
+| **Mermaid** | Diagram generation | Built into Quarto |
+
+## Local Development Setup
+
+### Prerequisites
+
+1. **Install Quarto**: Download from [quarto.org](https://quarto.org)
+2. **Install VS Code**: Download from [code.visualstudio.com](https://code.visualstudio.com)
+3. **Install Git**: Download from [git-scm.com](https://git-scm.com)
+4. **Install Quarto VS Code Extension**: Search "Quarto" in VS Code extensions
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/Bridgeframe-Toolkit.git
+cd Bridgeframe-Toolkit
+```
+
+### Preview Locally
+
+```bash
+quarto preview
+```
+
+This starts a local server and opens the book in your browser. Changes to `.qmd` files automatically refresh.
+
+### Render the Book
+
+```bash
+quarto render
+```
+
+Output is generated in the `_book/` directory.
+
+## Repository Structure
+
+```
+Bridgeframe-Toolkit/
+├── _quarto.yml           # Book configuration
+├── _brand.yml            # Branding (colors, fonts, logo)
+├── index.qmd             # Landing page
+├── preface.qmd           # Author preface
+├── references.qmd        # Bibliography
+├── chapters/             # Book chapters
+│   ├── 01-introduction.qmd
+│   ├── ...
+│   └── C-glossary.qmd
+├── assets/
+│   ├── branding/         # Logos, icons, templates
+│   ├── references/       # Bibliography files
+│   └── styles/           # Custom SCSS
+├── .github/
+│   ├── copilot-instructions.md  # AI assistant context
+│   └── workflows/
+│       └── publish.yml   # GitHub Actions workflow
+└── _book/                # Generated output (gitignored)
+```
+
+## Configuration Files
+
+### _quarto.yml
+
+The main configuration file controls:
+
+- Book metadata (title, author, date)
+- Chapter organization
+- Output formats (HTML, DOCX)
+- Theme and styling
+- Bibliography settings
+
+Key sections:
+
+```yaml
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Bridgeframe"
+  chapters:
+    - index.qmd
+    - part: "Foundations"
+      chapters:
+        - chapters/01-introduction.qmd
+        # ...
+
+format:
+  html:
+    theme:
+      - brand
+      - assets/styles/custom.scss
+  docx:
+    reference-doc: assets/branding/templates/IntersectCollab-reference-doc.docx
+```
+
+### _brand.yml
+
+Controls visual branding:
+
+```yaml
+color:
+  palette:
+    blue: "#2494f7"
+    teal: "#00a4bb"
+    # ...
+  primary: blue
+  secondary: teal
+
+typography:
+  base: "Inter"
+  headings:
+    family: "Inter"
+    weight: 800
+  monospace: "Fira Code"
+
+logo:
+  medium: assets/branding/logos/intersect-logo.png
+```
+
+## Writing Content
+
+### Quarto Markdown Basics
+
+Quarto uses extended Markdown. Key features:
+
+**Headings:**
+```markdown
+# Chapter Title (H1)
+## Section (H2)
+### Subsection (H3)
+```
+
+**Callout Boxes:**
+```markdown
+::: {.callout-note title="CancerSurv Example"}
+Content here...
+:::
+
+::: {.callout-tip}
+Tip content...
+:::
+
+::: {.callout-warning}
+Warning content...
+:::
+```
+
+**Tables:**
+```markdown
+| Column 1 | Column 2 |
+|:---------|:---------|
+| Data 1   | Data 2   |
+```
+
+**Citations:**
+```markdown
+According to the BABOK [@babok2015], requirements should be...
+```
+
+### Mermaid Diagrams
+
+Diagrams are created with Mermaid syntax in code blocks:
+
+````markdown
+```{mermaid}
+%%| label: fig-example
+%%| fig-cap: "Example Diagram"
+flowchart LR
+    A[Start] --> B[Process]
+    B --> C[End]
+```
+````
+
+Common diagram types:
+
+- `flowchart`: Process flows, architecture
+- `sequenceDiagram`: Interactions over time
+- `erDiagram`: Data models
+- `gantt`: Project timelines
+
+### Cross-References
+
+Reference figures, tables, and sections:
+
+```markdown
+See @fig-example for the diagram.
+As discussed in @sec-planning...
+```
+
+## Publishing
+
+### GitHub Pages Deployment
+
+The book automatically publishes to GitHub Pages when changes are pushed to `main`. The workflow (`.github/workflows/publish.yml`) handles rendering and deployment.
+
+### Manual Publishing
+
+To publish manually:
+
+```bash
+quarto publish gh-pages
+```
+
+This creates/updates the `gh-pages` branch with rendered content.
+
+### Initial Setup
+
+For first-time setup:
+
+1. Create `.nojekyll` file in repository root (empty file)
+2. Run `quarto publish gh-pages` once locally
+3. Commit the generated `_publish.yml` file
+4. Enable GitHub Pages in repository settings (source: `gh-pages` branch)
+
+## Contributing
+
+### Branch Strategy
+
+- `main`: Production-ready content
+- Feature branches: For new content or significant changes
+- Pull requests: For review before merging to main
+
+### Content Guidelines
+
+1. Follow the BA-PH dual framing throughout
+2. Include CancerSurv examples in callout boxes
+3. Use tables for terminology mapping
+4. Avoid em dashes and en dashes; rewrite sentences instead
+5. Every `.qmd` file needs YAML frontmatter with at least a `title`
+
+### Style Guidelines
+
+- First-person voice only in Preface and personal sections
+- Professional/instructional tone for toolkit content
+- Academic yet accessible language
+- Ground claims in evidence where possible
+
+## Troubleshooting
+
+### Common Issues
+
+**Quarto preview not updating:**
+- Check for syntax errors in YAML frontmatter
+- Restart preview with `quarto preview`
+
+**Mermaid diagram not rendering:**
+- Verify syntax at [mermaid.live](https://mermaid.live)
+- Check for unsupported features
+
+**GitHub Pages not updating:**
+- Check Actions tab for workflow failures
+- Verify `gh-pages` branch exists
+- Check repository Pages settings
+
+**Bibliography not working:**
+- Verify `references.bib` exists at specified path
+- Check citation key matches bib entry
+- Ensure `bibliography` field in `_quarto.yml` is correct
+
+## Resources
+
+- [Quarto Documentation](https://quarto.org/docs/guide/)
+- [Quarto Books Guide](https://quarto.org/docs/books/)
+- [Mermaid Documentation](https://mermaid.js.org/intro/)
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
