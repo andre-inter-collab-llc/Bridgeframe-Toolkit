@@ -110,6 +110,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background-image: url(assets/branding/images/cover-image.jpg);
+background-size: cover;
+      }
+</style>
 
 
 </head>
@@ -117,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -133,7 +140,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Bridgeframe</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+            <p class="subtitle lead">Bridging Business Analysis and Public Health</p>
+                      </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-heading">Affiliation</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author"><a href="https://www.linkedin.com/in/andre-van-zyl/">André van Zyl</a> <a href="https://orcid.org/0000-0001-6872-5276" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+    <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              <a href="https://www.intersectcollaborations.com/">
+              Intersect Collaborations LLC
+              </a>
+            </p>
+        </div>
+    </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
@@ -324,42 +369,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="toc-actions"><ul><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Bridgeframe</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Bridging Business Analysis and Public Health</p>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>André van Zyl </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 2026</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome</h1>
+<h1 class="unnumbered">Welcome</h1><p><img src="assets/branding/images/cover-image.jpg" title="Bridgeframe" class="quarto-cover-image nolightbox img-fluid"></p>
 <p><strong>Bridgeframe</strong> is a practical toolkit for professionals who work at the intersection of information technology and public health. Whether you are a business analyst stepping into your first health department project, or a public health professional learning to collaborate with software teams, this book provides the translation layer you need.</p>
 <section id="the-challenge" class="level2" data-number="0.1">
 <h2 data-number="0.1" class="anchored" data-anchor-id="the-challenge"><span class="header-section-number">0.1</span> The Challenge</h2>
@@ -368,7 +386,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="the-solution" class="level2" data-number="0.2">
 <h2 data-number="0.2" class="anchored" data-anchor-id="the-solution"><span class="header-section-number">0.2</span> The Solution</h2>
-<p>Bridgeframe provides:</p>
+<p>Logic Model Components Mapped to Requirements Bridgeframe provides:</p>
 <ul>
 <li><strong>A terminology dictionary</strong> mapping IT/Agile concepts to their public health equivalents</li>
 <li><strong>Phase-by-phase guidance</strong> aligning the BABOK lifecycle with CDC frameworks</li>
@@ -411,10 +429,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="about-the-author" class="level2" data-number="0.5">
 <h2 data-number="0.5" class="anchored" data-anchor-id="about-the-author"><span class="header-section-number">0.5</span> About the Author</h2>
-<p><strong>André van Zyl, MPH</strong> is an epidemiologist and data science professional with close to two decades of experience spanning public health, health informatics, and technical system development. His career has taken him across local, state, federal, tribal, and international health systems, from helping establish global surveillance systems at the CDC to implementing health interventions in resource-constrained settings.</p>
+<p><strong><a href="https://www.linkedin.com/in/andre-van-zyl/">André van Zyl, MPH</a></strong> is an epidemiologist and data science professional with close to two decades of experience spanning public health, health informatics, and technical system development. His career has taken him across local, state, federal, tribal, and international health systems, from helping establish global surveillance systems at the CDC to implementing health interventions in resource-constrained settings.</p>
 <p>As a Health Scientist at CDC’s National Center for Emerging and Zoonotic Infectious Diseases, André led data acquisition and reporting systems for global antimicrobial resistance surveillance spanning multiple continents. He pioneered the integration of artificial intelligence into public health workflows and modernized data processes using R, Python, Azure Databricks, and platforms like REDCap and DHIS2. A consistent theme throughout his work has been technical translation: bridging communication gaps between laboratory scientists, clinical teams, and technical developers.</p>
 <p>André holds a Master of Public Health from the University of Pretoria and a BA Honors in Psychology from Nelson Mandela University. This combination of behavioral science and technical expertise enables him to understand both user needs and system requirements when implementing solutions across diverse communities.</p>
-<p>He is the founder of <strong>Intersect Collaborations LLC</strong>, a consultancy helping public health organizations transform data systems and analytics capabilities for improved decision-making and community health outcomes.</p>
+<p>He is the founder of <strong><a href="https://www.linkedin.com/company/intersect-collaborations-llc/">Intersect Collaborations LLC</a></strong>, a consultancy helping public health organizations transform data systems and analytics capabilities for improved decision-making and community health outcomes.</p>
 
 
 <!-- -->
@@ -899,7 +917,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>**Business analysts** speak of user stories, sprints, and requirements traceability. **Public health professionals** speak of logic models, PDSA cycles, and program evaluation. Both are trying to define problems, design solutions, and measure success, yet their terminology creates friction rather than collaboration.</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Solution</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Logic Model Components Mapped to Requirements</span>
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Bridgeframe provides:</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A terminology dictionary** mapping IT/Agile concepts to their public health equivalents</span>
@@ -931,13 +949,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## About the Author</span></span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>**André van Zyl, MPH** is an epidemiologist and data science professional with close to two decades of experience spanning public health, health informatics, and technical system development. His career has taken him across local, state, federal, tribal, and international health systems, from helping establish global surveillance systems at the CDC to implementing health interventions in resource-constrained settings.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>**[André van Zyl, MPH](https://www.linkedin.com/in/andre-van-zyl/)** is an epidemiologist and data science professional with close to two decades of experience spanning public health, health informatics, and technical system development. His career has taken him across local, state, federal, tribal, and international health systems, from helping establish global surveillance systems at the CDC to implementing health interventions in resource-constrained settings.</span>
 <span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>As a Health Scientist at CDC's National Center for Emerging and Zoonotic Infectious Diseases, André led data acquisition and reporting systems for global antimicrobial resistance surveillance spanning multiple continents. He pioneered the integration of artificial intelligence into public health workflows and modernized data processes using R, Python, Azure Databricks, and platforms like REDCap and DHIS2. A consistent theme throughout his work has been technical translation: bridging communication gaps between laboratory scientists, clinical teams, and technical developers.</span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>André holds a Master of Public Health from the University of Pretoria and a BA Honors in Psychology from Nelson Mandela University. This combination of behavioral science and technical expertise enables him to understand both user needs and system requirements when implementing solutions across diverse communities.</span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>He is the founder of **Intersect Collaborations LLC**, a consultancy helping public health organizations transform data systems and analytics capabilities for improved decision-making and community health outcomes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>He is the founder of **[Intersect Collaborations LLC](https://www.linkedin.com/company/intersect-collaborations-llc/)**, a consultancy helping public health organizations transform data systems and analytics capabilities for improved decision-making and community health outcomes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

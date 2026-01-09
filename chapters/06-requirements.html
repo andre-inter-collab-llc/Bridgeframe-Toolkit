@@ -110,6 +110,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background-image: url(../assets/branding/images/cover-image.jpg);
+background-size: cover;
+      }
+</style>
 <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
 <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
@@ -120,7 +127,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -136,7 +143,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-planning.html">The Analysis Process</a></li><li class="breadcrumb-item"><a href="../chapters/06-requirements.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Requirements &amp; Data Analysis</span></a></li></ol></nav>
+      <div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Requirements &amp; Data Analysis</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
@@ -330,25 +353,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="toc-actions"><ul><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-planning.html">The Analysis Process</a></li><li class="breadcrumb-item"><a href="../chapters/06-requirements.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Requirements &amp; Data Analysis</span></a></li></ol></nav>
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Requirements &amp; Data Analysis</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <section id="requirements-analysis-data-analysis" class="level2" data-number="8.1">
@@ -587,34 +595,23 @@ Figure&nbsp;8.1: CancerSurv Simplified Data Model
 <div aria-describedby="fig-logic-requirements-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-logic-requirements">flowchart LR
-    subgraph Inputs["Inputs (Resources)"]
-        I1[Funding]
-        I2[Staff]
-        I3[Data feeds]
-        I4[Infrastructure]
+    subgraph Inputs[" "]
+        I["**Inputs**&lt;br/&gt;(Resources)&lt;br/&gt;───────&lt;br/&gt;Funding&lt;br/&gt;Staff&lt;br/&gt;Data feeds&lt;br/&gt;Infrastructure"]
     end
     
-    subgraph Activities["Activities (Functions)"]
-        A1[Case abstraction]
-        A2[Data quality checks]
-        A3[Report generation]
-        A4[Analytics]
+    subgraph Activities[" "]
+        A["**Activities**&lt;br/&gt;(Functions)&lt;br/&gt;───────&lt;br/&gt;Case abstraction&lt;br/&gt;Data quality&lt;br/&gt;Reporting&lt;br/&gt;Analytics"]
     end
     
-    subgraph Outputs["Outputs (Deliverables)"]
-        O1[Complete case records]
-        O2[Quality reports]
-        O3[NPCR submissions]
-        O4[Dashboards]
+    subgraph Outputs[" "]
+        O["**Outputs**&lt;br/&gt;(Deliverables)&lt;br/&gt;───────&lt;br/&gt;Case records&lt;br/&gt;Quality reports&lt;br/&gt;NPCR submissions&lt;br/&gt;Dashboards"]
     end
     
-    subgraph Outcomes["Outcomes (Success Metrics)"]
-        OC1[95% completeness]
-        OC2[Timely reporting]
-        OC3[User satisfaction]
+    subgraph Outcomes[" "]
+        OC["**Outcomes**&lt;br/&gt;(Success Metrics)&lt;br/&gt;───────&lt;br/&gt;95% completeness&lt;br/&gt;Timely reporting&lt;br/&gt;User satisfaction"]
     end
     
-    Inputs --&gt; Activities --&gt; Outputs --&gt; Outcomes
+    I --&gt; A --&gt; O --&gt; OC
 </pre>
 </div>
 </div>
@@ -1515,169 +1512,158 @@ Figure&nbsp;8.3: Requirements Traceability Structure
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>%%| label: fig-logic-requirements</span>
 <span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>%%| fig-cap: <span class="ot">"</span><span class="st">Logic Model Components Mapped to Requirements</span><span class="ot">"</span></span>
 <span id="cb1-131"><a href="#cb1-131" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
-<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>    subgraph Inputs[<span class="ot">"</span><span class="st">Inputs (Resources)</span><span class="ot">"</span>]</span>
-<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>        I1[Funding]</span>
-<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>        I2[Staff]</span>
-<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>        I3[Data feeds]</span>
-<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>        I4[Infrastructure]</span>
-<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>    subgraph Activities[<span class="ot">"</span><span class="st">Activities (Functions)</span><span class="ot">"</span>]</span>
-<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>        A1[Case abstraction]</span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>        A2[Data quality checks]</span>
-<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>        A3[Report generation]</span>
-<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>        A4[Analytics]</span>
-<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>    subgraph Outputs[<span class="ot">"</span><span class="st">Outputs (Deliverables)</span><span class="ot">"</span>]</span>
-<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>        O1[Complete case records]</span>
-<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>        O2[Quality reports]</span>
-<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a>        O3[NPCR submissions]</span>
-<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a>        O4[Dashboards]</span>
-<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a>    subgraph Outcomes[<span class="ot">"</span><span class="st">Outcomes (Success Metrics)</span><span class="ot">"</span>]</span>
-<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a>        OC1[<span class="dv">95</span>% completeness]</span>
-<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a>        OC2[Timely reporting]</span>
-<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a>        OC3[User satisfaction]</span>
-<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a>    Inputs --&gt; Activities --&gt; Outputs --&gt; Outcomes</span>
-<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Logic Model Component <span class="pp">|</span> Requirements Category <span class="pp">|</span></span>
-<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a><span class="pp">|:----------------------|:----------------------|</span></span>
-<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Inputs <span class="pp">|</span> Constraints, Assumptions, Dependencies <span class="pp">|</span></span>
-<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Activities <span class="pp">|</span> Functional Requirements <span class="pp">|</span></span>
-<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Outputs <span class="pp">|</span> System Deliverables, Features <span class="pp">|</span></span>
-<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Outcomes <span class="pp">|</span> Success Metrics, Acceptance Criteria <span class="pp">|</span></span>
-<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Impact <span class="pp">|</span> Strategic Objectives, Business Value <span class="pp">|</span></span>
-<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="fu">### Prioritization</span></span>
+<span id="cb1-132"><a href="#cb1-132" aria-hidden="true" tabindex="-1"></a>    subgraph Inputs[<span class="ot">"</span><span class="st"> </span><span class="ot">"</span>]</span>
+<span id="cb1-133"><a href="#cb1-133" aria-hidden="true" tabindex="-1"></a>        I[<span class="ot">"</span><span class="st">**Inputs**&lt;br/&gt;(Resources)&lt;br/&gt;───────&lt;br/&gt;Funding&lt;br/&gt;Staff&lt;br/&gt;Data feeds&lt;br/&gt;Infrastructure</span><span class="ot">"</span>]</span>
+<span id="cb1-134"><a href="#cb1-134" aria-hidden="true" tabindex="-1"></a>    end</span>
+<span id="cb1-135"><a href="#cb1-135" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-136"><a href="#cb1-136" aria-hidden="true" tabindex="-1"></a>    subgraph Activities[<span class="ot">"</span><span class="st"> </span><span class="ot">"</span>]</span>
+<span id="cb1-137"><a href="#cb1-137" aria-hidden="true" tabindex="-1"></a>        A[<span class="ot">"</span><span class="st">**Activities**&lt;br/&gt;(Functions)&lt;br/&gt;───────&lt;br/&gt;Case abstraction&lt;br/&gt;Data quality&lt;br/&gt;Reporting&lt;br/&gt;Analytics</span><span class="ot">"</span>]</span>
+<span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a>    end</span>
+<span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a>    subgraph Outputs[<span class="ot">"</span><span class="st"> </span><span class="ot">"</span>]</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>        O[<span class="ot">"</span><span class="st">**Outputs**&lt;br/&gt;(Deliverables)&lt;br/&gt;───────&lt;br/&gt;Case records&lt;br/&gt;Quality reports&lt;br/&gt;NPCR submissions&lt;br/&gt;Dashboards</span><span class="ot">"</span>]</span>
+<span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a>    end</span>
+<span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a>    subgraph Outcomes[<span class="ot">"</span><span class="st"> </span><span class="ot">"</span>]</span>
+<span id="cb1-145"><a href="#cb1-145" aria-hidden="true" tabindex="-1"></a>        OC[<span class="ot">"</span><span class="st">**Outcomes**&lt;br/&gt;(Success Metrics)&lt;br/&gt;───────&lt;br/&gt;95% completeness&lt;br/&gt;Timely reporting&lt;br/&gt;User satisfaction</span><span class="ot">"</span>]</span>
+<span id="cb1-146"><a href="#cb1-146" aria-hidden="true" tabindex="-1"></a>    end</span>
+<span id="cb1-147"><a href="#cb1-147" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-148"><a href="#cb1-148" aria-hidden="true" tabindex="-1"></a>    I --&gt; A --&gt; O --&gt; OC</span>
+<span id="cb1-149"><a href="#cb1-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-150"><a href="#cb1-150" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-151"><a href="#cb1-151" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Logic Model Component <span class="pp">|</span> Requirements Category <span class="pp">|</span></span>
+<span id="cb1-152"><a href="#cb1-152" aria-hidden="true" tabindex="-1"></a><span class="pp">|:----------------------|:----------------------|</span></span>
+<span id="cb1-153"><a href="#cb1-153" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Inputs <span class="pp">|</span> Constraints, Assumptions, Dependencies <span class="pp">|</span></span>
+<span id="cb1-154"><a href="#cb1-154" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Activities <span class="pp">|</span> Functional Requirements <span class="pp">|</span></span>
+<span id="cb1-155"><a href="#cb1-155" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Outputs <span class="pp">|</span> System Deliverables, Features <span class="pp">|</span></span>
+<span id="cb1-156"><a href="#cb1-156" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Outcomes <span class="pp">|</span> Success Metrics, Acceptance Criteria <span class="pp">|</span></span>
+<span id="cb1-157"><a href="#cb1-157" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Impact <span class="pp">|</span> Strategic Objectives, Business Value <span class="pp">|</span></span>
+<span id="cb1-158"><a href="#cb1-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-159"><a href="#cb1-159" aria-hidden="true" tabindex="-1"></a><span class="fu">### Prioritization</span></span>
+<span id="cb1-160"><a href="#cb1-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-161"><a href="#cb1-161" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Methods for Ranking Requirements</span></span>
+<span id="cb1-162"><a href="#cb1-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-163"><a href="#cb1-163" aria-hidden="true" tabindex="-1"></a>Not all requirements are equal. Prioritization ensures critical needs are addressed first:</span>
+<span id="cb1-164"><a href="#cb1-164" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-165"><a href="#cb1-165" aria-hidden="true" tabindex="-1"></a>**MoSCoW Method:**</span>
+<span id="cb1-166"><a href="#cb1-166" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-167"><a href="#cb1-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Must have**: Essential for go-live</span>
+<span id="cb1-168"><a href="#cb1-168" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Should have**: Important but not critical</span>
+<span id="cb1-169"><a href="#cb1-169" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Could have**: Desirable if time permits</span>
+<span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Won't have**: Out of scope for this release</span>
 <span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Methods for Ranking Requirements</span></span>
+<span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a>**Weighted Scoring:**</span>
 <span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>Not all requirements are equal. Prioritization ensures critical needs are addressed first:</span>
+<span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a>Assign weights to criteria (business value, regulatory requirement, user impact) and score each requirement.</span>
 <span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>**MoSCoW Method:**</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>**Kano Model:**</span>
 <span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Must have**: Essential for go-live</span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Should have**: Important but not critical</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Could have**: Desirable if time permits</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Won't have**: Out of scope for this release</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>**Weighted Scoring:**</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Basic needs (expected, cause dissatisfaction if missing)</span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Performance needs (more is better)</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Delighters (unexpected features that excite)</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a>**Must Have:**</span>
 <span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a>Assign weights to criteria (business value, regulatory requirement, user impact) and score each requirement.</span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a>**Kano Model:**</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Case entry and coding functionality</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>HIPAA-compliant security</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NPCR data submission capability</span>
 <span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Basic needs (expected, cause dissatisfaction if missing)</span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Performance needs (more is better)</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Delighters (unexpected features that excite)</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>**Must Have:**</span>
-<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Case entry and coding functionality</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>HIPAA-compliant security</span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>NPCR data submission capability</span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>**Should Have:**</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a>**Should Have:**</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Real-time analytics dashboard</span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mobile-friendly interface</span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Automated duplicate detection</span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a>**Could Have:**</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Machine learning for coding assistance</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Patient portal for self-reported outcomes</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integration with research databases</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Real-time analytics dashboard</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Mobile-friendly interface</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Automated duplicate detection</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirements Traceability</span></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Linking Requirements to Objectives</span></span>
 <span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>**Could Have:**</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>Traceability ensures every requirement connects to a business need or program goal:</span>
 <span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Machine learning for coding assistance</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Patient portal for self-reported outcomes</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integration with research databases</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="fu">### Requirements Traceability</span></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Linking Requirements to Objectives</span></span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>Traceability ensures every requirement connects to a business need or program goal:</span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>%%| label: fig-traceability</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>%%| fig-cap: <span class="ot">"</span><span class="st">Requirements Traceability Structure</span><span class="ot">"</span></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>    BN[Business Need /&lt;br/&gt;Program Goal] --&gt; FR[Functional&lt;br/&gt;Requirement]</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>    BN --&gt; NFR[Non-Functional&lt;br/&gt;Requirement]</span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>    FR --&gt; TC[Test Case]</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>    NFR --&gt; TC</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>    FR --&gt; US[User Story]</span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a>    TC --&gt; TR[Test Result]</span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>**Traceability Matrix Example:**</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Requirement ID <span class="pp">|</span> Description <span class="pp">|</span> Source <span class="pp">|</span> Priority <span class="pp">|</span> Test Case <span class="pp">|</span></span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------|:------------|:-------|:---------|:----------|</span></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> FR-101 <span class="pp">|</span> Case search functionality <span class="pp">|</span> Registrar interviews <span class="pp">|</span> Must <span class="pp">|</span> TC-101, TC-102 <span class="pp">|</span></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> FR-102 <span class="pp">|</span> ICD-O-3 coding validation <span class="pp">|</span> NAACCR standards <span class="pp">|</span> Must <span class="pp">|</span> TC-103 <span class="pp">|</span></span>
-<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> NFR-201 <span class="pp">|</span> 99.9% uptime <span class="pp">|</span> SLA requirements <span class="pp">|</span> Must <span class="pp">|</span> TC-201 <span class="pp">|</span></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="fu">### Specification Formats</span></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Writing Good Requirements</span></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>Regardless of format, good requirements share characteristics:</span>
-<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Characteristic <span class="pp">|</span> Description <span class="pp">|</span> Example <span class="pp">|</span></span>
-<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------|:------------|:--------|</span></span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Complete** <span class="pp">|</span> Contains all necessary information <span class="pp">|</span> Includes error handling, edge cases <span class="pp">|</span></span>
-<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Consistent** <span class="pp">|</span> Does not contradict other requirements <span class="pp">|</span> Uses standard terminology <span class="pp">|</span></span>
-<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Unambiguous** <span class="pp">|</span> Only one interpretation possible <span class="pp">|</span> "Within 3 seconds" not "quickly" <span class="pp">|</span></span>
-<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Verifiable** <span class="pp">|</span> Can be tested <span class="pp">|</span> Measurable acceptance criteria <span class="pp">|</span></span>
-<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Traceable** <span class="pp">|</span> Links to source and test <span class="pp">|</span> Includes requirement ID <span class="pp">|</span></span>
-<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a><span class="fu">#### User Story Format</span></span>
-<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a>For Agile projects:</span>
-<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; As a </span><span class="co">[</span><span class="ot">role</span><span class="co">]</span><span class="at">, I want </span><span class="co">[</span><span class="ot">feature</span><span class="co">]</span><span class="at">, so that </span><span class="co">[</span><span class="ot">benefit</span><span class="co">]</span><span class="at">.</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a>%%| label: fig-traceability</span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a>%%| fig-cap: <span class="ot">"</span><span class="st">Requirements Traceability Structure</span><span class="ot">"</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>    BN[Business Need /&lt;br/&gt;Program Goal] --&gt; FR[Functional&lt;br/&gt;Requirement]</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>    BN --&gt; NFR[Non-Functional&lt;br/&gt;Requirement]</span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a>    FR --&gt; TC[Test Case]</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>    NFR --&gt; TC</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>    FR --&gt; US[User Story]</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>    TC --&gt; TR[Test Result]</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a>**Traceability Matrix Example:**</span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Requirement ID <span class="pp">|</span> Description <span class="pp">|</span> Source <span class="pp">|</span> Priority <span class="pp">|</span> Test Case <span class="pp">|</span></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------|:------------|:-------|:---------|:----------|</span></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> FR-101 <span class="pp">|</span> Case search functionality <span class="pp">|</span> Registrar interviews <span class="pp">|</span> Must <span class="pp">|</span> TC-101, TC-102 <span class="pp">|</span></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> FR-102 <span class="pp">|</span> ICD-O-3 coding validation <span class="pp">|</span> NAACCR standards <span class="pp">|</span> Must <span class="pp">|</span> TC-103 <span class="pp">|</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> NFR-201 <span class="pp">|</span> 99.9% uptime <span class="pp">|</span> SLA requirements <span class="pp">|</span> Must <span class="pp">|</span> TC-201 <span class="pp">|</span></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="fu">### Specification Formats</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Writing Good Requirements</span></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>Regardless of format, good requirements share characteristics:</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Characteristic <span class="pp">|</span> Description <span class="pp">|</span> Example <span class="pp">|</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------|:------------|:--------|</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Complete** <span class="pp">|</span> Contains all necessary information <span class="pp">|</span> Includes error handling, edge cases <span class="pp">|</span></span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Consistent** <span class="pp">|</span> Does not contradict other requirements <span class="pp">|</span> Uses standard terminology <span class="pp">|</span></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Unambiguous** <span class="pp">|</span> Only one interpretation possible <span class="pp">|</span> "Within 3 seconds" not "quickly" <span class="pp">|</span></span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Verifiable** <span class="pp">|</span> Can be tested <span class="pp">|</span> Measurable acceptance criteria <span class="pp">|</span></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Traceable** <span class="pp">|</span> Links to source and test <span class="pp">|</span> Includes requirement ID <span class="pp">|</span></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="fu">#### User Story Format</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>For Agile projects:</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; As a </span><span class="co">[</span><span class="ot">role</span><span class="co">]</span><span class="at">, I want </span><span class="co">[</span><span class="ot">feature</span><span class="co">]</span><span class="at">, so that </span><span class="co">[</span><span class="ot">benefit</span><span class="co">]</span><span class="at">.</span></span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>**Acceptance Criteria:**</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Given <span class="co">[</span><span class="ot">context</span><span class="co">]</span>, when <span class="co">[</span><span class="ot">action</span><span class="co">]</span>, then <span class="co">[</span><span class="ot">result</span><span class="co">]</span></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a><span class="fu">#### GPS Format for Clinical Contexts</span></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Given </span><span class="co">[</span><span class="ot">clinical context</span><span class="co">]</span><span class="at">, the </span><span class="co">[</span><span class="ot">health worker role</span><span class="co">]</span><span class="at"> should </span><span class="co">[</span><span class="ot">specific action</span><span class="co">]</span><span class="at"> to </span><span class="co">[</span><span class="ot">health outcome</span><span class="co">]</span><span class="at">.</span></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>**User Story:**</span>
 <span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a>**Acceptance Criteria:**</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; As a cancer registrar, I want to search for existing cases before creating a new record, so that I avoid creating duplicate entries.</span></span>
 <span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Given <span class="co">[</span><span class="ot">context</span><span class="co">]</span>, when <span class="co">[</span><span class="ot">action</span><span class="co">]</span>, then <span class="co">[</span><span class="ot">result</span><span class="co">]</span></span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a>**GPS Format:**</span>
 <span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="fu">#### GPS Format for Clinical Contexts</span></span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Given a new pathology report, the registrar should search existing cases by patient identifiers before abstracting, to maintain data integrity and accurate incidence counts.</span></span>
 <span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Given </span><span class="co">[</span><span class="ot">clinical context</span><span class="co">]</span><span class="at">, the </span><span class="co">[</span><span class="ot">health worker role</span><span class="co">]</span><span class="at"> should </span><span class="co">[</span><span class="ot">specific action</span><span class="co">]</span><span class="at"> to </span><span class="co">[</span><span class="ot">health outcome</span><span class="co">]</span><span class="at">.</span></span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>**Acceptance Criteria:**</span>
 <span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
-<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a>**User Story:**</span>
-<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; As a cancer registrar, I want to search for existing cases before creating a new record, so that I avoid creating duplicate entries.</span></span>
-<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a>**GPS Format:**</span>
-<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Given a new pathology report, the registrar should search existing cases by patient identifiers before abstracting, to maintain data integrity and accurate incidence counts.</span></span>
-<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a>**Acceptance Criteria:**</span>
-<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Given a patient name, when the registrar searches, then matching cases display within 3 seconds</span>
-<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Given a patient with no existing cases, when the registrar searches, then a "No matches found" message displays with option to create new case</span>
-<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="fu">### Deliverables from This Phase</span></span>
-<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> BA Deliverable <span class="pp">|</span> PH Deliverable <span class="pp">|</span> Purpose <span class="pp">|</span></span>
-<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------|:---------------|:--------|</span></span>
-<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Requirements Specification <span class="pp">|</span> Logic Model <span class="pp">|</span> Document what must be built <span class="pp">|</span></span>
-<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Dictionary <span class="pp">|</span> Case Definition / Data Standards <span class="pp">|</span> Specify data structures <span class="pp">|</span></span>
-<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Business Rules Catalog <span class="pp">|</span> Clinical Protocol <span class="pp">|</span> Define processing rules <span class="pp">|</span></span>
-<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Traceability Matrix <span class="pp">|</span> Evaluation Framework <span class="pp">|</span> Link requirements to objectives <span class="pp">|</span></span>
-<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Prioritized Backlog <span class="pp">|</span> Workplan <span class="pp">|</span> Order implementation work <span class="pp">|</span></span>
-<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a><span class="fu">### Moving Forward</span></span>
-<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a>With requirements analyzed, prioritized, and specified, the next phase focuses on **Design**: defining how the solution will be built to meet these requirements.</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Given a patient name, when the registrar searches, then matching cases display within 3 seconds</span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Given a patient with no existing cases, when the registrar searches, then a "No matches found" message displays with option to create new case</span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a><span class="fu">### Deliverables from This Phase</span></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> BA Deliverable <span class="pp">|</span> PH Deliverable <span class="pp">|</span> Purpose <span class="pp">|</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------|:---------------|:--------|</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Requirements Specification <span class="pp">|</span> Logic Model <span class="pp">|</span> Document what must be built <span class="pp">|</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Dictionary <span class="pp">|</span> Case Definition / Data Standards <span class="pp">|</span> Specify data structures <span class="pp">|</span></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Business Rules Catalog <span class="pp">|</span> Clinical Protocol <span class="pp">|</span> Define processing rules <span class="pp">|</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Traceability Matrix <span class="pp">|</span> Evaluation Framework <span class="pp">|</span> Link requirements to objectives <span class="pp">|</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Prioritized Backlog <span class="pp">|</span> Workplan <span class="pp">|</span> Order implementation work <span class="pp">|</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="fu">### Moving Forward</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a>With requirements analyzed, prioritized, and specified, the next phase focuses on **Design**: defining how the solution will be built to meet these requirements.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

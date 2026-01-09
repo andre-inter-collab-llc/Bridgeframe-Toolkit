@@ -110,6 +110,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background-image: url(../assets/branding/images/cover-image.jpg);
+background-size: cover;
+      }
+</style>
 
 
 </head>
@@ -117,7 +124,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -133,7 +140,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/A-templates.html">Appendices</a></li><li class="breadcrumb-item"><a href="../chapters/B-development-tools.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Development Tools</span></a></li></ol></nav>
+      <div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Development Tools</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
@@ -315,38 +338,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#development-tools-for-toolkit-contributors" id="toc-development-tools-for-toolkit-contributors" class="nav-link active" data-scroll-target="#development-tools-for-toolkit-contributors"><span class="header-section-number">15.1</span> Development Tools for Toolkit Contributors</a>
   <ul class="collapse">
   <li><a href="#technology-stack" id="toc-technology-stack" class="nav-link" data-scroll-target="#technology-stack"><span class="header-section-number">15.1.1</span> Technology Stack</a></li>
-  <li><a href="#local-development-setup" id="toc-local-development-setup" class="nav-link" data-scroll-target="#local-development-setup"><span class="header-section-number">15.1.2</span> Local Development Setup</a></li>
-  <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure"><span class="header-section-number">15.1.3</span> Repository Structure</a></li>
-  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files"><span class="header-section-number">15.1.4</span> Configuration Files</a></li>
-  <li><a href="#writing-content" id="toc-writing-content" class="nav-link" data-scroll-target="#writing-content"><span class="header-section-number">15.1.5</span> Writing Content</a></li>
-  <li><a href="#publishing" id="toc-publishing" class="nav-link" data-scroll-target="#publishing"><span class="header-section-number">15.1.6</span> Publishing</a></li>
-  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing"><span class="header-section-number">15.1.7</span> Contributing</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">15.1.8</span> Troubleshooting</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">15.1.9</span> Resources</a></li>
+  <li><a href="#ai-assisted-development" id="toc-ai-assisted-development" class="nav-link" data-scroll-target="#ai-assisted-development"><span class="header-section-number">15.1.2</span> AI-Assisted Development</a></li>
+  <li><a href="#local-development-setup" id="toc-local-development-setup" class="nav-link" data-scroll-target="#local-development-setup"><span class="header-section-number">15.1.3</span> Local Development Setup</a></li>
+  <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure"><span class="header-section-number">15.1.4</span> Repository Structure</a></li>
+  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files"><span class="header-section-number">15.1.5</span> Configuration Files</a></li>
+  <li><a href="#writing-content" id="toc-writing-content" class="nav-link" data-scroll-target="#writing-content"><span class="header-section-number">15.1.6</span> Writing Content</a></li>
+  <li><a href="#publishing" id="toc-publishing" class="nav-link" data-scroll-target="#publishing"><span class="header-section-number">15.1.7</span> Publishing</a></li>
+  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing"><span class="header-section-number">15.1.8</span> Contributing</a></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">15.1.9</span> Troubleshooting</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">15.1.10</span> Resources</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/A-templates.html">Appendices</a></li><li class="breadcrumb-item"><a href="../chapters/B-development-tools.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Development Tools</span></a></li></ol></nav>
-<div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Development Tools</span></h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <section id="development-tools-for-toolkit-contributors" class="level2" data-number="15.1">
@@ -375,16 +384,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td style="text-align: left;">Current</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;"><strong>GitHub Copilot</strong></td>
+<td style="text-align: left;">AI-assisted development</td>
+<td style="text-align: left;">Current</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><strong>Git/GitHub</strong></td>
 <td style="text-align: left;">Version control and hosting</td>
 <td style="text-align: left;">N/A</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><strong>GitHub Actions</strong></td>
 <td style="text-align: left;">Automated publishing</td>
 <td style="text-align: left;">N/A</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><strong>Mermaid</strong></td>
 <td style="text-align: left;">Diagram generation</td>
 <td style="text-align: left;">Built into Quarto</td>
@@ -392,10 +406,81 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="local-development-setup" class="level3" data-number="15.1.2">
-<h3 data-number="15.1.2" class="anchored" data-anchor-id="local-development-setup"><span class="header-section-number">15.1.2</span> Local Development Setup</h3>
-<section id="prerequisites" class="level4" data-number="15.1.2.1">
-<h4 data-number="15.1.2.1" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">15.1.2.1</span> Prerequisites</h4>
+<section id="ai-assisted-development" class="level3" data-number="15.1.2">
+<h3 data-number="15.1.2" class="anchored" data-anchor-id="ai-assisted-development"><span class="header-section-number">15.1.2</span> AI-Assisted Development</h3>
+<p>GitHub Copilot is used throughout the development of this toolkit for:</p>
+<ul>
+<li><strong>Refining ideas</strong>: Brainstorming content structure and terminology mappings</li>
+<li><strong>Analysis</strong>: Reviewing and improving BA-PH framework alignments</li>
+<li><strong>Code development</strong>: Generating Mermaid diagrams, R scripts, and configuration files</li>
+</ul>
+<section id="llm-models-used" class="level4" data-number="15.1.2.1">
+<h4 data-number="15.1.2.1" class="anchored" data-anchor-id="llm-models-used"><span class="header-section-number">15.1.2.1</span> LLM Models Used</h4>
+<p>GitHub Copilot provides access to multiple large language models:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 25%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Provider</th>
+<th style="text-align: left;">Models</th>
+<th style="text-align: left;">Primary Use</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Anthropic</strong></td>
+<td style="text-align: left;">Claude (Sonnet, Opus)</td>
+<td style="text-align: left;">Complex analysis, long-form content</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Google</strong></td>
+<td style="text-align: left;">Gemini</td>
+<td style="text-align: left;">Research, fact-checking</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>OpenAI</strong></td>
+<td style="text-align: left;">GPT-4, GPT-4o</td>
+<td style="text-align: left;">Code generation, quick edits</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="copilot-features" class="level4" data-number="15.1.2.2">
+<h4 data-number="15.1.2.2" class="anchored" data-anchor-id="copilot-features"><span class="header-section-number">15.1.2.2</span> Copilot Features</h4>
+<ul>
+<li><strong>Chat</strong>: Interactive conversation for complex tasks</li>
+<li><strong>Inline suggestions</strong>: Real-time code and content completion</li>
+<li><strong>Agent mode</strong>: Multi-step tasks with file creation and terminal access</li>
+</ul>
+</section>
+<section id="deep-research-tools" class="level4" data-number="15.1.2.3">
+<h4 data-number="15.1.2.3" class="anchored" data-anchor-id="deep-research-tools"><span class="header-section-number">15.1.2.3</span> Deep Research Tools</h4>
+<p>Research and analysis is additionally supported by deep research features in:</p>
+<ul>
+<li><strong>Google Gemini</strong>: Extended research capabilities for comprehensive literature review and framework analysis</li>
+<li><strong>OpenAI ChatGPT</strong>: Deep research mode for exploring complex BA-PH terminology mappings and implementation science concepts</li>
+</ul>
+<p>These tools complement GitHub Copilot by providing broader research context beyond the immediate codebase.</p>
+</section>
+<section id="project-context" class="level4" data-number="15.1.2.4">
+<h4 data-number="15.1.2.4" class="anchored" data-anchor-id="project-context"><span class="header-section-number">15.1.2.4</span> Project Context</h4>
+<p>The <code>.github/copilot-instructions.md</code> file provides Copilot with project-specific context including:</p>
+<ul>
+<li>Repository structure and conventions</li>
+<li>BA-PH terminology mappings</li>
+<li>CancerSurv case study details</li>
+<li>Formatting standards and style guidelines</li>
+</ul>
+</section>
+</section>
+<section id="local-development-setup" class="level3" data-number="15.1.3">
+<h3 data-number="15.1.3" class="anchored" data-anchor-id="local-development-setup"><span class="header-section-number">15.1.3</span> Local Development Setup</h3>
+<section id="prerequisites" class="level4" data-number="15.1.3.1">
+<h4 data-number="15.1.3.1" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">15.1.3.1</span> Prerequisites</h4>
 <ol type="1">
 <li><strong>Install Quarto</strong>: Download from <a href="https://quarto.org">quarto.org</a></li>
 <li><strong>Install VS Code</strong>: Download from <a href="https://code.visualstudio.com">code.visualstudio.com</a></li>
@@ -403,24 +488,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Install Quarto VS Code Extension</strong>: Search “Quarto” in VS Code extensions</li>
 </ol>
 </section>
-<section id="clone-the-repository" class="level4" data-number="15.1.2.2">
-<h4 data-number="15.1.2.2" class="anchored" data-anchor-id="clone-the-repository"><span class="header-section-number">15.1.2.2</span> Clone the Repository</h4>
+<section id="clone-the-repository" class="level4" data-number="15.1.3.2">
+<h4 data-number="15.1.3.2" class="anchored" data-anchor-id="clone-the-repository"><span class="header-section-number">15.1.3.2</span> Clone the Repository</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit.git</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Bridgeframe-Toolkit</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="preview-locally" class="level4" data-number="15.1.2.3">
-<h4 data-number="15.1.2.3" class="anchored" data-anchor-id="preview-locally"><span class="header-section-number">15.1.2.3</span> Preview Locally</h4>
+<section id="preview-locally" class="level4" data-number="15.1.3.3">
+<h4 data-number="15.1.3.3" class="anchored" data-anchor-id="preview-locally"><span class="header-section-number">15.1.3.3</span> Preview Locally</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This starts a local server and opens the book in your browser. Changes to <code>.qmd</code> files automatically refresh.</p>
 </section>
-<section id="render-the-book" class="level4" data-number="15.1.2.4">
-<h4 data-number="15.1.2.4" class="anchored" data-anchor-id="render-the-book"><span class="header-section-number">15.1.2.4</span> Render the Book</h4>
+<section id="render-the-book" class="level4" data-number="15.1.3.4">
+<h4 data-number="15.1.3.4" class="anchored" data-anchor-id="render-the-book"><span class="header-section-number">15.1.3.4</span> Render the Book</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Output is generated in the <code>_book/</code> directory.</p>
 </section>
 </section>
-<section id="repository-structure" class="level3" data-number="15.1.3">
-<h3 data-number="15.1.3" class="anchored" data-anchor-id="repository-structure"><span class="header-section-number">15.1.3</span> Repository Structure</h3>
+<section id="repository-structure" class="level3" data-number="15.1.4">
+<h3 data-number="15.1.4" class="anchored" data-anchor-id="repository-structure"><span class="header-section-number">15.1.4</span> Repository Structure</h3>
 <pre><code>Bridgeframe-Toolkit/
 ├── _quarto.yml           # Book configuration
 ├── _brand.yml            # Branding (colors, fonts, logo)
@@ -441,10 +526,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 │       └── publish.yml   # GitHub Actions workflow
 └── _book/                # Generated output (gitignored)</code></pre>
 </section>
-<section id="configuration-files" class="level3" data-number="15.1.4">
-<h3 data-number="15.1.4" class="anchored" data-anchor-id="configuration-files"><span class="header-section-number">15.1.4</span> Configuration Files</h3>
-<section id="quarto.yml" class="level4" data-number="15.1.4.1">
-<h4 data-number="15.1.4.1" class="anchored" data-anchor-id="quarto.yml"><span class="header-section-number">15.1.4.1</span> _quarto.yml</h4>
+<section id="configuration-files" class="level3" data-number="15.1.5">
+<h3 data-number="15.1.5" class="anchored" data-anchor-id="configuration-files"><span class="header-section-number">15.1.5</span> Configuration Files</h3>
+<section id="quarto.yml" class="level4" data-number="15.1.5.1">
+<h4 data-number="15.1.5.1" class="anchored" data-anchor-id="quarto.yml"><span class="header-section-number">15.1.5.1</span> _quarto.yml</h4>
 <p>The main configuration file controls:</p>
 <ul>
 <li>Book metadata (title, author, date)</li>
@@ -475,8 +560,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span></span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference-doc</span><span class="kw">:</span><span class="at"> assets/branding/templates/IntersectCollab-reference-doc.docx</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="brand.yml" class="level4" data-number="15.1.4.2">
-<h4 data-number="15.1.4.2" class="anchored" data-anchor-id="brand.yml"><span class="header-section-number">15.1.4.2</span> _brand.yml</h4>
+<section id="brand.yml" class="level4" data-number="15.1.5.2">
+<h4 data-number="15.1.5.2" class="anchored" data-anchor-id="brand.yml"><span class="header-section-number">15.1.5.2</span> _brand.yml</h4>
 <p>Controls visual branding:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">color</span><span class="kw">:</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">palette</span><span class="kw">:</span></span>
@@ -497,10 +582,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">medium</span><span class="kw">:</span><span class="at"> assets/branding/logos/intersect-logo.png</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="writing-content" class="level3" data-number="15.1.5">
-<h3 data-number="15.1.5" class="anchored" data-anchor-id="writing-content"><span class="header-section-number">15.1.5</span> Writing Content</h3>
-<section id="quarto-markdown-basics" class="level4" data-number="15.1.5.1">
-<h4 data-number="15.1.5.1" class="anchored" data-anchor-id="quarto-markdown-basics"><span class="header-section-number">15.1.5.1</span> Quarto Markdown Basics</h4>
+<section id="writing-content" class="level3" data-number="15.1.6">
+<h3 data-number="15.1.6" class="anchored" data-anchor-id="writing-content"><span class="header-section-number">15.1.6</span> Writing Content</h3>
+<section id="quarto-markdown-basics" class="level4" data-number="15.1.6.1">
+<h4 data-number="15.1.6.1" class="anchored" data-anchor-id="quarto-markdown-basics"><span class="header-section-number">15.1.6.1</span> Quarto Markdown Basics</h4>
 <p>Quarto uses extended Markdown. Key features:</p>
 <p><strong>Headings:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Chapter Title (H1)</span></span>
@@ -525,8 +610,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Citations:</strong></p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>According to the BABOK <span class="co">[</span><span class="ot">@babok2015</span><span class="co">]</span>, requirements should be...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="mermaid-diagrams" class="level4" data-number="15.1.5.2">
-<h4 data-number="15.1.5.2" class="anchored" data-anchor-id="mermaid-diagrams"><span class="header-section-number">15.1.5.2</span> Mermaid Diagrams</h4>
+<section id="mermaid-diagrams" class="level4" data-number="15.1.6.2">
+<h4 data-number="15.1.6.2" class="anchored" data-anchor-id="mermaid-diagrams"><span class="header-section-number">15.1.6.2</span> Mermaid Diagrams</h4>
 <p>Diagrams are created with Mermaid syntax in code blocks:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>%%| label: fig-example</span>
@@ -543,27 +628,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>gantt</code>: Project timelines</li>
 </ul>
 </section>
-<section id="cross-references" class="level4" data-number="15.1.5.3">
-<h4 data-number="15.1.5.3" class="anchored" data-anchor-id="cross-references"><span class="header-section-number">15.1.5.3</span> Cross-References</h4>
+<section id="cross-references" class="level4" data-number="15.1.6.3">
+<h4 data-number="15.1.6.3" class="anchored" data-anchor-id="cross-references"><span class="header-section-number">15.1.6.3</span> Cross-References</h4>
 <p>Reference figures, tables, and sections:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>See @fig-example for the diagram.</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>As discussed in @sec-planning...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="publishing" class="level3" data-number="15.1.6">
-<h3 data-number="15.1.6" class="anchored" data-anchor-id="publishing"><span class="header-section-number">15.1.6</span> Publishing</h3>
-<section id="github-pages-deployment" class="level4" data-number="15.1.6.1">
-<h4 data-number="15.1.6.1" class="anchored" data-anchor-id="github-pages-deployment"><span class="header-section-number">15.1.6.1</span> GitHub Pages Deployment</h4>
+<section id="publishing" class="level3" data-number="15.1.7">
+<h3 data-number="15.1.7" class="anchored" data-anchor-id="publishing"><span class="header-section-number">15.1.7</span> Publishing</h3>
+<section id="github-pages-deployment" class="level4" data-number="15.1.7.1">
+<h4 data-number="15.1.7.1" class="anchored" data-anchor-id="github-pages-deployment"><span class="header-section-number">15.1.7.1</span> GitHub Pages Deployment</h4>
 <p>The book automatically publishes to GitHub Pages when changes are pushed to <code>main</code>. The workflow (<code>.github/workflows/publish.yml</code>) handles rendering and deployment.</p>
 </section>
-<section id="manual-publishing" class="level4" data-number="15.1.6.2">
-<h4 data-number="15.1.6.2" class="anchored" data-anchor-id="manual-publishing"><span class="header-section-number">15.1.6.2</span> Manual Publishing</h4>
+<section id="manual-publishing" class="level4" data-number="15.1.7.2">
+<h4 data-number="15.1.7.2" class="anchored" data-anchor-id="manual-publishing"><span class="header-section-number">15.1.7.2</span> Manual Publishing</h4>
 <p>To publish manually:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This creates/updates the <code>gh-pages</code> branch with rendered content.</p>
 </section>
-<section id="initial-setup" class="level4" data-number="15.1.6.3">
-<h4 data-number="15.1.6.3" class="anchored" data-anchor-id="initial-setup"><span class="header-section-number">15.1.6.3</span> Initial Setup</h4>
+<section id="initial-setup" class="level4" data-number="15.1.7.3">
+<h4 data-number="15.1.7.3" class="anchored" data-anchor-id="initial-setup"><span class="header-section-number">15.1.7.3</span> Initial Setup</h4>
 <p>For first-time setup:</p>
 <ol type="1">
 <li>Create <code>.nojekyll</code> file in repository root (empty file)</li>
@@ -573,18 +658,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </section>
 </section>
-<section id="contributing" class="level3" data-number="15.1.7">
-<h3 data-number="15.1.7" class="anchored" data-anchor-id="contributing"><span class="header-section-number">15.1.7</span> Contributing</h3>
-<section id="branch-strategy" class="level4" data-number="15.1.7.1">
-<h4 data-number="15.1.7.1" class="anchored" data-anchor-id="branch-strategy"><span class="header-section-number">15.1.7.1</span> Branch Strategy</h4>
+<section id="contributing" class="level3" data-number="15.1.8">
+<h3 data-number="15.1.8" class="anchored" data-anchor-id="contributing"><span class="header-section-number">15.1.8</span> Contributing</h3>
+<section id="branch-strategy" class="level4" data-number="15.1.8.1">
+<h4 data-number="15.1.8.1" class="anchored" data-anchor-id="branch-strategy"><span class="header-section-number">15.1.8.1</span> Branch Strategy</h4>
 <ul>
 <li><code>main</code>: Production-ready content</li>
 <li>Feature branches: For new content or significant changes</li>
 <li>Pull requests: For review before merging to main</li>
 </ul>
 </section>
-<section id="content-guidelines" class="level4" data-number="15.1.7.2">
-<h4 data-number="15.1.7.2" class="anchored" data-anchor-id="content-guidelines"><span class="header-section-number">15.1.7.2</span> Content Guidelines</h4>
+<section id="content-guidelines" class="level4" data-number="15.1.8.2">
+<h4 data-number="15.1.8.2" class="anchored" data-anchor-id="content-guidelines"><span class="header-section-number">15.1.8.2</span> Content Guidelines</h4>
 <ol type="1">
 <li>Follow the BA-PH dual framing throughout</li>
 <li>Include CancerSurv examples in callout boxes</li>
@@ -593,8 +678,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Every <code>.qmd</code> file needs YAML frontmatter with at least a <code>title</code></li>
 </ol>
 </section>
-<section id="style-guidelines" class="level4" data-number="15.1.7.3">
-<h4 data-number="15.1.7.3" class="anchored" data-anchor-id="style-guidelines"><span class="header-section-number">15.1.7.3</span> Style Guidelines</h4>
+<section id="style-guidelines" class="level4" data-number="15.1.8.3">
+<h4 data-number="15.1.8.3" class="anchored" data-anchor-id="style-guidelines"><span class="header-section-number">15.1.8.3</span> Style Guidelines</h4>
 <ul>
 <li>First-person voice only in Preface and personal sections</li>
 <li>Professional/instructional tone for toolkit content</li>
@@ -603,18 +688,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="troubleshooting" class="level3" data-number="15.1.8">
-<h3 data-number="15.1.8" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">15.1.8</span> Troubleshooting</h3>
-<section id="common-issues" class="level4" data-number="15.1.8.1">
-<h4 data-number="15.1.8.1" class="anchored" data-anchor-id="common-issues"><span class="header-section-number">15.1.8.1</span> Common Issues</h4>
+<section id="troubleshooting" class="level3" data-number="15.1.9">
+<h3 data-number="15.1.9" class="anchored" data-anchor-id="troubleshooting"><span class="header-section-number">15.1.9</span> Troubleshooting</h3>
+<section id="common-issues" class="level4" data-number="15.1.9.1">
+<h4 data-number="15.1.9.1" class="anchored" data-anchor-id="common-issues"><span class="header-section-number">15.1.9.1</span> Common Issues</h4>
 <p><strong>Quarto preview not updating:</strong> - Check for syntax errors in YAML frontmatter - Restart preview with <code>quarto preview</code></p>
 <p><strong>Mermaid diagram not rendering:</strong> - Verify syntax at <a href="https://mermaid.live">mermaid.live</a> - Check for unsupported features</p>
 <p><strong>GitHub Pages not updating:</strong> - Check Actions tab for workflow failures - Verify <code>gh-pages</code> branch exists - Check repository Pages settings</p>
 <p><strong>Bibliography not working:</strong> - Verify <code>references.bib</code> exists at specified path - Check citation key matches bib entry - Ensure <code>bibliography</code> field in <code>_quarto.yml</code> is correct</p>
 </section>
 </section>
-<section id="resources" class="level3" data-number="15.1.9">
-<h3 data-number="15.1.9" class="anchored" data-anchor-id="resources"><span class="header-section-number">15.1.9</span> Resources</h3>
+<section id="resources" class="level3" data-number="15.1.10">
+<h3 data-number="15.1.10" class="anchored" data-anchor-id="resources"><span class="header-section-number">15.1.10</span> Resources</h3>
 <ul>
 <li><a href="https://quarto.org/docs/guide/">Quarto Documentation</a></li>
 <li><a href="https://quarto.org/docs/books/">Quarto Books Guide</a></li>
@@ -1108,273 +1193,316 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----|:--------|:--------|</span></span>
 <span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Quarto** <span class="pp">|</span> Document publishing system <span class="pp">|</span> 1.4+ <span class="pp">|</span></span>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **VS Code** <span class="pp">|</span> Code editor <span class="pp">|</span> Current <span class="pp">|</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Git/GitHub** <span class="pp">|</span> Version control and hosting <span class="pp">|</span> N/A <span class="pp">|</span></span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **GitHub Actions** <span class="pp">|</span> Automated publishing <span class="pp">|</span> N/A <span class="pp">|</span></span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Mermaid** <span class="pp">|</span> Diagram generation <span class="pp">|</span> Built into Quarto <span class="pp">|</span></span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="fu">### Local Development Setup</span></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Prerequisites</span></span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Install Quarto**: Download from <span class="co">[</span><span class="ot">quarto.org</span><span class="co">](https://quarto.org)</span></span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Install VS Code**: Download from <span class="co">[</span><span class="ot">code.visualstudio.com</span><span class="co">](https://code.visualstudio.com)</span></span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Install Git**: Download from <span class="co">[</span><span class="ot">git-scm.com</span><span class="co">](https://git-scm.com)</span></span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Install Quarto VS Code Extension**: Search "Quarto" in VS Code extensions</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **GitHub Copilot** <span class="pp">|</span> AI-assisted development <span class="pp">|</span> Current <span class="pp">|</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Git/GitHub** <span class="pp">|</span> Version control and hosting <span class="pp">|</span> N/A <span class="pp">|</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **GitHub Actions** <span class="pp">|</span> Automated publishing <span class="pp">|</span> N/A <span class="pp">|</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Mermaid** <span class="pp">|</span> Diagram generation <span class="pp">|</span> Built into Quarto <span class="pp">|</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="fu">### AI-Assisted Development</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>GitHub Copilot is used throughout the development of this toolkit for:</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Refining ideas**: Brainstorming content structure and terminology mappings</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Analysis**: Reviewing and improving BA-PH framework alignments</span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Code development**: Generating Mermaid diagrams, R scripts, and configuration files</span>
 <span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Clone the Repository</span></span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="fu">#### LLM Models Used</span></span>
 <span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit.git</span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Bridgeframe-Toolkit</span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Preview Locally</span></span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>This starts a local server and opens the book in your browser. Changes to <span class="in">`.qmd`</span> files automatically refresh.</span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Render the Book</span></span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span>
-<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>Output is generated in the <span class="in">`_book/`</span> directory.</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>GitHub Copilot provides access to multiple large language models:</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Provider <span class="pp">|</span> Models <span class="pp">|</span> Primary Use <span class="pp">|</span></span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-------|:------------|</span></span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Anthropic** <span class="pp">|</span> Claude (Sonnet, Opus) <span class="pp">|</span> Complex analysis, long-form content <span class="pp">|</span></span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Google** <span class="pp">|</span> Gemini <span class="pp">|</span> Research, fact-checking <span class="pp">|</span></span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **OpenAI** <span class="pp">|</span> GPT-4, GPT-4o <span class="pp">|</span> Code generation, quick edits <span class="pp">|</span></span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Copilot Features</span></span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Chat**: Interactive conversation for complex tasks</span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Inline suggestions**: Real-time code and content completion</span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Agent mode**: Multi-step tasks with file creation and terminal access</span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Deep Research Tools</span></span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>Research and analysis is additionally supported by deep research features in:</span>
+<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Google Gemini**: Extended research capabilities for comprehensive literature review and framework analysis</span>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**OpenAI ChatGPT**: Deep research mode for exploring complex BA-PH terminology mappings and implementation science concepts</span>
 <span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a><span class="fu">### Repository Structure</span></span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>These tools complement GitHub Copilot by providing broader research context beyond the immediate codebase.</span>
 <span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a><span class="in">Bridgeframe-Toolkit/</span></span>
-<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a><span class="in">├── _quarto.yml           # Book configuration</span></span>
-<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a><span class="in">├── _brand.yml            # Branding (colors, fonts, logo)</span></span>
-<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a><span class="in">├── index.qmd             # Landing page</span></span>
-<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a><span class="in">├── preface.qmd           # Author preface</span></span>
-<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a><span class="in">├── references.qmd        # Bibliography</span></span>
-<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a><span class="in">├── chapters/             # Book chapters</span></span>
-<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── 01-introduction.qmd</span></span>
-<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── ...</span></span>
-<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── C-glossary.qmd</span></span>
-<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="in">├── assets/</span></span>
-<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── branding/         # Logos, icons, templates</span></span>
-<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── references/       # Bibliography files</span></span>
-<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── styles/           # Custom SCSS</span></span>
-<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a><span class="in">├── .github/</span></span>
-<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── copilot-instructions.md  # AI assistant context</span></span>
-<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── workflows/</span></span>
-<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a><span class="in">│       └── publish.yml   # GitHub Actions workflow</span></span>
-<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a><span class="in">└── _book/                # Generated output (gitignored)</span></span>
-<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a><span class="fu">### Configuration Files</span></span>
-<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a><span class="fu">#### _quarto.yml</span></span>
-<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a>The main configuration file controls:</span>
-<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Book metadata (title, author, date)</span>
-<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chapter organization</span>
-<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Output formats (HTML, DOCX)</span>
-<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Theme and styling</span>
-<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bibliography settings</span>
-<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a>Key sections:</span>
-<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a><span class="in">```yaml</span></span>
-<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
-<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> book</span></span>
-<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> _book</span></span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Project Context</span></span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>The <span class="in">`.github/copilot-instructions.md`</span> file provides Copilot with project-specific context including:</span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Repository structure and conventions</span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>BA-PH terminology mappings</span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>CancerSurv case study details</span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Formatting standards and style guidelines</span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a><span class="fu">### Local Development Setup</span></span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Prerequisites</span></span>
+<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Install Quarto**: Download from <span class="co">[</span><span class="ot">quarto.org</span><span class="co">](https://quarto.org)</span></span>
+<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Install VS Code**: Download from <span class="co">[</span><span class="ot">code.visualstudio.com</span><span class="co">](https://code.visualstudio.com)</span></span>
+<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Install Git**: Download from <span class="co">[</span><span class="ot">git-scm.com</span><span class="co">](https://git-scm.com)</span></span>
+<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Install Quarto VS Code Extension**: Search "Quarto" in VS Code extensions</span>
+<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Clone the Repository</span></span>
+<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit.git</span>
+<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> Bridgeframe-Toolkit</span>
+<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-80"><a href="#cb14-80" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Preview Locally</span></span>
+<span id="cb14-81"><a href="#cb14-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-82"><a href="#cb14-82" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb14-83"><a href="#cb14-83" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span>
+<span id="cb14-84"><a href="#cb14-84" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-85"><a href="#cb14-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-86"><a href="#cb14-86" aria-hidden="true" tabindex="-1"></a>This starts a local server and opens the book in your browser. Changes to <span class="in">`.qmd`</span> files automatically refresh.</span>
+<span id="cb14-87"><a href="#cb14-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-88"><a href="#cb14-88" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Render the Book</span></span>
+<span id="cb14-89"><a href="#cb14-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-90"><a href="#cb14-90" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb14-91"><a href="#cb14-91" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render</span>
+<span id="cb14-92"><a href="#cb14-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-93"><a href="#cb14-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-94"><a href="#cb14-94" aria-hidden="true" tabindex="-1"></a>Output is generated in the <span class="in">`_book/`</span> directory.</span>
 <span id="cb14-95"><a href="#cb14-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a><span class="fu">book</span><span class="kw">:</span></span>
-<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Bridgeframe"</span></span>
-<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">chapters</span><span class="kw">:</span></span>
-<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span>index.qmd</span>
-<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">part</span><span class="kw">:</span><span class="at"> </span><span class="st">"Foundations"</span></span>
-<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">chapters</span><span class="kw">:</span></span>
-<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span>chapters/01-introduction.qmd</span>
-<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a><span class="co">        # ...</span></span>
-<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span></span>
-<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span>brand</span>
-<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span>assets/styles/custom.scss</span>
-<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span></span>
-<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference-doc</span><span class="kw">:</span><span class="at"> assets/branding/templates/IntersectCollab-reference-doc.docx</span></span>
-<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a><span class="fu">#### _brand.yml</span></span>
-<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a>Controls visual branding:</span>
-<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a><span class="in">```yaml</span></span>
-<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a><span class="fu">color</span><span class="kw">:</span></span>
-<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">palette</span><span class="kw">:</span></span>
-<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">blue</span><span class="kw">:</span><span class="at"> </span><span class="st">"#2494f7"</span></span>
-<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">teal</span><span class="kw">:</span><span class="at"> </span><span class="st">"#00a4bb"</span></span>
-<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a><span class="co">    # ...</span></span>
-<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> blue</span></span>
-<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">secondary</span><span class="kw">:</span><span class="at"> teal</span></span>
-<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a><span class="fu">typography</span><span class="kw">:</span></span>
-<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> </span><span class="st">"Inter"</span></span>
-<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">headings</span><span class="kw">:</span></span>
-<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">family</span><span class="kw">:</span><span class="at"> </span><span class="st">"Inter"</span></span>
-<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="dv">800</span></span>
-<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">monospace</span><span class="kw">:</span><span class="at"> </span><span class="st">"Fira Code"</span></span>
+<span id="cb14-96"><a href="#cb14-96" aria-hidden="true" tabindex="-1"></a><span class="fu">### Repository Structure</span></span>
+<span id="cb14-97"><a href="#cb14-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-98"><a href="#cb14-98" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-99"><a href="#cb14-99" aria-hidden="true" tabindex="-1"></a><span class="in">Bridgeframe-Toolkit/</span></span>
+<span id="cb14-100"><a href="#cb14-100" aria-hidden="true" tabindex="-1"></a><span class="in">├── _quarto.yml           # Book configuration</span></span>
+<span id="cb14-101"><a href="#cb14-101" aria-hidden="true" tabindex="-1"></a><span class="in">├── _brand.yml            # Branding (colors, fonts, logo)</span></span>
+<span id="cb14-102"><a href="#cb14-102" aria-hidden="true" tabindex="-1"></a><span class="in">├── index.qmd             # Landing page</span></span>
+<span id="cb14-103"><a href="#cb14-103" aria-hidden="true" tabindex="-1"></a><span class="in">├── preface.qmd           # Author preface</span></span>
+<span id="cb14-104"><a href="#cb14-104" aria-hidden="true" tabindex="-1"></a><span class="in">├── references.qmd        # Bibliography</span></span>
+<span id="cb14-105"><a href="#cb14-105" aria-hidden="true" tabindex="-1"></a><span class="in">├── chapters/             # Book chapters</span></span>
+<span id="cb14-106"><a href="#cb14-106" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── 01-introduction.qmd</span></span>
+<span id="cb14-107"><a href="#cb14-107" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── ...</span></span>
+<span id="cb14-108"><a href="#cb14-108" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── C-glossary.qmd</span></span>
+<span id="cb14-109"><a href="#cb14-109" aria-hidden="true" tabindex="-1"></a><span class="in">├── assets/</span></span>
+<span id="cb14-110"><a href="#cb14-110" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── branding/         # Logos, icons, templates</span></span>
+<span id="cb14-111"><a href="#cb14-111" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── references/       # Bibliography files</span></span>
+<span id="cb14-112"><a href="#cb14-112" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── styles/           # Custom SCSS</span></span>
+<span id="cb14-113"><a href="#cb14-113" aria-hidden="true" tabindex="-1"></a><span class="in">├── .github/</span></span>
+<span id="cb14-114"><a href="#cb14-114" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── copilot-instructions.md  # AI assistant context</span></span>
+<span id="cb14-115"><a href="#cb14-115" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── workflows/</span></span>
+<span id="cb14-116"><a href="#cb14-116" aria-hidden="true" tabindex="-1"></a><span class="in">│       └── publish.yml   # GitHub Actions workflow</span></span>
+<span id="cb14-117"><a href="#cb14-117" aria-hidden="true" tabindex="-1"></a><span class="in">└── _book/                # Generated output (gitignored)</span></span>
+<span id="cb14-118"><a href="#cb14-118" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-119"><a href="#cb14-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-120"><a href="#cb14-120" aria-hidden="true" tabindex="-1"></a><span class="fu">### Configuration Files</span></span>
+<span id="cb14-121"><a href="#cb14-121" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-122"><a href="#cb14-122" aria-hidden="true" tabindex="-1"></a><span class="fu">#### _quarto.yml</span></span>
+<span id="cb14-123"><a href="#cb14-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-124"><a href="#cb14-124" aria-hidden="true" tabindex="-1"></a>The main configuration file controls:</span>
+<span id="cb14-125"><a href="#cb14-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-126"><a href="#cb14-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Book metadata (title, author, date)</span>
+<span id="cb14-127"><a href="#cb14-127" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Chapter organization</span>
+<span id="cb14-128"><a href="#cb14-128" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Output formats (HTML, DOCX)</span>
+<span id="cb14-129"><a href="#cb14-129" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Theme and styling</span>
+<span id="cb14-130"><a href="#cb14-130" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Bibliography settings</span>
+<span id="cb14-131"><a href="#cb14-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-132"><a href="#cb14-132" aria-hidden="true" tabindex="-1"></a>Key sections:</span>
 <span id="cb14-133"><a href="#cb14-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a><span class="fu">logo</span><span class="kw">:</span></span>
-<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">medium</span><span class="kw">:</span><span class="at"> assets/branding/logos/intersect-logo.png</span></span>
-<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a><span class="fu">### Writing Content</span></span>
-<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Quarto Markdown Basics</span></span>
-<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a>Quarto uses extended Markdown. Key features:</span>
-<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a>**Headings:**</span>
-<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
-<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a><span class="fu"># Chapter Title (H1)</span></span>
-<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section (H2)</span></span>
-<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a><span class="fu">### Subsection (H3)</span></span>
-<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a>**Callout Boxes:**</span>
-<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
-<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
-<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a>Content here...</span>
-<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-134"><a href="#cb14-134" aria-hidden="true" tabindex="-1"></a><span class="in">```yaml</span></span>
+<span id="cb14-135"><a href="#cb14-135" aria-hidden="true" tabindex="-1"></a><span class="fu">project</span><span class="kw">:</span></span>
+<span id="cb14-136"><a href="#cb14-136" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> book</span></span>
+<span id="cb14-137"><a href="#cb14-137" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> _book</span></span>
+<span id="cb14-138"><a href="#cb14-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-139"><a href="#cb14-139" aria-hidden="true" tabindex="-1"></a><span class="fu">book</span><span class="kw">:</span></span>
+<span id="cb14-140"><a href="#cb14-140" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Bridgeframe"</span></span>
+<span id="cb14-141"><a href="#cb14-141" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">chapters</span><span class="kw">:</span></span>
+<span id="cb14-142"><a href="#cb14-142" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span>index.qmd</span>
+<span id="cb14-143"><a href="#cb14-143" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">part</span><span class="kw">:</span><span class="at"> </span><span class="st">"Foundations"</span></span>
+<span id="cb14-144"><a href="#cb14-144" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="fu">chapters</span><span class="kw">:</span></span>
+<span id="cb14-145"><a href="#cb14-145" aria-hidden="true" tabindex="-1"></a><span class="at">        </span><span class="kw">-</span><span class="at"> </span>chapters/01-introduction.qmd</span>
+<span id="cb14-146"><a href="#cb14-146" aria-hidden="true" tabindex="-1"></a><span class="co">        # ...</span></span>
+<span id="cb14-147"><a href="#cb14-147" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-148"><a href="#cb14-148" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb14-149"><a href="#cb14-149" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb14-150"><a href="#cb14-150" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">theme</span><span class="kw">:</span></span>
+<span id="cb14-151"><a href="#cb14-151" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span>brand</span>
+<span id="cb14-152"><a href="#cb14-152" aria-hidden="true" tabindex="-1"></a><span class="at">      </span><span class="kw">-</span><span class="at"> </span>assets/styles/custom.scss</span>
+<span id="cb14-153"><a href="#cb14-153" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span></span>
+<span id="cb14-154"><a href="#cb14-154" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">reference-doc</span><span class="kw">:</span><span class="at"> assets/branding/templates/IntersectCollab-reference-doc.docx</span></span>
+<span id="cb14-155"><a href="#cb14-155" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-156"><a href="#cb14-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a>Tip content...</span>
-<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-157"><a href="#cb14-157" aria-hidden="true" tabindex="-1"></a><span class="fu">#### _brand.yml</span></span>
+<span id="cb14-158"><a href="#cb14-158" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-159"><a href="#cb14-159" aria-hidden="true" tabindex="-1"></a>Controls visual branding:</span>
 <span id="cb14-160"><a href="#cb14-160" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
-<span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a>Warning content...</span>
-<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a>**Tables:**</span>
-<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
-<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Column 1 <span class="pp">|</span> Column 2 <span class="pp">|</span></span>
-<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:---------|</span></span>
-<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data 1   <span class="pp">|</span> Data 2   <span class="pp">|</span></span>
-<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a>**Citations:**</span>
-<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
-<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a>According to the BABOK <span class="co">[</span><span class="ot">@babok2015</span><span class="co">]</span>, requirements should be...</span>
-<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Mermaid Diagrams</span></span>
-<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a>Diagrams are created with Mermaid syntax in code blocks:</span>
-<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a><span class="in">````markdown</span></span>
-<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a>%%| label: fig-example</span>
-<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a>%%| fig-cap: <span class="ot">"</span><span class="st">Example Diagram</span><span class="ot">"</span></span>
-<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
-<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a>    A[Start] --&gt; B[Process]</span>
-<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[End]</span>
-<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
+<span id="cb14-161"><a href="#cb14-161" aria-hidden="true" tabindex="-1"></a><span class="in">```yaml</span></span>
+<span id="cb14-162"><a href="#cb14-162" aria-hidden="true" tabindex="-1"></a><span class="fu">color</span><span class="kw">:</span></span>
+<span id="cb14-163"><a href="#cb14-163" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">palette</span><span class="kw">:</span></span>
+<span id="cb14-164"><a href="#cb14-164" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">blue</span><span class="kw">:</span><span class="at"> </span><span class="st">"#2494f7"</span></span>
+<span id="cb14-165"><a href="#cb14-165" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">teal</span><span class="kw">:</span><span class="at"> </span><span class="st">"#00a4bb"</span></span>
+<span id="cb14-166"><a href="#cb14-166" aria-hidden="true" tabindex="-1"></a><span class="co">    # ...</span></span>
+<span id="cb14-167"><a href="#cb14-167" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">primary</span><span class="kw">:</span><span class="at"> blue</span></span>
+<span id="cb14-168"><a href="#cb14-168" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">secondary</span><span class="kw">:</span><span class="at"> teal</span></span>
+<span id="cb14-169"><a href="#cb14-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-170"><a href="#cb14-170" aria-hidden="true" tabindex="-1"></a><span class="fu">typography</span><span class="kw">:</span></span>
+<span id="cb14-171"><a href="#cb14-171" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">base</span><span class="kw">:</span><span class="at"> </span><span class="st">"Inter"</span></span>
+<span id="cb14-172"><a href="#cb14-172" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">headings</span><span class="kw">:</span></span>
+<span id="cb14-173"><a href="#cb14-173" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">family</span><span class="kw">:</span><span class="at"> </span><span class="st">"Inter"</span></span>
+<span id="cb14-174"><a href="#cb14-174" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">weight</span><span class="kw">:</span><span class="at"> </span><span class="dv">800</span></span>
+<span id="cb14-175"><a href="#cb14-175" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">monospace</span><span class="kw">:</span><span class="at"> </span><span class="st">"Fira Code"</span></span>
+<span id="cb14-176"><a href="#cb14-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-177"><a href="#cb14-177" aria-hidden="true" tabindex="-1"></a><span class="fu">logo</span><span class="kw">:</span></span>
+<span id="cb14-178"><a href="#cb14-178" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">medium</span><span class="kw">:</span><span class="at"> assets/branding/logos/intersect-logo.png</span></span>
+<span id="cb14-179"><a href="#cb14-179" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-180"><a href="#cb14-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-181"><a href="#cb14-181" aria-hidden="true" tabindex="-1"></a><span class="fu">### Writing Content</span></span>
+<span id="cb14-182"><a href="#cb14-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-183"><a href="#cb14-183" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Quarto Markdown Basics</span></span>
+<span id="cb14-184"><a href="#cb14-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-185"><a href="#cb14-185" aria-hidden="true" tabindex="-1"></a>Quarto uses extended Markdown. Key features:</span>
+<span id="cb14-186"><a href="#cb14-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-187"><a href="#cb14-187" aria-hidden="true" tabindex="-1"></a>**Headings:**</span>
+<span id="cb14-188"><a href="#cb14-188" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb14-189"><a href="#cb14-189" aria-hidden="true" tabindex="-1"></a><span class="fu"># Chapter Title (H1)</span></span>
+<span id="cb14-190"><a href="#cb14-190" aria-hidden="true" tabindex="-1"></a><span class="fu">## Section (H2)</span></span>
+<span id="cb14-191"><a href="#cb14-191" aria-hidden="true" tabindex="-1"></a><span class="fu">### Subsection (H3)</span></span>
+<span id="cb14-192"><a href="#cb14-192" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-193"><a href="#cb14-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a>Common diagram types:</span>
-<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`flowchart`</span>: Process flows, architecture</span>
-<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`sequenceDiagram`</span>: Interactions over time</span>
-<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`erDiagram`</span>: Data models</span>
-<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`gantt`</span>: Project timelines</span>
-<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Cross-References</span></span>
-<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a>Reference figures, tables, and sections:</span>
-<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
-<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>See @fig-example for the diagram.</span>
-<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a>As discussed in @sec-planning...</span>
-<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a><span class="fu">### Publishing</span></span>
-<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a><span class="fu">#### GitHub Pages Deployment</span></span>
-<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a>The book automatically publishes to GitHub Pages when changes are pushed to <span class="in">`main`</span>. The workflow (<span class="in">`.github/workflows/publish.yml`</span>) handles rendering and deployment.</span>
+<span id="cb14-194"><a href="#cb14-194" aria-hidden="true" tabindex="-1"></a>**Callout Boxes:**</span>
+<span id="cb14-195"><a href="#cb14-195" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb14-196"><a href="#cb14-196" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb14-197"><a href="#cb14-197" aria-hidden="true" tabindex="-1"></a>Content here...</span>
+<span id="cb14-198"><a href="#cb14-198" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-199"><a href="#cb14-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-200"><a href="#cb14-200" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb14-201"><a href="#cb14-201" aria-hidden="true" tabindex="-1"></a>Tip content...</span>
+<span id="cb14-202"><a href="#cb14-202" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-203"><a href="#cb14-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-204"><a href="#cb14-204" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning}</span>
+<span id="cb14-205"><a href="#cb14-205" aria-hidden="true" tabindex="-1"></a>Warning content...</span>
+<span id="cb14-206"><a href="#cb14-206" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb14-207"><a href="#cb14-207" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-208"><a href="#cb14-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-209"><a href="#cb14-209" aria-hidden="true" tabindex="-1"></a>**Tables:**</span>
+<span id="cb14-210"><a href="#cb14-210" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb14-211"><a href="#cb14-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Column 1 <span class="pp">|</span> Column 2 <span class="pp">|</span></span>
+<span id="cb14-212"><a href="#cb14-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:---------|</span></span>
+<span id="cb14-213"><a href="#cb14-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data 1   <span class="pp">|</span> Data 2   <span class="pp">|</span></span>
+<span id="cb14-214"><a href="#cb14-214" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-215"><a href="#cb14-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Manual Publishing</span></span>
-<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a>To publish manually:</span>
-<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span>
-<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a>This creates/updates the <span class="in">`gh-pages`</span> branch with rendered content.</span>
-<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-226"><a href="#cb14-226" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Initial Setup</span></span>
-<span id="cb14-227"><a href="#cb14-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a>For first-time setup:</span>
-<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create <span class="in">`.nojekyll`</span> file in repository root (empty file)</span>
-<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`quarto publish gh-pages`</span> once locally</span>
-<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Commit the generated <span class="in">`_publish.yml`</span> file</span>
-<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Enable GitHub Pages in repository settings (source: <span class="in">`gh-pages`</span> branch)</span>
-<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a><span class="fu">### Contributing</span></span>
+<span id="cb14-216"><a href="#cb14-216" aria-hidden="true" tabindex="-1"></a>**Citations:**</span>
+<span id="cb14-217"><a href="#cb14-217" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb14-218"><a href="#cb14-218" aria-hidden="true" tabindex="-1"></a>According to the BABOK <span class="co">[</span><span class="ot">@babok2015</span><span class="co">]</span>, requirements should be...</span>
+<span id="cb14-219"><a href="#cb14-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-220"><a href="#cb14-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-221"><a href="#cb14-221" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Mermaid Diagrams</span></span>
+<span id="cb14-222"><a href="#cb14-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-223"><a href="#cb14-223" aria-hidden="true" tabindex="-1"></a>Diagrams are created with Mermaid syntax in code blocks:</span>
+<span id="cb14-224"><a href="#cb14-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-225"><a href="#cb14-225" aria-hidden="true" tabindex="-1"></a><span class="in">````markdown</span></span>
+<span id="cb14-228"><a href="#cb14-228" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb14-229"><a href="#cb14-229" aria-hidden="true" tabindex="-1"></a>%%| label: fig-example</span>
+<span id="cb14-230"><a href="#cb14-230" aria-hidden="true" tabindex="-1"></a>%%| fig-cap: <span class="ot">"</span><span class="st">Example Diagram</span><span class="ot">"</span></span>
+<span id="cb14-231"><a href="#cb14-231" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb14-232"><a href="#cb14-232" aria-hidden="true" tabindex="-1"></a>    A[Start] --&gt; B[Process]</span>
+<span id="cb14-233"><a href="#cb14-233" aria-hidden="true" tabindex="-1"></a>    B --&gt; C[End]</span>
+<span id="cb14-234"><a href="#cb14-234" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-235"><a href="#cb14-235" aria-hidden="true" tabindex="-1"></a><span class="in">````</span></span>
 <span id="cb14-236"><a href="#cb14-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Branch Strategy</span></span>
+<span id="cb14-237"><a href="#cb14-237" aria-hidden="true" tabindex="-1"></a>Common diagram types:</span>
 <span id="cb14-238"><a href="#cb14-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`main`</span>: Production-ready content</span>
-<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Feature branches: For new content or significant changes</span>
-<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pull requests: For review before merging to main</span>
-<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Content Guidelines</span></span>
-<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Follow the BA-PH dual framing throughout</span>
-<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Include CancerSurv examples in callout boxes</span>
-<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Use tables for terminology mapping</span>
-<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Avoid em dashes and en dashes; rewrite sentences instead</span>
-<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Every <span class="in">`.qmd`</span> file needs YAML frontmatter with at least a <span class="in">`title`</span></span>
-<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Style Guidelines</span></span>
+<span id="cb14-239"><a href="#cb14-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`flowchart`</span>: Process flows, architecture</span>
+<span id="cb14-240"><a href="#cb14-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`sequenceDiagram`</span>: Interactions over time</span>
+<span id="cb14-241"><a href="#cb14-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`erDiagram`</span>: Data models</span>
+<span id="cb14-242"><a href="#cb14-242" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`gantt`</span>: Project timelines</span>
+<span id="cb14-243"><a href="#cb14-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-244"><a href="#cb14-244" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Cross-References</span></span>
+<span id="cb14-245"><a href="#cb14-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-246"><a href="#cb14-246" aria-hidden="true" tabindex="-1"></a>Reference figures, tables, and sections:</span>
+<span id="cb14-247"><a href="#cb14-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-248"><a href="#cb14-248" aria-hidden="true" tabindex="-1"></a><span class="in">```markdown</span></span>
+<span id="cb14-249"><a href="#cb14-249" aria-hidden="true" tabindex="-1"></a>See @fig-example for the diagram.</span>
+<span id="cb14-250"><a href="#cb14-250" aria-hidden="true" tabindex="-1"></a>As discussed in @sec-planning...</span>
+<span id="cb14-251"><a href="#cb14-251" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
 <span id="cb14-252"><a href="#cb14-252" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First-person voice only in Preface and personal sections</span>
-<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Professional/instructional tone for toolkit content</span>
-<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Academic yet accessible language</span>
-<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ground claims in evidence where possible</span>
-<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a><span class="fu">### Troubleshooting</span></span>
-<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Common Issues</span></span>
-<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a>**Quarto preview not updating:**</span>
-<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check for syntax errors in YAML frontmatter</span>
-<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Restart preview with <span class="in">`quarto preview`</span></span>
-<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a>**Mermaid diagram not rendering:**</span>
-<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Verify syntax at <span class="co">[</span><span class="ot">mermaid.live</span><span class="co">](https://mermaid.live)</span></span>
-<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check for unsupported features</span>
-<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a>**GitHub Pages not updating:**</span>
-<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check Actions tab for workflow failures</span>
-<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Verify <span class="in">`gh-pages`</span> branch exists</span>
-<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check repository Pages settings</span>
-<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a>**Bibliography not working:**</span>
-<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Verify <span class="in">`references.bib`</span> exists at specified path</span>
-<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check citation key matches bib entry</span>
-<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ensure <span class="in">`bibliography`</span> field in <span class="in">`_quarto.yml`</span> is correct</span>
+<span id="cb14-253"><a href="#cb14-253" aria-hidden="true" tabindex="-1"></a><span class="fu">### Publishing</span></span>
+<span id="cb14-254"><a href="#cb14-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-255"><a href="#cb14-255" aria-hidden="true" tabindex="-1"></a><span class="fu">#### GitHub Pages Deployment</span></span>
+<span id="cb14-256"><a href="#cb14-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-257"><a href="#cb14-257" aria-hidden="true" tabindex="-1"></a>The book automatically publishes to GitHub Pages when changes are pushed to <span class="in">`main`</span>. The workflow (<span class="in">`.github/workflows/publish.yml`</span>) handles rendering and deployment.</span>
+<span id="cb14-258"><a href="#cb14-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-259"><a href="#cb14-259" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Manual Publishing</span></span>
+<span id="cb14-260"><a href="#cb14-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-261"><a href="#cb14-261" aria-hidden="true" tabindex="-1"></a>To publish manually:</span>
+<span id="cb14-262"><a href="#cb14-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-263"><a href="#cb14-263" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb14-264"><a href="#cb14-264" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish gh-pages</span>
+<span id="cb14-265"><a href="#cb14-265" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb14-266"><a href="#cb14-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-267"><a href="#cb14-267" aria-hidden="true" tabindex="-1"></a>This creates/updates the <span class="in">`gh-pages`</span> branch with rendered content.</span>
+<span id="cb14-268"><a href="#cb14-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-269"><a href="#cb14-269" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Initial Setup</span></span>
+<span id="cb14-270"><a href="#cb14-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-271"><a href="#cb14-271" aria-hidden="true" tabindex="-1"></a>For first-time setup:</span>
+<span id="cb14-272"><a href="#cb14-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-273"><a href="#cb14-273" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Create <span class="in">`.nojekyll`</span> file in repository root (empty file)</span>
+<span id="cb14-274"><a href="#cb14-274" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Run <span class="in">`quarto publish gh-pages`</span> once locally</span>
+<span id="cb14-275"><a href="#cb14-275" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Commit the generated <span class="in">`_publish.yml`</span> file</span>
+<span id="cb14-276"><a href="#cb14-276" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Enable GitHub Pages in repository settings (source: <span class="in">`gh-pages`</span> branch)</span>
+<span id="cb14-277"><a href="#cb14-277" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-278"><a href="#cb14-278" aria-hidden="true" tabindex="-1"></a><span class="fu">### Contributing</span></span>
 <span id="cb14-279"><a href="#cb14-279" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a><span class="fu">### Resources</span></span>
+<span id="cb14-280"><a href="#cb14-280" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Branch Strategy</span></span>
 <span id="cb14-281"><a href="#cb14-281" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quarto Documentation</span><span class="co">](https://quarto.org/docs/guide/)</span></span>
-<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quarto Books Guide</span><span class="co">](https://quarto.org/docs/books/)</span></span>
-<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Mermaid Documentation</span><span class="co">](https://mermaid.js.org/intro/)</span></span>
-<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">GitHub Pages Documentation</span><span class="co">](https://docs.github.com/en/pages)</span></span>
+<span id="cb14-282"><a href="#cb14-282" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`main`</span>: Production-ready content</span>
+<span id="cb14-283"><a href="#cb14-283" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Feature branches: For new content or significant changes</span>
+<span id="cb14-284"><a href="#cb14-284" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pull requests: For review before merging to main</span>
+<span id="cb14-285"><a href="#cb14-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-286"><a href="#cb14-286" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Content Guidelines</span></span>
+<span id="cb14-287"><a href="#cb14-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-288"><a href="#cb14-288" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Follow the BA-PH dual framing throughout</span>
+<span id="cb14-289"><a href="#cb14-289" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Include CancerSurv examples in callout boxes</span>
+<span id="cb14-290"><a href="#cb14-290" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Use tables for terminology mapping</span>
+<span id="cb14-291"><a href="#cb14-291" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Avoid em dashes and en dashes; rewrite sentences instead</span>
+<span id="cb14-292"><a href="#cb14-292" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Every <span class="in">`.qmd`</span> file needs YAML frontmatter with at least a <span class="in">`title`</span></span>
+<span id="cb14-293"><a href="#cb14-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-294"><a href="#cb14-294" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Style Guidelines</span></span>
+<span id="cb14-295"><a href="#cb14-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-296"><a href="#cb14-296" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First-person voice only in Preface and personal sections</span>
+<span id="cb14-297"><a href="#cb14-297" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Professional/instructional tone for toolkit content</span>
+<span id="cb14-298"><a href="#cb14-298" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Academic yet accessible language</span>
+<span id="cb14-299"><a href="#cb14-299" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ground claims in evidence where possible</span>
+<span id="cb14-300"><a href="#cb14-300" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-301"><a href="#cb14-301" aria-hidden="true" tabindex="-1"></a><span class="fu">### Troubleshooting</span></span>
+<span id="cb14-302"><a href="#cb14-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-303"><a href="#cb14-303" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Common Issues</span></span>
+<span id="cb14-304"><a href="#cb14-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-305"><a href="#cb14-305" aria-hidden="true" tabindex="-1"></a>**Quarto preview not updating:**</span>
+<span id="cb14-306"><a href="#cb14-306" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check for syntax errors in YAML frontmatter</span>
+<span id="cb14-307"><a href="#cb14-307" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Restart preview with <span class="in">`quarto preview`</span></span>
+<span id="cb14-308"><a href="#cb14-308" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-309"><a href="#cb14-309" aria-hidden="true" tabindex="-1"></a>**Mermaid diagram not rendering:**</span>
+<span id="cb14-310"><a href="#cb14-310" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Verify syntax at <span class="co">[</span><span class="ot">mermaid.live</span><span class="co">](https://mermaid.live)</span></span>
+<span id="cb14-311"><a href="#cb14-311" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check for unsupported features</span>
+<span id="cb14-312"><a href="#cb14-312" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-313"><a href="#cb14-313" aria-hidden="true" tabindex="-1"></a>**GitHub Pages not updating:**</span>
+<span id="cb14-314"><a href="#cb14-314" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check Actions tab for workflow failures</span>
+<span id="cb14-315"><a href="#cb14-315" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Verify <span class="in">`gh-pages`</span> branch exists</span>
+<span id="cb14-316"><a href="#cb14-316" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check repository Pages settings</span>
+<span id="cb14-317"><a href="#cb14-317" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-318"><a href="#cb14-318" aria-hidden="true" tabindex="-1"></a>**Bibliography not working:**</span>
+<span id="cb14-319"><a href="#cb14-319" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Verify <span class="in">`references.bib`</span> exists at specified path</span>
+<span id="cb14-320"><a href="#cb14-320" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Check citation key matches bib entry</span>
+<span id="cb14-321"><a href="#cb14-321" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Ensure <span class="in">`bibliography`</span> field in <span class="in">`_quarto.yml`</span> is correct</span>
+<span id="cb14-322"><a href="#cb14-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-323"><a href="#cb14-323" aria-hidden="true" tabindex="-1"></a><span class="fu">### Resources</span></span>
+<span id="cb14-324"><a href="#cb14-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-325"><a href="#cb14-325" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quarto Documentation</span><span class="co">](https://quarto.org/docs/guide/)</span></span>
+<span id="cb14-326"><a href="#cb14-326" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quarto Books Guide</span><span class="co">](https://quarto.org/docs/books/)</span></span>
+<span id="cb14-327"><a href="#cb14-327" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Mermaid Documentation</span><span class="co">](https://mermaid.js.org/intro/)</span></span>
+<span id="cb14-328"><a href="#cb14-328" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">GitHub Pages Documentation</span><span class="co">](https://docs.github.com/en/pages)</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
