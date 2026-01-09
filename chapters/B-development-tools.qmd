@@ -43,6 +43,15 @@ GitHub Copilot provides access to multiple large language models:
 - **Inline suggestions**: Real-time code and content completion
 - **Agent mode**: Multi-step tasks with file creation and terminal access
 
+#### Deep Research Tools
+
+Research and analysis is additionally supported by deep research features in:
+
+- **Google Gemini**: Extended research capabilities for comprehensive literature review and framework analysis
+- **OpenAI ChatGPT**: Deep research mode for exploring complex BA-PH terminology mappings and implementation science concepts
+
+These tools complement GitHub Copilot by providing broader research context beyond the immediate codebase.
+
 #### Project Context
 
 The `.github/copilot-instructions.md` file provides Copilot with project-specific context including:

@@ -1,11 +1,21 @@
 project:
   type: book
   output-dir: _book
+title-block-banner: assets/branding/images/cover-image.jpg
 
 book:
   title: "Bridgeframe"
   subtitle: "Bridging Business Analysis and Public Health"
-  author: "André van Zyl"
+  author: 
+  - name: "André van Zyl"
+    id: avz
+    orcid: 0000-0001-6872-5276
+    url: https://www.linkedin.com/in/andre-van-zyl/
+    affiliation: 
+      - name: Intersect Collaborations LLC
+        city: Cincinnati
+        state: OH
+        url: https://www.intersectcollaborations.com/
   date: last-modified
   date-format: "MMMM YYYY"
   cover-image: assets/branding/images/cover-image.jpg
@@ -45,8 +55,8 @@ book:
   repo-url: https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit
   repo-actions: [issue]
 
-bibliography: assets/references/references.bib
-csl: assets/references/apa.csl
+bibliography: assets/references/Bridgeframe.bib
+csl: assets/references/vancouver-superscript.csl
 
 execute:
   freeze: auto

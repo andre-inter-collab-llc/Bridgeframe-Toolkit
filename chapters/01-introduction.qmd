@@ -18,18 +18,18 @@ This is not a failure of intelligence or good faith. It is a failure of translat
 
 ### Two Parallel Worlds
 
-Business analysis, as codified in the BABOK (Business Analysis Body of Knowledge), provides a rigorous framework for understanding needs, defining requirements, and ensuring solutions deliver value. Public health analysis, guided by CDC frameworks and epidemiological methods, provides an equally rigorous approach to assessing community needs, designing interventions, and evaluating outcomes.
+Business analysis, as codified in the BABOK (Business Analysis Body of Knowledge), provides a rigorous framework for understanding needs, defining requirements, and ensuring solutions deliver value[@iiba_babok_2015]. Public health analysis, guided by CDC frameworks and epidemiological methods, provides an equally rigorous approach to assessing community needs, designing interventions, and evaluating outcomes[@cdc_cdc_2025; @kidder_cdc_2024].
 
 These frameworks are parallel, not incompatible:
 
-| Business Analysis | Public Health |
-|:------------------|:--------------|
-| Stakeholder Analysis | Community Partner Mapping |
-| Current State Analysis | Epidemiological Baseline |
-| Requirements Specification | Program Protocol |
-| Solution Design | Intervention Design |
-| Implementation | Program Rollout |
-| Evaluation | Program Evaluation |
+| Business Analysis          | Public Health             |
+|:---------------------------|:--------------------------|
+| Stakeholder Analysis       | Community Partner Mapping |
+| Current State Analysis     | Epidemiological Baseline  |
+| Requirements Specification | Program Protocol          |
+| Solution Design            | Intervention Design       |
+| Implementation             | Program Rollout           |
+| Evaluation                 | Program Evaluation        |
 
 The concepts align; the terminology diverges. Bridgeframe provides the translation layer.
 
@@ -37,11 +37,11 @@ The concepts align; the terminology diverges. Bridgeframe provides the translati
 
 When BA and PH professionals cannot communicate effectively, projects suffer:
 
-- **Scope creep**: Vague requirements lead to endless revisions
-- **Missed requirements**: Critical public health needs get lost in translation
-- **Delayed timelines**: Clarification loops consume sprint capacity
-- **Poor adoption**: Systems that meet technical specs but fail field workers
-- **Wasted funding**: Grant dollars spent on rework rather than outcomes
+-   **Scope creep**: Vague requirements lead to endless revisions
+-   **Missed requirements**: Critical public health needs get lost in translation
+-   **Delayed timelines**: Clarification loops consume sprint capacity
+-   **Poor adoption**: Systems that meet technical specs but fail field workers
+-   **Wasted funding**: Grant dollars spent on rework rather than outcomes
 
 More importantly, health outcomes suffer. A delayed surveillance system means delayed outbreak response. A poorly designed immunization registry means children missing vaccines.
 
@@ -49,10 +49,29 @@ More importantly, health outcomes suffer. A delayed surveillance system means de
 
 Bridgeframe offers a structured approach to bridging these domains:
 
-1. **Common Vocabulary**: Chapter 3 provides a comprehensive dictionary mapping BA terms to PH equivalents
-2. **Phase Alignment**: Chapters 4-9 walk through each lifecycle phase, showing how BA activities map to PH frameworks
-3. **Practical Examples**: The CancerSurv case study (Chapter 2) demonstrates concepts in action
-4. **Implementation Science**: Chapter 11 introduces CFIR and other frameworks for addressing adoption barriers
+1.  **Common Vocabulary**: Chapter 3 provides a comprehensive dictionary mapping BA terms to PH equivalents
+2.  **Phase Alignment**: Chapters 4-9 walk through each lifecycle phase, showing how BA activities map to PH frameworks
+3.  **Practical Examples**: The CancerSurv case study (Chapter 2) demonstrates concepts in action
+4.  **Implementation Science**: Chapter 11 introduces CFIR and other frameworks for addressing adoption barriers
+
+### Start with the Client's Framework
+
+Before diving into requirements gathering or sprint planning, a critical first question must be answered: **What frameworks does the client already use?**
+
+Public health organizations operate within established methodological traditions. They may follow CDC evaluation frameworks, use logic models for program planning, apply CFIR for implementation readiness, or adhere to agency-specific protocols. These are not obstacles to be worked around; they are assets to be leveraged.
+
+When engaging with a public health client:
+
+1.  **Ask early**: In the first meetings, explicitly ask what frameworks, methodologies, or standards guide their work
+2.  **Prioritize existing frameworks**: If the client has established approaches, adapt your deliverables to align with them rather than imposing unfamiliar structures
+3.  **Translate, do not replace**: When BA frameworks offer value the client lacks, introduce them by mapping to familiar concepts. Present a "logic model with software requirements" rather than demanding they learn BABOK terminology
+4.  **Document the bridge**: Create explicit crosswalks showing how your deliverables map to their frameworks
+
+::: {.callout-tip title="Practical Guidance"}
+If you are the business analyst or developer, your role is translation, not conversion. A requirements document that aligns with the client's existing CDC program evaluation framework will gain faster buy-in than one that requires the client to learn Agile terminology. Meet them where they are.
+:::
+
+This principle works both ways. Public health professionals engaging with IT vendors should communicate their frameworks early, providing documentation and context so the technical team can adapt their approach accordingly.
 
 ### Who Should Use This Book
 
@@ -60,21 +79,21 @@ This book serves multiple audiences:
 
 **For IT Business Analysts entering public health:**
 
-- Learn the regulatory context (HIPAA, CDC reporting requirements)
-- Understand grant-driven funding and its implications
-- Adapt Agile practices for public health workflows
+-   Learn the regulatory context (HIPAA, CDC reporting requirements)
+-   Understand grant-driven funding and its implications
+-   Adapt Agile practices for public health workflows
 
 **For Public Health Professionals working with IT teams:**
 
-- Translate your needs into requirements language
-- Participate effectively in sprint planning and reviews
-- Evaluate vendor proposals with confidence
+-   Translate your needs into requirements language
+-   Participate effectively in sprint planning and reviews
+-   Evaluate vendor proposals with confidence
 
 **For Project Managers and Leaders:**
 
-- Build teams with shared vocabulary
-- Anticipate common friction points
-- Structure projects for hybrid success
+-   Build teams with shared vocabulary
+-   Anticipate common friction points
+-   Structure projects for hybrid success
 
 ::: {.callout-note title="CancerSurv Example"}
 Throughout this book, we follow the CancerSurv project: a state health department modernizing its cancer registry system. In the Introduction, the challenge is framed as both a **Business Need** (replace aging mainframe with modern cloud platform) and a **Public Health Challenge** (ensure timely, complete cancer data for prevention planning and disparity identification).
