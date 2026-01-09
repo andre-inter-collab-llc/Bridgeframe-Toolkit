@@ -49,7 +49,7 @@ flowchart TB
 Properties of the intervention itself that influence adoption:
 
 | Construct | Definition | BA/Requirements Implication |
-|:------------------|:------------------|:----------------------------------|
+|:------------------|:------------------|:---------------------------------|
 | **Intervention Source** | Perception of whether intervention is externally vs internally developed | Involve users in design; customize for local context |
 | **Evidence Strength** | Stakeholders' perception of evidence supporting the intervention | Document benefits; reference standards (CDC, NAACCR) |
 | **Relative Advantage** | Perception that the intervention is better than current practice | Quantify improvements; demonstrate in pilot |
@@ -73,7 +73,7 @@ Properties of the intervention itself that influence adoption:
 External context influencing the implementing organization:
 
 | Construct | Definition | BA/Requirements Implication |
-|:------------------|:------------------|:----------------------------------|
+|:------------------|:------------------|:---------------------------------|
 | **Patient/Community Needs** | Extent to which needs are known and prioritized | Gather community input; equity analysis |
 | **Cosmopolitanism** | Degree of networking with external organizations | Plan for interoperability; support data sharing |
 | **Peer Pressure** | Competitive pressure from peer organizations | Reference successful implementations elsewhere |
@@ -92,7 +92,7 @@ For public health IT projects, outer setting often includes:
 Internal organizational context:
 
 | Construct | Definition | BA/Requirements Implication |
-|:------------------|:------------------|:----------------------------------|
+|:------------------|:------------------|:---------------------------------|
 | **Structural Characteristics** | Organization size, maturity, structure | Assess readiness; tailor approach |
 | **Networks & Communications** | Information flow within organization | Plan communication strategy |
 | **Culture** | Norms, values, assumptions | Align with organizational culture |
@@ -112,7 +112,7 @@ Internal organizational context:
 Attributes of people involved in implementation:
 
 | Construct | Definition | BA/Requirements Implication |
-|:------------------|:------------------|:----------------------------------|
+|:------------------|:------------------|:---------------------------------|
 | **Knowledge & Beliefs** | Attitudes toward the intervention | Education, demonstration, testimonials |
 | **Self-Efficacy** | Confidence in ability to use intervention | Training, support resources, simplification |
 | **Individual Stage of Change** | Readiness to adopt | Tailored engagement by readiness level |
@@ -123,7 +123,7 @@ Attributes of people involved in implementation:
 The implementation process itself:
 
 | Construct | Definition | BA/Requirements Implication |
-|:------------------|:------------------|:----------------------------------|
+|:------------------|:------------------|:---------------------------------|
 | **Planning** | Degree to which implementation is planned | Detailed implementation plan |
 | **Engaging** | Attracting and involving appropriate people | Stakeholder engagement strategy |
 | **Executing** | Carrying out implementation as planned | Project management, monitoring |
