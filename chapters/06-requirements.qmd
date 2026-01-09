@@ -125,34 +125,23 @@ Public health uses the **Logic Model** to specify program components. This struc
 %%| label: fig-logic-requirements
 %%| fig-cap: "Logic Model Components Mapped to Requirements"
 flowchart LR
-    subgraph Inputs["Inputs (Resources)"]
-        I1[Funding]
-        I2[Staff]
-        I3[Data feeds]
-        I4[Infrastructure]
+    subgraph Inputs[" "]
+        I["**Inputs**<br/>(Resources)<br/>───────<br/>Funding<br/>Staff<br/>Data feeds<br/>Infrastructure"]
     end
     
-    subgraph Activities["Activities (Functions)"]
-        A1[Case abstraction]
-        A2[Data quality checks]
-        A3[Report generation]
-        A4[Analytics]
+    subgraph Activities[" "]
+        A["**Activities**<br/>(Functions)<br/>───────<br/>Case abstraction<br/>Data quality<br/>Reporting<br/>Analytics"]
     end
     
-    subgraph Outputs["Outputs (Deliverables)"]
-        O1[Complete case records]
-        O2[Quality reports]
-        O3[NPCR submissions]
-        O4[Dashboards]
+    subgraph Outputs[" "]
+        O["**Outputs**<br/>(Deliverables)<br/>───────<br/>Case records<br/>Quality reports<br/>NPCR submissions<br/>Dashboards"]
     end
     
-    subgraph Outcomes["Outcomes (Success Metrics)"]
-        OC1[95% completeness]
-        OC2[Timely reporting]
-        OC3[User satisfaction]
+    subgraph Outcomes[" "]
+        OC["**Outcomes**<br/>(Success Metrics)<br/>───────<br/>95% completeness<br/>Timely reporting<br/>User satisfaction"]
     end
     
-    Inputs --> Activities --> Outputs --> Outcomes
+    I --> A --> O --> OC
 ```
 
 | Logic Model Component | Requirements Category |

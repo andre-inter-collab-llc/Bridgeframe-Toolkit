@@ -14,9 +14,43 @@ The Bridgeframe Toolkit is built with:
 |:-----|:--------|:--------|
 | **Quarto** | Document publishing system | 1.4+ |
 | **VS Code** | Code editor | Current |
+| **GitHub Copilot** | AI-assisted development | Current |
 | **Git/GitHub** | Version control and hosting | N/A |
 | **GitHub Actions** | Automated publishing | N/A |
 | **Mermaid** | Diagram generation | Built into Quarto |
+
+### AI-Assisted Development
+
+GitHub Copilot is used throughout the development of this toolkit for:
+
+- **Refining ideas**: Brainstorming content structure and terminology mappings
+- **Analysis**: Reviewing and improving BA-PH framework alignments
+- **Code development**: Generating Mermaid diagrams, R scripts, and configuration files
+
+#### LLM Models Used
+
+GitHub Copilot provides access to multiple large language models:
+
+| Provider | Models | Primary Use |
+|:---------|:-------|:------------|
+| **Anthropic** | Claude (Sonnet, Opus) | Complex analysis, long-form content |
+| **Google** | Gemini | Research, fact-checking |
+| **OpenAI** | GPT-4, GPT-4o | Code generation, quick edits |
+
+#### Copilot Features
+
+- **Chat**: Interactive conversation for complex tasks
+- **Inline suggestions**: Real-time code and content completion
+- **Agent mode**: Multi-step tasks with file creation and terminal access
+
+#### Project Context
+
+The `.github/copilot-instructions.md` file provides Copilot with project-specific context including:
+
+- Repository structure and conventions
+- BA-PH terminology mappings
+- CancerSurv case study details
+- Formatting standards and style guidelines
 
 ### Local Development Setup
 

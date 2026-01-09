@@ -8,7 +8,7 @@ book:
   author: "André van Zyl"
   date: last-modified
   date-format: "MMMM YYYY"
-  
+  cover-image: assets/branding/images/cover-image.jpg
   chapters:
     - index.qmd
     - preface.qmd

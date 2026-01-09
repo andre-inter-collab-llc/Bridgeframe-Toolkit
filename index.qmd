@@ -14,7 +14,7 @@ Two disciplines. Two languages. One shared goal: building systems that improve h
 **Business analysts** speak of user stories, sprints, and requirements traceability. **Public health professionals** speak of logic models, PDSA cycles, and program evaluation. Both are trying to define problems, design solutions, and measure success, yet their terminology creates friction rather than collaboration.
 
 ## The Solution
-
+Logic Model Components Mapped to Requirements
 Bridgeframe provides:
 
 - **A terminology dictionary** mapping IT/Agile concepts to their public health equivalents

@@ -17,6 +17,40 @@ The BA lifecycle aligns with public health program phases:
 | **Solution Evaluation** | **Program Evaluation (CDC Framework)** | Measure outcomes against targets |
 | **Change Management** | **Implementation Science** | CFIR, RE-AIM for adoption barriers |
 
+### The Complete BA-PH Process Workflow
+
+The following diagram illustrates the six-phase analysis process covered in Part II of this book, showing how each BA phase maps to its Public Health equivalent. Note the iterative feedback loop from evaluation back to planning, reflecting the continuous improvement philosophy shared by both domains.
+
+```{mermaid}
+%%| label: fig-ba-ph-process
+%%| fig-cap: "Business Analyst Process Mapped to Public Health Analyst Workflow"
+%%| fig-width: 10
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#2494f7', 'primaryTextColor': '#ffffff', 'primaryBorderColor': '#01272f', 'lineColor': '#777777', 'secondaryColor': '#00a4bb', 'tertiaryColor': '#01272f', 'edgeLabelBackground': '#ffffff'}}}%%
+flowchart TB
+    P1["<b>Ch 4: Planning & Strategy (BA) | Needs Assessment (PH)</b><br/><br/>BA Terms: business need, current state, future state, stakeholder identification<br/>PH Analog: public health challenge, epidemiological baseline, program goals<br/>Frameworks: SMART, RACI, SIPOC, 5 Whys, Fishbone<br/>Artifacts: business case, needs assessment, stakeholder map, current-state analysis"]
+
+    P2["<b>Ch 5: Elicitation (BA) | Stakeholder Engagement (PH)</b><br/><br/>BA Terms: interviews, workshops, document analysis, observation, prototyping<br/>PH Analog: key informant interviews, focus groups, community engagement<br/>Frameworks: facilitation techniques, participatory research methods<br/>Artifacts: interview notes, workshop outputs, elicitation findings"]
+
+    P3["<b>Ch 6: Requirements Analysis (BA) | Data Analysis & Logic Models (PH)</b><br/><br/>BA Terms: functional requirements, NFRs, data requirements, business rules<br/>PH Analog: program activities, implementation characteristics, case definitions<br/>Frameworks: MoSCoW, INVEST, UML, ERD; Logic Model, Theory of Change<br/>Artifacts: requirements specification, data dictionary, logic model, RTM"]
+
+    P4["<b>Ch 7: Design & Solution Definition (BA) | Intervention Design (PH)</b><br/><br/>BA Terms: solution architecture, interface design, integration design<br/>PH Analog: intervention framework, program design, service delivery model<br/>Frameworks: UML, CFIR implementation planning<br/>Artifacts: architecture diagrams, prototypes, implementation strategy"]
+
+    P5["<b>Ch 8: Implementation (BA) | Program Execution (PH)</b><br/><br/>BA Terms: sprint, release management, UAT, go-live, defect management<br/>PH Analog: PDSA cycle, phased rollout, pilot evaluation, program launch<br/>Frameworks: Agile/Scrum, Kanban; PDSA, implementation science<br/>Artifacts: release notes, test results, training materials, change log"]
+
+    P6["<b>Ch 9: Evaluation (BA) | Program Evaluation & QI (PH)</b><br/><br/>BA Terms: solution evaluation, KPI tracking, ROI, lessons learned<br/>PH Analog: program evaluation, health indicators, cost-effectiveness, QI<br/>Frameworks: CDC Evaluation Framework, RE-AIM, PDCA/PDSA<br/>Artifacts: KPI dashboard, evaluation report, after-action review"]
+
+    P1 --> P2
+    P2 --> P3
+    P3 --> P4
+    P4 --> P5
+    P5 --> P6
+    P6 -.->|"Iterate and Improve"| P1
+
+    linkStyle 5 stroke:#333333
+```
+
+Each phase produces artifacts and applies frameworks that translate across domains. The following sections detail the terminology mappings for each phase.
+
 ### Terminology Translation Table
 
 #### Planning & Strategy Terms
