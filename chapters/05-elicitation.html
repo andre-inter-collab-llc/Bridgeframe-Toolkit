@@ -320,12 +320,18 @@ background-size: cover;
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/D-workforce-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Workforce Development</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -716,6 +722,60 @@ Figure&nbsp;7.1: From Elicitation to Requirements
 </tr>
 </tbody>
 </table>
+</section>
+<section id="when-standard-user-stories-fall-short" class="level4" data-number="7.1.6.4">
+<h4 data-number="7.1.6.4" class="anchored" data-anchor-id="when-standard-user-stories-fall-short"><span class="header-section-number">7.1.6.4</span> When Standard User Stories Fall Short</h4>
+<p>The standard Agile user story format (“As a [user], I want [feature], so that [benefit]”) works well for many software contexts. However, it often fails to capture the nuances of clinical workflows, regulatory requirements, and public health scenarios.</p>
+<p><strong>Why standard user stories may not fit clinical contexts:</strong></p>
+<ul>
+<li>Clinical workflows involve conditional logic (“if this lab result, then that action”)</li>
+<li>Regulatory requirements mandate specific timeframes and actions</li>
+<li>Patient safety considerations require explicit protocols, not just user preferences</li>
+<li>Public health surveillance involves system-initiated actions, not just user-initiated features</li>
+</ul>
+<p><strong>Alternative formats worth considering:</strong></p>
+<p><strong>Given-Person-Should (GPS) Format:</strong></p>
+<p>This format emphasizes context and obligation rather than desire:</p>
+<blockquote class="blockquote">
+<p>“Given [clinical/situational context], the [health worker role] should [specific action] to [health outcome].”</p>
+</blockquote>
+<p><em>Example:</em></p>
+<blockquote class="blockquote">
+<p>“Given a positive TB test result, the contact tracer should initiate household investigation within 48 hours to prevent secondary transmission.”</p>
+</blockquote>
+<p><strong>Situational Protocol Format:</strong></p>
+<p>This format ties system behavior to clinical guidelines or regulatory requirements:</p>
+<blockquote class="blockquote">
+<p>“When [triggering event], the system shall [required action] within [timeframe].”</p>
+</blockquote>
+<p><em>Example:</em></p>
+<blockquote class="blockquote">
+<p>“When a laboratory reports a confirmed measles case, the system shall generate a contact list and notify the assigned epidemiologist within 4 hours.”</p>
+</blockquote>
+<p><strong>Service-User Scenario Format:</strong></p>
+<p>This narrative format describes a patient or client journey through the system:</p>
+<blockquote class="blockquote">
+<p>“Maria, a 45-year-old farmworker, visits a mobile clinic for diabetes screening. She speaks primarily Spanish and has no regular primary care provider. The system must support her preferred language, connect her to follow-up care, and track her screening results for population health reporting.”</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="CancerSurv Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>CancerSurv Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Standard user story:</strong></p>
+<p>“As a registrar, I want to search for existing cases, so that I can avoid creating duplicates.”</p>
+<p><strong>GPS format (adding clinical context):</strong></p>
+<p>“Given a new pathology report for a patient who may already be in the registry, the registrar should be able to search by name, SSN, and diagnosis within 3 seconds to prevent duplicate case creation and ensure accurate incidence counts.”</p>
+<p><strong>Situational protocol (system-initiated):</strong></p>
+<p>“When a new case is entered, the system shall automatically search for potential duplicates using probabilistic matching and present candidates to the registrar for review before saving.”</p>
+</div>
+</div>
+<p>Choose the format that best communicates intent to your audience. Development teams may still translate these into standard user stories for sprint planning, but starting with clinical context ensures nothing gets lost in translation.</p>
 </section>
 </section>
 <section id="validation-and-confirmation" class="level3" data-number="7.1.7">
@@ -1503,62 +1563,117 @@ Figure&nbsp;7.1: From Elicitation to Requirements
 <span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Funders (CDC, grants) <span class="pp">|</span> Logic Model <span class="pp">|</span> Inputs, activities, outputs, outcomes <span class="pp">|</span></span>
 <span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Governance <span class="pp">|</span> Requirements Traceability Matrix <span class="pp">|</span> Links requirements to objectives <span class="pp">|</span></span>
 <span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="fu">### Validation and Confirmation</span></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="fu">#### When Standard User Stories Fall Short</span></span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Ensuring Accuracy</span></span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>The standard Agile user story format ("As a <span class="co">[</span><span class="ot">user</span><span class="co">]</span>, I want <span class="co">[</span><span class="ot">feature</span><span class="co">]</span>, so that <span class="co">[</span><span class="ot">benefit</span><span class="co">]</span>") works well for many software contexts. However, it often fails to capture the nuances of clinical workflows, regulatory requirements, and public health scenarios.</span>
 <span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>Elicitation is iterative. Validate what you heard:</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a>**Why standard user stories may not fit clinical contexts:**</span>
 <span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>**BA Validation Techniques:**</span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requirements reviews</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prototype walkthroughs</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Structured walkthroughs</span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sign-off meetings</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Clinical workflows involve conditional logic ("if this lab result, then that action")</span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Regulatory requirements mandate specific timeframes and actions</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Patient safety considerations require explicit protocols, not just user preferences</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Public health surveillance involves system-initiated actions, not just user-initiated features</span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>**Alternative formats worth considering:**</span>
 <span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>**PH Validation Techniques:**</span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a>**Given-Person-Should (GPS) Format:**</span>
 <span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Member checking (returning findings to participants)</span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Community review sessions</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pilot testing</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Expert review panels</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a><span class="fu">### Managing Conflicting Needs</span></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="fu">#### When Stakeholders Disagree</span></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a>Conflicts are inevitable. Resolution approaches include:</span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Approach <span class="pp">|</span> When to Use <span class="pp">|</span></span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:------------|</span></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Prioritization** <span class="pp">|</span> When resources are limited; use MoSCoW or weighted scoring <span class="pp">|</span></span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Negotiation** <span class="pp">|</span> When compromise is possible without losing value <span class="pp">|</span></span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Escalation** <span class="pp">|</span> When authority must resolve; use governance structure <span class="pp">|</span></span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Phasing** <span class="pp">|</span> When both needs are valid; address in different releases <span class="pp">|</span></span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Alternatives Analysis** <span class="pp">|</span> When creative solutions can satisfy both parties <span class="pp">|</span></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>**Conflict:** Registrars want a simple, streamlined interface. Epidemiologists want comprehensive data fields for analysis.</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a>This format emphasizes context and obligation rather than desire:</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "Given </span><span class="co">[</span><span class="ot">clinical/situational context</span><span class="co">]</span><span class="at">, the </span><span class="co">[</span><span class="ot">health worker role</span><span class="co">]</span><span class="at"> should </span><span class="co">[</span><span class="ot">specific action</span><span class="co">]</span><span class="at"> to </span><span class="co">[</span><span class="ot">health outcome</span><span class="co">]</span><span class="at">."</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>*Example:*</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "Given a positive TB test result, the contact tracer should initiate household investigation within 48 hours to prevent secondary transmission."</span></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a>**Situational Protocol Format:**</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>This format ties system behavior to clinical guidelines or regulatory requirements:</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "When </span><span class="co">[</span><span class="ot">triggering event</span><span class="co">]</span><span class="at">, the system shall </span><span class="co">[</span><span class="ot">required action</span><span class="co">]</span><span class="at"> within </span><span class="co">[</span><span class="ot">timeframe</span><span class="co">]</span><span class="at">."</span></span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a>*Example:*</span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "When a laboratory reports a confirmed measles case, the system shall generate a contact list and notify the assigned epidemiologist within 4 hours."</span></span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>**Service-User Scenario Format:**</span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a>This narrative format describes a patient or client journey through the system:</span>
 <span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a>**Resolution:** Implement a tiered interface:</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; "Maria, a 45-year-old farmworker, visits a mobile clinic for diabetes screening. She speaks primarily Spanish and has no regular primary care provider. The system must support her preferred language, connect her to follow-up care, and track her screening results for population health reporting."</span></span>
 <span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Core fields (required): Streamlined view for registrars</span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Extended fields (optional): Available when needed</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Analytics fields: Populated from other sources, not requiring registrar entry</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>**Standard user story:**</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a>"As a registrar, I want to search for existing cases, so that I can avoid creating duplicates."</span>
 <span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="fu">### Deliverables from This Phase</span></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>**GPS format (adding clinical context):**</span>
 <span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> BA Deliverable <span class="pp">|</span> PH Deliverable <span class="pp">|</span> Purpose <span class="pp">|</span></span>
-<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------|:---------------|:--------|</span></span>
-<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Elicitation Results <span class="pp">|</span> Engagement Summary <span class="pp">|</span> Raw findings documentation <span class="pp">|</span></span>
-<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Requirements Document <span class="pp">|</span> Program Protocol <span class="pp">|</span> Detailed specifications <span class="pp">|</span></span>
-<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> User Stories / Use Cases <span class="pp">|</span> Service-User Scenarios <span class="pp">|</span> Actionable descriptions <span class="pp">|</span></span>
-<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stakeholder Feedback Log <span class="pp">|</span> Community Input Register <span class="pp">|</span> Track all input received <span class="pp">|</span></span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>"Given a new pathology report for a patient who may already be in the registry, the registrar should be able to search by name, SSN, and diagnosis within 3 seconds to prevent duplicate case creation and ensure accurate incidence counts."</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>**Situational protocol (system-initiated):**</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>"When a new case is entered, the system shall automatically search for potential duplicates using probabilistic matching and present candidates to the registrar for review before saving."</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a><span class="fu">### Moving Forward</span></span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a>Choose the format that best communicates intent to your audience. Development teams may still translate these into standard user stories for sprint planning, but starting with clinical context ensures nothing gets lost in translation.</span>
 <span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a>With needs elicited and documented, the next phase focuses on **Requirements Analysis**: organizing, prioritizing, and specifying the detailed requirements that will guide solution design.</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a><span class="fu">### Validation and Confirmation</span></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Ensuring Accuracy</span></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a>Elicitation is iterative. Validate what you heard:</span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a>**BA Validation Techniques:**</span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Requirements reviews</span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prototype walkthroughs</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Structured walkthroughs</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sign-off meetings</span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a>**PH Validation Techniques:**</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Member checking (returning findings to participants)</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Community review sessions</span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pilot testing</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Expert review panels</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a><span class="fu">### Managing Conflicting Needs</span></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a><span class="fu">#### When Stakeholders Disagree</span></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a>Conflicts are inevitable. Resolution approaches include:</span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Approach <span class="pp">|</span> When to Use <span class="pp">|</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:------------|</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Prioritization** <span class="pp">|</span> When resources are limited; use MoSCoW or weighted scoring <span class="pp">|</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Negotiation** <span class="pp">|</span> When compromise is possible without losing value <span class="pp">|</span></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Escalation** <span class="pp">|</span> When authority must resolve; use governance structure <span class="pp">|</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Phasing** <span class="pp">|</span> When both needs are valid; address in different releases <span class="pp">|</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Alternatives Analysis** <span class="pp">|</span> When creative solutions can satisfy both parties <span class="pp">|</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a>**Conflict:** Registrars want a simple, streamlined interface. Epidemiologists want comprehensive data fields for analysis.</span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-286"><a href="#cb1-286" aria-hidden="true" tabindex="-1"></a>**Resolution:** Implement a tiered interface:</span>
+<span id="cb1-287"><a href="#cb1-287" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-288"><a href="#cb1-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Core fields (required): Streamlined view for registrars</span>
+<span id="cb1-289"><a href="#cb1-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Extended fields (optional): Available when needed</span>
+<span id="cb1-290"><a href="#cb1-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Analytics fields: Populated from other sources, not requiring registrar entry</span>
+<span id="cb1-291"><a href="#cb1-291" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-292"><a href="#cb1-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-293"><a href="#cb1-293" aria-hidden="true" tabindex="-1"></a><span class="fu">### Deliverables from This Phase</span></span>
+<span id="cb1-294"><a href="#cb1-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-295"><a href="#cb1-295" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> BA Deliverable <span class="pp">|</span> PH Deliverable <span class="pp">|</span> Purpose <span class="pp">|</span></span>
+<span id="cb1-296"><a href="#cb1-296" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------------|:---------------|:--------|</span></span>
+<span id="cb1-297"><a href="#cb1-297" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Elicitation Results <span class="pp">|</span> Engagement Summary <span class="pp">|</span> Raw findings documentation <span class="pp">|</span></span>
+<span id="cb1-298"><a href="#cb1-298" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Requirements Document <span class="pp">|</span> Program Protocol <span class="pp">|</span> Detailed specifications <span class="pp">|</span></span>
+<span id="cb1-299"><a href="#cb1-299" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> User Stories / Use Cases <span class="pp">|</span> Service-User Scenarios <span class="pp">|</span> Actionable descriptions <span class="pp">|</span></span>
+<span id="cb1-300"><a href="#cb1-300" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Stakeholder Feedback Log <span class="pp">|</span> Community Input Register <span class="pp">|</span> Track all input received <span class="pp">|</span></span>
+<span id="cb1-301"><a href="#cb1-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-302"><a href="#cb1-302" aria-hidden="true" tabindex="-1"></a><span class="fu">### Moving Forward</span></span>
+<span id="cb1-303"><a href="#cb1-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-304"><a href="#cb1-304" aria-hidden="true" tabindex="-1"></a>With needs elicited and documented, the next phase focuses on **Requirements Analysis**: organizing, prioritizing, and specifying the detailed requirements that will guide solution design.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -339,12 +339,18 @@ background-size: cover;
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Glossary</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapters/D-workforce-development.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Workforce Development</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">References</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">References</span></span></a>
   </div>
 </li>
     </ul>
@@ -379,6 +385,20 @@ background-size: cover;
 <section id="welcome" class="level1 unnumbered">
 <h1 class="unnumbered">Welcome</h1><p><img src="assets/branding/images/cover-image.jpg" title="Bridgeframe" class="quarto-cover-image nolightbox img-fluid"></p>
 <p><strong>Bridgeframe</strong> is a practical toolkit for professionals who work at the intersection of information technology and public health. Whether you are a business analyst stepping into your first health department project, or a public health professional learning to collaborate with software teams, this book provides the translation layer you need.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="About This Toolkit">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>About This Toolkit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bridgeframe is a work in progress, not an authoritative guide. The scenarios and examples throughout (including the CancerSurv case study) are illustrative and fictitious, designed to help professionals relate to common challenges in health IT projects.</p>
+<p>The goal is educational: to spark discussion, point readers toward established frameworks (BABOK, CDC methodologies, CFIR, and others), and provide a starting point for teams navigating this intersection. Feedback and contributions are welcome as this resource continues to evolve.</p>
+</div>
+</div>
 <section id="the-challenge" class="level2" data-number="0.1">
 <h2 data-number="0.1" class="anchored" data-anchor-id="the-challenge"><span class="header-section-number">0.1</span> The Challenge</h2>
 <p>Two disciplines. Two languages. One shared goal: building systems that improve health outcomes.</p>
@@ -910,52 +930,58 @@ background-size: cover;
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>**Bridgeframe** is a practical toolkit for professionals who work at the intersection of information technology and public health. Whether you are a business analyst stepping into your first health department project, or a public health professional learning to collaborate with software teams, this book provides the translation layer you need.</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Challenge</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Two disciplines. Two languages. One shared goal: building systems that improve health outcomes.</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>**Business analysts** speak of user stories, sprints, and requirements traceability. **Public health professionals** speak of logic models, PDSA cycles, and program evaluation. Both are trying to define problems, design solutions, and measure success, yet their terminology creates friction rather than collaboration.</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="About This Toolkit"}</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>Bridgeframe is a work in progress, not an authoritative guide. The scenarios and examples throughout (including the CancerSurv case study) are illustrative and fictitious, designed to help professionals relate to common challenges in health IT projects.</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>The goal is educational: to spark discussion, point readers toward established frameworks (BABOK, CDC methodologies, CFIR, and others), and provide a starting point for teams navigating this intersection. Feedback and contributions are welcome as this resource continues to evolve.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Solution</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Logic Model Components Mapped to Requirements</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Bridgeframe provides:</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Challenge</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Two disciplines. Two languages. One shared goal: building systems that improve health outcomes.</span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A terminology dictionary** mapping IT/Agile concepts to their public health equivalents</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Phase-by-phase guidance** aligning the BABOK lifecycle with CDC frameworks</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A running case study** (CancerSurv) demonstrating concepts in practice</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Templates and tools** for hybrid teams</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="fu">## Who This Book Is For</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**IT Business Analysts** entering the public health sector</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Public Health Informaticians** collaborating with software vendors</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Project Managers** overseeing health IT implementations</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Scientists** working with epidemiological systems</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Students** in health informatics or public health programs</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>**Business analysts** speak of user stories, sprints, and requirements traceability. **Public health professionals** speak of logic models, PDSA cycles, and program evaluation. Both are trying to define problems, design solutions, and measure success, yet their terminology creates friction rather than collaboration.</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Solution</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>Logic Model Components Mapped to Requirements</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>Bridgeframe provides:</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A terminology dictionary** mapping IT/Agile concepts to their public health equivalents</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Phase-by-phase guidance** aligning the BABOK lifecycle with CDC frameworks</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A running case study** (CancerSurv) demonstrating concepts in practice</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Templates and tools** for hybrid teams</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="fu">## Who This Book Is For</span></span>
 <span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu">## How to Use This Book</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>This book is organized into three parts:</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Foundations**: Core concepts, terminology mapping, and the CancerSurv case study</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**The Analysis Process**: Phase-by-phase guidance from planning through evaluation</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Putting It Into Practice**: Tools comparison and implementation science frameworks</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**IT Business Analysts** entering the public health sector</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Public Health Informaticians** collaborating with software vendors</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Project Managers** overseeing health IT implementations</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data Scientists** working with epidemiological systems</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Students** in health informatics or public health programs</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## How to Use This Book</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>Each chapter includes CancerSurv examples in callout boxes, making abstract concepts concrete.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>This book is organized into three parts:</span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Getting Started"}</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>If you are new to this intersection, start with <span class="co">[</span><span class="ot">Chapter 1: Introduction</span><span class="co">](chapters/01-introduction.qmd)</span> and the <span class="co">[</span><span class="ot">Terminology Dictionary</span><span class="co">](chapters/03-terminology.qmd)</span>. If you are already working on a project, jump to the relevant phase chapter.</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Foundations**: Core concepts, terminology mapping, and the CancerSurv case study</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**The Analysis Process**: Phase-by-phase guidance from planning through evaluation</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Putting It Into Practice**: Tools comparison and implementation science frameworks</span>
 <span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="fu">## About the Author</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>Each chapter includes CancerSurv examples in callout boxes, making abstract concepts concrete.</span>
 <span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>**[André van Zyl, MPH](https://www.linkedin.com/in/andre-van-zyl/)** is an epidemiologist and data science professional with close to two decades of experience spanning public health, health informatics, and technical system development. His career has taken him across local, state, federal, tribal, and international health systems, from helping establish global surveillance systems at the CDC to implementing health interventions in resource-constrained settings.</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>As a Health Scientist at CDC's National Center for Emerging and Zoonotic Infectious Diseases, André led data acquisition and reporting systems for global antimicrobial resistance surveillance spanning multiple continents. He pioneered the integration of artificial intelligence into public health workflows and modernized data processes using R, Python, Azure Databricks, and platforms like REDCap and DHIS2. A consistent theme throughout his work has been technical translation: bridging communication gaps between laboratory scientists, clinical teams, and technical developers.</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Getting Started"}</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>If you are new to this intersection, start with <span class="co">[</span><span class="ot">Chapter 1: Introduction</span><span class="co">](chapters/01-introduction.qmd)</span> and the <span class="co">[</span><span class="ot">Terminology Dictionary</span><span class="co">](chapters/03-terminology.qmd)</span>. If you are already working on a project, jump to the relevant phase chapter.</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>André holds a Master of Public Health from the University of Pretoria and a BA Honors in Psychology from Nelson Mandela University. This combination of behavioral science and technical expertise enables him to understand both user needs and system requirements when implementing solutions across diverse communities.</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="fu">## About the Author</span></span>
 <span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>He is the founder of **[Intersect Collaborations LLC](https://www.linkedin.com/company/intersect-collaborations-llc/)**, a consultancy helping public health organizations transform data systems and analytics capabilities for improved decision-making and community health outcomes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>**[André van Zyl, MPH](https://www.linkedin.com/in/andre-van-zyl/)** is an epidemiologist and data science professional with close to two decades of experience spanning public health, health informatics, and technical system development. His career has taken him across local, state, federal, tribal, and international health systems, from helping establish global surveillance systems at the CDC to implementing health interventions in resource-constrained settings.</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>As a Health Scientist at CDC's National Center for Emerging and Zoonotic Infectious Diseases, André led data acquisition and reporting systems for global antimicrobial resistance surveillance spanning multiple continents. He pioneered the integration of artificial intelligence into public health workflows and modernized data processes using R, Python, Azure Databricks, and platforms like REDCap and DHIS2. A consistent theme throughout his work has been technical translation: bridging communication gaps between laboratory scientists, clinical teams, and technical developers.</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>André holds a Master of Public Health from the University of Pretoria and a BA Honors in Psychology from Nelson Mandela University. This combination of behavioral science and technical expertise enables him to understand both user needs and system requirements when implementing solutions across diverse communities.</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>He is the founder of **[Intersect Collaborations LLC](https://www.linkedin.com/company/intersect-collaborations-llc/)**, a consultancy helping public health organizations transform data systems and analytics capabilities for improved decision-making and community health outcomes.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
