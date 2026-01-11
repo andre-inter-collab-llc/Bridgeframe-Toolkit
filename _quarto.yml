@@ -44,6 +44,7 @@ book:
         - chapters/A-templates.qmd
         - chapters/B-development-tools.qmd
         - chapters/C-glossary.qmd
+        - chapters/D-workforce-development.qmd
     - references.qmd
   
   downloads:

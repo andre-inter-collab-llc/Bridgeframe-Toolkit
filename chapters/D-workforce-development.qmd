@@ -1,0 +1,189 @@
+---
+title: "Workforce Development"
+---
+
+## Building Hybrid Professionals and Teams
+
+The translation gap between IT business analysis and public health is not just a process problem or a terminology problem. It is fundamentally a **workforce problem**. Both government agencies and private industry need professionals who can operate fluently in both worlds, yet most training programs still operate in silos.
+
+This appendix explores the challenge, highlights emerging resources, and suggests strategies for building hybrid capacity.
+
+### The Training Silo Problem
+
+Consider the typical career paths:
+
+**Public Health Path:**
+
+- MPH or equivalent graduate training
+- Coursework in epidemiology, biostatistics, health policy
+- Rarely covers: Agile methodology, BABOK, software development lifecycle, requirements engineering
+
+**Business Analysis Path:**
+
+- Business or IT undergraduate degree
+- CBAP, PMI-PBA, or similar certification
+- Rarely covers: Epidemiology, CDC frameworks, public health ethics, community engagement methods
+
+When these professionals meet on a health IT project, each brings deep expertise in their domain but limited fluency in the other's language, frameworks, and assumptions. The result is the translation gap this book addresses.
+
+::: {.callout-note title="Insight from the Field"}
+The lack of skilled hybrid workforce and limited resources to hire such professionals are two significant limiting factors in bridging this gap. Organizations often recognize the need but struggle to find candidates or justify positions that span traditional departmental boundaries.
+:::
+
+### Emerging Training Programs
+
+Several initiatives are working to close this gap:
+
+#### CDC Public Health Informatics Fellowship Program (PHIFP)
+
+The [Public Health Informatics Fellowship Program](https://www.cdc.gov/phifp/php/about/index.html) trains professionals specifically for this intersection. Fellows work on real public health informatics projects while developing competencies in both public health practice and information systems.
+
+The program recruits from diverse backgrounds and provides structured mentorship bridging technical and programmatic domains. Since its establishment, PHIFP has produced many of the hybrid professionals now leading health IT initiatives across state and local health departments.
+
+#### PHIT Workforce Development Program
+
+The [Public Health Informatics & Technology (PHIT) Workforce Development Program](https://www.healthit.gov/topic/onc-hitech-programs/workforce-development-programs), funded by the Office of the National Coordinator for Health IT (ONC), focuses on training diverse professionals in health informatics. The program emphasizes recruiting from underrepresented communities, recognizing that the hybrid workforce should reflect the populations public health serves.
+
+#### AMIA Public Health Informatics Working Group
+
+The American Medical Informatics Association (AMIA) hosts an active [Public Health Informatics Working Group](https://amia.org/community/working-groups/public-health-informatics) with members from state health departments, academic institutions, nonprofits, and consulting firms. The working group:
+
+- Develops competency frameworks for public health informatics
+- Shares best practices across organizations
+- Advocates for workforce development resources
+- Connects professionals navigating similar challenges
+
+For those seeking community and professional development in this space, AMIA membership provides access to peers tackling the same translation challenges.
+
+#### Other Resources
+
+| Resource | Focus | Access |
+|:---------|:------|:-------|
+| **CDC TRAIN** | Free public health courses, including informatics fundamentals | [train.org](https://www.train.org/) |
+| **AMIA 10x10** | Intensive health informatics courses | [amia.org](https://amia.org/education-events/amia-10x10-courses) |
+| **CAHIMS / CPHIMS** | Health IT certifications from HIMSS | [himss.org](https://www.himss.org/resources-certification) |
+| **Coursera / edX** | Public health informatics specializations (Johns Hopkins, UCSF) | Online |
+
+### Organizational Strategies for Building Hybrid Capacity
+
+Beyond individual training, organizations can take structural steps to build translation capability:
+
+#### 1. Create Explicit Bridge Roles
+
+Rather than expecting traditional BAs or PH staff to develop hybrid skills on their own, create positions specifically designed for translation:
+
+- **Health Informatics Liaison**: Embedded in IT teams but reporting to public health leadership
+- **Technical Program Analyst**: Embedded in public health programs but with explicit BA responsibilities
+- **Implementation Specialist**: Focused on adoption and change management across both domains
+
+These roles should have:
+
+- Dual reporting or matrix accountability
+- Performance metrics that span technical and programmatic outcomes
+- Professional development budgets for cross-training
+
+#### 2. Invest in Onboarding Crosswalks
+
+When new team members join hybrid projects, provide structured onboarding that covers both domains:
+
+- Terminology glossaries (like Chapter 3 of this book)
+- Framework overviews (BABOK basics for PH staff; CDC evaluation basics for BA staff)
+- Project-specific crosswalks mapping deliverables to both languages
+
+This upfront investment reduces the clarification loops that consume project time later.
+
+#### 3. Include Translation Capacity in Grant Budgets
+
+As discussed in Chapter 1, the business case stage is the ideal time to secure resources for cross-domain facilitation. When writing grant applications or project proposals:
+
+- Include line items for terminology alignment workshops
+- Budget for cross-training or professional development
+- Allocate facilitation time for mixed-team meetings
+- Consider consultants or contractors with hybrid backgrounds
+
+#### 4. Build Communities of Practice
+
+Internal communities of practice can connect professionals across organizational silos:
+
+- Regular brown-bag sessions where IT and PH staff present to each other
+- Shared Slack/Teams channels for quick translation questions
+- Joint retrospectives that surface communication challenges
+- Rotating assignments that expose staff to the other domain
+
+### Competencies for the Hybrid Professional
+
+What should a hybrid BA/PH professional be able to do? Based on established competency frameworks and practical experience, key capabilities include:
+
+#### Core Translation Competencies
+
+| Competency | Description |
+|:-----------|:------------|
+| **Dual-framework thinking** | Map Agile artifacts to Logic Model outcomes and vice versa |
+| **Terminology fluency** | Speak both languages without constant translation pauses |
+| **Audience adaptation** | Adjust communication style for technical vs. programmatic audiences |
+| **Framework selection** | Know when to use BA tools vs. PH tools vs. hybrid approaches |
+
+#### Technical Competencies (BA Side)
+
+| Competency | Description |
+|:-----------|:------------|
+| **Requirements engineering** | Elicit, analyze, specify, and validate requirements |
+| **Process modeling** | Create BPMN, UML, or similar diagrams |
+| **Agile practices** | Participate effectively in sprints, stand-ups, retrospectives |
+| **Data modeling** | Understand ERDs, data dictionaries, database concepts |
+
+#### Technical Competencies (PH Side)
+
+| Competency | Description |
+|:-----------|:------------|
+| **Epidemiological thinking** | Understand surveillance, case definitions, health indicators |
+| **Program evaluation** | Apply CDC evaluation framework, logic models, PDSA |
+| **Regulatory knowledge** | Navigate HIPAA, IRB, grant compliance requirements |
+| **Health equity lens** | Identify disparities, ensure inclusive engagement |
+
+#### Implementation Science Competencies
+
+| Competency | Description |
+|:-----------|:------------|
+| **CFIR application** | Assess implementation context using CFIR domains |
+| **Change management** | Plan for adoption, not just deployment |
+| **Stakeholder engagement** | Build relationships across organizational boundaries |
+| **Sustainability planning** | Design for long-term operation, not just project completion |
+
+### Career Pathways
+
+For professionals seeking to develop hybrid capabilities, several pathways exist:
+
+#### From Public Health to Hybrid
+
+1. Seek projects involving health IT systems (surveillance, registries, EHRs)
+2. Request assignment to vendor-managed implementations
+3. Pursue CAHIMS or similar health IT certification
+4. Take online courses in Agile, requirements engineering, or project management
+5. Join AMIA or similar professional communities
+
+#### From Business Analysis to Hybrid
+
+1. Seek health sector clients or employers
+2. Learn public health fundamentals (CDC TRAIN offers free courses)
+3. Study regulatory context (HIPAA, CDC reporting requirements)
+4. Understand grant-driven funding cycles and constraints
+5. Develop cultural competency for community engagement
+
+#### Academic Pathways
+
+- **Dual degrees**: MPH + MBA, MPH + MIS
+- **Health informatics programs**: Specifically designed for this intersection
+- **Graduate certificates**: Add informatics credentials to existing degrees
+
+### The Long View
+
+Building hybrid workforce capacity is a long-term investment. Individual professionals take years to develop fluency in both domains. Organizational cultures take even longer to change.
+
+But the need is urgent. Public health IT projects will continue to grow in scope and complexity. The professionals and organizations that build translation capacity now will be better positioned to deliver systems that actually improve health outcomes.
+
+Bridgeframe is one contribution to this effort: a crosswalk that teams can use while the workforce develops. But crosswalks are not substitutes for people. The field needs more hybrid professionals, more training programs, and more organizational commitment to building this capacity.
+
+::: {.callout-tip title="Get Involved"}
+If you are working on workforce development for health informatics, or have experience building hybrid teams, consider contributing to this conversation. The challenges described in this appendix are shared across many organizations, and solutions developed in one context often transfer to others.
+:::
