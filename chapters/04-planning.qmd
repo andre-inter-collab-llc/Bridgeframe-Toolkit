@@ -16,6 +16,28 @@ Every successful project begins with understanding the problem. In business anal
 | Stakeholder Identification | Community Partner Mapping |
 | Feasibility Assessment | Resource & Capacity Analysis |
 
+### Start Translation Early
+
+Many health IT projects encounter translation challenges only when they reach software requirements definition. By then, both teams have invested time and developed expectations using their own terminology. Untangling miscommunication while simultaneously trying to make progress creates unnecessary friction.
+
+**The business case is the ideal moment to introduce translation.**
+
+When building the justification for funding (whether a grant application, budget request, or vendor RFP), explicitly consider:
+
+-   What terminology gaps exist between the technical and programmatic teams?
+-   What training or facilitation will help teams communicate effectively?
+-   Who will serve as translators or bridges between domains?
+-   What documentation will help each team understand the other's frameworks?
+
+Including these considerations in the business case accomplishes two things:
+
+1.  **Resource discovery**: The funding request captures the full scope of what the project needs, including human and process elements, not just technical deliverables
+2.  **Early alignment**: Teams enter requirements gathering with shared vocabulary, reducing costly clarification loops later
+
+::: {.callout-note title="CancerSurv Example"}
+The CancerSurv grant application included a budget line for "cross-domain facilitation workshops" and allocated time for the project manager to develop a terminology crosswalk document before vendor selection. When TechHealth Solutions came on board, the state team provided this crosswalk in the kickoff meeting, establishing shared language from day one.
+:::
+
 ### Defining the Problem
 
 #### Business Analysis Approach

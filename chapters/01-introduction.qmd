@@ -73,6 +73,26 @@ If you are the business analyst or developer, your role is translation, not conv
 
 This principle works both ways. Public health professionals engaging with IT vendors should communicate their frameworks early, providing documentation and context so the technical team can adapt their approach accordingly.
 
+### When to Introduce the Translation
+
+A common pattern across public health IT projects: translation challenges emerge during software requirements gathering, by which point significant momentum (and sometimes conflict) has already built up. The teams discover they are speaking different languages only after the project is well underway.
+
+**The earlier translation happens, the better the outcome.**
+
+Ideally, translation should begin during the business case development that justifies funding. When writing grant applications or funding proposals, explicitly address:
+
+-   How IT terminology maps to programmatic outcomes
+-   What resources (training, facilitation, documentation) will be needed for cross-domain communication
+-   Who will serve as translators or bridges between teams
+
+This early attention accomplishes two things: it surfaces potential friction points before they become costly, and it ensures that resource discovery includes the human and process elements needed for successful collaboration, not just technical requirements.
+
+::: {.callout-tip title="Practical Guidance"}
+If you are writing a grant proposal or business case for a health IT project, include a line item for "cross-domain facilitation" or "terminology alignment workshops." This signals awareness of the challenge and secures resources to address it.
+:::
+
+When translation training happens before or alongside business case development, teams enter requirements gathering with shared vocabulary and mutual understanding. When it happens only during software requirements definition, teams must untangle miscommunication while simultaneously trying to make progress.
+
 ### Who Should Use This Book
 
 This book serves multiple audiences:

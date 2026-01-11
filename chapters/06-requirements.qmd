@@ -117,6 +117,45 @@ Rules governing system behavior and data processing:
 | "Discount applies if quantity > 100" | "Stage is unknown if pathology report unavailable within 4 months" |
 | "Manager approval required for refunds > $500" | "Multiple primary rules apply per SEER guidelines" |
 
+### Data Standards as Primary Requirements
+
+In commercial software projects, data standards (file formats, API specifications, integration protocols) are often treated as technical details to be resolved by developers during implementation. In public health IT, this approach fails.
+
+**Data standards are primary business requirements, not optional technical details.**
+
+Health information systems operate within a regulatory and interoperability landscape where specific standards are mandated, not merely preferred. These standards should be identified and documented early, during requirements analysis, not deferred to design or implementation.
+
+| Standard | Purpose | Requirement Implication |
+|:---------|:--------|:------------------------|
+| **HIPAA** | Privacy and security | Security architecture, access controls, audit logging |
+| **HL7 v2** | Message-based data exchange | Interface specifications for lab results, ADT events |
+| **HL7 FHIR** | Modern API-based exchange | RESTful API design for EHR integration |
+| **USCDI** | Federal data interoperability | Required data classes for ONC certification |
+| **ICD-10 / ICD-O-3** | Diagnosis and oncology coding | Validation rules, lookup tables, code mapping |
+| **SNOMED CT** | Clinical terminology | Concept mapping specifications |
+| **LOINC** | Laboratory test coding | Interface specifications for electronic lab reporting |
+| **NAACCR** | Cancer registry standards | Data dictionary, edit checks, submission formats |
+
+::: {.callout-warning title="Common Pitfall"}
+When data standards are not identified as requirements, projects encounter costly surprises during integration testing. A system that functions correctly in isolation may fail when connected to external systems that expect specific data formats, codes, or protocols.
+
+For business analysts entering public health IT: treat data standards as \"Must Have\" requirements from day one. Interview stakeholders about external data exchanges early, and document the specific standards each interface requires.
+:::
+
+::: {.callout-note title="CancerSurv Example"}
+**Standards-Based Requirements for CancerSurv:**
+
+| Standard | CancerSurv Requirement |
+|:---------|:-----------------------|
+| HIPAA | All PHI encrypted at rest and in transit; role-based access; 6-year audit log retention |
+| HL7 FHIR | Patient, Condition, and Observation resources for hospital EHR integration |
+| NAACCR v24 | All required data items; automated EDITS validation; annual submission file generation |
+| ICD-O-3 | Validated primary site and histology codes with cross-validation rules |
+| LOINC | Mapping table for incoming electronic pathology reports |
+
+These standards-based requirements appeared in the CancerSurv requirements specification alongside functional requirements, with the same priority and traceability as any other \"Must Have\" item.
+:::
+
 ### The Logic Model as Requirements Framework
 
 Public health uses the **Logic Model** to specify program components. This structure maps directly to requirements categories:

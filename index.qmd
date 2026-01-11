@@ -7,6 +7,12 @@ subtitle: "Bridging Business Analysis and Public Health"
 
 **Bridgeframe** is a practical toolkit for professionals who work at the intersection of information technology and public health. Whether you are a business analyst stepping into your first health department project, or a public health professional learning to collaborate with software teams, this book provides the translation layer you need.
 
+::: {.callout-note title="About This Toolkit"}
+Bridgeframe is a work in progress, not an authoritative guide. The scenarios and examples throughout (including the CancerSurv case study) are illustrative and fictitious, designed to help professionals relate to common challenges in health IT projects.
+
+The goal is educational: to spark discussion, point readers toward established frameworks (BABOK, CDC methodologies, CFIR, and others), and provide a starting point for teams navigating this intersection. Feedback and contributions are welcome as this resource continues to evolve.
+:::
+
 ## The Challenge
 
 Two disciplines. Two languages. One shared goal: building systems that improve health outcomes.

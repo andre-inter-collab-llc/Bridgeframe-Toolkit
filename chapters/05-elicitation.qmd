@@ -189,6 +189,61 @@ For hybrid projects, consider dual documentation:
 | Funders (CDC, grants) | Logic Model | Inputs, activities, outputs, outcomes |
 | Governance | Requirements Traceability Matrix | Links requirements to objectives |
 
+#### When Standard User Stories Fall Short
+
+The standard Agile user story format ("As a [user], I want [feature], so that [benefit]") works well for many software contexts. However, it often fails to capture the nuances of clinical workflows, regulatory requirements, and public health scenarios.
+
+**Why standard user stories may not fit clinical contexts:**
+
+-   Clinical workflows involve conditional logic ("if this lab result, then that action")
+-   Regulatory requirements mandate specific timeframes and actions
+-   Patient safety considerations require explicit protocols, not just user preferences
+-   Public health surveillance involves system-initiated actions, not just user-initiated features
+
+**Alternative formats worth considering:**
+
+**Given-Person-Should (GPS) Format:**
+
+This format emphasizes context and obligation rather than desire:
+
+> "Given [clinical/situational context], the [health worker role] should [specific action] to [health outcome]."
+
+*Example:*
+
+> "Given a positive TB test result, the contact tracer should initiate household investigation within 48 hours to prevent secondary transmission."
+
+**Situational Protocol Format:**
+
+This format ties system behavior to clinical guidelines or regulatory requirements:
+
+> "When [triggering event], the system shall [required action] within [timeframe]."
+
+*Example:*
+
+> "When a laboratory reports a confirmed measles case, the system shall generate a contact list and notify the assigned epidemiologist within 4 hours."
+
+**Service-User Scenario Format:**
+
+This narrative format describes a patient or client journey through the system:
+
+> "Maria, a 45-year-old farmworker, visits a mobile clinic for diabetes screening. She speaks primarily Spanish and has no regular primary care provider. The system must support her preferred language, connect her to follow-up care, and track her screening results for population health reporting."
+
+::: {.callout-note title="CancerSurv Example"}
+**Standard user story:**
+
+"As a registrar, I want to search for existing cases, so that I can avoid creating duplicates."
+
+**GPS format (adding clinical context):**
+
+"Given a new pathology report for a patient who may already be in the registry, the registrar should be able to search by name, SSN, and diagnosis within 3 seconds to prevent duplicate case creation and ensure accurate incidence counts."
+
+**Situational protocol (system-initiated):**
+
+"When a new case is entered, the system shall automatically search for potential duplicates using probabilistic matching and present candidates to the registrar for review before saving."
+:::
+
+Choose the format that best communicates intent to your audience. Development teams may still translate these into standard user stories for sprint planning, but starting with clinical context ensures nothing gets lost in translation.
+
 ### Validation and Confirmation
 
 #### Ensuring Accuracy

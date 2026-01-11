@@ -30,7 +30,15 @@ Bridgeframe exists because I needed it. Every time I translated a clinical workf
 
 This toolkit distills what I've learned from CDC surveillance systems, COVID-19 contact tracing implementations, tuberculosis intervention trials, and countless cross-functional team meetings. It's designed for the health informatician sitting between two worlds: ensuring the IT team's technical specifications align with the health department's programmatic goals.
 
-My hope is that Bridgeframe helps others avoid the lost-in-translation moments I experienced, and accelerates the collaboration our public health infrastructure desperately needs.
+## A Work in Progress
+
+I want to be clear: I am not positioning myself as an expert on business analysis, and Bridgeframe is not intended as an authoritative guide. This is a draft that I will continue to develop and refine.
+
+The examples throughout this book (including the CancerSurv case study) are illustrative and fictitious. They are designed to be relatable, to help professionals in both domains recognize common patterns and challenges. The intent is educational and informative.
+
+My hope is that Bridgeframe stimulates discussion and points readers toward the established frameworks and resources that offer deeper expertise: BABOK for business analysis, CDC evaluation frameworks for public health, CFIR for implementation science, and the many other rigorous methodologies developed by true experts in these fields.
+
+If this toolkit helps even a few teams find common ground, or sparks conversations that improve how we build health information systems, it will have served its purpose. I welcome feedback, corrections, and contributions as this resource evolves.
 
 André van Zyl  
 Intersect Collaborations
