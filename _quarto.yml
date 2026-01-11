@@ -77,4 +77,4 @@ format:
     reference-doc: assets/branding/templates/IntersectCollab-reference-doc.docx
     toc: true
     number-sections: false
-    toc-depth: 3
+    toc-depth: 2

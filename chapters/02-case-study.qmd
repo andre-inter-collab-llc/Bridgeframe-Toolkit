@@ -155,3 +155,11 @@ CancerSurv illustrates the fundamental tension bridged by this book. The project
 - Health equity focus
 
 Success requires translation between these worldviews. That is what Bridgeframe provides.
+
+### Shared Responsibility: Proving Public Health Value
+
+Both teams in the CancerSurv project (TechHealth Solutions' business analysts and the State Cancer Registry's public health professionals) share a critical responsibility: **proving the public health value and impact of the solution they develop.**
+
+This is not merely about meeting technical specifications. Both teams must prove the public health value of their work through measurable outcomes and return on investment. In an era of constrained budgets, demonstrating tangible health impact has become essential for program survival.
+
+Chapter 4 explores how to establish these success metrics during the Planning phase, ensuring that both technical deliverables and programmatic outcomes are measured from the start.

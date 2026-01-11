@@ -148,6 +148,117 @@ Both domains benefit from SMART objective setting:
 Both objectives are valid; both should appear in project documentation.
 :::
 
+### Proving Impact: Defining Success Metrics That Matter
+
+During the Planning phase, both teams must establish not just technical deliverables but **proof points** that demonstrate public health value and return on investment. This is not an afterthought for the Evaluation phase; impact measurement must be designed into the project from the beginning.
+
+#### Why This Matters Now
+
+When funding is constrained, every technology investment must justify its worth. Programs that cannot demonstrate measurable health outcomes or cost savings risk elimination. Grant proposals that lack data-driven proof of impact are increasingly non-competitive.
+
+This creates a **shared responsibility** between technical and public health teams:
+
+- **Technical teams** (BAs, developers, product managers) must design systems that capture and report impact metrics automatically
+- **Public health teams** (epidemiologists, program managers, evaluators) must define what "success" looks like in measurable, system-capturable terms
+
+Neither can succeed without the other. A system that tracks technical performance but not health outcomes cannot justify continued funding. A program with strong outcomes but no data to prove them cannot compete for resources.
+
+#### Focus on Outcomes, Not Just Outputs
+
+During planning, resist the temptation to define success solely through system features or process metrics. Instead, establish clear lines of sight from technical deliverables to health outcomes:
+
+| Don't Just Measure... | Instead, Translate To... |
+|:----------------------|:------------------------|
+| System processes 12,000 records annually | Faster outbreak detection through real-time analytics |
+| Achieved 95% data quality scores | Enabled accurate survival statistics that guide treatment protocols |
+| Implemented HL7 FHIR integration | Reduced registrar burden by 40%, allowing focus on complex cases |
+| Built analytics dashboard | Identified cancer disparities 6 months faster, enabling targeted screening |
+
+::: {.callout-note title="CancerSurv Example"}
+During the Planning phase, the CancerSurv project team established **paired metrics** that satisfy both technical and programmatic accountability:
+
+**Baseline Metrics:**
+- Legacy system processes 12,000 cases annually with 87% data completeness
+- 6-month lag between data collection and annual reporting
+- Manual processes consume 15 minutes per case for abstraction
+- Limited ability to identify geographic or demographic disparities
+
+**Target Metrics (Technical + Health Outcomes):**
+
+1. **Data Completeness**: Increase from 87% to 95% within 18 months
+    - *Technical benefit*: Meets CDC/NPCR reporting standards
+    - *Health outcome*: Approximately 960 additional cases fully documented, strengthening survival analyses and disparity assessments
+
+2. **Reporting Timeliness**: Reduce lag from 6 months to 3 months
+    - *Technical benefit*: Automated data pipelines and validation
+    - *Health outcome*: Policy decisions about screening programs informed by more current data
+
+3. **Workflow Efficiency**: Reduce abstraction time from 15 to 8 minutes per case
+    - *Technical benefit*: Improved UI/UX and automated coding suggestions
+    - *Health outcome*: Registrars can process more cases or dedicate time to complex case resolution
+
+4. **Disparity Identification**: Enable real-time geographic and demographic analysis
+    - *Technical benefit*: Analytics dashboard with interactive mapping
+    - *Health outcome*: Target screening and prevention resources to underserved populations faster
+
+These metrics were not arbitrary technical goals. They directly map to CDC reporting requirements, state strategic health objectives, and competitive grant criteria. By establishing them during Planning, the team ensured that both the business case and the system requirements aligned around demonstrable impact.
+:::
+
+#### Making the Case to Multiple Audiences
+
+Success metrics serve different stakeholders with different priorities. Plan for multiple reporting formats:
+
+**For CDC/NPCR Program:**
+- Annual performance reports demonstrating compliance with NPCR standards
+- Data quality metrics (completeness, timeliness, validity)
+- Comparison to national benchmarks
+
+**For State Legislature and Budget Offices:**
+- Budget justifications showing public health value per dollar invested
+- Efficiency gains (e.g., "Automation saves 140 hours/month, equivalent to $X salary")
+- Health outcomes (e.g., "Earlier detection in rural counties reduced late-stage diagnoses by 12%")
+
+**For Hospital Partners and Data Submitters:**
+- Evidence that data submission yields insights valuable to their quality improvement efforts
+- Feedback reports showing how their data contributes to statewide cancer prevention
+- Reduced burden through automated electronic reporting
+
+**For Registry Staff:**
+- Tangible improvements in workflow efficiency and job satisfaction
+- Recognition of their work's impact on community health
+- Career development opportunities through new technical skills
+
+::: {.callout-important title="Design for Impact from Day One"}
+Proving impact is not solely the responsibility of the public health team's evaluation unit. Business analysts, developers, and product managers must design impact measurement into the system architecture from requirements gathering forward. This means:
+
+- Including "evaluation metrics capture" as functional requirements, not optional features
+- Designing data models that support both operational reporting and outcome analysis
+- Building dashboards and export functions that generate grant-ready reports automatically
+- Architecting audit logs that track not just system usage but workflow improvements
+
+Likewise, epidemiologists and registry staff must collaborate with technical partners early to define what "success" looks like in measurable, system-capturable terms. Vague goals like "improve cancer outcomes" must translate to specific, quantifiable indicators the system can track.
+:::
+
+#### Building Impact into the Business Case
+
+The business case or grant application developed during this Planning phase should explicitly address impact demonstration:
+
+**Resource Allocation:**
+- Budget line items for evaluation tools, data visualization platforms, or analytics staff
+- Time allocated for defining metrics and establishing baselines
+- Training for staff on using system-generated reports for grant writing
+
+**Long-term Sustainability:**
+- How will the system prove its value over time to justify continued funding?
+- What ongoing performance indicators will be tracked and reported?
+- Who is responsible for translating technical metrics into health outcome narratives?
+
+**Competitive Positioning:**
+- How does this project's approach to impact measurement differentiate the proposal?
+- What evidence-based outcomes make the case more compelling than competing priorities?
+
+When both technical and public health teams embrace this shared responsibility for proving impact, technology investments do more than deliver features on time and on budget. They deliver **demonstrable improvements in population health**, which justifies existing funding and unlocks new opportunities. Public health leaders and elected officials are far more likely to protect and expand programs that show tangible results: reduced cancer mortality, eliminated disparities, dollars saved through prevention.
+
 ### Stakeholder / Community Partner Identification
 
 #### Mapping the Landscape
