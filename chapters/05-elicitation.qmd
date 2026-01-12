@@ -97,7 +97,77 @@ Watching work happen reveals what interviews miss:
 
 ::: {.callout-tip title="Gemba Walks"}
 The Lean concept of "Gemba" (going to the actual place where work happens) applies to both domains. For CancerSurv, this means spending time in the registry office watching abstractors work, not just interviewing them in a conference room.
+
+However, Gemba walks often fall short when designers and programmers only observe a single point in the workflow. A critical gap in many software projects is the failure to understand the **complete data and document flow** across all users and use cases.
 :::
+
+#### Understanding the Full Workflow
+
+A frequent and costly mistake is that software designers speak primarily with **decision-makers and budget holders**—often located far from the actual work. These gatekeepers may not themselves use the system daily, and they may not see the entire operational flow. The result: software that fails to support the messy, multi-stage reality of work.
+
+**The Complete Workflow Includes:**
+
+1. **Data Generation & Collection** (field operations)
+   - How data originates: inspections, tests, patient encounters
+   - Who collects it and what constraints they face
+
+2. **Data Intake & System Processing** (data entry, administration)
+   - How raw data enters the system
+   - What validation, coding, and quality checks occur
+   - Who performs these tasks and their priorities
+
+3. **Data Preparation for External Use** (records, reporting)
+   - How data is processed for public requests, legal discovery, or external reporting
+   - Admin support and customer service functions
+   - Regulatory and compliance requirements
+
+4. **Data Use by Multiple Stakeholders** (analysis, management, operations)
+   - How frontline workers (field inspectors, registrars) use data for daily decisions
+   - How managers use the same data for productivity metrics, resource allocation, and accountability
+   - These uses often conflict—what serves operational efficiency may not serve field worker needs
+
+**Why This Matters:**
+
+Each stage has **different outcomes, different focuses, and different definitions of success**. Data collected by one stakeholder is processed by another and used by a third—each with distinct priorities. A system designed to satisfy the decision-maker but not these three operational groups will fail in practice.
+
+::: {.callout-note title="CancerSurv Example"}
+**The Problem:**
+
+A software vendor designs CancerSurv by consulting the State Cancer Registry **Director** (the budget holder). The director prioritizes:
+- NPCR reporting compliance
+- Cost efficiency
+- Centralized system control
+
+But the director rarely enters data or manages daily workflows. The actual system involves:
+
+1. **Data Generation:** Hospital pathologists and surgical oncologists generate reports (often outside the system, in hospital EHRs)
+2. **Data Intake:** Registrars abstract cases from hospital records into CancerSurv—manually reviewing pathology, staging, treatment
+3. **Data Processing:** Admin staff validate data, perform quality checks, request missing information, deduplicate records, and prepare annual reports for CDC
+4. **Data Use (Inspection/Operations):** Registrars use the system to identify missing follow-up information and flag data quality issues
+5. **Data Use (Management):** The director uses dashboards to track incidence trends and ensure grant milestones are met; registry managers use the same data to evaluate registrar productivity and workload
+
+**The Disconnect:**
+
+If programmers and designers only shadow the director or attend leadership meetings, they miss critical needs:
+- Registrars need efficient batch workflows for large case imports (not addressed in director-focused design)
+- Admin staff need audit trails and error logs (not a director priority)
+- Registrars' productivity data goes to managers for performance reviews—creating tension between doing quality work and doing work fast
+- Hospital pathologists need interoperability to send structured reports directly into CancerSurv (if this step is never observed, a manual workaround becomes permanent)
+
+**The Solution:**
+
+Before programming begins, the development team—including programmers and architects—must shadow all four phases:
+- Spend time in the hospital observing how pathology reports are generated and accessed by registrars
+- Sit with registrars as they abstract cases and manage quality issues
+- Work with admin staff processing data for CDC submission and responding to records requests
+- Interview both field registrars and managers to understand how the same data supports different decisions
+
+Only then can the team design a system that truly serves the work, not just the budget narrative.
+:::
+
+**A Critical Principle for Both Domains:**
+
+Whether in public health or IT, the programmer or analyst who designs the system must see the complete workflow before design begins. This is not optional; it is the foundation of requirements elicitation. Skipping this step guarantees expensive redesigns, user dissatisfaction, and workarounds that undermine system integrity.
 
 ### Engaging Diverse Voices
 

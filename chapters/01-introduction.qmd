@@ -37,11 +37,11 @@ The concepts align; the terminology diverges. Bridgeframe provides the translati
 
 When BA and PH professionals cannot communicate effectively, projects suffer:
 
-	**Inability to prove impact**: Systems that cannot demonstrate public health value
+**Inability to prove impact**: Systems that cannot demonstrate public health value
 
 More importantly, health outcomes suffer. A delayed surveillance system means delayed outbreak response. A poorly designed immunization registry means children missing vaccines. And increasingly, programs that cannot demonstrate measurable public health impact risk losing funding.
 
-Both technical and public health teams share responsibility for proving the value of their work. Technology investments must translate to demonstrable improvements in population health, not just features delivered on time and on budget.
+**Both technical and public health teams share responsibility for proving the value of their work.** Technology investments must translate to demonstrable improvements in population health, not just features delivered on time and on budget.
 
 ### The Bridgeframe Solution
 
