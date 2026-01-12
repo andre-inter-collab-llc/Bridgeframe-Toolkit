@@ -342,16 +342,50 @@ background-size: cover;
    
   <ul>
   <li><a href="#development-tools-for-toolkit-contributors" id="toc-development-tools-for-toolkit-contributors" class="nav-link active" data-scroll-target="#development-tools-for-toolkit-contributors"><span class="header-section-number">15.1</span> Development Tools for Toolkit Contributors</a>
-  <ul class="collapse">
+  <ul>
   <li><a href="#technology-stack" id="toc-technology-stack" class="nav-link" data-scroll-target="#technology-stack"><span class="header-section-number">15.1.1</span> Technology Stack</a></li>
-  <li><a href="#ai-assisted-development" id="toc-ai-assisted-development" class="nav-link" data-scroll-target="#ai-assisted-development"><span class="header-section-number">15.1.2</span> AI-Assisted Development</a></li>
-  <li><a href="#local-development-setup" id="toc-local-development-setup" class="nav-link" data-scroll-target="#local-development-setup"><span class="header-section-number">15.1.3</span> Local Development Setup</a></li>
+  <li><a href="#ai-assisted-development" id="toc-ai-assisted-development" class="nav-link" data-scroll-target="#ai-assisted-development"><span class="header-section-number">15.1.2</span> AI-Assisted Development</a>
+  <ul>
+  <li><a href="#llm-models-used" id="toc-llm-models-used" class="nav-link" data-scroll-target="#llm-models-used"><span class="header-section-number">15.1.2.1</span> LLM Models Used</a></li>
+  <li><a href="#copilot-features" id="toc-copilot-features" class="nav-link" data-scroll-target="#copilot-features"><span class="header-section-number">15.1.2.2</span> Copilot Features</a></li>
+  <li><a href="#deep-research-tools" id="toc-deep-research-tools" class="nav-link" data-scroll-target="#deep-research-tools"><span class="header-section-number">15.1.2.3</span> Deep Research Tools</a></li>
+  <li><a href="#project-context" id="toc-project-context" class="nav-link" data-scroll-target="#project-context"><span class="header-section-number">15.1.2.4</span> Project Context</a></li>
+  </ul></li>
+  <li><a href="#local-development-setup" id="toc-local-development-setup" class="nav-link" data-scroll-target="#local-development-setup"><span class="header-section-number">15.1.3</span> Local Development Setup</a>
+  <ul>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">15.1.3.1</span> Prerequisites</a></li>
+  <li><a href="#clone-the-repository" id="toc-clone-the-repository" class="nav-link" data-scroll-target="#clone-the-repository"><span class="header-section-number">15.1.3.2</span> Clone the Repository</a></li>
+  <li><a href="#preview-locally" id="toc-preview-locally" class="nav-link" data-scroll-target="#preview-locally"><span class="header-section-number">15.1.3.3</span> Preview Locally</a></li>
+  <li><a href="#render-the-book" id="toc-render-the-book" class="nav-link" data-scroll-target="#render-the-book"><span class="header-section-number">15.1.3.4</span> Render the Book</a></li>
+  </ul></li>
   <li><a href="#repository-structure" id="toc-repository-structure" class="nav-link" data-scroll-target="#repository-structure"><span class="header-section-number">15.1.4</span> Repository Structure</a></li>
-  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files"><span class="header-section-number">15.1.5</span> Configuration Files</a></li>
-  <li><a href="#writing-content" id="toc-writing-content" class="nav-link" data-scroll-target="#writing-content"><span class="header-section-number">15.1.6</span> Writing Content</a></li>
-  <li><a href="#publishing" id="toc-publishing" class="nav-link" data-scroll-target="#publishing"><span class="header-section-number">15.1.7</span> Publishing</a></li>
-  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing"><span class="header-section-number">15.1.8</span> Contributing</a></li>
-  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">15.1.9</span> Troubleshooting</a></li>
+  <li><a href="#configuration-files" id="toc-configuration-files" class="nav-link" data-scroll-target="#configuration-files"><span class="header-section-number">15.1.5</span> Configuration Files</a>
+  <ul>
+  <li><a href="#quarto.yml" id="toc-quarto.yml" class="nav-link" data-scroll-target="#quarto.yml"><span class="header-section-number">15.1.5.1</span> _quarto.yml</a></li>
+  <li><a href="#brand.yml" id="toc-brand.yml" class="nav-link" data-scroll-target="#brand.yml"><span class="header-section-number">15.1.5.2</span> _brand.yml</a></li>
+  </ul></li>
+  <li><a href="#writing-content" id="toc-writing-content" class="nav-link" data-scroll-target="#writing-content"><span class="header-section-number">15.1.6</span> Writing Content</a>
+  <ul>
+  <li><a href="#quarto-markdown-basics" id="toc-quarto-markdown-basics" class="nav-link" data-scroll-target="#quarto-markdown-basics"><span class="header-section-number">15.1.6.1</span> Quarto Markdown Basics</a></li>
+  <li><a href="#mermaid-diagrams" id="toc-mermaid-diagrams" class="nav-link" data-scroll-target="#mermaid-diagrams"><span class="header-section-number">15.1.6.2</span> Mermaid Diagrams</a></li>
+  <li><a href="#cross-references" id="toc-cross-references" class="nav-link" data-scroll-target="#cross-references"><span class="header-section-number">15.1.6.3</span> Cross-References</a></li>
+  </ul></li>
+  <li><a href="#publishing" id="toc-publishing" class="nav-link" data-scroll-target="#publishing"><span class="header-section-number">15.1.7</span> Publishing</a>
+  <ul>
+  <li><a href="#github-pages-deployment" id="toc-github-pages-deployment" class="nav-link" data-scroll-target="#github-pages-deployment"><span class="header-section-number">15.1.7.1</span> GitHub Pages Deployment</a></li>
+  <li><a href="#manual-publishing" id="toc-manual-publishing" class="nav-link" data-scroll-target="#manual-publishing"><span class="header-section-number">15.1.7.2</span> Manual Publishing</a></li>
+  <li><a href="#initial-setup" id="toc-initial-setup" class="nav-link" data-scroll-target="#initial-setup"><span class="header-section-number">15.1.7.3</span> Initial Setup</a></li>
+  </ul></li>
+  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing"><span class="header-section-number">15.1.8</span> Contributing</a>
+  <ul>
+  <li><a href="#branch-strategy" id="toc-branch-strategy" class="nav-link" data-scroll-target="#branch-strategy"><span class="header-section-number">15.1.8.1</span> Branch Strategy</a></li>
+  <li><a href="#content-guidelines" id="toc-content-guidelines" class="nav-link" data-scroll-target="#content-guidelines"><span class="header-section-number">15.1.8.2</span> Content Guidelines</a></li>
+  <li><a href="#style-guidelines" id="toc-style-guidelines" class="nav-link" data-scroll-target="#style-guidelines"><span class="header-section-number">15.1.8.3</span> Style Guidelines</a></li>
+  </ul></li>
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting"><span class="header-section-number">15.1.9</span> Troubleshooting</a>
+  <ul>
+  <li><a href="#common-issues" id="toc-common-issues" class="nav-link" data-scroll-target="#common-issues"><span class="header-section-number">15.1.9.1</span> Common Issues</a></li>
+  </ul></li>
   <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources"><span class="header-section-number">15.1.10</span> Resources</a></li>
   </ul></li>
   </ul>
