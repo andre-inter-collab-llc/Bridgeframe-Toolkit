@@ -68,7 +68,7 @@ format:
       - brand
       - assets/styles/custom.scss
     toc: true
-    toc-depth: 3
+    toc-depth: 5
     number-sections: true
     code-fold: true
     code-tools: true

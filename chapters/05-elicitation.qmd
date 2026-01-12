@@ -134,6 +134,7 @@ Each stage has **different outcomes, different focuses, and different definition
 **The Problem:**
 
 A software vendor designs CancerSurv by consulting the State Cancer Registry **Director** (the budget holder). The director prioritizes:
+
 - NPCR reporting compliance
 - Cost efficiency
 - Centralized system control
@@ -149,6 +150,7 @@ But the director rarely enters data or manages daily workflows. The actual syste
 **The Disconnect:**
 
 If programmers and designers only shadow the director or attend leadership meetings, they miss critical needs:
+
 - Registrars need efficient batch workflows for large case imports (not addressed in director-focused design)
 - Admin staff need audit trails and error logs (not a director priority)
 - Registrars' productivity data goes to managers for performance reviews—creating tension between doing quality work and doing work fast
@@ -157,6 +159,7 @@ If programmers and designers only shadow the director or attend leadership meeti
 **The Solution:**
 
 Before programming begins, the development team—including programmers and architects—must shadow all four phases:
+
 - Spend time in the hospital observing how pathology reports are generated and accessed by registrars
 - Sit with registrars as they abstract cases and manage quality issues
 - Work with admin staff processing data for CDC submission and responding to records requests
