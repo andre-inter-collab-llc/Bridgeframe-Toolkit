@@ -396,299 +396,409 @@
     ]
   },
   {
-    "objectID": "chapters/C-glossary.html",
-    "href": "chapters/C-glossary.html",
-    "title": "16  Glossary",
-    "section": "",
-    "text": "16.1 A\nThis glossary provides comprehensive terminology mapping between Business Analysis (BA) and Public Health (PH) domains. Terms are organized alphabetically with cross-references.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#a",
-    "href": "chapters/C-glossary.html#a",
-    "title": "16  Glossary",
-    "section": "",
-    "text": "Acceptance Criteria (BA)\n\nConditions that a solution must meet to be accepted by stakeholders. PH equivalent: Evaluation protocol measures, success criteria.\n\nAcceptance Testing (BA)\n\nFormal testing to verify a solution meets acceptance criteria. PH equivalent: Pilot evaluation, field testing.\n\nActivity (PH)\n\nAn action taken as part of a program or intervention. BA equivalent: Functional requirement, use case step.\n\nAdaptability (Implementation Science)\n\nDegree to which an intervention can be modified for local context. BA equivalent: Configurability, customization capability.\n\nAfter-Action Review (PH)\n\nStructured review of what happened, why, and how to improve. BA equivalent: Lessons learned, retrospective.\n\nAgile (BA)\n\nIterative development methodology emphasizing flexibility and stakeholder collaboration. PH parallel: Adaptive management, PDSA cycles.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#b",
-    "href": "chapters/C-glossary.html#b",
-    "title": "16  Glossary",
-    "section": "16.2 B",
-    "text": "16.2 B\n\nBacklog (BA/Agile)\n\nPrioritized list of work items. PH equivalent: Workplan, action item list.\n\nBaseline (Both)\n\nStarting point measurement for comparison. In BA, current state metrics. In PH, epidemiological baseline data.\n\nBeneficiary (PH)\n\nPerson or group intended to benefit from a program. BA equivalent: End user, customer.\n\nBPMN (Business Process Model and Notation) (BA)\n\nStandard for process diagrams. PH equivalent: Intervention flowchart, workflow diagram.\n\nBug (BA)\n\nDefect in software. PH equivalent: Adverse event, variance from protocol.\n\nBusiness Case (BA)\n\nJustification for a project based on expected benefits. PH equivalent: Needs assessment, funding proposal.\n\nBusiness Need (BA)\n\nProblem or opportunity driving a project. PH equivalent: Public health challenge, health need.\n\nBusiness Rule (BA)\n\nConstraint governing system behavior. PH equivalent: Clinical guideline, protocol rule.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#c",
-    "href": "chapters/C-glossary.html#c",
-    "title": "16  Glossary",
-    "section": "16.3 C",
-    "text": "16.3 C\n\nCapacity Building (PH)\n\nDeveloping skills and resources in individuals and organizations. BA equivalent: Training, organizational readiness.\n\nCase Definition (PH)\n\nCriteria for identifying disease cases. BA equivalent: Data validation rules, entity definition.\n\nCFIR (Consolidated Framework for Implementation Research) (PH)\n\nFramework for understanding implementation context. BA application: Assessing organizational readiness, NFR refinement.\n\nChampion (Both)\n\nPerson who advocates for and promotes an initiative. Usage similar in both domains.\n\nChange Management (BA)\n\nApproach for transitioning organizations to new systems/processes. PH equivalent: Implementation strategy, adoption support.\n\nCommunity Health Assessment (PH)\n\nSystematic examination of health status and needs. BA equivalent: Current state analysis, needs assessment.\n\nCommunity Partner (PH)\n\nExternal organization collaborating on health initiatives. BA equivalent: Stakeholder, vendor, integration partner.\n\nComplexity (Implementation Science)\n\nPerceived difficulty of implementing an intervention. BA equivalent: Usability concerns, training requirements.\n\nCompliance (Both)\n\nAdherence to regulations, standards, or requirements. In PH, often HIPAA, CDC standards. In BA, often regulatory NFRs.\n\nConstraint (BA)\n\nLimitation on solution options. PH equivalent: Policy constraint, resource limitation.\n\nCurrent State (BA)\n\nExisting situation before change. PH equivalent: Baseline, pre-intervention status.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#d",
-    "href": "chapters/C-glossary.html#d",
-    "title": "16  Glossary",
-    "section": "16.4 D",
-    "text": "16.4 D\n\nData Dictionary (Both)\n\nDocumentation of data elements, definitions, and formats. Used similarly in both domains.\n\nData Quality (Both)\n\nAccuracy, completeness, and reliability of data. Critical in both domains.\n\nDefect (BA)\n\nFlaw in a deliverable. PH equivalent: Protocol deviation, adverse event.\n\nDeliverable (BA)\n\nOutput of project work. PH equivalent: Program output, product.\n\nDemo (BA/Agile)\n\nPresentation of completed work. PH equivalent: Progress presentation, milestone review.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#e",
-    "href": "chapters/C-glossary.html#e",
-    "title": "16  Glossary",
-    "section": "16.5 E",
-    "text": "16.5 E\n\nEffectiveness (PH)\n\nDegree to which an intervention achieves intended outcomes. BA equivalent: Solution value, ROI.\n\nElicitation (BA)\n\nTechniques for gathering requirements from stakeholders. PH equivalent: Community engagement, data collection.\n\nEpic (BA/Agile)\n\nLarge user story spanning multiple sprints. PH equivalent: Grant objective, program goal.\n\nEpidemiological Baseline (PH)\n\nPre-intervention disease/health status data. BA equivalent: Current state metrics.\n\nEvaluation (Both)\n\nAssessment of value, outcomes, or quality. In BA, solution evaluation. In PH, program evaluation.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#f",
-    "href": "chapters/C-glossary.html#f",
-    "title": "16  Glossary",
-    "section": "16.6 F",
-    "text": "16.6 F\n\nFeasibility (Both)\n\nAssessment of whether something can be done. Technical, economic, operational (BA) or evidence-based, resource, political (PH).\n\nFidelity (PH)\n\nDegree to which an intervention is delivered as designed. BA equivalent: Conformance to specifications.\n\nFocus Group (Both)\n\nGroup discussion for gathering perspectives. Used similarly in both domains.\n\nFunctional Requirement (BA)\n\nWhat a system must do. PH equivalent: Program activity, intervention component.\n\nFuture State (BA)\n\nDesired situation after change. PH equivalent: Program goals, intended outcomes.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#g",
-    "href": "chapters/C-glossary.html#g",
-    "title": "16  Glossary",
-    "section": "16.7 G",
-    "text": "16.7 G\n\nGemba (Lean/Both)\n\nGoing to the actual place where work happens. Applicable in both BA observation and PH site visits.\n\nGo-Live (BA)\n\nSystem deployment to production. PH equivalent: Program launch, intervention rollout.\n\nGovernance (Both)\n\nDecision-making structure and authority. Similar usage in both domains.\n\nGPS Format (PH-adapted)\n\n“Given [context], Person [role] Should [action]” user story format for clinical contexts.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#h",
-    "href": "chapters/C-glossary.html#h",
-    "title": "16  Glossary",
-    "section": "16.8 H",
-    "text": "16.8 H\n\nHealth Indicator (PH)\n\nMeasurable characteristic of population health. BA equivalent: KPI, metric.\n\nHealth Information Exchange (HIE) (PH)\n\nElectronic sharing of health data. BA equivalent: System integration, data exchange.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#i",
-    "href": "chapters/C-glossary.html#i",
-    "title": "16  Glossary",
-    "section": "16.9 I",
-    "text": "16.9 I\n\nImpact (PH)\n\nLong-term effects of an intervention. BA equivalent: Business value, strategic outcomes.\n\nImplementation (Both)\n\nPutting a solution or intervention into practice. Similar usage.\n\nImplementation Climate (CFIR)\n\nOrganizational receptivity to change. BA equivalent: Organizational readiness.\n\nImplementation Science (PH)\n\nStudy of methods to promote adoption of evidence-based practices. BA application: Change management, adoption strategy.\n\nIndicator (PH)\n\nMeasurable variable reflecting status or change. BA equivalent: Metric, KPI.\n\nInner Setting (CFIR)\n\nInternal organizational context. BA equivalent: Organizational environment, culture.\n\nInput (PH Logic Model)\n\nResources invested in a program. BA equivalent: Resources, constraints.\n\nIntegration (BA)\n\nConnecting systems to work together. PH equivalent: Interoperability, HIE.\n\nInterest Holder (PH)\n\nPerson or group with interest in a program. BA equivalent: Stakeholder.\n\nIntervention (PH)\n\nAction taken to improve health. BA equivalent: Solution, system, process change.\n\nIteration (BA/Agile)\n\nFixed time period for development work. PH equivalent: PDSA cycle, program phase.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#k",
-    "href": "chapters/C-glossary.html#k",
-    "title": "16  Glossary",
-    "section": "16.10 K",
-    "text": "16.10 K\n\nKey Informant (PH)\n\nPerson with specialized knowledge consulted for input. BA equivalent: Subject matter expert (SME).\n\nKPI (Key Performance Indicator) (BA)\n\nMetric measuring success. PH equivalent: Health indicator, outcome measure.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#l",
-    "href": "chapters/C-glossary.html#l",
-    "title": "16  Glossary",
-    "section": "16.11 L",
-    "text": "16.11 L\n\nLessons Learned (BA)\n\nKnowledge gained from experience. PH equivalent: After-action review findings.\n\nLogic Model (PH)\n\nVisual representation of program theory (inputs → activities → outputs → outcomes). BA equivalent: Requirements traceability, value chain.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#m",
-    "href": "chapters/C-glossary.html#m",
-    "title": "16  Glossary",
-    "section": "16.12 M",
-    "text": "16.12 M\n\nMaintenance (RE-AIM)\n\nSustainability of an intervention over time. BA equivalent: Operational sustainability.\n\nMilestone (Both)\n\nSignificant point in project timeline. In PH, often aligned with grant reporting.\n\nMVP (Minimum Viable Product) (BA/Agile)\n\nSmallest useful version of a solution. PH equivalent: Pilot intervention, proof of concept.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#n",
-    "href": "chapters/C-glossary.html#n",
-    "title": "16  Glossary",
-    "section": "16.13 N",
-    "text": "16.13 N\n\nNeeds Assessment (PH)\n\nSystematic identification of needs and gaps. BA equivalent: Business analysis, current state assessment.\n\nNFR (Non-Functional Requirement) (BA)\n\nQuality attribute or constraint. PH equivalent: Implementation characteristic (CFIR).",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#o",
-    "href": "chapters/C-glossary.html#o",
-    "title": "16  Glossary",
-    "section": "16.14 O",
-    "text": "16.14 O\n\nOutcome (PH)\n\nChange resulting from an intervention. BA equivalent: Benefit, value delivered.\n\nOuter Setting (CFIR)\n\nExternal context (regulations, networks, peer pressure). BA equivalent: External environment, market forces.\n\nOutput (PH Logic Model)\n\nDirect products of program activities. BA equivalent: Deliverables, features.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#p",
-    "href": "chapters/C-glossary.html#p",
-    "title": "16  Glossary",
-    "section": "16.15 P",
-    "text": "16.15 P\n\nPDSA (Plan-Do-Study-Act) (PH)\n\nQuality improvement cycle. BA equivalent: Sprint/iteration, continuous improvement cycle.\n\nPilot (Both)\n\nSmall-scale test of a solution or intervention. Similar usage.\n\nProcess Evaluation (PH)\n\nAssessment of how an intervention was implemented. BA equivalent: Implementation review.\n\nProgram (PH)\n\nOrganized set of activities to achieve health objectives. BA equivalent: Solution, system, project.\n\nProtocol (PH)\n\nStandardized procedure or guideline. BA equivalent: Business rule, procedure specification.\n\nPrototype (BA)\n\nEarly model for testing concepts. PH equivalent: Pilot, formative testing.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#q",
-    "href": "chapters/C-glossary.html#q",
-    "title": "16  Glossary",
-    "section": "16.16 Q",
-    "text": "16.16 Q\n\nQuality Assurance (QA) (BA)\n\nSystematic quality activities. PH equivalent: Quality Improvement (QI).\n\nQuality Improvement (QI) (PH)\n\nContinuous improvement of processes and outcomes. BA equivalent: Continuous improvement, QA.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#r",
-    "href": "chapters/C-glossary.html#r",
-    "title": "16  Glossary",
-    "section": "16.17 R",
-    "text": "16.17 R\n\nRE-AIM (PH)\n\nFramework for evaluating public health impact (Reach, Effectiveness, Adoption, Implementation, Maintenance).\n\nReach (RE-AIM)\n\nProportion of target population participating. BA equivalent: Adoption rate, market penetration.\n\nReadiness (Both)\n\nPreparedness for change. Implementation readiness (PH) or organizational readiness (BA).\n\nRelative Advantage (CFIR)\n\nPerception that intervention is better than current practice. BA equivalent: Value proposition.\n\nRequirements (BA)\n\nConditions a solution must satisfy. PH equivalent: Program specifications, protocols.\n\nRetrospective (BA/Agile)\n\nMeeting to reflect on past work. PH equivalent: After-action review.\n\nRights Holder (PH)\n\nPerson with inherent claims (alternative to “stakeholder”). BA equivalent: Stakeholder (with different connotation).\n\nRisk (Both)\n\nPotential for adverse outcomes. Similar usage; PH may emphasize community risk.\n\nROI (Return on Investment) (BA)\n\nFinancial value relative to cost. PH equivalent: Cost-effectiveness, cost-benefit.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#s",
-    "href": "chapters/C-glossary.html#s",
-    "title": "16  Glossary",
-    "section": "16.18 S",
-    "text": "16.18 S\n\nScope (Both)\n\nBoundaries of what is included. Similar usage in both domains.\n\nService-User Scenario (PH-adapted)\n\nNarrative description of user journey. BA equivalent: User story, use case narrative.\n\nSME (Subject Matter Expert) (BA)\n\nPerson with domain expertise. PH equivalent: Key informant, clinical expert.\n\nSolution (BA)\n\nSystem or process addressing a business need. PH equivalent: Intervention, program.\n\nSprint (BA/Agile)\n\nFixed-length iteration. PH equivalent: PDSA cycle, work period.\n\nStakeholder (BA)\n\nPerson with interest in a project. PH alternatives: Interest holder, community partner, rights holder.\n\nSummative Evaluation (PH)\n\nAssessment of overall outcomes after implementation. BA equivalent: Post-implementation review.\n\nSustainability (PH)\n\nAbility to maintain intervention over time. BA equivalent: Operational viability.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#t",
-    "href": "chapters/C-glossary.html#t",
-    "title": "16  Glossary",
-    "section": "16.19 T",
-    "text": "16.19 T\n\nTest Case (BA)\n\nSpecification for verifying a requirement. PH equivalent: Evaluation measure, data collection protocol.\n\nTraceability (BA)\n\nLinking requirements to sources and tests. PH equivalent: Theory of change alignment.\n\nTraining (Both)\n\nBuilding user/staff capability. Similar usage; PH may use “capacity building.”",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#u",
-    "href": "chapters/C-glossary.html#u",
-    "title": "16  Glossary",
-    "section": "16.20 U",
-    "text": "16.20 U\n\nUAT (User Acceptance Testing) (BA)\n\nStakeholder verification of solution. PH equivalent: Pilot evaluation, field testing.\n\nUse Case (BA)\n\nDescription of system-user interaction. PH equivalent: Clinical scenario, patient journey.\n\nUser Story (BA/Agile)\n\nBrief requirement from user perspective. PH equivalents: Service-user scenario, GPS format.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#v",
-    "href": "chapters/C-glossary.html#v",
-    "title": "16  Glossary",
-    "section": "16.21 V",
-    "text": "16.21 V\n\nValidation (Both)\n\nConfirming the right thing is built. Similar usage.\n\nVariance (PH)\n\nDeviation from expected outcome. BA equivalent: Defect, exception.\n\nVerification (Both)\n\nConfirming the thing is built right. Similar usage.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#w",
-    "href": "chapters/C-glossary.html#w",
-    "title": "16  Glossary",
-    "section": "16.22 W",
-    "text": "16.22 W\n\nWorkflow (Both)\n\nSequence of tasks to accomplish work. Similar usage.\n\nWorkplan (PH)\n\nDetailed plan of activities. BA equivalent: Project plan, backlog.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/C-glossary.html#quick-reference-most-common-translations",
-    "href": "chapters/C-glossary.html#quick-reference-most-common-translations",
-    "title": "16  Glossary",
-    "section": "16.23 Quick Reference: Most Common Translations",
-    "text": "16.23 Quick Reference: Most Common Translations\n\n\n\n\n\n\n\n\nWhen You Hear…\nBA Meaning\nPH Meaning\n\n\n\n\n“Requirements”\nSystem specifications\nProgram protocols\n\n\n“Stakeholder”\nAnyone with interest\nCommunity partner, rights holder\n\n\n“Sprint”\n2-week development cycle\nPDSA cycle\n\n\n“User story”\nFeature description\nService-user scenario\n\n\n“KPI”\nBusiness metric\nHealth indicator\n\n\n“MVP”\nMinimal product\nPilot intervention\n\n\n“Go-live”\nSystem deployment\nProgram launch\n\n\n“Bug”\nSoftware defect\nProtocol variance",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Glossary</span>"
-    ]
-  },
-  {
     "objectID": "chapters/D-workforce-development.html",
     "href": "chapters/D-workforce-development.html",
-    "title": "17  Workforce Development",
+    "title": "16  Workforce Development",
     "section": "",
-    "text": "17.1 Building Hybrid Professionals and Teams\nThe translation gap between IT business analysis and public health is not just a process problem or a terminology problem. It is fundamentally a workforce problem. Both government agencies and private industry need professionals who can operate fluently in both worlds, yet most training programs still operate in silos.\nThis appendix explores the challenge, highlights emerging resources, and suggests strategies for building hybrid capacity.",
+    "text": "16.1 Building Hybrid Professionals and Teams\nThe translation gap between IT business analysis and public health is not just a process problem or a terminology problem. It is fundamentally a workforce problem. Both government agencies and private industry need professionals who can operate fluently in both worlds, yet most training programs still operate in silos.\nThis appendix explores the challenge, highlights emerging resources, and suggests strategies for building hybrid capacity.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Workforce Development</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Workforce Development</span>"
     ]
   },
   {
     "objectID": "chapters/D-workforce-development.html#building-hybrid-professionals-and-teams",
     "href": "chapters/D-workforce-development.html#building-hybrid-professionals-and-teams",
-    "title": "17  Workforce Development",
+    "title": "16  Workforce Development",
     "section": "",
-    "text": "17.1.1 The Training Silo Problem\nConsider the typical career paths:\nPublic Health Path:\n\nMPH or equivalent graduate training\nCoursework in epidemiology, biostatistics, health policy\nRarely covers: Agile methodology, BABOK, software development lifecycle, requirements engineering\n\nBusiness Analysis Path:\n\nBusiness or IT undergraduate degree\nCBAP, PMI-PBA, or similar certification\nRarely covers: Epidemiology, CDC frameworks, public health ethics, community engagement methods\n\nWhen these professionals meet on a health IT project, each brings deep expertise in their domain but limited fluency in the other’s language, frameworks, and assumptions. The result is the translation gap this book addresses.\n\n\n\n\n\n\nNoteInsight from the Field\n\n\n\nThe lack of skilled hybrid workforce and limited resources to hire such professionals are two significant limiting factors in bridging this gap. Organizations often recognize the need but struggle to find candidates or justify positions that span traditional departmental boundaries.\n\n\n\n\n17.1.2 Emerging Training Programs\nSeveral initiatives are working to close this gap:\n\n17.1.2.1 CDC Public Health Informatics Fellowship Program (PHIFP)\nThe Public Health Informatics Fellowship Program trains professionals specifically for this intersection. Fellows work on real public health informatics projects while developing competencies in both public health practice and information systems.\nThe program recruits from diverse backgrounds and provides structured mentorship bridging technical and programmatic domains. Since its establishment, PHIFP has produced many of the hybrid professionals now leading health IT initiatives across state and local health departments.\n\n\n17.1.2.2 PHIT Workforce Development Program\nThe Public Health Informatics & Technology (PHIT) Workforce Development Program, funded by the Office of the National Coordinator for Health IT (ONC), focuses on training diverse professionals in health informatics. The program emphasizes recruiting from underrepresented communities, recognizing that the hybrid workforce should reflect the populations public health serves.\n\n\n17.1.2.3 AMIA Public Health Informatics Working Group\nThe American Medical Informatics Association (AMIA) hosts an active Public Health Informatics Working Group with members from state health departments, academic institutions, nonprofits, and consulting firms. The working group:\n\nDevelops competency frameworks for public health informatics\nShares best practices across organizations\nAdvocates for workforce development resources\nConnects professionals navigating similar challenges\n\nFor those seeking community and professional development in this space, AMIA membership provides access to peers tackling the same translation challenges.\n\n\n17.1.2.4 Other Resources\n\n\n\nResource\nFocus\nAccess\n\n\n\n\nCDC TRAIN\nFree public health courses, including informatics fundamentals\ntrain.org\n\n\nAMIA 10x10\nIntensive health informatics courses\namia.org\n\n\nCAHIMS / CPHIMS\nHealth IT certifications from HIMSS\nhimss.org\n\n\nCoursera / edX\nPublic health informatics specializations (Johns Hopkins, UCSF)\nOnline\n\n\n\n\n\n\n17.1.3 Organizational Strategies for Building Hybrid Capacity\nBeyond individual training, organizations can take structural steps to build translation capability:\n\n17.1.3.1 1. Create Explicit Bridge Roles\nRather than expecting traditional BAs or PH staff to develop hybrid skills on their own, create positions specifically designed for translation:\n\nHealth Informatics Liaison: Embedded in IT teams but reporting to public health leadership\nTechnical Program Analyst: Embedded in public health programs but with explicit BA responsibilities\nImplementation Specialist: Focused on adoption and change management across both domains\n\nThese roles should have:\n\nDual reporting or matrix accountability\nPerformance metrics that span technical and programmatic outcomes\nProfessional development budgets for cross-training\n\n\n\n17.1.3.2 2. Invest in Onboarding Crosswalks\nWhen new team members join hybrid projects, provide structured onboarding that covers both domains:\n\nTerminology glossaries (like Chapter 3 of this book)\nFramework overviews (BABOK basics for PH staff; CDC evaluation basics for BA staff)\nProject-specific crosswalks mapping deliverables to both languages\n\nThis upfront investment reduces the clarification loops that consume project time later.\n\n\n17.1.3.3 3. Include Translation Capacity in Grant Budgets\nAs discussed in Chapter 1, the business case stage is the ideal time to secure resources for cross-domain facilitation. When writing grant applications or project proposals:\n\nInclude line items for terminology alignment workshops\nBudget for cross-training or professional development\nAllocate facilitation time for mixed-team meetings\nConsider consultants or contractors with hybrid backgrounds\n\n\n\n17.1.3.4 4. Build Communities of Practice\nInternal communities of practice can connect professionals across organizational silos:\n\nRegular brown-bag sessions where IT and PH staff present to each other\nShared Slack/Teams channels for quick translation questions\nJoint retrospectives that surface communication challenges\nRotating assignments that expose staff to the other domain\n\n\n\n\n17.1.4 Competencies for the Hybrid Professional\nWhat should a hybrid BA/PH professional be able to do? Based on established competency frameworks and practical experience, key capabilities include:\n\n17.1.4.1 Core Translation Competencies\n\n\n\n\n\n\n\nCompetency\nDescription\n\n\n\n\nDual-framework thinking\nMap Agile artifacts to Logic Model outcomes and vice versa\n\n\nTerminology fluency\nSpeak both languages without constant translation pauses\n\n\nAudience adaptation\nAdjust communication style for technical vs. programmatic audiences\n\n\nFramework selection\nKnow when to use BA tools vs. PH tools vs. hybrid approaches\n\n\n\n\n\n17.1.4.2 Technical Competencies (BA Side)\n\n\n\n\n\n\n\nCompetency\nDescription\n\n\n\n\nRequirements engineering\nElicit, analyze, specify, and validate requirements\n\n\nProcess modeling\nCreate BPMN, UML, or similar diagrams\n\n\nAgile practices\nParticipate effectively in sprints, stand-ups, retrospectives\n\n\nData modeling\nUnderstand ERDs, data dictionaries, database concepts\n\n\n\n\n\n17.1.4.3 Technical Competencies (PH Side)\n\n\n\n\n\n\n\nCompetency\nDescription\n\n\n\n\nEpidemiological thinking\nUnderstand surveillance, case definitions, health indicators\n\n\nProgram evaluation\nApply CDC evaluation framework, logic models, PDSA\n\n\nRegulatory knowledge\nNavigate HIPAA, IRB, grant compliance requirements\n\n\nHealth equity lens\nIdentify disparities, ensure inclusive engagement\n\n\n\n\n\n17.1.4.4 Implementation Science Competencies\n\n\n\n\n\n\n\nCompetency\nDescription\n\n\n\n\nCFIR application\nAssess implementation context using CFIR domains\n\n\nChange management\nPlan for adoption, not just deployment\n\n\nStakeholder engagement\nBuild relationships across organizational boundaries\n\n\nSustainability planning\nDesign for long-term operation, not just project completion\n\n\n\n\n\n\n17.1.5 Career Pathways\nFor professionals seeking to develop hybrid capabilities, several pathways exist:\n\n17.1.5.1 From Public Health to Hybrid\n\nSeek projects involving health IT systems (surveillance, registries, EHRs)\nRequest assignment to vendor-managed implementations\nPursue CAHIMS or similar health IT certification\nTake online courses in Agile, requirements engineering, or project management\nJoin AMIA or similar professional communities\n\n\n\n17.1.5.2 From Business Analysis to Hybrid\n\nSeek health sector clients or employers\nLearn public health fundamentals (CDC TRAIN offers free courses)\nStudy regulatory context (HIPAA, CDC reporting requirements)\nUnderstand grant-driven funding cycles and constraints\nDevelop cultural competency for community engagement\n\n\n\n17.1.5.3 Academic Pathways\n\nDual degrees: MPH + MBA, MPH + MIS\nHealth informatics programs: Specifically designed for this intersection\nGraduate certificates: Add informatics credentials to existing degrees\n\n\n\n\n17.1.6 The Long View\nBuilding hybrid workforce capacity is a long-term investment. Individual professionals take years to develop fluency in both domains. Organizational cultures take even longer to change.\nBut the need is urgent. Public health IT projects will continue to grow in scope and complexity. The professionals and organizations that build translation capacity now will be better positioned to deliver systems that actually improve health outcomes.\nBridgeframe is one contribution to this effort: a crosswalk that teams can use while the workforce develops. But crosswalks are not substitutes for people. The field needs more hybrid professionals, more training programs, and more organizational commitment to building this capacity.\n\n\n\n\n\n\nTipGet Involved\n\n\n\nIf you are working on workforce development for health informatics, or have experience building hybrid teams, consider contributing to this conversation. The challenges described in this appendix are shared across many organizations, and solutions developed in one context often transfer to others.",
+    "text": "16.1.1 The Training Silo Problem\nConsider the typical career paths:\nPublic Health Path:\n\nMPH or equivalent graduate training\nCoursework in epidemiology, biostatistics, health policy\nRarely covers: Agile methodology, BABOK, software development lifecycle, requirements engineering\n\nBusiness Analysis Path:\n\nBusiness or IT undergraduate degree\nCBAP, PMI-PBA, or similar certification\nRarely covers: Epidemiology, CDC frameworks, public health ethics, community engagement methods\n\nWhen these professionals meet on a health IT project, each brings deep expertise in their domain but limited fluency in the other’s language, frameworks, and assumptions. The result is the translation gap this book addresses.\n\n\n\n\n\n\nNoteInsight from the Field\n\n\n\nThe lack of skilled hybrid workforce and limited resources to hire such professionals are two significant limiting factors in bridging this gap. Organizations often recognize the need but struggle to find candidates or justify positions that span traditional departmental boundaries.\n\n\n\n\n16.1.2 Emerging Training Programs\nSeveral initiatives are working to close this gap:\n\n16.1.2.1 CDC Public Health Informatics Fellowship Program (PHIFP)\nThe Public Health Informatics Fellowship Program trains professionals specifically for this intersection. Fellows work on real public health informatics projects while developing competencies in both public health practice and information systems.\nThe program recruits from diverse backgrounds and provides structured mentorship bridging technical and programmatic domains. Since its establishment, PHIFP has produced many of the hybrid professionals now leading health IT initiatives across state and local health departments.\n\n\n16.1.2.2 PHIT Workforce Development Program\nThe Public Health Informatics & Technology (PHIT) Workforce Development Program, funded by the Office of the National Coordinator for Health IT (ONC), focuses on training diverse professionals in health informatics. The program emphasizes recruiting from underrepresented communities, recognizing that the hybrid workforce should reflect the populations public health serves.\n\n\n16.1.2.3 AMIA Public Health Informatics Working Group\nThe American Medical Informatics Association (AMIA) hosts an active Public Health Informatics Working Group with members from state health departments, academic institutions, nonprofits, and consulting firms. The working group:\n\nDevelops competency frameworks for public health informatics\nShares best practices across organizations\nAdvocates for workforce development resources\nConnects professionals navigating similar challenges\n\nFor those seeking community and professional development in this space, AMIA membership provides access to peers tackling the same translation challenges.\n\n\n16.1.2.4 Other Resources\n\n\n\nResource\nFocus\nAccess\n\n\n\n\nCDC TRAIN\nFree public health courses, including informatics fundamentals\ntrain.org\n\n\nAMIA 10x10\nIntensive health informatics courses\namia.org\n\n\nCAHIMS / CPHIMS\nHealth IT certifications from HIMSS\nhimss.org\n\n\nCoursera / edX\nPublic health informatics specializations (Johns Hopkins, UCSF)\nOnline\n\n\n\n\n\n\n16.1.3 Organizational Strategies for Building Hybrid Capacity\nBeyond individual training, organizations can take structural steps to build translation capability:\n\n16.1.3.1 1. Create Explicit Bridge Roles\nRather than expecting traditional BAs or PH staff to develop hybrid skills on their own, create positions specifically designed for translation:\n\nHealth Informatics Liaison: Embedded in IT teams but reporting to public health leadership\nTechnical Program Analyst: Embedded in public health programs but with explicit BA responsibilities\nImplementation Specialist: Focused on adoption and change management across both domains\n\nThese roles should have:\n\nDual reporting or matrix accountability\nPerformance metrics that span technical and programmatic outcomes\nProfessional development budgets for cross-training\n\n\n\n16.1.3.2 2. Invest in Onboarding Crosswalks\nWhen new team members join hybrid projects, provide structured onboarding that covers both domains:\n\nTerminology glossaries (like Chapter 3 of this book)\nFramework overviews (BABOK basics for PH staff; CDC evaluation basics for BA staff)\nProject-specific crosswalks mapping deliverables to both languages\n\nThis upfront investment reduces the clarification loops that consume project time later.\n\n\n16.1.3.3 3. Include Translation Capacity in Grant Budgets\nAs discussed in Chapter 1, the business case stage is the ideal time to secure resources for cross-domain facilitation. When writing grant applications or project proposals:\n\nInclude line items for terminology alignment workshops\nBudget for cross-training or professional development\nAllocate facilitation time for mixed-team meetings\nConsider consultants or contractors with hybrid backgrounds\n\n\n\n16.1.3.4 4. Build Communities of Practice\nInternal communities of practice can connect professionals across organizational silos:\n\nRegular brown-bag sessions where IT and PH staff present to each other\nShared Slack/Teams channels for quick translation questions\nJoint retrospectives that surface communication challenges\nRotating assignments that expose staff to the other domain\n\n\n\n\n16.1.4 Competencies for the Hybrid Professional\nWhat should a hybrid BA/PH professional be able to do? Based on established competency frameworks and practical experience, key capabilities include:\n\n16.1.4.1 Core Translation Competencies\n\n\n\n\n\n\n\nCompetency\nDescription\n\n\n\n\nDual-framework thinking\nMap Agile artifacts to Logic Model outcomes and vice versa\n\n\nTerminology fluency\nSpeak both languages without constant translation pauses\n\n\nAudience adaptation\nAdjust communication style for technical vs. programmatic audiences\n\n\nFramework selection\nKnow when to use BA tools vs. PH tools vs. hybrid approaches\n\n\n\n\n\n16.1.4.2 Technical Competencies (BA Side)\n\n\n\n\n\n\n\nCompetency\nDescription\n\n\n\n\nRequirements engineering\nElicit, analyze, specify, and validate requirements\n\n\nProcess modeling\nCreate BPMN, UML, or similar diagrams\n\n\nAgile practices\nParticipate effectively in sprints, stand-ups, retrospectives\n\n\nData modeling\nUnderstand ERDs, data dictionaries, database concepts\n\n\n\n\n\n16.1.4.3 Technical Competencies (PH Side)\n\n\n\n\n\n\n\nCompetency\nDescription\n\n\n\n\nEpidemiological thinking\nUnderstand surveillance, case definitions, health indicators\n\n\nProgram evaluation\nApply CDC evaluation framework, logic models, PDSA\n\n\nRegulatory knowledge\nNavigate HIPAA, IRB, grant compliance requirements\n\n\nHealth equity lens\nIdentify disparities, ensure inclusive engagement\n\n\n\n\n\n16.1.4.4 Implementation Science Competencies\n\n\n\n\n\n\n\nCompetency\nDescription\n\n\n\n\nCFIR application\nAssess implementation context using CFIR domains\n\n\nChange management\nPlan for adoption, not just deployment\n\n\nStakeholder engagement\nBuild relationships across organizational boundaries\n\n\nSustainability planning\nDesign for long-term operation, not just project completion\n\n\n\n\n\n\n16.1.5 Career Pathways\nFor professionals seeking to develop hybrid capabilities, several pathways exist:\n\n16.1.5.1 From Public Health to Hybrid\n\nSeek projects involving health IT systems (surveillance, registries, EHRs)\nRequest assignment to vendor-managed implementations\nPursue CAHIMS or similar health IT certification\nTake online courses in Agile, requirements engineering, or project management\nJoin AMIA or similar professional communities\n\n\n\n16.1.5.2 From Business Analysis to Hybrid\n\nSeek health sector clients or employers\nLearn public health fundamentals (CDC TRAIN offers free courses)\nStudy regulatory context (HIPAA, CDC reporting requirements)\nUnderstand grant-driven funding cycles and constraints\nDevelop cultural competency for community engagement\n\n\n\n16.1.5.3 Academic Pathways\n\nDual degrees: MPH + MBA, MPH + MIS\nHealth informatics programs: Specifically designed for this intersection\nGraduate certificates: Add informatics credentials to existing degrees\n\n\n\n\n16.1.6 The Long View\nBuilding hybrid workforce capacity is a long-term investment. Individual professionals take years to develop fluency in both domains. Organizational cultures take even longer to change.\nBut the need is urgent. Public health IT projects will continue to grow in scope and complexity. The professionals and organizations that build translation capacity now will be better positioned to deliver systems that actually improve health outcomes.\nBridgeframe is one contribution to this effort: a crosswalk that teams can use while the workforce develops. But crosswalks are not substitutes for people. The field needs more hybrid professionals, more training programs, and more organizational commitment to building this capacity.\n\n\n\n\n\n\nTipGet Involved\n\n\n\nIf you are working on workforce development for health informatics, or have experience building hybrid teams, consider contributing to this conversation. The challenges described in this appendix are shared across many organizations, and solutions developed in one context often transfer to others.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Workforce Development</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Workforce Development</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/E-career-navigation.html",
+    "href": "chapters/E-career-navigation.html",
+    "title": "17  Career Navigation for Hybrid Professionals",
+    "section": "",
+    "text": "17.1 Finding and Landing Roles at the BA/PH Intersection\nThe integration of business analysis and public health is not merely a theoretical exercise in framework alignment; it is a burgeoning labor market reality. However, a significant translation gap exists within the workforce ecosystem itself. While the operational need for professionals who can navigate both epidemiological principles and information technology (IT) requirements is acute, the job market often lacks the taxonomy to describe them.\nHuman Resources departments, government civil service commissions, and automated Applicant Tracking Systems (ATS) predominantly operate within siloed definitions: a candidate is either a “Health Scientist” or an “IT Specialist,” rarely both. This appendix addresses the “structural invisibility” of the hybrid professional, providing a comprehensive analysis of the employment landscape and practical strategies for navigating it.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Career Navigation for Hybrid Professionals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/E-career-navigation.html#finding-and-landing-roles-at-the-baph-intersection",
+    "href": "chapters/E-career-navigation.html#finding-and-landing-roles-at-the-baph-intersection",
+    "title": "17  Career Navigation for Hybrid Professionals",
+    "section": "",
+    "text": "TipThe Bridgeframe Workforce Philosophy\n\n\n\nContext is the most valuable currency in health IT. Technical skills (SQL, Python, Jira) are commodities that can be learned or contracted out. Domain context, understanding why a disease case definition changes during an outbreak or how a rural clinic workflow differs from an urban hospital, is the scarce resource.\nThe career path for the Bridgeframe professional is rarely linear. It does not always move from “Junior Analyst” to “Senior Analyst.” Instead, it often moves laterally across sectors, accumulating context in one domain to leverage it in another.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Career Navigation for Hybrid Professionals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/E-career-navigation.html#the-landscape-of-opportunity",
+    "href": "chapters/E-career-navigation.html#the-landscape-of-opportunity",
+    "title": "17  Career Navigation for Hybrid Professionals",
+    "section": "17.2 The Landscape of Opportunity",
+    "text": "17.2 The Landscape of Opportunity\nResearch into the public health workforce reveals a distinct ecosystem of opportunity. The demand for hybrid skills is universal, but the capacity to hire and the language used to describe these roles varies significantly by sector. We can map these sectors onto a “Maturity Model” of hybrid employment.\n\n17.2.1 The Incubator: Local and Rural Health Departments\nEarly-career professionals should consider prioritizing local health organizations (LHOs) in communities with limited access to highly trained workers. These environments, including rural county health departments, tribal health organizations, and small community nonprofits, offer a unique value proposition: necessity-driven hybridization.\n\n17.2.1.1 The Operational Reality\nIn a large, well-funded state health department, roles are siloed. A “Database Administrator” manages the servers; an “Epidemiologist” analyzes the data; a “Health Educator” creates the charts.\nIn a rural county health department serving 20,000 residents, a single employee often performs all three functions. They may troubleshoot the clinic’s label printer in the morning (IT Support), query the state immunization registry at lunch (Data Analysis), and present vaccination rates to the County Board of Health in the evening (Data Visualization).\n\n\n17.2.1.2 Strategic Advantages\n\n\n\n\n\n\n\nAdvantage\nDescription\n\n\n\n\nFull-stack experience\nExposure to the entire data lifecycle, from point of collection to point of reporting. This end-to-end visibility provides deep understanding of data provenance and quality issues at the source.\n\n\nRapid decision cycles\nUnlike federal agencies where changes take years, local departments often need immediate solutions. An analyst can propose, build, and implement a new tracking tool in a single week.\n\n\nHigh impact\nThe hybrid professional in this setting is often the only person with advanced data skills, giving them disproportionate influence on agency operations and strategy.\n\n\n\n\n\n17.2.1.3 Navigating the Challenges\n\nTitle ambiguity: These roles almost never carry titles like “Informatics Specialist” or “Business Analyst.” Instead, search for titles such as Health Educator, Emergency Preparedness Coordinator, Disease Intervention Specialist, or Program Coordinator.\nResource constraints: Salaries are typically lower than in the private sector. Consider this compensation gap as an investment in real-world experience.\nLegacy infrastructure: Be prepared to work with outdated hardware, slow internet connections, and paper-based processes. Learning to design systems within these constraints is a critical skill for any high-level architect.\n\n\n\n\n17.2.2 The Intermediary: State Health Departments and Large Universities\nState-level agencies and large academic institutions act as the “middle layer” of the public health stack, translating federal funding and standards into local implementation.\n\n17.2.2.1 State Health Departments\nState health departments manage the centralized systems of record: the Electronic Disease Surveillance System (EDSS), the Immunization Information System (IIS), and Vital Records. Roles here focus heavily on interoperability and compliance. The analyst ensures that data flowing from hospitals (via HL7 messages) meets the validation rules required by the CDC.\nTypical titles: Epidemiologist (Informatics), Surveillance System Manager, Data Modernization Lead, Interoperability Coordinator.\n\n\n17.2.2.2 Universities and Academic Centers\nUniversities are often the engines of research and workforce development. They hire staff to manage large research datasets, coordinate multi-site clinical trials, or evaluate public health programs. Positions often bridge the gap between Principal Investigators (academics) and Data Management Centers (IT).\nTypical titles: Research Data Manager, Center Administrator, Project Coordinator.\n\n\n\n17.2.3 The Engine: Federal Contractors and Consultancies\nA significant portion of the public health IT workforce is employed not by the government directly, but by the private ecosystem that supports it. Since government agencies often lack the flexibility to hire rapid-response IT teams, they contract this work out to consulting firms.\n\n17.2.3.1 Large Systems Integrators\nFirms like Deloitte, Accenture, Booz Allen Hamilton, Leidos, GDIT (General Dynamics), and ICF execute the massive modernization contracts (e.g., CDC’s Data Modernization Initiative).\n\nThe culture: These firms operate with corporate speed. They value “billable” skills: specific experience with platforms (Salesforce, ServiceNow, Azure) combined with the ability to obtain security clearances (Public Trust).\nThe hybrid value: These firms need Subject Matter Experts (SMEs) who can sit in a room with CDC scientists, understand the nuance of “hepatitis serology,” and translate it into user stories for software developers.\n\n\n\n17.2.3.2 Niche Public Health Consultancies\nSpecialized boutique firms focus exclusively on the public health domain, often offering a culture more aligned with public health values.\nKey players: J Michael Consulting, Berry Technology Solutions, Lantana Consulting Group (standards focus), Public Health Informatics Institute (PHII, a nonprofit/consultancy hybrid).\nThese firms often handle the “high-touch” aspects of informatics: training, technical assistance to states, and standards development (HL7/FHIR implementation guides).\n\n\n\n17.2.4 The Infrastructure: EHR Vendors and Retail Health\nPrivate sector entities that generate clinical data are increasingly hiring public health experts to ensure their products remain relevant and compliant.\n\n17.2.4.1 Electronic Health Record Vendors\nCompanies like Epic, Oracle Health (Cerner), MEDITECH, and athenahealth need professionals who understand the regulatory landscape. Federal regulations (like “Promoting Interoperability”) mandate that EHRs must be able to send data to public health agencies.\nTypical titles: Implementation Consultant, Regulatory Affairs Analyst, Public Health Liaison.\n\n\n17.2.4.2 National Pharmacy Chains\nRetail health giants like CVS Health, Walgreens, and Rite Aid have transformed into primary care and public health hubs. Since the COVID-19 pandemic, pharmacies generate massive volumes of immunization and testing data. These companies recruit informatics professionals to manage complex data flows between thousands of retail locations and fifty distinct state immunization registries.\nFocus areas: Population health analytics, medication adherence tracking, interoperability management.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Career Navigation for Hybrid Professionals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/E-career-navigation.html#the-rfp-search-strategy",
+    "href": "chapters/E-career-navigation.html#the-rfp-search-strategy",
+    "title": "17  Career Navigation for Hybrid Professionals",
+    "section": "17.3 The RFP Search Strategy",
+    "text": "17.3 The RFP Search Strategy\nStandard job searching is reactive: a candidate waits for a job description to be posted and then applies. The Bridgeframe strategy is proactive: it analyzes the business drivers of hiring to identify opportunities before they are advertised.\nIn the public sector, jobs are downstream of projects, and projects are downstream of funding. Before a job description can be posted, an agency must secure a budget and usually hire a vendor to execute the work. This procurement process leaves a public paper trail that savvy job seekers can follow.\nThe central document in this trail is the Request for Proposal (RFP).\n\n17.3.1 The Logic of Procurement-Based Job Searching\nWhen a government agency needs to modernize a system (like the CancerSurv registry), they rarely build it in-house. Instead, they release an RFP to hire a private vendor. This document contains three critical pieces of intelligence:\n\n\n\n\n\n\n\nComponent\nWhat It Tells You\n\n\n\n\nProblem Statement\nDescribes exactly what is broken (e.g., “Legacy mainframe cannot accept HL7 2.5.1 messages”)\n\n\nSolution Requirements\nDescribes exactly what skills are needed (e.g., “Vendor must provide data migration, cloud architecture, and training for 500 registrars”)\n\n\nTimeline\nDescribes when the work (and the hiring) will begin\n\n\n\nThe strategy:\n\nFinding the RFP = Finding the Demand: If you find an RFP for “Surveillance System Modernization,” you know that specific high-value skills (Cloud, SQL, Training) are about to be in demand in that geographic area.\nFinding the Award Notice = Finding the Employer: Eventually, the agency announces which vendor won the contract. That vendor has just received a multi-million dollar contract and is legally obligated to staff the project immediately.\n\n\n\n17.3.2 Google Boolean Search Operators\nMost RFPs are buried on obscure government procurement portals. However, they are almost always indexed by Google. By using Boolean search operators, you can locate the source documents directly.\n\n17.3.2.1 The Master Search String\n(RFP OR \"Request for Proposal\" OR \"Request for Applications\" OR \n\"Notice of Funding Opportunity\") AND (\"Public Health\" OR \"Epidemiology\" \nOR \"Surveillance\" OR \"Informatics\" OR \"Vital Records\") AND (\"System\" \nOR \"Modernization\" OR \"Implementation\" OR \"Software\" OR \"Data\") \nfiletype:pdf site:.gov\nDeconstructing the operators:\n\n\n\n\n\n\n\nOperator Group\nPurpose\n\n\n\n\nDocument type\n(RFP OR \"Request for Proposal\"...) casts a wide net for solicitation names\n\n\nDomain\nAND (\"Public Health\"...) ensures content is relevant to the field\n\n\nActivity\nAND (\"System\"...) ensures the project has a technical/IT component\n\n\nfiletype:pdf\nOfficial government RFPs are almost universally PDF documents\n\n\nsite:.gov\nRestricts results to US government domains (federal, state, and local)\n\n\n\n\n\n\n17.3.3 Customizing Your Search\n\n17.3.3.1 Strategy A: Geographic Targeting\nIf you wish to work in a specific state or region, add location keywords:\n...AND (\"Texas\" OR \"TX\" OR \"Austin\")...\n\n\n17.3.3.2 Strategy B: The Winning Vendor Hunt\nFinding an old RFP is valuable because it leads to the Award Notice. If an RFP was due 3 months ago, the contract has likely just been awarded.\n(\"Notice of Award\" OR \"Contract Award\" OR \"Bid Tabulation\" OR \n\"Intent to Award\") AND (\"Department of Health\" OR \"CDC\") AND \n(\"IT\" OR \"Informatics\" OR \"Data System\") 2024..2026\nThe 2024..2026 operator (two dots) tells Google to search for numbers within that range, helping identify recent fiscal year awards.\n\n\n17.3.3.3 Strategy C: Skill-Specific Targeting\nIf you have a niche skill (e.g., HL7 FHIR), search for RFPs that specifically require it:\n(RFP OR \"Scope of Work\") AND \"Public Health\" AND (\"FHIR\" OR \"HL7\" \nOR \"Interoperability\") filetype:pdf\n\n\n\n\n\n\nNoteCancerSurv Example: The RFP Strategy in Action\n\n\n\nThe Scenario: The State Health Department releases an RFP for the “CancerSurv Modernization Project” (RFP #2026-CS-001). The RFP describes a need to “replace a legacy mainframe system with a cloud-based registry compliant with NAACCR standards.”\nThe Job Seeker: Alex is a Business Analyst with SQL skills who wants to transition into public health. Alex runs the Google Boolean search:\n(\"Request for Proposal\") AND \"Cancer Registry\" AND \"Modernization\" filetype:pdf site:.gov\nThe Insight: Alex finds the RFP and reads the Scope of Work. Section 4.2 states: “Vendor must provide training and change management for 150 hospital registrars.” Alex realizes this is a green flag, as Alex has extensive experience in corporate training.\nThe Move: Alex searches for the award notice: (\"Contract Award\" OR \"Bid Tabulation\") AND \"CancerSurv\". The search reveals that TechHealth Solutions won the bid last month.\nAlex goes to TechHealth’s careers page. There is no “Cancer Registry Trainer” job listed yet. Alex sends a proactive application to the TechHealth hiring manager: “I see TechHealth won the CancerSurv contract. The RFP requires extensive training for 150 registrars. My background in large-scale change management training would allow you to meet that deliverable immediately.”\nThe Result: TechHealth was indeed worrying about how to staff the training component. Alex is interviewed immediately, bypassing the competitive stack of generic resumes.\n\n\n\n\n\n17.3.4 The Blind Application\nOnce you identify a winning vendor, the next step is the proactive application. Even if the vendor has not yet posted job openings, they are likely in the “ramp-up” phase.\nSample outreach script:\n\n“I noticed that [Company Name] was recently awarded the Disease Surveillance Modernization contract. I have reviewed the RFP requirements and see a need for [specific skill]. I have [X] years of experience executing exactly this type of migration for public health agencies and would like to discuss how I can support the new contract.”\n\nThis approach positions you not as a job seeker asking for a favor, but as a solution provider solving an immediate problem for the vendor.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Career Navigation for Hybrid Professionals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/E-career-navigation.html#specialized-job-boards-and-platforms",
+    "href": "chapters/E-career-navigation.html#specialized-job-boards-and-platforms",
+    "title": "17  Career Navigation for Hybrid Professionals",
+    "section": "17.4 Specialized Job Boards and Platforms",
+    "text": "17.4 Specialized Job Boards and Platforms\nWhile the RFP strategy unearths hidden opportunities, traditional platforms remain a necessary component of a comprehensive search. The hybrid professional must know where to look.\n\n17.4.1 Platform Directory\n\n\n\n\n\n\n\n\nPlatform\nTarget Audience\nSearch Strategy\n\n\n\n\nGovernmentJobs.com\nLocal/State Government\nSearch for Program Specialist, Health Analyst, Epidemiologist\n\n\nUSAJobs.gov\nFederal Agencies (CDC, CMS, IHS)\nFilter for Job Series 0601 (General Health Science), 0685 (Public Health Program Specialist), 2210 (IT Management)\n\n\nPublicHealthJobs.org\nAcademia/Nonprofit (ASPPH)\nExcellent for roles at universities and NGOs\n\n\nAMIA Career Center\nInformatics Professionals\nHigh-quality listings; often requires advanced degrees\n\n\nHIMSS JobMine\nHealth IT/Vendors\nHeavily focused on the private sector and hospital IT\n\n\n3RNET\nRural/Underserved\nNational Rural Recruitment and Retention Network; essential for “incubator” roles\n\n\nORISE (Zintellect)\nFellowships/Internships\nPrimary portal for CDC fellowships, including PHIFP\n\n\n\n\n\n17.4.2 Target Employer Watch List\nA proactive search involves monitoring specific companies known to hire hybrid talent.\n\n17.4.2.1 Federal Contractors\nThese firms are the primary engine of federal health IT employment:\n\nLeidos, GDIT, Booz Allen Hamilton\nDeloitte, Accenture Federal Services\nICF, Maximus\n\nStrategy: Monitor their “Health” or “Civilian” career pages. Look for keywords like “CDC,” “CMS,” or “Data Modernization.”\n\n\n17.4.2.2 Niche Public Health Firms\nThese smaller firms often offer a more mission-driven culture:\n\nJ Michael Consulting, Karna, Goldbelt\nChickasaw Nation Industries, DLH Corp\nAbt Associates, JSI (John Snow, Inc.)\n\nStrategy: These firms often recruit directly from public health conferences (CSTE, NACCHO). Follow their LinkedIn pages for contract wins.\n\n\n17.4.2.3 NGOs and Nonprofits\n\nTask Force for Global Health (home of PHII)\nAPHL (Association of Public Health Labs)\nASTHO, NACCHO\n\nStrategy: These organizations often manage cooperative agreements with the CDC, functioning similarly to contractors but with a nonprofit structure.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Career Navigation for Hybrid Professionals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/E-career-navigation.html#decoding-job-descriptions",
+    "href": "chapters/E-career-navigation.html#decoding-job-descriptions",
+    "title": "17  Career Navigation for Hybrid Professionals",
+    "section": "17.5 Decoding Job Descriptions",
+    "text": "17.5 Decoding Job Descriptions\nOne of the most significant barriers to entry is the inconsistency of job titles. A “Business Analyst” in a corporate setting might be called a “Public Health Program Specialist II” in a state agency. The hybrid professional must learn to read job descriptions for skills and activities rather than titles.\n\n17.5.1 Title-to-Function Mapping\n\n\n\n\n\n\n\n\nIf You Want To Do…\nSearch For These Titles…\nLook For These Keywords…\n\n\n\n\nBusiness Analysis\nManagement Analyst, Program Analyst, Operations Coordinator, Product Owner, Systems Analyst\n“Requirements gathering,” “Workflow analysis,” “Process improvement,” “Stakeholder liaison,” “User stories,” “SOP development”\n\n\nInformatics/Data\nEpidemiologist (Data Systems), Health Scientist, Informatics Specialist, Surveillance Coordinator, Data Manager\n“HL7,” “ELR” (Electronic Lab Reporting), “Syndromic Surveillance,” “Registry,” “Interoperability,” “FHIR,” “Cleaning data”\n\n\nProject Management\nPublic Health Advisor, Program Manager, Implementation Specialist, Grant Manager\n“Agile,” “Scrum,” “Scope management,” “Timeline,” “Vendor management,” “Grant reporting,” “Deliverables”\n\n\nTraining/Rollout\nTechnical Assistance (TA) Lead, Onboarding Specialist, Implementation Specialist\n“User adoption,” “Go-live,” “Manuals,” “Capacity building,” “Workforce development”\n\n\n\n\n\n17.5.2 The “Unicorn” Job Description\nOften, hiring managers in public health know they need “someone technical” but do not know exactly what that entails. This results in the unicorn job description: a posting that asks for a PhD in Epidemiology, a PMP certification, 10 years of Python coding experience, and a nursing license.\n\nThe interpretation: This usually signals a lack of role clarity. The agency has a problem (data) and is listing every possible qualification.\nThe strategy: Apply if you meet 50 to 60 percent of the criteria.\nThe interview pivot: Use the interview to perform business analysis on the role itself. Ask: “I see you asked for both Python coding and clinical nursing. Is the primary goal of this role to write the code (Python) or to talk to the nurses who use the system? I excel at the translation between the two.” By helping them define the role, you demonstrate your value as a Business Analyst before you are hired.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Career Navigation for Hybrid Professionals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/E-career-navigation.html#resume-and-interview-strategy",
+    "href": "chapters/E-career-navigation.html#resume-and-interview-strategy",
+    "title": "17  Career Navigation for Hybrid Professionals",
+    "section": "17.6 Resume and Interview Strategy",
+    "text": "17.6 Resume and Interview Strategy\nTo land the job, you must translate your experience into the language of the employer. This requires a “dual-frame” approach.\n\n17.6.1 The Hybrid Resume\nA standard resume is often chronological and mono-lingual (either all tech or all health). A hybrid resume must explicitly bridge the gap.\n\n17.6.1.1 Strategy: The Translation Bullet Point\nRewrite experience to highlight implications for the other domain.\nPublic Health professional applying for a Tech/BA role:\n\n❌ Original: “Managed the Gonorrhea Surveillance Program.”\n✅ Translated: “Managed a disease surveillance system with 5,000+ annual records; acted as Product Owner to define reporting requirements for the IT vendor and led User Acceptance Testing (UAT) for system upgrades.”\n\nTech/BA professional applying for a Public Health role:\n\n❌ Original: “Gathered requirements for SQL database migration.”\n✅ Translated: “Facilitated workshops with clinical stakeholders to define data standards for a patient registry; ensured system design complied with HIPAA privacy regulations and supported epidemiological reporting needs.”\n\n\n\n17.6.1.2 Strategy: The Dual-Competency Skills Section\nCreate a skills section that visually separates but presents both domains:\n\nTechnical & Analysis: SQL, Tableau, Jira, Visio (BPMN), User Stories, Agile/Scrum\nPublic Health & Regulatory: Epidemiology, Surveillance Systems, HIPAA, HL7/FHIR Standards, CDC Grant Reporting\n\n\n\n\n17.6.2 The Behavioral Bridge Interview\nIn an interview, you will often face a panel with mixed backgrounds (e.g., a Program Director and an IT Manager). Your answers must satisfy both.\n\n17.6.2.1 The Bridge Answer Structure\nWhen answering behavioral questions (“Tell me about a time…”), the narrative arc should always be about translation.\nQuestion: “Tell me about a time you faced a challenge.”\nBridge Answer:\n\nContext: “We had a disconnect where the developers built a feature that did not match the clinical workflow.”\nAction: “I scheduled a joint session where I mapped the clinical process on a whiteboard while the developers watched. I translated clinical terms into technical specifications in real time.”\nResult: “The developers understood the ‘why,’ the nurses got a tool that fit their process, and we reduced data entry errors by 50%.”\n\n\n\n\n17.6.3 Questions to Ask the Employer\nThe questions you ask reveal your sophistication regarding the BA/PH gap.\n\nTo the IT Manager: “How does the development team currently receive input from the epidemiologists? Do you use a specific framework to map public health goals to technical backlogs?”\nTo the Program Manager: “How is the success of this IT project being measured? Are we tracking just ‘system uptime,’ or are we tracking public health metrics like ‘time to intervention’?”\nThe Role-Definition Question: “Who currently owns the ‘translation’ between the clinical subject matter experts and the technical vendors? Is that a gap this role is intended to fill?”",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Career Navigation for Hybrid Professionals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/E-career-navigation.html#a-note-for-hiring-managers",
+    "href": "chapters/E-career-navigation.html#a-note-for-hiring-managers",
+    "title": "17  Career Navigation for Hybrid Professionals",
+    "section": "17.7 A Note for Hiring Managers",
+    "text": "17.7 A Note for Hiring Managers\nThis appendix is primarily for job seekers, but a note for those hiring is essential. The “talent shortage” in public health informatics is often a “visibility shortage.” The candidates exist, but they are filtered out by rigid requirements.\n\n17.7.1 Re-Examine Degree Requirements\nDo not filter exclusively for MPH or Computer Science degrees. A History major who has spent five years managing a complex nonprofit database often makes an excellent Business Analyst due to their research and synthesis skills.\n\n\n17.7.2 Hunt for “Super-Users”\nThe best future analysts are often currently working inside your organization as nurses, registrars, or administrative assistants. They are the ones who become the “go-to” person for their team’s technology problems. They possess the deep domain context that is hardest to teach; technical skills (SQL, Visio) can be taught more easily.\n\n\n17.7.3 Use Your Contracts as Signals\nIf you are a vendor, use your RFP wins as recruitment tools. Advertise that you are “staffing for a newly awarded CDC modernization contract.” This signals stability and high-impact work to prospective candidates.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Career Navigation for Hybrid Professionals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/E-career-navigation.html#quick-reference-search-string-cheat-sheet",
+    "href": "chapters/E-career-navigation.html#quick-reference-search-string-cheat-sheet",
+    "title": "17  Career Navigation for Hybrid Professionals",
+    "section": "17.8 Quick Reference: Search String Cheat Sheet",
+    "text": "17.8 Quick Reference: Search String Cheat Sheet\nUse these strings in Google to identify opportunities.\n\n17.8.1 1. The Generalist Hybrid Search\n(\"Business Analyst\" OR \"Systems Analyst\" OR \"Product Owner\") AND \n(\"Public Health\" OR \"Epidemiology\" OR \"Infectious Disease\") AND \n(\"Remote\" OR \"Hybrid\")\n\n\n17.8.2 2. The Informatics Specialist Search\n(\"Informatics\" OR \"Informatician\") AND (\"HL7\" OR \"FHIR\" OR \n\"Interoperability\" OR \"ELR\" OR \"eCR\") AND (\"CDC\" OR \"DOH\" OR \n\"Department of Health\")\n\n\n17.8.3 3. The RFP Hunter (Contract Finding)\n(RFP OR \"Request for Proposal\" OR \"Notice of Funding Opportunity\") \nAND (\"Surveillance System\" OR \"Registry\" OR \"Data Modernization\") \nAND (\"2025\" OR \"2026\") filetype:pdf\n\n\n17.8.4 4. The Winning Vendor Search\n(\"Contract Award\" OR \"Notice of Award\") AND (\"Department of Health\" \nOR \"CDC\") AND (\"IT\" OR \"System\") 2024..2026\n\n\n17.8.5 5. The ATS Platform Search\nsite:lever.co OR site:greenhouse.io OR site:workday.com \n(\"Public Health\" AND \"Analyst\")\nThis searches inside common HR platforms to find jobs that might not be indexed on aggregators.\n\n\n\n\n\n\nTipApplying the Bridgeframe Mindset\n\n\n\nThe job search for a hybrid professional is, in itself, an act of business analysis. It requires analyzing the market (Current State), identifying the gaps where hybrid skills add value (Future State), and designing a strategy (The Application) to bridge that gap.\nWhether the journey begins in a rural health department, building foundational knowledge of public health reality, or leverages advanced search operators to uncover a major federal contract, the opportunities are vast. The field of public health is undergoing a massive digital transformation. It does not just need code; it needs context. It needs the Bridgeframe professional.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Career Navigation for Hybrid Professionals</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html",
+    "href": "chapters/C-glossary.html",
+    "title": "18  Glossary",
+    "section": "",
+    "text": "18.1 A\nThis glossary provides comprehensive terminology mapping between Business Analysis (BA) and Public Health (PH) domains. Terms are organized alphabetically with cross-references.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#a",
+    "href": "chapters/C-glossary.html#a",
+    "title": "18  Glossary",
+    "section": "",
+    "text": "Acceptance Criteria (BA)\n\nConditions that a solution must meet to be accepted by stakeholders. PH equivalent: Evaluation protocol measures, success criteria.\n\nAcceptance Testing (BA)\n\nFormal testing to verify a solution meets acceptance criteria. PH equivalent: Pilot evaluation, field testing.\n\nActivity (PH)\n\nAn action taken as part of a program or intervention. BA equivalent: Functional requirement, use case step.\n\nAdaptability (Implementation Science)\n\nDegree to which an intervention can be modified for local context. BA equivalent: Configurability, customization capability.\n\nAfter-Action Review (PH)\n\nStructured review of what happened, why, and how to improve. BA equivalent: Lessons learned, retrospective.\n\nAgile (BA)\n\nIterative development methodology emphasizing flexibility and stakeholder collaboration. PH parallel: Adaptive management, PDSA cycles.\n\nApplicant Tracking System (ATS) (Workforce)\n\nAutomated software used by employers to filter job applications by keywords and qualifications. Hybrid professionals must tailor resumes to pass ATS filters in both technical and public health domains.\n\nAward Notice (Government Procurement)\n\nPublic announcement of which vendor won a government contract. Job seekers can use award notices to identify employers who are actively staffing new projects.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#b",
+    "href": "chapters/C-glossary.html#b",
+    "title": "18  Glossary",
+    "section": "18.2 B",
+    "text": "18.2 B\n\nBacklog (BA/Agile)\n\nPrioritized list of work items. PH equivalent: Workplan, action item list.\n\nBaseline (Both)\n\nStarting point measurement for comparison. In BA, current state metrics. In PH, epidemiological baseline data.\n\nBeneficiary (PH)\n\nPerson or group intended to benefit from a program. BA equivalent: End user, customer.\n\nBlind Application (Workforce)\n\nProactive job application sent to a vendor before they post open positions, typically after identifying a contract award. Positions the applicant as a solution provider rather than a job seeker.\n\nBridge Role (Workforce)\n\nPosition explicitly designed for translation between IT and public health domains, such as Health Informatics Liaison or Technical Program Analyst. These roles typically have dual reporting and cross-domain performance metrics.\n\nBPMN (Business Process Model and Notation) (BA)\n\nStandard for process diagrams. PH equivalent: Intervention flowchart, workflow diagram.\n\nBug (BA)\n\nDefect in software. PH equivalent: Adverse event, variance from protocol.\n\nBusiness Case (BA)\n\nJustification for a project based on expected benefits. PH equivalent: Needs assessment, funding proposal.\n\nBusiness Need (BA)\n\nProblem or opportunity driving a project. PH equivalent: Public health challenge, health need.\n\nBusiness Rule (BA)\n\nConstraint governing system behavior. PH equivalent: Clinical guideline, protocol rule.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#c",
+    "href": "chapters/C-glossary.html#c",
+    "title": "18  Glossary",
+    "section": "18.3 C",
+    "text": "18.3 C\n\nCapacity Building (PH)\n\nDeveloping skills and resources in individuals and organizations. BA equivalent: Training, organizational readiness.\n\nCase Definition (PH)\n\nCriteria for identifying disease cases. BA equivalent: Data validation rules, entity definition.\n\nCFIR (Consolidated Framework for Implementation Research) (PH)\n\nFramework for understanding implementation context. BA application: Assessing organizational readiness, NFR refinement.\n\nChampion (Both)\n\nPerson who advocates for and promotes an initiative. Usage similar in both domains.\n\nChange Management (BA)\n\nApproach for transitioning organizations to new systems/processes. PH equivalent: Implementation strategy, adoption support.\n\nCAHIMS / CPHIMS (Workforce)\n\nCertified Associate/Professional in Healthcare Information and Management Systems. HIMSS certifications demonstrating health IT competency; valuable credentials for BA professionals entering the health sector.\n\nCommunity Health Assessment (PH)\n\nSystematic examination of health status and needs. BA equivalent: Current state analysis, needs assessment.\n\nCommunity of Practice (Workforce)\n\nInternal group connecting professionals across organizational silos to share knowledge. In hybrid contexts, CoPs facilitate BA/PH translation through brown-bag sessions, shared channels, and joint retrospectives.\n\nCommunity Partner (PH)\n\nExternal organization collaborating on health initiatives. BA equivalent: Stakeholder, vendor, integration partner.\n\nComplexity (Implementation Science)\n\nPerceived difficulty of implementing an intervention. BA equivalent: Usability concerns, training requirements.\n\nCompliance (Both)\n\nAdherence to regulations, standards, or requirements. In PH, often HIPAA, CDC standards. In BA, often regulatory NFRs.\n\nConstraint (BA)\n\nLimitation on solution options. PH equivalent: Policy constraint, resource limitation.\n\nCurrent State (BA)\n\nExisting situation before change. PH equivalent: Baseline, pre-intervention status.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#d",
+    "href": "chapters/C-glossary.html#d",
+    "title": "18  Glossary",
+    "section": "18.4 D",
+    "text": "18.4 D\n\nData Dictionary (Both)\n\nDocumentation of data elements, definitions, and formats. Used similarly in both domains.\n\nData Quality (Both)\n\nAccuracy, completeness, and reliability of data. Critical in both domains.\n\nDefect (BA)\n\nFlaw in a deliverable. PH equivalent: Protocol deviation, adverse event.\n\nDeliverable (BA)\n\nOutput of project work. PH equivalent: Program output, product.\n\nDemo (BA/Agile)\n\nPresentation of completed work. PH equivalent: Progress presentation, milestone review.\n\nDual-Framework Thinking (Workforce)\n\nCore competency of hybrid professionals: the ability to map Agile artifacts (user stories, sprints) to Logic Model outcomes (activities, outputs) and vice versa.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#e",
+    "href": "chapters/C-glossary.html#e",
+    "title": "18  Glossary",
+    "section": "18.5 E",
+    "text": "18.5 E\n\nEffectiveness (PH)\n\nDegree to which an intervention achieves intended outcomes. BA equivalent: Solution value, ROI.\n\nElicitation (BA)\n\nTechniques for gathering requirements from stakeholders. PH equivalent: Community engagement, data collection.\n\nEpic (BA/Agile)\n\nLarge user story spanning multiple sprints. PH equivalent: Grant objective, program goal.\n\nEpidemiological Baseline (PH)\n\nPre-intervention disease/health status data. BA equivalent: Current state metrics.\n\nEvaluation (Both)\n\nAssessment of value, outcomes, or quality. In BA, solution evaluation. In PH, program evaluation.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#f",
+    "href": "chapters/C-glossary.html#f",
+    "title": "18  Glossary",
+    "section": "18.6 F",
+    "text": "18.6 F\n\nFeasibility (Both)\n\nAssessment of whether something can be done. Technical, economic, operational (BA) or evidence-based, resource, political (PH).\n\nFidelity (PH)\n\nDegree to which an intervention is delivered as designed. BA equivalent: Conformance to specifications.\n\nFocus Group (Both)\n\nGroup discussion for gathering perspectives. Used similarly in both domains.\n\nFunctional Requirement (BA)\n\nWhat a system must do. PH equivalent: Program activity, intervention component.\n\nFuture State (BA)\n\nDesired situation after change. PH equivalent: Program goals, intended outcomes.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#g",
+    "href": "chapters/C-glossary.html#g",
+    "title": "18  Glossary",
+    "section": "18.7 G",
+    "text": "18.7 G\n\nGemba (Lean/Both)\n\nGoing to the actual place where work happens. Applicable in both BA observation and PH site visits.\n\nGo-Live (BA)\n\nSystem deployment to production. PH equivalent: Program launch, intervention rollout.\n\nGovernance (Both)\n\nDecision-making structure and authority. Similar usage in both domains.\n\nGPS Format (PH-adapted)\n\n“Given [context], Person [role] Should [action]” user story format for clinical contexts.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#h",
+    "href": "chapters/C-glossary.html#h",
+    "title": "18  Glossary",
+    "section": "18.8 H",
+    "text": "18.8 H\n\nHealth Indicator (PH)\n\nMeasurable characteristic of population health. BA equivalent: KPI, metric.\n\nHealth Information Exchange (HIE) (PH)\n\nElectronic sharing of health data. BA equivalent: System integration, data exchange.\n\nHybrid Professional (Workforce)\n\nProfessional who operates fluently in both IT/BA and public health domains. May also be called Public Health Business Analyst (PH-BA) or Health Informatician. See also: Bridge Role.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#i",
+    "href": "chapters/C-glossary.html#i",
+    "title": "18  Glossary",
+    "section": "18.9 I",
+    "text": "18.9 I\n\nImpact (PH)\n\nLong-term effects of an intervention. BA equivalent: Business value, strategic outcomes.\n\nImplementation (Both)\n\nPutting a solution or intervention into practice. Similar usage.\n\nImplementation Climate (CFIR)\n\nOrganizational receptivity to change. BA equivalent: Organizational readiness.\n\nImplementation Science (PH)\n\nStudy of methods to promote adoption of evidence-based practices. BA application: Change management, adoption strategy.\n\nIndicator (PH)\n\nMeasurable variable reflecting status or change. BA equivalent: Metric, KPI.\n\nInner Setting (CFIR)\n\nInternal organizational context. BA equivalent: Organizational environment, culture.\n\nInput (PH Logic Model)\n\nResources invested in a program. BA equivalent: Resources, constraints.\n\nIntegration (BA)\n\nConnecting systems to work together. PH equivalent: Interoperability, HIE.\n\nInterest Holder (PH)\n\nPerson or group with interest in a program. BA equivalent: Stakeholder.\n\nIntervention (PH)\n\nAction taken to improve health. BA equivalent: Solution, system, process change.\n\nIteration (BA/Agile)\n\nFixed time period for development work. PH equivalent: PDSA cycle, program phase.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#k",
+    "href": "chapters/C-glossary.html#k",
+    "title": "18  Glossary",
+    "section": "18.10 K",
+    "text": "18.10 K\n\nKey Informant (PH)\n\nPerson with specialized knowledge consulted for input. BA equivalent: Subject matter expert (SME).\n\nKPI (Key Performance Indicator) (BA)\n\nMetric measuring success. PH equivalent: Health indicator, outcome measure.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#j",
+    "href": "chapters/C-glossary.html#j",
+    "title": "18  Glossary",
+    "section": "18.11 J",
+    "text": "18.11 J\n\nJob Series (Federal Employment)\n\nNumerical classification system for federal positions. Key series for hybrid professionals include 0601 (General Health Science), 0685 (Public Health Program Specialist), and 2210 (IT Management).",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#l",
+    "href": "chapters/C-glossary.html#l",
+    "title": "18  Glossary",
+    "section": "18.12 L",
+    "text": "18.12 L\n\nLessons Learned (BA)\n\nKnowledge gained from experience. PH equivalent: After-action review findings.\n\nLogic Model (PH)\n\nVisual representation of program theory (inputs → activities → outputs → outcomes). BA equivalent: Requirements traceability, value chain.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#m",
+    "href": "chapters/C-glossary.html#m",
+    "title": "18  Glossary",
+    "section": "18.13 M",
+    "text": "18.13 M\n\nMaintenance (RE-AIM)\n\nSustainability of an intervention over time. BA equivalent: Operational sustainability.\n\nMilestone (Both)\n\nSignificant point in project timeline. In PH, often aligned with grant reporting.\n\nMVP (Minimum Viable Product) (BA/Agile)\n\nSmallest useful version of a solution. PH equivalent: Pilot intervention, proof of concept.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#n",
+    "href": "chapters/C-glossary.html#n",
+    "title": "18  Glossary",
+    "section": "18.14 N",
+    "text": "18.14 N\n\nNeeds Assessment (PH)\n\nSystematic identification of needs and gaps. BA equivalent: Business analysis, current state assessment.\n\nNFR (Non-Functional Requirement) (BA)\n\nQuality attribute or constraint. PH equivalent: Implementation characteristic (CFIR).",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#o",
+    "href": "chapters/C-glossary.html#o",
+    "title": "18  Glossary",
+    "section": "18.15 O",
+    "text": "18.15 O\n\nOutcome (PH)\n\nChange resulting from an intervention. BA equivalent: Benefit, value delivered.\n\nOnboarding Crosswalk (Workforce)\n\nStructured orientation materials that cover both BA and PH domains for new team members joining hybrid projects. Includes terminology glossaries, framework overviews, and project-specific mappings.\n\nOuter Setting (CFIR)\n\nExternal context (regulations, networks, peer pressure). BA equivalent: External environment, market forces.\n\nOutput (PH Logic Model)\n\nDirect products of program activities. BA equivalent: Deliverables, features.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#p",
+    "href": "chapters/C-glossary.html#p",
+    "title": "18  Glossary",
+    "section": "18.16 P",
+    "text": "18.16 P\n\nPDSA (Plan-Do-Study-Act) (PH)\n\nQuality improvement cycle. BA equivalent: Sprint/iteration, continuous improvement cycle.\n\nPHIFP (Public Health Informatics Fellowship Program) (Workforce)\n\nCDC fellowship program training professionals at the intersection of public health practice and information systems. Produces hybrid professionals who lead health IT initiatives across state and local health departments.\n\nPHIT (Public Health Informatics & Technology) Program (Workforce)\n\nONC-funded workforce development program training diverse professionals in health informatics. Emphasizes recruiting from underrepresented communities.\n\nPilot (Both)\n\nSmall-scale test of a solution or intervention. Similar usage.\n\nProcess Evaluation (PH)\n\nAssessment of how an intervention was implemented. BA equivalent: Implementation review.\n\nProgram (PH)\n\nOrganized set of activities to achieve health objectives. BA equivalent: Solution, system, project.\n\nProtocol (PH)\n\nStandardized procedure or guideline. BA equivalent: Business rule, procedure specification.\n\nPrototype (BA)\n\nEarly model for testing concepts. PH equivalent: Pilot, formative testing.\n\nPublic Trust (Federal Employment)\n\nSecurity clearance level commonly required for federal contractor positions in health IT. Lower than Secret/Top Secret but still requires background investigation.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#q",
+    "href": "chapters/C-glossary.html#q",
+    "title": "18  Glossary",
+    "section": "18.17 Q",
+    "text": "18.17 Q\n\nQuality Assurance (QA) (BA)\n\nSystematic quality activities. PH equivalent: Quality Improvement (QI).\n\nQuality Improvement (QI) (PH)\n\nContinuous improvement of processes and outcomes. BA equivalent: Continuous improvement, QA.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#r",
+    "href": "chapters/C-glossary.html#r",
+    "title": "18  Glossary",
+    "section": "18.18 R",
+    "text": "18.18 R\n\nRE-AIM (PH)\n\nFramework for evaluating public health impact (Reach, Effectiveness, Adoption, Implementation, Maintenance).\n\nReach (RE-AIM)\n\nProportion of target population participating. BA equivalent: Adoption rate, market penetration.\n\nReadiness (Both)\n\nPreparedness for change. Implementation readiness (PH) or organizational readiness (BA).\n\nRelative Advantage (CFIR)\n\nPerception that intervention is better than current practice. BA equivalent: Value proposition.\n\nRequest for Proposal (RFP) (Government Procurement)\n\nFormal solicitation document describing a government agency’s needs and inviting vendors to bid. For job seekers, RFPs reveal upcoming demand for specific skills before positions are posted. See also: Award Notice.\n\nRequirements (BA)\n\nConditions a solution must satisfy. PH equivalent: Program specifications, protocols.\n\nRetrospective (BA/Agile)\n\nMeeting to reflect on past work. PH equivalent: After-action review.\n\nRights Holder (PH)\n\nPerson with inherent claims (alternative to “stakeholder”). BA equivalent: Stakeholder (with different connotation).\n\nRisk (Both)\n\nPotential for adverse outcomes. Similar usage; PH may emphasize community risk.\n\nROI (Return on Investment) (BA)\n\nFinancial value relative to cost. PH equivalent: Cost-effectiveness, cost-benefit.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#s",
+    "href": "chapters/C-glossary.html#s",
+    "title": "18  Glossary",
+    "section": "18.19 S",
+    "text": "18.19 S\n\nScope (Both)\n\nBoundaries of what is included. Similar usage in both domains.\n\nService-User Scenario (PH-adapted)\n\nNarrative description of user journey. BA equivalent: User story, use case narrative.\n\nSME (Subject Matter Expert) (BA)\n\nPerson with domain expertise. PH equivalent: Key informant, clinical expert.\n\nSolution (BA)\n\nSystem or process addressing a business need. PH equivalent: Intervention, program.\n\nSprint (BA/Agile)\n\nFixed-length iteration. PH equivalent: PDSA cycle, work period.\n\nStakeholder (BA)\n\nPerson with interest in a project. PH alternatives: Interest holder, community partner, rights holder.\n\nSummative Evaluation (PH)\n\nAssessment of overall outcomes after implementation. BA equivalent: Post-implementation review.\n\nSustainability (PH)\n\nAbility to maintain intervention over time. BA equivalent: Operational viability.\n\nSuper-User (Workforce)\n\nStaff member who becomes the informal technology expert for their team. Often the best candidates for formal hybrid roles because they possess deep domain context that is difficult to teach.\n\nSystems Integrator (Federal Contracting)\n\nLarge consulting firm that executes major government IT contracts (e.g., Deloitte, Accenture, Booz Allen Hamilton, Leidos). Primary employers for hybrid professionals working on federal health IT modernization.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#t",
+    "href": "chapters/C-glossary.html#t",
+    "title": "18  Glossary",
+    "section": "18.20 T",
+    "text": "18.20 T\n\nTest Case (BA)\n\nSpecification for verifying a requirement. PH equivalent: Evaluation measure, data collection protocol.\n\nTraceability (BA)\n\nLinking requirements to sources and tests. PH equivalent: Theory of change alignment.\n\nTerminology Fluency (Workforce)\n\nAbility to speak both BA and PH languages without constant translation pauses. A core competency for hybrid professionals.\n\nTraining (Both)\n\nBuilding user/staff capability. Similar usage; PH may use “capacity building.”",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#u",
+    "href": "chapters/C-glossary.html#u",
+    "title": "18  Glossary",
+    "section": "18.21 U",
+    "text": "18.21 U\n\nUAT (User Acceptance Testing) (BA)\n\nStakeholder verification of solution. PH equivalent: Pilot evaluation, field testing.\n\nUse Case (BA)\n\nDescription of system-user interaction. PH equivalent: Clinical scenario, patient journey.\n\nUnicorn Job Description (Workforce)\n\nJob posting with unrealistic requirements spanning multiple specialties (e.g., PhD, PMP, 10 years Python, and nursing license). Usually signals role clarity issues; candidates meeting 50 to 60 percent of criteria should still apply.\n\nUser Story (BA/Agile)\n\nBrief requirement from user perspective. PH equivalents: Service-user scenario, GPS format.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#v",
+    "href": "chapters/C-glossary.html#v",
+    "title": "18  Glossary",
+    "section": "18.22 V",
+    "text": "18.22 V\n\nValidation (Both)\n\nConfirming the right thing is built. Similar usage.\n\nVariance (PH)\n\nDeviation from expected outcome. BA equivalent: Defect, exception.\n\nVerification (Both)\n\nConfirming the thing is built right. Similar usage.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#w",
+    "href": "chapters/C-glossary.html#w",
+    "title": "18  Glossary",
+    "section": "18.23 W",
+    "text": "18.23 W\n\nWorkflow (Both)\n\nSequence of tasks to accomplish work. Similar usage.\n\nWorkplan (PH)\n\nDetailed plan of activities. BA equivalent: Project plan, backlog.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/C-glossary.html#quick-reference-most-common-translations",
+    "href": "chapters/C-glossary.html#quick-reference-most-common-translations",
+    "title": "18  Glossary",
+    "section": "18.24 Quick Reference: Most Common Translations",
+    "text": "18.24 Quick Reference: Most Common Translations\n\n\n\n\n\n\n\n\nWhen You Hear…\nBA Meaning\nPH Meaning\n\n\n\n\n“Requirements”\nSystem specifications\nProgram protocols\n\n\n“Stakeholder”\nAnyone with interest\nCommunity partner, rights holder\n\n\n“Sprint”\n2-week development cycle\nPDSA cycle\n\n\n“User story”\nFeature description\nService-user scenario\n\n\n“KPI”\nBusiness metric\nHealth indicator\n\n\n“MVP”\nMinimal product\nPilot intervention\n\n\n“Go-live”\nSystem deployment\nProgram launch\n\n\n“Bug”\nSoftware defect\nProtocol variance",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "references.html",
     "href": "references.html",
-    "title": "18  References",
+    "title": "19  References",
     "section": "",
     "text": "References\n\n\n1. Iiba. Babok: A Guide\nto the Business Analysis Body of\nKnowledge. International Institute of Business Analysis;\n2015. \n\n\n2. CDC.\nCDC Program Evaluation\nFramework [Internet]. CDC Approach to Program Evaluation.\n2025 [cited 2026 Jan 9]. Available from: https://www.cdc.gov/evaluation/php/evaluation-framework/index.html\n\n\n3. Kidder DP. CDC\nProgram Evaluation Framework,\n2024. MMWR Recommendations and Reports [Internet]. 2024 [cited 2026 Jan\n9];73. Available from: https://www.cdc.gov/mmwr/volumes/73/rr/rr7306a1.htm\n\n\n4. 1999\n– RE-AIM [Internet]. [cited 2026 Jan 9].\nAvailable from: https://re-aim.org/1999/\n\n\n5. RE-AIM –\nHome – Reach Effectiveness\nAdoption Implementation\nMaintenance [Internet]. [cited 2026 Jan 9]. Available from:\nhttps://re-aim.org/",
     "crumbs": [
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>References</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>References</span>"
     ]
   }
 ]
