@@ -89,7 +89,7 @@ Companies like [Epic](https://careers.epic.com/), [Oracle Health (Cerner)](https
 
 #### National Pharmacy Chains
 
-Retail health giants like [CVS Health](https://jobs.cvshealth.com/), [Walgreens](https://jobs.walgreens.com/), and [Rite Aid](https://careers.riteaid.com/) have transformed into primary care and public health hubs. Since the COVID-19 pandemic, pharmacies generate massive volumes of immunization and testing data. These companies recruit informatics professionals to manage complex data flows between thousands of retail locations and fifty distinct state immunization registries.
+Retail health giants like [CVS Health](https://jobs.cvshealth.com/), and [Walgreens](https://jobs.walgreens.com/) have transformed into primary care and public health hubs. Since the COVID-19 pandemic, pharmacies generate massive volumes of immunization and testing data. These companies recruit informatics professionals to manage complex data flows between thousands of retail locations and fifty distinct state immunization registries.
 
 **Focus areas**: Population health analytics, medication adherence tracking, interoperability management.
 
@@ -131,6 +131,31 @@ To find only recent postings, use Google's date filtering tools:
 3. **Using the `after:` Operator**: Add `after:2026-01-01` to your search string to find only documents indexed after a specific date.
 
 For job searches, limiting to the past week or month ensures you are seeing active opportunities rather than archived postings. For RFP searches, consider a broader timeframe (past 3 to 6 months) since procurement cycles move slowly.
+
+#### Automating Your Search with Google Alerts
+
+Rather than running manual searches repeatedly, use [Google Alerts](https://www.google.com/alerts) to have new results delivered to your inbox automatically.
+
+**Setting up an RFP Alert:**
+
+1. Go to [google.com/alerts](https://www.google.com/alerts)
+2. Enter your search query (use the Boolean strings from this chapter)
+3. Click "Show options" to configure:
+   - **How often**: "As-it-happens" or "Once a day"
+   - **Sources**: Select "Automatic" or narrow to specific types
+   - **Language**: English (or your preferred language)
+   - **Region**: United States (or your target region)
+   - **How many**: "All results" to ensure nothing is missed
+   - **Deliver to**: Your email address or RSS feed
+4. Click "Create Alert"
+
+**Example Alert Queries for Hybrid Professionals:**
+
+- `"Request for Proposal" "public health" "informatics" site:.gov`
+- `"Contract Award" "CDC" "data modernization"`
+- `"public health" "business analyst" job`
+
+Google Alerts will email you whenever new content matching your query is indexed. This passive monitoring ensures you never miss an opportunity because you forgot to run a search.
 
 #### The Master Search String
 
@@ -243,6 +268,30 @@ While the RFP strategy unearths hidden opportunities, traditional platforms rema
 | [**HIMSS JobMine**](https://jobmine.himss.org/) | Health IT/Vendors | Heavily focused on the private sector and hospital IT |
 | [**3RNET**](https://www.3rnet.org/) | Rural/Underserved | National Rural Recruitment and Retention Network; essential for "incubator" roles |
 | [**ORISE (Zintellect)**](https://orise.orau.gov/internships-fellowships/) | Fellowships/Internships | Primary portal for CDC fellowships, including [PHIFP](https://www.cdc.gov/phifp/) |
+
+### Using Google Jobs for Passive Monitoring
+
+[Google Jobs](https://www.google.com/search?q=jobs) aggregates listings from multiple job boards into a single interface. More importantly, it offers a **Following** feature that sends you email alerts when new jobs matching your criteria are posted.
+
+**Setting up Google Jobs Alerts:**
+
+1. Go to [google.com](https://www.google.com) and search for jobs using keywords like `public health informatics jobs` or `health data analyst jobs`
+2. Google will display a job search panel. Refine your search using:
+   - **Location**: Enter your target city, state, or "Remote"
+   - **Date posted**: Filter to "Past week" or "Past 3 days"
+   - **Type**: Full-time, Part-time, Contractor
+   - **Company type**: Filter by employer category if available
+3. Once your search is configured, look for the **"Turn on"** or **"Follow"** button (often shown as a bell icon or "Create alert")
+4. Enable notifications to receive email alerts when new jobs matching your search are posted
+
+**Recommended Searches to Follow:**
+
+- `public health informatics` (your location or Remote)
+- `health data analyst CDC` (Remote or Washington, DC)
+- `epidemiologist data systems` (your state)
+- `health IT business analyst` (Remote)
+
+By following multiple searches, you build a passive monitoring system that brings opportunities to you rather than requiring daily manual searches. Combine this with [Google Alerts](https://www.google.com/alerts) for RFP monitoring to create a comprehensive opportunity radar.
 
 ### Target Employer Watch List
 
