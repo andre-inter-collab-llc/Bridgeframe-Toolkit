@@ -342,6 +342,64 @@ The employers listed above represent a starting point, not a comprehensive direc
 This creates a unique opportunity: you can approach local health departments proactively, demonstrate how your skills address their data challenges, and help them define a role that did not previously exist. The "hidden" job market is especially fertile in under-resourced settings where the need is greatest but the vocabulary to describe it is absent.
 :::
 
+## Building Experience Through Volunteering
+
+Even a few hours each week of volunteer work can solidify your experience and help you stand out as a candidate who goes above and beyond. For professionals transitioning into hybrid roles, or those seeking to demonstrate data and analysis skills in a public health context, volunteering offers a low-barrier path to meaningful experience.
+
+### Volunteer Platforms for Data and Analysis Skills
+
+These platforms connect skilled volunteers with organizations that need data analysis, technology, and public health expertise:
+
+| Platform | Focus Area | Best For |
+|:---------|:-----------|:---------|
+| [**VolunteerMatch**](https://www.volunteermatch.org/) | General nonprofit matching | Finding local health organizations needing data help |
+| [**Catchafire**](https://www.catchafire.org/) | Skills-based volunteering | Project-based work with defined scope and timeline |
+| [**Techfleet**](https://techfleet.org/) | Tech volunteers for nonprofits | Software development and data infrastructure projects |
+| [**DataKind**](https://www.datakind.org/) | Data science for social good | High-impact data projects with mentorship opportunities |
+| [**Statistics Without Borders**](https://www.statisticswithoutborders.org/) | Statistical consulting | Epidemiological and public health research support |
+| [**United Nations Volunteers**](https://www.unv.org/) | Global development | International health programs and humanitarian response |
+| [**Code for America**](https://codeforamerica.org/) | Civic technology | Government and public sector technology projects |
+
+### The Value of Volunteer Experience
+
+While volunteer work is unpaid, it delivers three critical benefits:
+
+1. **Purpose while you wait**: Job searches can be demoralizing. Volunteer work provides structure, meaning, and forward momentum during gaps in employment.
+
+2. **Skill maintenance and growth**: Skills atrophy without use. Volunteering keeps your technical abilities sharp and exposes you to new tools, datasets, and problem types.
+
+3. **Real experience for your resume**: A completed volunteer project analyzing immunization coverage for a community health center is indistinguishable on a resume from paid consulting work. It demonstrates capability and initiative.
+
+### Strategic Approaches to Volunteering
+
+For experienced professionals, a more intentional approach to volunteering can maximize both impact and career benefit.
+
+#### Treat Volunteer Work as Discounted Professional Work
+
+Some organizations struggle to fully value volunteer contributions when the cost is invisible. One practical approach is to frame volunteer work as professional services provided at a reduced rate. For example, you can send an invoice that reflects the true market value of the work alongside the discounted rate, even if the final amount due is $0.
+
+This approach:
+
+- Makes your contribution tangible to the organization
+- Reinforces the expertise being provided
+- Creates documentation of professional-level work for your portfolio
+- Helps the organization understand the true value of what they received
+
+#### Start Your Own Initiative
+
+An alternative to traditional volunteering is to start your own business, nonprofit, or independent project to carry forward work you believe is important, even if it is initially unpaid. This approach offers several advantages:
+
+- **Ownership**: You retain rights to frameworks, tools, and products you develop
+- **Portfolio building**: Your work demonstrates skills across multiple clients or use cases
+- **Flexibility**: You control the scope, timeline, and direction of the work
+- **Foundation for future consulting**: Pro bono projects can evolve into paid engagements
+
+::: {.callout-tip title="From Volunteer to Consultant"}
+Many successful public health consultancies began as volunteer efforts. A professional who builds a reporting dashboard for one health department can offer that same framework to others. The first project builds the product; subsequent projects generate revenue. This "productized service" model is especially effective for hybrid professionals whose specialized skills are in high demand but undersupplied.
+:::
+
+This strategic approach tends to be most effective for experienced professionals who bring specialized expertise and want to be intentional about how their time and skills are invested. For early-career professionals, traditional volunteering through established platforms may offer more structure and mentorship.
+
 ## Decoding Job Descriptions
 
 One of the most significant barriers to entry is the inconsistency of job titles. A "Business Analyst" in a corporate setting might be called a "Public Health Program Specialist II" in a state agency. The hybrid professional must learn to read job descriptions for *skills* and *activities* rather than titles.
@@ -432,6 +490,35 @@ The best future analysts are often currently working inside your organization as
 ### Use Your Contracts as Signals
 
 If you are a vendor, use your RFP wins as recruitment tools. Advertise that you are "staffing for a newly awarded CDC modernization contract." This signals stability and high-impact work to prospective candidates.
+
+### Make Your Postings Discoverable via Google for Jobs
+
+[Google for Jobs](https://jobs.google.com/about/) aggregates job postings from across the web and surfaces them directly in Google Search results. Millions of job seekers search Google every day, and properly formatted job postings can reach candidates who might never visit your agency's careers page or specialized job boards.
+
+**Why This Matters for Public Health Employers:**
+
+- **Broader reach**: Candidates searching for "epidemiologist jobs" or "public health data analyst" will see your posting in their Google search results, not just those who know to check your specific portal.
+- **Equity in hiring**: Many qualified candidates from non-traditional backgrounds may not know to search specialized platforms like [USAJobs.gov](https://www.usajobs.gov/) or [PublicHealthJobs.org](https://publichealthjobs.aspph.org/). Google surfaces your posting to anyone searching relevant terms.
+- **No cost**: Google for Jobs is free; you simply need to ensure your postings meet their technical requirements.
+
+**How to Get Your Job Postings on Google:**
+
+1. **If you use a major job board or ATS**: Platforms like LinkedIn, Indeed, ZipRecruiter, Lever, Greenhouse, and Workday already integrate with Google for Jobs. Postings on these platforms are automatically indexed.
+
+2. **If you post directly on your website**: Add structured data markup (JSON-LD) to your job posting pages following [Google's JobPosting schema](https://developers.google.com/search/docs/appearance/structured-data/job-posting). Key fields include:
+   - Job title, description, and location
+   - Salary range (increasingly expected by candidates)
+   - Date posted and application deadline
+   - Employment type (full-time, part-time, contract)
+   - Remote work eligibility
+
+3. **Test your implementation**: Use [Google's Rich Results Test](https://search.google.com/test/rich-results) to verify your structured data is correctly formatted before publishing.
+
+4. **Keep postings current**: Google penalizes stale or expired job postings. Remove listings promptly when positions are filled, and ensure "date posted" fields are accurate.
+
+::: {.callout-tip title="For Small Health Departments"}
+If your agency lacks IT resources to implement structured data, post your positions on a platform that already integrates with Google for Jobs (such as Indeed or LinkedIn). This ensures discoverability without requiring technical implementation on your end.
+:::
 
 ## Quick Reference: Search String Cheat Sheet
 
