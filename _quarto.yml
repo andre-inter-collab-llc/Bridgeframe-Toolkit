@@ -43,8 +43,9 @@ book:
       chapters:
         - chapters/A-templates.qmd
         - chapters/B-development-tools.qmd
-        - chapters/C-glossary.qmd
         - chapters/D-workforce-development.qmd
+        - chapters/E-career-navigation.qmd
+        - chapters/C-glossary.qmd
     - references.qmd
   
   downloads:

@@ -24,6 +24,12 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Agile** (BA)
 : Iterative development methodology emphasizing flexibility and stakeholder collaboration. **PH parallel**: Adaptive management, PDSA cycles.
 
+**Applicant Tracking System (ATS)** (Workforce)
+: Automated software used by employers to filter job applications by keywords and qualifications. Hybrid professionals must tailor resumes to pass ATS filters in both technical and public health domains.
+
+**Award Notice** (Government Procurement)
+: Public announcement of which vendor won a government contract. Job seekers can use award notices to identify employers who are actively staffing new projects.
+
 ## B
 
 **Backlog** (BA/Agile)
@@ -34,6 +40,12 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Beneficiary** (PH)
 : Person or group intended to benefit from a program. **BA equivalent**: End user, customer.
+
+**Blind Application** (Workforce)
+: Proactive job application sent to a vendor before they post open positions, typically after identifying a contract award. Positions the applicant as a solution provider rather than a job seeker.
+
+**Bridge Role** (Workforce)
+: Position explicitly designed for translation between IT and public health domains, such as Health Informatics Liaison or Technical Program Analyst. These roles typically have dual reporting and cross-domain performance metrics.
 
 **BPMN (Business Process Model and Notation)** (BA)
 : Standard for process diagrams. **PH equivalent**: Intervention flowchart, workflow diagram.
@@ -67,8 +79,14 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Change Management** (BA)
 : Approach for transitioning organizations to new systems/processes. **PH equivalent**: Implementation strategy, adoption support.
 
+**CAHIMS / CPHIMS** (Workforce)
+: Certified Associate/Professional in Healthcare Information and Management Systems. HIMSS certifications demonstrating health IT competency; valuable credentials for BA professionals entering the health sector.
+
 **Community Health Assessment** (PH)
 : Systematic examination of health status and needs. **BA equivalent**: Current state analysis, needs assessment.
+
+**Community of Practice** (Workforce)
+: Internal group connecting professionals across organizational silos to share knowledge. In hybrid contexts, CoPs facilitate BA/PH translation through brown-bag sessions, shared channels, and joint retrospectives.
 
 **Community Partner** (PH)
 : External organization collaborating on health initiatives. **BA equivalent**: Stakeholder, vendor, integration partner.
@@ -101,6 +119,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Demo** (BA/Agile)
 : Presentation of completed work. **PH equivalent**: Progress presentation, milestone review.
+
+**Dual-Framework Thinking** (Workforce)
+: Core competency of hybrid professionals: the ability to map Agile artifacts (user stories, sprints) to Logic Model outcomes (activities, outputs) and vice versa.
 
 ## E
 
@@ -158,6 +179,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Health Information Exchange (HIE)** (PH)
 : Electronic sharing of health data. **BA equivalent**: System integration, data exchange.
 
+**Hybrid Professional** (Workforce)
+: Professional who operates fluently in both IT/BA and public health domains. May also be called Public Health Business Analyst (PH-BA) or Health Informatician. See also: Bridge Role.
+
 ## I
 
 **Impact** (PH)
@@ -201,6 +225,11 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **KPI (Key Performance Indicator)** (BA)
 : Metric measuring success. **PH equivalent**: Health indicator, outcome measure.
 
+## J
+
+**Job Series** (Federal Employment)
+: Numerical classification system for federal positions. Key series for hybrid professionals include 0601 (General Health Science), 0685 (Public Health Program Specialist), and 2210 (IT Management).
+
 ## L
 
 **Lessons Learned** (BA)
@@ -233,6 +262,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Outcome** (PH)
 : Change resulting from an intervention. **BA equivalent**: Benefit, value delivered.
 
+**Onboarding Crosswalk** (Workforce)
+: Structured orientation materials that cover both BA and PH domains for new team members joining hybrid projects. Includes terminology glossaries, framework overviews, and project-specific mappings.
+
 **Outer Setting** (CFIR)
 : External context (regulations, networks, peer pressure). **BA equivalent**: External environment, market forces.
 
@@ -243,6 +275,12 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **PDSA (Plan-Do-Study-Act)** (PH)
 : Quality improvement cycle. **BA equivalent**: Sprint/iteration, continuous improvement cycle.
+
+**PHIFP (Public Health Informatics Fellowship Program)** (Workforce)
+: CDC fellowship program training professionals at the intersection of public health practice and information systems. Produces hybrid professionals who lead health IT initiatives across state and local health departments.
+
+**PHIT (Public Health Informatics & Technology) Program** (Workforce)
+: ONC-funded workforce development program training diverse professionals in health informatics. Emphasizes recruiting from underrepresented communities.
 
 **Pilot** (Both)
 : Small-scale test of a solution or intervention. Similar usage.
@@ -258,6 +296,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Prototype** (BA)
 : Early model for testing concepts. **PH equivalent**: Pilot, formative testing.
+
+**Public Trust** (Federal Employment)
+: Security clearance level commonly required for federal contractor positions in health IT. Lower than Secret/Top Secret but still requires background investigation.
 
 ## Q
 
@@ -280,6 +321,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Relative Advantage** (CFIR)
 : Perception that intervention is better than current practice. **BA equivalent**: Value proposition.
+
+**Request for Proposal (RFP)** (Government Procurement)
+: Formal solicitation document describing a government agency's needs and inviting vendors to bid. For job seekers, RFPs reveal upcoming demand for specific skills before positions are posted. See also: Award Notice.
 
 **Requirements** (BA)
 : Conditions a solution must satisfy. **PH equivalent**: Program specifications, protocols.
@@ -322,6 +366,12 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Sustainability** (PH)
 : Ability to maintain intervention over time. **BA equivalent**: Operational viability.
 
+**Super-User** (Workforce)
+: Staff member who becomes the informal technology expert for their team. Often the best candidates for formal hybrid roles because they possess deep domain context that is difficult to teach.
+
+**Systems Integrator** (Federal Contracting)
+: Large consulting firm that executes major government IT contracts (e.g., Deloitte, Accenture, Booz Allen Hamilton, Leidos). Primary employers for hybrid professionals working on federal health IT modernization.
+
 ## T
 
 **Test Case** (BA)
@@ -329,6 +379,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Traceability** (BA)
 : Linking requirements to sources and tests. **PH equivalent**: Theory of change alignment.
+
+**Terminology Fluency** (Workforce)
+: Ability to speak both BA and PH languages without constant translation pauses. A core competency for hybrid professionals.
 
 **Training** (Both)
 : Building user/staff capability. Similar usage; PH may use "capacity building."
@@ -340,6 +393,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Use Case** (BA)
 : Description of system-user interaction. **PH equivalent**: Clinical scenario, patient journey.
+
+**Unicorn Job Description** (Workforce)
+: Job posting with unrealistic requirements spanning multiple specialties (e.g., PhD, PMP, 10 years Python, and nursing license). Usually signals role clarity issues; candidates meeting 50 to 60 percent of criteria should still apply.
 
 **User Story** (BA/Agile)
 : Brief requirement from user perspective. **PH equivalents**: Service-user scenario, GPS format.
