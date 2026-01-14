@@ -240,7 +240,13 @@ You do not have to navigate the job market, or the RFP process, alone. Collabora
 
 #### For RFP Responses
 
-If you identify an RFP opportunity but lack certain skills (whether technical, domain-specific, or the hybrid professional perspective itself), consider partnering with others. Organizations like [Intersect Collaborations LLC](https://www.intersectcollaborations.com/) specialize in bridging business analysis and public health. Teaming arrangements are common in government contracting; a small firm with deep domain expertise can partner with a larger firm that has the administrative capacity to manage federal contracts.
+If you identify an RFP opportunity but lack certain skills (whether technical, domain-specific, or the hybrid professional perspective itself), consider partnering with others. Teaming arrangements are common in government contracting; a small firm with deep domain expertise can partner with a larger firm that has the administrative capacity to manage federal contracts.
+
+**Potential collaborators in the Bridgeframe space:**
+
+- [Intersect Collaborations LLC](https://www.intersectcollaborations.com/): Specializes in bridging business analysis and public health
+- [Chaptico Hundred](https://chapticohundred.com/): Purpose-driven consultancy with transformative expertise
+- [Magpie Public Health LLC](https://www.magpieph.com/): Specialists in mixed-methods research and qualitative study design
 
 #### For Job Seekers
 
@@ -323,8 +329,6 @@ These organizations build technology platforms used by health programs worldwide
 
 - [Dimagi](https://dimagi.com/careers/) (creators of CommCare, a mobile data collection platform)
 - [DHIS2](https://dhis2.org/careers/) (the world's largest health management information system)
-- [Chaptico Hundred](https://chapticohundred.com/) (purpose-driven consultancy with transformative expertise)
-- [Magpie Public Health LLC](https://www.magpieph.com/) (specialists in mixed-methods research and qualitative study design)
 
 **Strategy**: These organizations value professionals who understand both the technology and the public health context in which it operates.
 
