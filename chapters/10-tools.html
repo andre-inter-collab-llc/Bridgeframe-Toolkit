@@ -713,6 +713,19 @@ background-size: cover;
 <h4 data-number="12.1.2.6" class="anchored" data-anchor-id="data-platform-architecture"><span class="header-section-number">12.1.2.6</span> Data Platform Architecture</h4>
 <p>Modern public health data systems benefit from structured data architectures that organize information from raw ingestion through analytics-ready outputs. The <strong>medallion architecture</strong> (Bronze → Silver → Gold) provides a framework for designing scalable, maintainable data platforms.</p>
 <p>While often discussed in cloud contexts, medallion architecture works equally well on desktop computers and local servers. The key is the logical separation of data by refinement stage, not the specific technology.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Communication Tip">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Communication Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>“Medallion architecture” and “Bronze/Silver/Gold” are IT jargon unfamiliar to most public health professionals. When discussing data workflows with epidemiologists or program staff, use terms like “raw data,” “cleaned data,” and “final reports” instead. See the <a href="../chapters/03-terminology.html#data-architecture-medallion-architecture-for-public-health">Terminology Dictionary</a> for a complete translation guide.</p>
+</div>
+</div>
 <p><strong>Commercial vs.&nbsp;Open Source Data Platforms</strong></p>
 <table class="caption-top table">
 <colgroup>
@@ -868,15 +881,17 @@ background-size: cover;
 <p><strong>Data Architecture for Different Scales</strong></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 36%">
-<col style="width: 42%">
-<col style="width: 21%">
+<col style="width: 27%">
+<col style="width: 31%">
+<col style="width: 15%">
+<col style="width: 25%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Organization Size</th>
 <th style="text-align: left;">Recommended Approach</th>
 <th style="text-align: left;">Key Tools</th>
+<th style="text-align: left;">Typical Staffing</th>
 </tr>
 </thead>
 <tbody>
@@ -884,21 +899,25 @@ background-size: cover;
 <td style="text-align: left;"><strong>Individual analyst</strong></td>
 <td style="text-align: left;">Organized folders with naming conventions</td>
 <td style="text-align: left;">Excel, Python/R scripts, SQLite</td>
+<td style="text-align: left;">Single epidemiologist or data manager handles all layers</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Small program</strong></td>
 <td style="text-align: left;">Single PostgreSQL database with layered schemas</td>
 <td style="text-align: left;">PostgreSQL, dbt, Python</td>
+<td style="text-align: left;">1-2 staff share responsibilities across layers</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>Medium health department</strong></td>
 <td style="text-align: left;">Data warehouse with ETL pipeline</td>
 <td style="text-align: left;">PostgreSQL/Snowflake, Airflow, dbt</td>
+<td style="text-align: left;">Dedicated data team with some role specialization</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Large state/federal</strong></td>
 <td style="text-align: left;">Full lakehouse architecture</td>
 <td style="text-align: left;">Spark/Databricks, Delta Lake, Airflow, dbt</td>
+<td style="text-align: left;">Specialized roles: data engineers (Bronze/Silver), analysts (Silver/Gold), BI developers (Gold)</td>
 </tr>
 </tbody>
 </table>
@@ -1963,207 +1982,211 @@ background-size: cover;
 <span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>While often discussed in cloud contexts, medallion architecture works equally well on desktop computers and local servers. The key is the logical separation of data by refinement stage, not the specific technology.</span>
 <span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>**Commercial vs. Open Source Data Platforms**</span>
-<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
-<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
-<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data Lake / Lakehouse** <span class="pp">|</span> Databricks, Snowflake, Azure Synapse <span class="pp">|</span> Apache Spark + Delta Lake, Apache Iceberg, DuckDB <span class="pp">|</span></span>
-<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **ETL/Orchestration** <span class="pp">|</span> Azure Data Factory, Informatica, Talend <span class="pp">|</span> Apache Airflow, Dagster, Prefect, dbt <span class="pp">|</span></span>
-<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data Catalog** <span class="pp">|</span> Alation, Collibra <span class="pp">|</span> Apache Atlas, DataHub, Amundsen <span class="pp">|</span></span>
-<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data Quality** <span class="pp">|</span> Informatica DQ, Talend <span class="pp">|</span> Great Expectations, dbt tests, Soda <span class="pp">|</span></span>
-<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>**Implementing Medallion Architecture**</span>
-<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>The medallion architecture can be implemented with various tool combinations, from enterprise cloud platforms to desktop applications:</span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning title="Communication Tip"}</span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>"Medallion architecture" and "Bronze/Silver/Gold" are IT jargon unfamiliar to most public health professionals. When discussing data workflows with epidemiologists or program staff, use terms like "raw data," "cleaned data," and "final reports" instead. See the <span class="co">[</span><span class="ot">Terminology Dictionary</span><span class="co">](03-terminology.qmd#data-architecture-medallion-architecture-for-public-health)</span> for a complete translation guide.</span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>**Commercial vs. Open Source Data Platforms**</span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data Lake / Lakehouse** <span class="pp">|</span> Databricks, Snowflake, Azure Synapse <span class="pp">|</span> Apache Spark + Delta Lake, Apache Iceberg, DuckDB <span class="pp">|</span></span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **ETL/Orchestration** <span class="pp">|</span> Azure Data Factory, Informatica, Talend <span class="pp">|</span> Apache Airflow, Dagster, Prefect, dbt <span class="pp">|</span></span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data Catalog** <span class="pp">|</span> Alation, Collibra <span class="pp">|</span> Apache Atlas, DataHub, Amundsen <span class="pp">|</span></span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Data Quality** <span class="pp">|</span> Informatica DQ, Talend <span class="pp">|</span> Great Expectations, dbt tests, Soda <span class="pp">|</span></span>
 <span id="cb3-161"><a href="#cb3-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Layer <span class="pp">|</span> Purpose <span class="pp">|</span> Cloud/Server Options <span class="pp">|</span> Desktop/Local Options <span class="pp">|</span></span>
-<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------|:--------|:---------------------|:----------------------|</span></span>
-<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bronze** <span class="pp">|</span> Raw data landing, preserve source fidelity <span class="pp">|</span> Object storage (S3, Azure Blob), PostgreSQL staging tables <span class="pp">|</span> File folders, SQLite database, Excel "Raw Data" sheets <span class="pp">|</span></span>
-<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Silver** <span class="pp">|</span> Cleansing, standardization, deduplication <span class="pp">|</span> dbt transformations, Apache Spark, Python/pandas <span class="pp">|</span> Excel Power Query, Python scripts, Access queries <span class="pp">|</span></span>
-<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Gold** <span class="pp">|</span> Analytics-ready datasets, aggregations <span class="pp">|</span> Dimensional models, materialized views, OLAP cubes <span class="pp">|</span> Pivot tables, final Excel reports, exported CSVs for tools <span class="pp">|</span></span>
-<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Starting Small"}</span>
-<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a>You don't need Databricks or Snowflake to implement medallion architecture. Even a well-organized folder structure with clear naming conventions implements the same principle:</span>
-<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a><span class="in">project/</span></span>
-<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a><span class="in">├── 01_bronze/          # Raw files as received</span></span>
-<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── lab_results_2024-01-15.csv</span></span>
-<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── ehr_export_raw.xlsx</span></span>
-<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="in">├── 02_silver/          # Cleaned and standardized</span></span>
-<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── cases_cleaned.csv</span></span>
-<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── patients_deduplicated.xlsx</span></span>
-<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="in">└── 03_gold/            # Ready for analysis/reporting</span></span>
-<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── outbreak_line_list.xlsx</span></span>
-<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="in">    └── monthly_summary_report.xlsx</span></span>
-<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a>Many state health departments successfully run medallion architectures on modest infrastructure, including single PostgreSQL databases with three schemas or even organized Excel workbooks.</span>
-<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a>**Open Source Lakehouse Stack for Public Health**</span>
-<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>For organizations seeking data sovereignty and cost control:</span>
+<span id="cb3-162"><a href="#cb3-162" aria-hidden="true" tabindex="-1"></a>**Implementing Medallion Architecture**</span>
+<span id="cb3-163"><a href="#cb3-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-164"><a href="#cb3-164" aria-hidden="true" tabindex="-1"></a>The medallion architecture can be implemented with various tool combinations, from enterprise cloud platforms to desktop applications:</span>
+<span id="cb3-165"><a href="#cb3-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-166"><a href="#cb3-166" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Layer <span class="pp">|</span> Purpose <span class="pp">|</span> Cloud/Server Options <span class="pp">|</span> Desktop/Local Options <span class="pp">|</span></span>
+<span id="cb3-167"><a href="#cb3-167" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------|:--------|:---------------------|:----------------------|</span></span>
+<span id="cb3-168"><a href="#cb3-168" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bronze** <span class="pp">|</span> Raw data landing, preserve source fidelity <span class="pp">|</span> Object storage (S3, Azure Blob), PostgreSQL staging tables <span class="pp">|</span> File folders, SQLite database, Excel "Raw Data" sheets <span class="pp">|</span></span>
+<span id="cb3-169"><a href="#cb3-169" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Silver** <span class="pp">|</span> Cleansing, standardization, deduplication <span class="pp">|</span> dbt transformations, Apache Spark, Python/pandas <span class="pp">|</span> Excel Power Query, Python scripts, Access queries <span class="pp">|</span></span>
+<span id="cb3-170"><a href="#cb3-170" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Gold** <span class="pp">|</span> Analytics-ready datasets, aggregations <span class="pp">|</span> Dimensional models, materialized views, OLAP cubes <span class="pp">|</span> Pivot tables, final Excel reports, exported CSVs for tools <span class="pp">|</span></span>
+<span id="cb3-171"><a href="#cb3-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-172"><a href="#cb3-172" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Starting Small"}</span>
+<span id="cb3-173"><a href="#cb3-173" aria-hidden="true" tabindex="-1"></a>You don't need Databricks or Snowflake to implement medallion architecture. Even a well-organized folder structure with clear naming conventions implements the same principle:</span>
+<span id="cb3-174"><a href="#cb3-174" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-175"><a href="#cb3-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-176"><a href="#cb3-176" aria-hidden="true" tabindex="-1"></a><span class="in">project/</span></span>
+<span id="cb3-177"><a href="#cb3-177" aria-hidden="true" tabindex="-1"></a><span class="in">├── 01_bronze/          # Raw files as received</span></span>
+<span id="cb3-178"><a href="#cb3-178" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── lab_results_2024-01-15.csv</span></span>
+<span id="cb3-179"><a href="#cb3-179" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── ehr_export_raw.xlsx</span></span>
+<span id="cb3-180"><a href="#cb3-180" aria-hidden="true" tabindex="-1"></a><span class="in">├── 02_silver/          # Cleaned and standardized</span></span>
+<span id="cb3-181"><a href="#cb3-181" aria-hidden="true" tabindex="-1"></a><span class="in">│   ├── cases_cleaned.csv</span></span>
+<span id="cb3-182"><a href="#cb3-182" aria-hidden="true" tabindex="-1"></a><span class="in">│   └── patients_deduplicated.xlsx</span></span>
+<span id="cb3-183"><a href="#cb3-183" aria-hidden="true" tabindex="-1"></a><span class="in">└── 03_gold/            # Ready for analysis/reporting</span></span>
+<span id="cb3-184"><a href="#cb3-184" aria-hidden="true" tabindex="-1"></a><span class="in">    ├── outbreak_line_list.xlsx</span></span>
+<span id="cb3-185"><a href="#cb3-185" aria-hidden="true" tabindex="-1"></a><span class="in">    └── monthly_summary_report.xlsx</span></span>
+<span id="cb3-186"><a href="#cb3-186" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-187"><a href="#cb3-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-188"><a href="#cb3-188" aria-hidden="true" tabindex="-1"></a>Many state health departments successfully run medallion architectures on modest infrastructure, including single PostgreSQL databases with three schemas or even organized Excel workbooks.</span>
+<span id="cb3-189"><a href="#cb3-189" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb3-190"><a href="#cb3-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Component <span class="pp">|</span> Tool <span class="pp">|</span> Notes <span class="pp">|</span></span>
-<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a><span class="pp">|:----------|:-----|:------|</span></span>
-<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Storage <span class="pp">|</span> MinIO or local filesystem <span class="pp">|</span> S3-compatible object storage <span class="pp">|</span></span>
-<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Table format <span class="pp">|</span> Delta Lake or Apache Iceberg <span class="pp">|</span> ACID transactions, time travel <span class="pp">|</span></span>
-<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Compute <span class="pp">|</span> Apache Spark or DuckDB <span class="pp">|</span> DuckDB for smaller workloads <span class="pp">|</span></span>
-<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Orchestration <span class="pp">|</span> Apache Airflow <span class="pp">|</span> Workflow scheduling <span class="pp">|</span></span>
-<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Transformation <span class="pp">|</span> dbt <span class="pp">|</span> SQL-based transformations <span class="pp">|</span></span>
-<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Quality <span class="pp">|</span> Great Expectations <span class="pp">|</span> Data validation <span class="pp">|</span></span>
-<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Catalog <span class="pp">|</span> DataHub <span class="pp">|</span> Metadata management <span class="pp">|</span></span>
-<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a>**Data Architecture for Different Scales**</span>
-<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Organization Size <span class="pp">|</span> Recommended Approach <span class="pp">|</span> Key Tools <span class="pp">|</span></span>
-<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------------------|:---------------------|:----------|</span></span>
-<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Individual analyst** <span class="pp">|</span> Organized folders with naming conventions <span class="pp">|</span> Excel, Python/R scripts, SQLite <span class="pp">|</span></span>
-<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Small program** <span class="pp">|</span> Single PostgreSQL database with layered schemas <span class="pp">|</span> PostgreSQL, dbt, Python <span class="pp">|</span></span>
-<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Medium health department** <span class="pp">|</span> Data warehouse with ETL pipeline <span class="pp">|</span> PostgreSQL/Snowflake, Airflow, dbt <span class="pp">|</span></span>
-<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Large state/federal** <span class="pp">|</span> Full lakehouse architecture <span class="pp">|</span> Spark/Databricks, Delta Lake, Airflow, dbt <span class="pp">|</span></span>
-<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
-<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a>CancerSurv implements a medallion architecture using open source tools:</span>
-<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Layer <span class="pp">|</span> Implementation <span class="pp">|</span> Gold Layer Outputs <span class="pp">|</span></span>
-<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------|:---------------|:-------------------|</span></span>
-<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bronze** <span class="pp">|</span> PostgreSQL <span class="in">`raw`</span> schema; HL7 messages stored as JSON; CSV uploads preserved verbatim <span class="pp">|</span> — <span class="pp">|</span></span>
-<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Silver** <span class="pp">|</span> PostgreSQL <span class="in">`staging`</span> schema; dbt models for deduplication and ICD-O-3 standardization <span class="pp">|</span> — <span class="pp">|</span></span>
-<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Gold** <span class="pp">|</span> PostgreSQL <span class="in">`analytics`</span> schema; pre-computed incidence rates, survival metrics, NPCR submission tables <span class="pp">|</span> Line lists for case follow-up, incidence reports, survival dashboards <span class="pp">|</span></span>
-<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Orchestration** <span class="pp">|</span> Apache Airflow schedules daily Bronze→Silver→Gold pipeline <span class="pp">|</span> — <span class="pp">|</span></span>
-<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Quality** <span class="pp">|</span> Great Expectations validates data at Silver layer before promotion to Gold <span class="pp">|</span> — <span class="pp">|</span></span>
-<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Visualization</span></span>
-<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
-<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
-<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Dashboards** <span class="pp">|</span> Tableau, Power BI <span class="pp">|</span> R Shiny, Dash (Python), Apache Superset <span class="pp">|</span></span>
-<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Static Visualization** <span class="pp">|</span> Tableau, Excel <span class="pp">|</span> R (ggplot2), Python (matplotlib, plotly) <span class="pp">|</span></span>
-<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Interactive Charts** <span class="pp">|</span> Tableau, Power BI <span class="pp">|</span> Plotly, Highcharts (free for non-commercial) <span class="pp">|</span></span>
-<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a>**R Shiny for Public Health Dashboards**</span>
-<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a>R Shiny enables interactive dashboards without JavaScript expertise:</span>
+<span id="cb3-191"><a href="#cb3-191" aria-hidden="true" tabindex="-1"></a>**Open Source Lakehouse Stack for Public Health**</span>
+<span id="cb3-192"><a href="#cb3-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-193"><a href="#cb3-193" aria-hidden="true" tabindex="-1"></a>For organizations seeking data sovereignty and cost control:</span>
+<span id="cb3-194"><a href="#cb3-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-195"><a href="#cb3-195" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Component <span class="pp">|</span> Tool <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb3-196"><a href="#cb3-196" aria-hidden="true" tabindex="-1"></a><span class="pp">|:----------|:-----|:------|</span></span>
+<span id="cb3-197"><a href="#cb3-197" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Storage <span class="pp">|</span> MinIO or local filesystem <span class="pp">|</span> S3-compatible object storage <span class="pp">|</span></span>
+<span id="cb3-198"><a href="#cb3-198" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Table format <span class="pp">|</span> Delta Lake or Apache Iceberg <span class="pp">|</span> ACID transactions, time travel <span class="pp">|</span></span>
+<span id="cb3-199"><a href="#cb3-199" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Compute <span class="pp">|</span> Apache Spark or DuckDB <span class="pp">|</span> DuckDB for smaller workloads <span class="pp">|</span></span>
+<span id="cb3-200"><a href="#cb3-200" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Orchestration <span class="pp">|</span> Apache Airflow <span class="pp">|</span> Workflow scheduling <span class="pp">|</span></span>
+<span id="cb3-201"><a href="#cb3-201" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Transformation <span class="pp">|</span> dbt <span class="pp">|</span> SQL-based transformations <span class="pp">|</span></span>
+<span id="cb3-202"><a href="#cb3-202" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Quality <span class="pp">|</span> Great Expectations <span class="pp">|</span> Data validation <span class="pp">|</span></span>
+<span id="cb3-203"><a href="#cb3-203" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Catalog <span class="pp">|</span> DataHub <span class="pp">|</span> Metadata management <span class="pp">|</span></span>
+<span id="cb3-204"><a href="#cb3-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-205"><a href="#cb3-205" aria-hidden="true" tabindex="-1"></a>**Data Architecture for Different Scales**</span>
+<span id="cb3-206"><a href="#cb3-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-207"><a href="#cb3-207" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Organization Size <span class="pp">|</span> Recommended Approach <span class="pp">|</span> Key Tools <span class="pp">|</span> Typical Staffing <span class="pp">|</span></span>
+<span id="cb3-208"><a href="#cb3-208" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------------------|:---------------------|:----------|:-----------------|</span></span>
+<span id="cb3-209"><a href="#cb3-209" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Individual analyst** <span class="pp">|</span> Organized folders with naming conventions <span class="pp">|</span> Excel, Python/R scripts, SQLite <span class="pp">|</span> Single epidemiologist or data manager handles all layers <span class="pp">|</span></span>
+<span id="cb3-210"><a href="#cb3-210" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Small program** <span class="pp">|</span> Single PostgreSQL database with layered schemas <span class="pp">|</span> PostgreSQL, dbt, Python <span class="pp">|</span> 1-2 staff share responsibilities across layers <span class="pp">|</span></span>
+<span id="cb3-211"><a href="#cb3-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Medium health department** <span class="pp">|</span> Data warehouse with ETL pipeline <span class="pp">|</span> PostgreSQL/Snowflake, Airflow, dbt <span class="pp">|</span> Dedicated data team with some role specialization <span class="pp">|</span></span>
+<span id="cb3-212"><a href="#cb3-212" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Large state/federal** <span class="pp">|</span> Full lakehouse architecture <span class="pp">|</span> Spark/Databricks, Delta Lake, Airflow, dbt <span class="pp">|</span> Specialized roles: data engineers (Bronze/Silver), analysts (Silver/Gold), BI developers (Gold) <span class="pp">|</span></span>
+<span id="cb3-213"><a href="#cb3-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-214"><a href="#cb3-214" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb3-215"><a href="#cb3-215" aria-hidden="true" tabindex="-1"></a>CancerSurv implements a medallion architecture using open source tools:</span>
+<span id="cb3-216"><a href="#cb3-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-217"><a href="#cb3-217" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Layer <span class="pp">|</span> Implementation <span class="pp">|</span> Gold Layer Outputs <span class="pp">|</span></span>
+<span id="cb3-218"><a href="#cb3-218" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------|:---------------|:-------------------|</span></span>
+<span id="cb3-219"><a href="#cb3-219" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bronze** <span class="pp">|</span> PostgreSQL <span class="in">`raw`</span> schema; HL7 messages stored as JSON; CSV uploads preserved verbatim <span class="pp">|</span> — <span class="pp">|</span></span>
+<span id="cb3-220"><a href="#cb3-220" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Silver** <span class="pp">|</span> PostgreSQL <span class="in">`staging`</span> schema; dbt models for deduplication and ICD-O-3 standardization <span class="pp">|</span> — <span class="pp">|</span></span>
+<span id="cb3-221"><a href="#cb3-221" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Gold** <span class="pp">|</span> PostgreSQL <span class="in">`analytics`</span> schema; pre-computed incidence rates, survival metrics, NPCR submission tables <span class="pp">|</span> Line lists for case follow-up, incidence reports, survival dashboards <span class="pp">|</span></span>
+<span id="cb3-222"><a href="#cb3-222" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Orchestration** <span class="pp">|</span> Apache Airflow schedules daily Bronze→Silver→Gold pipeline <span class="pp">|</span> — <span class="pp">|</span></span>
+<span id="cb3-223"><a href="#cb3-223" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Quality** <span class="pp">|</span> Great Expectations validates data at Silver layer before promotion to Gold <span class="pp">|</span> — <span class="pp">|</span></span>
+<span id="cb3-224"><a href="#cb3-224" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-225"><a href="#cb3-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-226"><a href="#cb3-226" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Visualization</span></span>
+<span id="cb3-227"><a href="#cb3-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-228"><a href="#cb3-228" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb3-229"><a href="#cb3-229" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb3-230"><a href="#cb3-230" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Dashboards** <span class="pp">|</span> Tableau, Power BI <span class="pp">|</span> R Shiny, Dash (Python), Apache Superset <span class="pp">|</span></span>
+<span id="cb3-231"><a href="#cb3-231" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Static Visualization** <span class="pp">|</span> Tableau, Excel <span class="pp">|</span> R (ggplot2), Python (matplotlib, plotly) <span class="pp">|</span></span>
+<span id="cb3-232"><a href="#cb3-232" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Interactive Charts** <span class="pp">|</span> Tableau, Power BI <span class="pp">|</span> Plotly, Highcharts (free for non-commercial) <span class="pp">|</span></span>
 <span id="cb3-233"><a href="#cb3-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Free and open source</span>
-<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integrates with R analysis pipelines</span>
-<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Can be deployed on-premise or Shinyapps.io</span>
-<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Many public health templates available</span>
-<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a><span class="fu">#### GIS and Mapping</span></span>
-<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
-<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
-<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Desktop GIS** <span class="pp">|</span> ArcGIS Pro <span class="pp">|</span> QGIS <span class="pp">|</span></span>
-<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Web Mapping** <span class="pp">|</span> ArcGIS Online, Mapbox <span class="pp">|</span> Leaflet, OpenLayers <span class="pp">|</span></span>
-<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Spatial Analysis** <span class="pp">|</span> ArcGIS, ESRI <span class="pp">|</span> QGIS, R (sf package), PostGIS <span class="pp">|</span></span>
-<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Geocoding** <span class="pp">|</span> Google, ESRI <span class="pp">|</span> Nominatim, US Census Geocoder <span class="pp">|</span></span>
-<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a>**QGIS for Disease Mapping**</span>
-<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a>QGIS is essential for spatial epidemiology:</span>
+<span id="cb3-234"><a href="#cb3-234" aria-hidden="true" tabindex="-1"></a>**R Shiny for Public Health Dashboards**</span>
+<span id="cb3-235"><a href="#cb3-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-236"><a href="#cb3-236" aria-hidden="true" tabindex="-1"></a>R Shiny enables interactive dashboards without JavaScript expertise:</span>
+<span id="cb3-237"><a href="#cb3-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-238"><a href="#cb3-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Free and open source</span>
+<span id="cb3-239"><a href="#cb3-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integrates with R analysis pipelines</span>
+<span id="cb3-240"><a href="#cb3-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Can be deployed on-premise or Shinyapps.io</span>
+<span id="cb3-241"><a href="#cb3-241" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Many public health templates available</span>
+<span id="cb3-242"><a href="#cb3-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-243"><a href="#cb3-243" aria-hidden="true" tabindex="-1"></a><span class="fu">#### GIS and Mapping</span></span>
+<span id="cb3-244"><a href="#cb3-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-245"><a href="#cb3-245" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Capability <span class="pp">|</span> Commercial Options <span class="pp">|</span> OSS/PH Options <span class="pp">|</span></span>
+<span id="cb3-246"><a href="#cb3-246" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------|:-------------------|:---------------|</span></span>
+<span id="cb3-247"><a href="#cb3-247" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Desktop GIS** <span class="pp">|</span> ArcGIS Pro <span class="pp">|</span> QGIS <span class="pp">|</span></span>
+<span id="cb3-248"><a href="#cb3-248" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Web Mapping** <span class="pp">|</span> ArcGIS Online, Mapbox <span class="pp">|</span> Leaflet, OpenLayers <span class="pp">|</span></span>
+<span id="cb3-249"><a href="#cb3-249" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Spatial Analysis** <span class="pp">|</span> ArcGIS, ESRI <span class="pp">|</span> QGIS, R (sf package), PostGIS <span class="pp">|</span></span>
+<span id="cb3-250"><a href="#cb3-250" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Geocoding** <span class="pp">|</span> Google, ESRI <span class="pp">|</span> Nominatim, US Census Geocoder <span class="pp">|</span></span>
 <span id="cb3-251"><a href="#cb3-251" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Free, cross-platform</span>
-<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Full-featured GIS capabilities</span>
-<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Disease mapping and cluster detection</span>
-<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integrates with R for spatial statistics</span>
-<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Active public health user community</span>
-<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
-<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a>CancerSurv analytics stack:</span>
-<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> Tool <span class="pp">|</span> Rationale <span class="pp">|</span></span>
-<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----|:----------|</span></span>
-<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Case data storage <span class="pp">|</span> PostgreSQL <span class="pp">|</span> Open source, HIPAA-capable <span class="pp">|</span></span>
-<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ETL/Data pipeline <span class="pp">|</span> Apache Airflow <span class="pp">|</span> Orchestration of data flows <span class="pp">|</span></span>
-<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Statistical analysis <span class="pp">|</span> R (tidyverse, survival) <span class="pp">|</span> Standard for cancer epidemiology <span class="pp">|</span></span>
-<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Dashboards <span class="pp">|</span> R Shiny <span class="pp">|</span> Interactive, deployable on-premise <span class="pp">|</span></span>
-<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Geographic mapping <span class="pp">|</span> QGIS + Leaflet <span class="pp">|</span> Cancer cluster visualization <span class="pp">|</span></span>
-<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Ad-hoc queries <span class="pp">|</span> Apache Superset <span class="pp">|</span> Self-service for epidemiologists <span class="pp">|</span></span>
-<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Data Standards and Interoperability</span></span>
-<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Standard <span class="pp">|</span> Commercial Tools <span class="pp">|</span> OSS Tools <span class="pp">|</span></span>
-<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----------------|:----------|</span></span>
-<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **HL7 FHIR** <span class="pp">|</span> Rhapsody, Corepoint <span class="pp">|</span> HAPI FHIR, LinuxForHealth <span class="pp">|</span></span>
-<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **HL7 v2.x** <span class="pp">|</span> Rhapsody, Mirth <span class="pp">|</span> Mirth Connect (open source), HAPI <span class="pp">|</span></span>
-<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **CDA/C-CDA** <span class="pp">|</span> Various EHR vendors <span class="pp">|</span> MDHT, Reference CDA <span class="pp">|</span></span>
-<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a>**Mirth Connect**</span>
-<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a>Mirth Connect is widely used in public health for health information exchange:</span>
+<span id="cb3-252"><a href="#cb3-252" aria-hidden="true" tabindex="-1"></a>**QGIS for Disease Mapping**</span>
+<span id="cb3-253"><a href="#cb3-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-254"><a href="#cb3-254" aria-hidden="true" tabindex="-1"></a>QGIS is essential for spatial epidemiology:</span>
+<span id="cb3-255"><a href="#cb3-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-256"><a href="#cb3-256" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Free, cross-platform</span>
+<span id="cb3-257"><a href="#cb3-257" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Full-featured GIS capabilities</span>
+<span id="cb3-258"><a href="#cb3-258" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Disease mapping and cluster detection</span>
+<span id="cb3-259"><a href="#cb3-259" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Integrates with R for spatial statistics</span>
+<span id="cb3-260"><a href="#cb3-260" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Active public health user community</span>
+<span id="cb3-261"><a href="#cb3-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-262"><a href="#cb3-262" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb3-263"><a href="#cb3-263" aria-hidden="true" tabindex="-1"></a>CancerSurv analytics stack:</span>
+<span id="cb3-264"><a href="#cb3-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-265"><a href="#cb3-265" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> Tool <span class="pp">|</span> Rationale <span class="pp">|</span></span>
+<span id="cb3-266"><a href="#cb3-266" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----|:----------|</span></span>
+<span id="cb3-267"><a href="#cb3-267" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Case data storage <span class="pp">|</span> PostgreSQL <span class="pp">|</span> Open source, HIPAA-capable <span class="pp">|</span></span>
+<span id="cb3-268"><a href="#cb3-268" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> ETL/Data pipeline <span class="pp">|</span> Apache Airflow <span class="pp">|</span> Orchestration of data flows <span class="pp">|</span></span>
+<span id="cb3-269"><a href="#cb3-269" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Statistical analysis <span class="pp">|</span> R (tidyverse, survival) <span class="pp">|</span> Standard for cancer epidemiology <span class="pp">|</span></span>
+<span id="cb3-270"><a href="#cb3-270" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Dashboards <span class="pp">|</span> R Shiny <span class="pp">|</span> Interactive, deployable on-premise <span class="pp">|</span></span>
+<span id="cb3-271"><a href="#cb3-271" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Geographic mapping <span class="pp">|</span> QGIS + Leaflet <span class="pp">|</span> Cancer cluster visualization <span class="pp">|</span></span>
+<span id="cb3-272"><a href="#cb3-272" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Ad-hoc queries <span class="pp">|</span> Apache Superset <span class="pp">|</span> Self-service for epidemiologists <span class="pp">|</span></span>
+<span id="cb3-273"><a href="#cb3-273" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-274"><a href="#cb3-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-275"><a href="#cb3-275" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Data Standards and Interoperability</span></span>
+<span id="cb3-276"><a href="#cb3-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-277"><a href="#cb3-277" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Standard <span class="pp">|</span> Commercial Tools <span class="pp">|</span> OSS Tools <span class="pp">|</span></span>
+<span id="cb3-278"><a href="#cb3-278" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----------------|:----------|</span></span>
+<span id="cb3-279"><a href="#cb3-279" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **HL7 FHIR** <span class="pp">|</span> Rhapsody, Corepoint <span class="pp">|</span> HAPI FHIR, LinuxForHealth <span class="pp">|</span></span>
+<span id="cb3-280"><a href="#cb3-280" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **HL7 v2.x** <span class="pp">|</span> Rhapsody, Mirth <span class="pp">|</span> Mirth Connect (open source), HAPI <span class="pp">|</span></span>
+<span id="cb3-281"><a href="#cb3-281" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **CDA/C-CDA** <span class="pp">|</span> Various EHR vendors <span class="pp">|</span> MDHT, Reference CDA <span class="pp">|</span></span>
 <span id="cb3-282"><a href="#cb3-282" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Open source (NextGen Healthcare)</span>
-<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>HL7 v2, FHIR, CDA support</span>
-<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visual interface builder</span>
-<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Used by many state health departments</span>
-<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a><span class="fu">### Building Your Stack</span></span>
-<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Small Public Health Program</span></span>
+<span id="cb3-283"><a href="#cb3-283" aria-hidden="true" tabindex="-1"></a>**Mirth Connect**</span>
+<span id="cb3-284"><a href="#cb3-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-285"><a href="#cb3-285" aria-hidden="true" tabindex="-1"></a>Mirth Connect is widely used in public health for health information exchange:</span>
+<span id="cb3-286"><a href="#cb3-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-287"><a href="#cb3-287" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Open source (NextGen Healthcare)</span>
+<span id="cb3-288"><a href="#cb3-288" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>HL7 v2, FHIR, CDA support</span>
+<span id="cb3-289"><a href="#cb3-289" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Visual interface builder</span>
+<span id="cb3-290"><a href="#cb3-290" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Used by many state health departments</span>
 <span id="cb3-291"><a href="#cb3-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> Recommended Tool <span class="pp">|</span> Notes <span class="pp">|</span></span>
-<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----------------|:------|</span></span>
-<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Project Management <span class="pp">|</span> Trello or Taiga <span class="pp">|</span> Free tier sufficient <span class="pp">|</span></span>
-<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Documentation <span class="pp">|</span> GitHub Wiki or BookStack <span class="pp">|</span> Version-controlled <span class="pp">|</span></span>
-<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Diagramming <span class="pp">|</span> diagrams.net <span class="pp">|</span> Free, export to any format <span class="pp">|</span></span>
-<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Collection <span class="pp">|</span> REDCap <span class="pp">|</span> Standard for research <span class="pp">|</span></span>
-<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Analysis <span class="pp">|</span> R + RStudio <span class="pp">|</span> Free, extensive packages <span class="pp">|</span></span>
-<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Visualization <span class="pp">|</span> R Shiny or Excel <span class="pp">|</span> Depends on technical capacity <span class="pp">|</span></span>
-<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Large State Health Department</span></span>
-<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> Recommended Tool <span class="pp">|</span> Notes <span class="pp">|</span></span>
-<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----------------|:------|</span></span>
-<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Project Management <span class="pp">|</span> Azure DevOps or OpenProject <span class="pp">|</span> Enterprise scale <span class="pp">|</span></span>
-<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Documentation <span class="pp">|</span> Confluence or BookStack <span class="pp">|</span> Team collaboration <span class="pp">|</span></span>
-<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Requirements <span class="pp">|</span> Jira or GitHub <span class="pp">|</span> Integrated with development <span class="pp">|</span></span>
-<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Collection <span class="pp">|</span> REDCap + DHIS2 <span class="pp">|</span> Research + program monitoring <span class="pp">|</span></span>
-<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Platform <span class="pp">|</span> PostgreSQL + Airflow <span class="pp">|</span> Scalable, HIPAA-capable <span class="pp">|</span></span>
-<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Analysis <span class="pp">|</span> R + Python <span class="pp">|</span> Comprehensive capabilities <span class="pp">|</span></span>
-<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Visualization <span class="pp">|</span> R Shiny + Superset <span class="pp">|</span> Dashboards + self-service <span class="pp">|</span></span>
-<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> GIS <span class="pp">|</span> QGIS + PostGIS <span class="pp">|</span> Full spatial capabilities <span class="pp">|</span></span>
-<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Integration <span class="pp">|</span> Mirth Connect <span class="pp">|</span> HL7/FHIR integration <span class="pp">|</span></span>
-<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a><span class="fu">### Considerations for Tool Selection</span></span>
-<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Total Cost of Ownership</span></span>
+<span id="cb3-292"><a href="#cb3-292" aria-hidden="true" tabindex="-1"></a><span class="fu">### Building Your Stack</span></span>
+<span id="cb3-293"><a href="#cb3-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-294"><a href="#cb3-294" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Small Public Health Program</span></span>
+<span id="cb3-295"><a href="#cb3-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-296"><a href="#cb3-296" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> Recommended Tool <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb3-297"><a href="#cb3-297" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----------------|:------|</span></span>
+<span id="cb3-298"><a href="#cb3-298" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Project Management <span class="pp">|</span> Trello or Taiga <span class="pp">|</span> Free tier sufficient <span class="pp">|</span></span>
+<span id="cb3-299"><a href="#cb3-299" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Documentation <span class="pp">|</span> GitHub Wiki or BookStack <span class="pp">|</span> Version-controlled <span class="pp">|</span></span>
+<span id="cb3-300"><a href="#cb3-300" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Diagramming <span class="pp">|</span> diagrams.net <span class="pp">|</span> Free, export to any format <span class="pp">|</span></span>
+<span id="cb3-301"><a href="#cb3-301" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Collection <span class="pp">|</span> REDCap <span class="pp">|</span> Standard for research <span class="pp">|</span></span>
+<span id="cb3-302"><a href="#cb3-302" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Analysis <span class="pp">|</span> R + RStudio <span class="pp">|</span> Free, extensive packages <span class="pp">|</span></span>
+<span id="cb3-303"><a href="#cb3-303" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Visualization <span class="pp">|</span> R Shiny or Excel <span class="pp">|</span> Depends on technical capacity <span class="pp">|</span></span>
+<span id="cb3-304"><a href="#cb3-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-305"><a href="#cb3-305" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Large State Health Department</span></span>
+<span id="cb3-306"><a href="#cb3-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-307"><a href="#cb3-307" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Function <span class="pp">|</span> Recommended Tool <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb3-308"><a href="#cb3-308" aria-hidden="true" tabindex="-1"></a><span class="pp">|:---------|:-----------------|:------|</span></span>
+<span id="cb3-309"><a href="#cb3-309" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Project Management <span class="pp">|</span> Azure DevOps or OpenProject <span class="pp">|</span> Enterprise scale <span class="pp">|</span></span>
+<span id="cb3-310"><a href="#cb3-310" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Documentation <span class="pp">|</span> Confluence or BookStack <span class="pp">|</span> Team collaboration <span class="pp">|</span></span>
+<span id="cb3-311"><a href="#cb3-311" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Requirements <span class="pp">|</span> Jira or GitHub <span class="pp">|</span> Integrated with development <span class="pp">|</span></span>
+<span id="cb3-312"><a href="#cb3-312" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Collection <span class="pp">|</span> REDCap + DHIS2 <span class="pp">|</span> Research + program monitoring <span class="pp">|</span></span>
+<span id="cb3-313"><a href="#cb3-313" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Data Platform <span class="pp">|</span> PostgreSQL + Airflow <span class="pp">|</span> Scalable, HIPAA-capable <span class="pp">|</span></span>
+<span id="cb3-314"><a href="#cb3-314" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Analysis <span class="pp">|</span> R + Python <span class="pp">|</span> Comprehensive capabilities <span class="pp">|</span></span>
+<span id="cb3-315"><a href="#cb3-315" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Visualization <span class="pp">|</span> R Shiny + Superset <span class="pp">|</span> Dashboards + self-service <span class="pp">|</span></span>
+<span id="cb3-316"><a href="#cb3-316" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> GIS <span class="pp">|</span> QGIS + PostGIS <span class="pp">|</span> Full spatial capabilities <span class="pp">|</span></span>
+<span id="cb3-317"><a href="#cb3-317" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Integration <span class="pp">|</span> Mirth Connect <span class="pp">|</span> HL7/FHIR integration <span class="pp">|</span></span>
 <span id="cb3-318"><a href="#cb3-318" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a>Free software is not always cheaper:</span>
+<span id="cb3-319"><a href="#cb3-319" aria-hidden="true" tabindex="-1"></a><span class="fu">### Considerations for Tool Selection</span></span>
 <span id="cb3-320"><a href="#cb3-320" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Cost Factor <span class="pp">|</span> Commercial <span class="pp">|</span> Open Source <span class="pp">|</span></span>
-<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------------|:-----------|:------------|</span></span>
-<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> License fees <span class="pp">|</span> Yes <span class="pp">|</span> No <span class="pp">|</span></span>
-<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Implementation <span class="pp">|</span> Vendor/partner <span class="pp">|</span> Internal/consultant <span class="pp">|</span></span>
-<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Training <span class="pp">|</span> Often included <span class="pp">|</span> Self-directed or purchased <span class="pp">|</span></span>
-<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Support <span class="pp">|</span> Included in license <span class="pp">|</span> Community or purchased <span class="pp">|</span></span>
-<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Customization <span class="pp">|</span> Limited <span class="pp">|</span> Unlimited but costly <span class="pp">|</span></span>
-<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Infrastructure <span class="pp">|</span> Cloud included or on-prem <span class="pp">|</span> You manage <span class="pp">|</span></span>
-<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Compliance and Security</span></span>
-<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Consideration <span class="pp">|</span> Commercial <span class="pp">|</span> Open Source <span class="pp">|</span></span>
-<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a><span class="pp">|:--------------|:-----------|:------------|</span></span>
-<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> HIPAA compliance <span class="pp">|</span> Often certified <span class="pp">|</span> Your responsibility to configure <span class="pp">|</span></span>
-<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> SOC 2 certification <span class="pp">|</span> Common <span class="pp">|</span> Rare; your responsibility <span class="pp">|</span></span>
-<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Security updates <span class="pp">|</span> Vendor manages <span class="pp">|</span> You monitor and apply <span class="pp">|</span></span>
-<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Audit trails <span class="pp">|</span> Built-in <span class="pp">|</span> May require configuration <span class="pp">|</span></span>
-<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Sustainability</span></span>
-<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a>Consider long-term viability:</span>
+<span id="cb3-321"><a href="#cb3-321" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Total Cost of Ownership</span></span>
+<span id="cb3-322"><a href="#cb3-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-323"><a href="#cb3-323" aria-hidden="true" tabindex="-1"></a>Free software is not always cheaper:</span>
+<span id="cb3-324"><a href="#cb3-324" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-325"><a href="#cb3-325" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Cost Factor <span class="pp">|</span> Commercial <span class="pp">|</span> Open Source <span class="pp">|</span></span>
+<span id="cb3-326"><a href="#cb3-326" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------------|:-----------|:------------|</span></span>
+<span id="cb3-327"><a href="#cb3-327" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> License fees <span class="pp">|</span> Yes <span class="pp">|</span> No <span class="pp">|</span></span>
+<span id="cb3-328"><a href="#cb3-328" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Implementation <span class="pp">|</span> Vendor/partner <span class="pp">|</span> Internal/consultant <span class="pp">|</span></span>
+<span id="cb3-329"><a href="#cb3-329" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Training <span class="pp">|</span> Often included <span class="pp">|</span> Self-directed or purchased <span class="pp">|</span></span>
+<span id="cb3-330"><a href="#cb3-330" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Support <span class="pp">|</span> Included in license <span class="pp">|</span> Community or purchased <span class="pp">|</span></span>
+<span id="cb3-331"><a href="#cb3-331" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Customization <span class="pp">|</span> Limited <span class="pp">|</span> Unlimited but costly <span class="pp">|</span></span>
+<span id="cb3-332"><a href="#cb3-332" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Infrastructure <span class="pp">|</span> Cloud included or on-prem <span class="pp">|</span> You manage <span class="pp">|</span></span>
+<span id="cb3-333"><a href="#cb3-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-334"><a href="#cb3-334" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Compliance and Security</span></span>
+<span id="cb3-335"><a href="#cb3-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-336"><a href="#cb3-336" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Consideration <span class="pp">|</span> Commercial <span class="pp">|</span> Open Source <span class="pp">|</span></span>
+<span id="cb3-337"><a href="#cb3-337" aria-hidden="true" tabindex="-1"></a><span class="pp">|:--------------|:-----------|:------------|</span></span>
+<span id="cb3-338"><a href="#cb3-338" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> HIPAA compliance <span class="pp">|</span> Often certified <span class="pp">|</span> Your responsibility to configure <span class="pp">|</span></span>
+<span id="cb3-339"><a href="#cb3-339" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> SOC 2 certification <span class="pp">|</span> Common <span class="pp">|</span> Rare; your responsibility <span class="pp">|</span></span>
+<span id="cb3-340"><a href="#cb3-340" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Security updates <span class="pp">|</span> Vendor manages <span class="pp">|</span> You monitor and apply <span class="pp">|</span></span>
+<span id="cb3-341"><a href="#cb3-341" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Audit trails <span class="pp">|</span> Built-in <span class="pp">|</span> May require configuration <span class="pp">|</span></span>
 <span id="cb3-342"><a href="#cb3-342" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Commercial: Vendor may be acquired, change pricing, sunset product</span>
-<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Open Source: Community may lose momentum; check activity levels</span>
-<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hybrid: Consider tools with both commercial and open source options</span>
+<span id="cb3-343"><a href="#cb3-343" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Sustainability</span></span>
+<span id="cb3-344"><a href="#cb3-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-345"><a href="#cb3-345" aria-hidden="true" tabindex="-1"></a>Consider long-term viability:</span>
 <span id="cb3-346"><a href="#cb3-346" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a><span class="fu">### Summary</span></span>
-<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a>The choice between commercial and open source tools depends on your context: budget, technical capacity, data sensitivity, and compliance requirements. Public health has excellent open source options, particularly for data collection (REDCap), analysis (R), mapping (QGIS), and integration (Mirth Connect). Evaluate total cost of ownership, not just license fees.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb3-347"><a href="#cb3-347" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Commercial: Vendor may be acquired, change pricing, sunset product</span>
+<span id="cb3-348"><a href="#cb3-348" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Open Source: Community may lose momentum; check activity levels</span>
+<span id="cb3-349"><a href="#cb3-349" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Hybrid: Consider tools with both commercial and open source options</span>
+<span id="cb3-350"><a href="#cb3-350" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-351"><a href="#cb3-351" aria-hidden="true" tabindex="-1"></a><span class="fu">### Summary</span></span>
+<span id="cb3-352"><a href="#cb3-352" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-353"><a href="#cb3-353" aria-hidden="true" tabindex="-1"></a>The choice between commercial and open source tools depends on your context: budget, technical capacity, data sensitivity, and compliance requirements. Public health has excellent open source options, particularly for data collection (REDCap), analysis (R), mapping (QGIS), and integration (Mirth Connect). Evaluate total cost of ownership, not just license fees.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 
