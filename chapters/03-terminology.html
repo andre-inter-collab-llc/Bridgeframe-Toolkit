@@ -373,7 +373,14 @@ background-size: cover;
   </ul></li>
   <li><a href="#the-logic-model-as-requirements-framework" id="toc-the-logic-model-as-requirements-framework" class="nav-link" data-scroll-target="#the-logic-model-as-requirements-framework"><span class="header-section-number">5.1.6</span> The Logic Model as Requirements Framework</a></li>
   <li><a href="#data-standards-as-requirements" id="toc-data-standards-as-requirements" class="nav-link" data-scroll-target="#data-standards-as-requirements"><span class="header-section-number">5.1.7</span> Data Standards as Requirements</a></li>
-  <li><a href="#quick-reference-card" id="toc-quick-reference-card" class="nav-link" data-scroll-target="#quick-reference-card"><span class="header-section-number">5.1.8</span> Quick Reference Card</a></li>
+  <li><a href="#data-architecture-medallion-architecture-for-public-health" id="toc-data-architecture-medallion-architecture-for-public-health" class="nav-link" data-scroll-target="#data-architecture-medallion-architecture-for-public-health"><span class="header-section-number">5.1.8</span> Data Architecture: Medallion Architecture for Public Health</a>
+  <ul>
+  <li><a href="#mapping-medallion-layers-to-public-health" id="toc-mapping-medallion-layers-to-public-health" class="nav-link" data-scroll-target="#mapping-medallion-layers-to-public-health"><span class="header-section-number">5.1.8.1</span> Mapping Medallion Layers to Public Health</a></li>
+  <li><a href="#user-roles-by-layer" id="toc-user-roles-by-layer" class="nav-link" data-scroll-target="#user-roles-by-layer"><span class="header-section-number">5.1.8.2</span> User Roles by Layer</a></li>
+  <li><a href="#what-layer-does-a-line-list-belong-to" id="toc-what-layer-does-a-line-list-belong-to" class="nav-link" data-scroll-target="#what-layer-does-a-line-list-belong-to"><span class="header-section-number">5.1.8.3</span> What Layer Does a Line List Belong To?</a></li>
+  <li><a href="#strategic-benefits-for-public-health" id="toc-strategic-benefits-for-public-health" class="nav-link" data-scroll-target="#strategic-benefits-for-public-health"><span class="header-section-number">5.1.8.4</span> Strategic Benefits for Public Health</a></li>
+  </ul></li>
+  <li><a href="#quick-reference-card" id="toc-quick-reference-card" class="nav-link" data-scroll-target="#quick-reference-card"><span class="header-section-number">5.1.9</span> Quick Reference Card</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/andre-inter-collab-llc/Bridgeframe-Toolkit/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -895,8 +902,171 @@ Figure&nbsp;5.2: Logic Model Structure
 </tbody>
 </table>
 </section>
-<section id="quick-reference-card" class="level3" data-number="5.1.8">
-<h3 data-number="5.1.8" class="anchored" data-anchor-id="quick-reference-card"><span class="header-section-number">5.1.8</span> Quick Reference Card</h3>
+<section id="data-architecture-medallion-architecture-for-public-health" class="level3" data-number="5.1.8">
+<h3 data-number="5.1.8" class="anchored" data-anchor-id="data-architecture-medallion-architecture-for-public-health"><span class="header-section-number">5.1.8</span> Data Architecture: Medallion Architecture for Public Health</h3>
+<p>Modern data platforms often use a <strong>medallion architecture</strong>, a design pattern that organizes data into progressively refined layers: Bronze, Silver, and Gold. Originally popularized by Databricks around 2020 for their “Lakehouse” architecture, the term uses the metaphor of precious metal refinement to represent the purification of raw data into actionable insights.</p>
+<p>While the specific “medallion” terminology is relatively new, the underlying concept evolved from traditional data warehousing layers (staging → cleansed → presentation) used since the late 1990s. Although often discussed in cloud computing contexts, medallion architecture applies equally to desktop and local server environments.</p>
+<section id="mapping-medallion-layers-to-public-health" class="level4" data-number="5.1.8.1">
+<h4 data-number="5.1.8.1" class="anchored" data-anchor-id="mapping-medallion-layers-to-public-health"><span class="header-section-number">5.1.8.1</span> Mapping Medallion Layers to Public Health</h4>
+<p>The medallion layers map directly to standard stages of public health surveillance and clinical data management:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 14%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Medallion Layer</th>
+<th style="text-align: left;">Cloud Concept</th>
+<th style="text-align: left;">Desktop/Local Equivalent</th>
+<th style="text-align: left;">Public Health Equivalent</th>
+<th style="text-align: left;">Practical Application</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Bronze (Raw)</strong></td>
+<td style="text-align: left;">Data Lake, blob storage</td>
+<td style="text-align: left;">Raw data folder, incoming file directory, source database tables</td>
+<td style="text-align: left;">Ingestion / Source Systems</td>
+<td style="text-align: left;">Original, unprocessed data from EHRs, medical devices, lab results, vital records, and external APIs</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Silver (Cleansed)</strong></td>
+<td style="text-align: left;">Data warehouse staging, transformed datasets</td>
+<td style="text-align: left;">Cleaned spreadsheets, normalized database tables, staging folders</td>
+<td style="text-align: left;">Normalization / Harmonization</td>
+<td style="text-align: left;">Standardizing data to common formats (FHIR, OMOP), de-identifying PHI for HIPAA compliance, harmonizing lab units and coding schemes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Gold (Curated)</strong></td>
+<td style="text-align: left;">Analytics layer, data marts, OLAP cubes</td>
+<td style="text-align: left;">Final reports, pivot tables, analysis-ready datasets, exported summaries</td>
+<td style="text-align: left;">Actionable Insights / Reporting</td>
+<td style="text-align: left;">Line lists for contact tracing, outbreak predictive models, patient cohorts for research, operational dashboards, CDC/NPCR submissions</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled" title="Desktop Analogy">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Desktop Analogy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Think of medallion architecture like organizing files on your computer:</p>
+<ul>
+<li><strong>Bronze</strong> = Your “Downloads” or “Inbox” folder with raw files exactly as received</li>
+<li><strong>Silver</strong> = A “Working” folder where you’ve cleaned up, renamed, and standardized files</li>
+<li><strong>Gold</strong> = Your “Final Reports” folder with polished, ready-to-share documents</li>
+</ul>
+<p>Even an Excel workbook can implement this pattern: raw data on a “Source” tab (Bronze), cleaned data on a “Processed” tab (Silver), and summary tables/charts on a “Dashboard” tab (Gold).</p>
+</div>
+</div>
+</section>
+<section id="user-roles-by-layer" class="level4" data-number="5.1.8.2">
+<h4 data-number="5.1.8.2" class="anchored" data-anchor-id="user-roles-by-layer"><span class="header-section-number">5.1.8.2</span> User Roles by Layer</h4>
+<p>Different team members interact with different layers based on their roles and responsibilities:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 31%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">BA/IT Users</th>
+<th style="text-align: left;">Public Health Users</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Bronze</strong></td>
+<td style="text-align: left;">Data engineers, operations teams, compliance/audit</td>
+<td style="text-align: left;">Data managers, data stewards, IT operations, security officers</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Silver</strong></td>
+<td style="text-align: left;">Data engineers, data analysts, data scientists</td>
+<td style="text-align: left;">Epidemiologists (detailed analysis), cancer registrars, data quality analysts</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Gold</strong></td>
+<td style="text-align: left;">BI developers, ML engineers, executives</td>
+<td style="text-align: left;">Contact tracers, program managers, leadership, partner agencies, the public (via dashboards)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="what-layer-does-a-line-list-belong-to" class="level4" data-number="5.1.8.3">
+<h4 data-number="5.1.8.3" class="anchored" data-anchor-id="what-layer-does-a-line-list-belong-to"><span class="header-section-number">5.1.8.3</span> What Layer Does a Line List Belong To?</h4>
+<p>A <strong>line list</strong>, the tabular record of cases used for outbreak investigation and contact tracing, is a <strong>Gold layer artifact</strong>. Here’s why:</p>
+<ul>
+<li>It serves a specific operational purpose (contact tracing, outbreak response)</li>
+<li>It draws from cleansed, deduplicated Silver layer data</li>
+<li>It is structured for end-user consumption by epidemiologists and contact tracers</li>
+<li>It represents a curated, analysis-ready dataset rather than raw source data</li>
+</ul>
+<p>The raw lab reports and case notifications are Bronze; the standardized, deduplicated case records are Silver; the line list exported for the contact tracing team is Gold.</p>
+</section>
+<section id="strategic-benefits-for-public-health" class="level4" data-number="5.1.8.4">
+<h4 data-number="5.1.8.4" class="anchored" data-anchor-id="strategic-benefits-for-public-health"><span class="header-section-number">5.1.8.4</span> Strategic Benefits for Public Health</h4>
+<dl>
+<dt><strong>Improved Data Quality and Trust</strong></dt>
+<dd>
+<p>Each layer acts as a governance checkpoint. Data in the Bronze layer may contain duplicates, inconsistencies, and errors. By the time data reaches Gold, it has been validated, deduplicated, and enriched. This is critical for clinical decision-making and regulatory reporting.</p>
+</dd>
+<dt><strong>Security and Compliance</strong></dt>
+<dd>
+<p>The layered architecture supports role-based access control. Data engineers may access Bronze (raw PHI for integration work), while analysts work primarily in Silver (de-identified or limited datasets), and program staff view only Gold (aggregated, anonymized dashboards). This minimizes unnecessary exposure of sensitive patient information.</p>
+</dd>
+<dt><strong>Scalability for Outbreak Response</strong></dt>
+<dd>
+<p>The architecture handles varying data volumes, from routine surveillance to pandemic surge. Bronze ingests high-velocity real-time streams; Silver performs complex transformations at scale; Gold delivers rapid insights to decision-makers.</p>
+</dd>
+</dl>
+<div class="callout callout-style-default callout-note callout-titled" title="CancerSurv Example">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>CancerSurv Example
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In CancerSurv, the medallion architecture maps to existing workflows:</p>
+<ul>
+<li><strong>Bronze</strong>: Raw HL7 messages from hospital pathology systems, vital records death certificates, lab reports</li>
+<li><strong>Silver</strong>: Deduplicated patient records, standardized ICD-O-3 codes, NAACCR-compliant case abstracts</li>
+<li><strong>Gold</strong>: Annual incidence reports for NPCR, survival analysis dashboards, geographic cancer cluster maps for epidemiologists</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Translation Tip">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Translation Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When a data engineer says “we need to land this in Bronze first,” they mean the data should be ingested in its raw form before any processing. This is equivalent to a public health analyst saying “we need to see the source data before any transformations.”</p>
+</div>
+</div>
+</section>
+</section>
+<section id="quick-reference-card" class="level3" data-number="5.1.9">
+<h3 data-number="5.1.9" class="anchored" data-anchor-id="quick-reference-card"><span class="header-section-number">5.1.9</span> Quick Reference Card</h3>
 <p>For easy access during meetings, here are the most commonly needed translations:</p>
 <table class="caption-top table">
 <colgroup>
@@ -941,6 +1111,14 @@ Figure&nbsp;5.2: Logic Model Structure
 <tr class="even">
 <td style="text-align: left;">“MVP (Minimum Viable Product)”</td>
 <td style="text-align: left;">“Pilot intervention”</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">“Land it in Bronze”</td>
+<td style="text-align: left;">“Ingest raw data before any processing”</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">“Promote to Gold”</td>
+<td style="text-align: left;">“Data is ready for reporting and analytics”</td>
 </tr>
 </tbody>
 </table>
@@ -1607,20 +1785,95 @@ Figure&nbsp;5.2: Logic Model Structure
 <span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **SNOMED CT** <span class="pp">|</span> Clinical terminology <span class="pp">|</span> Concept mapping specifications <span class="pp">|</span></span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **LOINC** <span class="pp">|</span> Lab test coding <span class="pp">|</span> Interface specifications <span class="pp">|</span></span>
 <span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quick Reference Card</span></span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data Architecture: Medallion Architecture for Public Health</span></span>
 <span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>For easy access during meetings, here are the most commonly needed translations:</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a>Modern data platforms often use a **medallion architecture**, a design pattern that organizes data into progressively refined layers: Bronze, Silver, and Gold. Originally popularized by Databricks around 2020 for their "Lakehouse" architecture, the term uses the metaphor of precious metal refinement to represent the purification of raw data into actionable insights.</span>
 <span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> When they say... <span class="pp">|</span> They might mean... <span class="pp">|</span></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------------|:-------------------|</span></span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "What's the user story?" <span class="pp">|</span> "What is the service-user scenario or clinical workflow?" <span class="pp">|</span></span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Let's do a sprint" <span class="pp">|</span> "Let's run a PDSA cycle" <span class="pp">|</span></span>
-<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "What are the NFRs?" <span class="pp">|</span> "What are the implementation characteristics?" <span class="pp">|</span></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Stakeholder meeting" <span class="pp">|</span> "Community partner engagement session" <span class="pp">|</span></span>
-<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Business case" <span class="pp">|</span> "Public health challenge / needs assessment" <span class="pp">|</span></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Acceptance criteria" <span class="pp">|</span> "Evaluation protocol measures" <span class="pp">|</span></span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Technical debt" <span class="pp">|</span> "System sustainability issues" <span class="pp">|</span></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "MVP (Minimum Viable Product)" <span class="pp">|</span> "Pilot intervention" <span class="pp">|</span></span>
+<span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a>While the specific "medallion" terminology is relatively new, the underlying concept evolved from traditional data warehousing layers (staging → cleansed → presentation) used since the late 1990s. Although often discussed in cloud computing contexts, medallion architecture applies equally to desktop and local server environments.</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Mapping Medallion Layers to Public Health</span></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a>The medallion layers map directly to standard stages of public health surveillance and clinical data management:</span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Medallion Layer <span class="pp">|</span> Cloud Concept <span class="pp">|</span> Desktop/Local Equivalent <span class="pp">|</span> Public Health Equivalent <span class="pp">|</span> Practical Application <span class="pp">|</span></span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="pp">|:----------------|:--------------|:-------------------------|:-------------------------|:----------------------|</span></span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bronze (Raw)** <span class="pp">|</span> Data Lake, blob storage <span class="pp">|</span> Raw data folder, incoming file directory, source database tables <span class="pp">|</span> Ingestion / Source Systems <span class="pp">|</span> Original, unprocessed data from EHRs, medical devices, lab results, vital records, and external APIs <span class="pp">|</span></span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Silver (Cleansed)** <span class="pp">|</span> Data warehouse staging, transformed datasets <span class="pp">|</span> Cleaned spreadsheets, normalized database tables, staging folders <span class="pp">|</span> Normalization / Harmonization <span class="pp">|</span> Standardizing data to common formats (FHIR, OMOP), de-identifying PHI for HIPAA compliance, harmonizing lab units and coding schemes <span class="pp">|</span></span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Gold (Curated)** <span class="pp">|</span> Analytics layer, data marts, OLAP cubes <span class="pp">|</span> Final reports, pivot tables, analysis-ready datasets, exported summaries <span class="pp">|</span> Actionable Insights / Reporting <span class="pp">|</span> Line lists for contact tracing, outbreak predictive models, patient cohorts for research, operational dashboards, CDC/NPCR submissions <span class="pp">|</span></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Desktop Analogy"}</span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>Think of medallion architecture like organizing files on your computer:</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bronze** = Your "Downloads" or "Inbox" folder with raw files exactly as received</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Silver** = A "Working" folder where you've cleaned up, renamed, and standardized files</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Gold** = Your "Final Reports" folder with polished, ready-to-share documents</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>Even an Excel workbook can implement this pattern: raw data on a "Source" tab (Bronze), cleaned data on a "Processed" tab (Silver), and summary tables/charts on a "Dashboard" tab (Gold).</span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="fu">#### User Roles by Layer</span></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>Different team members interact with different layers based on their roles and responsibilities:</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Layer <span class="pp">|</span> BA/IT Users <span class="pp">|</span> Public Health Users <span class="pp">|</span></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------|:------------|:--------------------|</span></span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Bronze** <span class="pp">|</span> Data engineers, operations teams, compliance/audit <span class="pp">|</span> Data managers, data stewards, IT operations, security officers <span class="pp">|</span></span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Silver** <span class="pp">|</span> Data engineers, data analysts, data scientists <span class="pp">|</span> Epidemiologists (detailed analysis), cancer registrars, data quality analysts <span class="pp">|</span></span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Gold** <span class="pp">|</span> BI developers, ML engineers, executives <span class="pp">|</span> Contact tracers, program managers, leadership, partner agencies, the public (via dashboards) <span class="pp">|</span></span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a><span class="fu">#### What Layer Does a Line List Belong To?</span></span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>A **line list**, the tabular record of cases used for outbreak investigation and contact tracing, is a **Gold layer artifact**. Here's why:</span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It serves a specific operational purpose (contact tracing, outbreak response)</span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It draws from cleansed, deduplicated Silver layer data</span>
+<span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It is structured for end-user consumption by epidemiologists and contact tracers</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>It represents a curated, analysis-ready dataset rather than raw source data</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a>The raw lab reports and case notifications are Bronze; the standardized, deduplicated case records are Silver; the line list exported for the contact tracing team is Gold.</span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Strategic Benefits for Public Health</span></span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>**Improved Data Quality and Trust**</span>
+<span id="cb1-247"><a href="#cb1-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-248"><a href="#cb1-248" aria-hidden="true" tabindex="-1"></a>:   Each layer acts as a governance checkpoint. Data in the Bronze layer may contain duplicates, inconsistencies, and errors. By the time data reaches Gold, it has been validated, deduplicated, and enriched. This is critical for clinical decision-making and regulatory reporting.</span>
+<span id="cb1-249"><a href="#cb1-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-250"><a href="#cb1-250" aria-hidden="true" tabindex="-1"></a>**Security and Compliance**</span>
+<span id="cb1-251"><a href="#cb1-251" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-252"><a href="#cb1-252" aria-hidden="true" tabindex="-1"></a>:   The layered architecture supports role-based access control. Data engineers may access Bronze (raw PHI for integration work), while analysts work primarily in Silver (de-identified or limited datasets), and program staff view only Gold (aggregated, anonymized dashboards). This minimizes unnecessary exposure of sensitive patient information.</span>
+<span id="cb1-253"><a href="#cb1-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-254"><a href="#cb1-254" aria-hidden="true" tabindex="-1"></a>**Scalability for Outbreak Response**</span>
+<span id="cb1-255"><a href="#cb1-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-256"><a href="#cb1-256" aria-hidden="true" tabindex="-1"></a>:   The architecture handles varying data volumes, from routine surveillance to pandemic surge. Bronze ingests high-velocity real-time streams; Silver performs complex transformations at scale; Gold delivers rapid insights to decision-makers.</span>
+<span id="cb1-257"><a href="#cb1-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-258"><a href="#cb1-258" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb1-259"><a href="#cb1-259" aria-hidden="true" tabindex="-1"></a>In CancerSurv, the medallion architecture maps to existing workflows:</span>
+<span id="cb1-260"><a href="#cb1-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-261"><a href="#cb1-261" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Bronze**: Raw HL7 messages from hospital pathology systems, vital records death certificates, lab reports</span>
+<span id="cb1-262"><a href="#cb1-262" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Silver**: Deduplicated patient records, standardized ICD-O-3 codes, NAACCR-compliant case abstracts</span>
+<span id="cb1-263"><a href="#cb1-263" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Gold**: Annual incidence reports for NPCR, survival analysis dashboards, geographic cancer cluster maps for epidemiologists</span>
+<span id="cb1-264"><a href="#cb1-264" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-265"><a href="#cb1-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-266"><a href="#cb1-266" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Translation Tip"}</span>
+<span id="cb1-267"><a href="#cb1-267" aria-hidden="true" tabindex="-1"></a>When a data engineer says "we need to land this in Bronze first," they mean the data should be ingested in its raw form before any processing. This is equivalent to a public health analyst saying "we need to see the source data before any transformations."</span>
+<span id="cb1-268"><a href="#cb1-268" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-269"><a href="#cb1-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-270"><a href="#cb1-270" aria-hidden="true" tabindex="-1"></a><span class="fu">### Quick Reference Card</span></span>
+<span id="cb1-271"><a href="#cb1-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-272"><a href="#cb1-272" aria-hidden="true" tabindex="-1"></a>For easy access during meetings, here are the most commonly needed translations:</span>
+<span id="cb1-273"><a href="#cb1-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-274"><a href="#cb1-274" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> When they say... <span class="pp">|</span> They might mean... <span class="pp">|</span></span>
+<span id="cb1-275"><a href="#cb1-275" aria-hidden="true" tabindex="-1"></a><span class="pp">|:-----------------|:-------------------|</span></span>
+<span id="cb1-276"><a href="#cb1-276" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "What's the user story?" <span class="pp">|</span> "What is the service-user scenario or clinical workflow?" <span class="pp">|</span></span>
+<span id="cb1-277"><a href="#cb1-277" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Let's do a sprint" <span class="pp">|</span> "Let's run a PDSA cycle" <span class="pp">|</span></span>
+<span id="cb1-278"><a href="#cb1-278" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "What are the NFRs?" <span class="pp">|</span> "What are the implementation characteristics?" <span class="pp">|</span></span>
+<span id="cb1-279"><a href="#cb1-279" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Stakeholder meeting" <span class="pp">|</span> "Community partner engagement session" <span class="pp">|</span></span>
+<span id="cb1-280"><a href="#cb1-280" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Business case" <span class="pp">|</span> "Public health challenge / needs assessment" <span class="pp">|</span></span>
+<span id="cb1-281"><a href="#cb1-281" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Acceptance criteria" <span class="pp">|</span> "Evaluation protocol measures" <span class="pp">|</span></span>
+<span id="cb1-282"><a href="#cb1-282" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Technical debt" <span class="pp">|</span> "System sustainability issues" <span class="pp">|</span></span>
+<span id="cb1-283"><a href="#cb1-283" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "MVP (Minimum Viable Product)" <span class="pp">|</span> "Pilot intervention" <span class="pp">|</span></span>
+<span id="cb1-284"><a href="#cb1-284" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Land it in Bronze" <span class="pp">|</span> "Ingest raw data before any processing" <span class="pp">|</span></span>
+<span id="cb1-285"><a href="#cb1-285" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> "Promote to Gold" <span class="pp">|</span> "Data is ready for reporting and analytics" <span class="pp">|</span></span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
