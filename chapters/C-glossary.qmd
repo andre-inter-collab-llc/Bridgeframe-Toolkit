@@ -47,6 +47,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Bridge Role** (Workforce)
 : Position explicitly designed for translation between IT and public health domains, such as Health Informatics Liaison or Technical Program Analyst. These roles typically have dual reporting and cross-domain performance metrics.
 
+**Bronze Layer** (Data Architecture)
+: The first layer in medallion architecture containing raw, unprocessed data as received from source systems. Data is preserved in its original format for auditability and reprocessing. **PH equivalent**: Ingestion layer, source data repository. **Key PH roles**: Data managers, data stewards, IT operations.
+
 **BPMN (Business Process Model and Notation)** (BA)
 : Standard for process diagrams. **PH equivalent**: Intervention flowchart, workflow diagram.
 
@@ -108,6 +111,18 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Data Dictionary** (Both)
 : Documentation of data elements, definitions, and formats. Used similarly in both domains.
 
+**Data Lake** (Data Architecture)
+: Centralized repository for storing raw data in native format. Supports schema-on-read, allowing flexible analysis without predefined structure. **PH application**: Repository for diverse health data sources (EHRs, labs, vital records) before standardization.
+
+**Data Lakehouse** (Data Architecture)
+: Architecture combining data lake flexibility with data warehouse reliability. Supports both raw data storage and structured analytics. Enables medallion architecture patterns.
+
+**Data Lineage** (Data Architecture)
+: Documentation of data's origin and transformations from source to final output. **PH equivalent**: Chain of custody for data, audit trail.
+
+**Data Manager** (PH)
+: Professional responsible for receiving, organizing, and maintaining data from source systems. Works primarily with Bronze layer data, ensuring completeness and proper storage of incoming files. **BA equivalent**: Data steward, data operations specialist.
+
 **Data Quality** (Both)
 : Accuracy, completeness, and reliability of data. Critical in both domains.
 
@@ -164,6 +179,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Go-Live** (BA)
 : System deployment to production. **PH equivalent**: Program launch, intervention rollout.
+
+**Gold Layer** (Data Architecture)
+: The final layer in medallion architecture containing curated, analytics-ready data. Optimized for reporting, dashboards, and decision support. Examples include line lists for contact tracing, summary reports, and regulatory submissions. **PH equivalent**: Reporting layer, analytics datasets, CDC submission files.
 
 **Governance** (Both)
 : Decision-making structure and authority. Similar usage in both domains.
@@ -235,6 +253,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Lessons Learned** (BA)
 : Knowledge gained from experience. **PH equivalent**: After-action review findings.
 
+**Line List** (PH)
+: Tabular record of individual cases used for outbreak investigation, contact tracing, and epidemiological analysis. Contains one row per case with key variables (demographics, dates, outcomes). A **Gold layer artifact** because it serves operational purposes and derives from cleansed Silver layer data. **BA equivalent**: Operational report, case management export.
+
 **Logic Model** (PH)
 : Visual representation of program theory (inputs → activities → outputs → outcomes). **BA equivalent**: Requirements traceability, value chain.
 
@@ -242,6 +263,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Maintenance** (RE-AIM)
 : Sustainability of an intervention over time. **BA equivalent**: Operational sustainability.
+
+**Medallion Architecture** (Data Architecture)
+: Data design pattern organizing data into three progressively refined layers: Bronze (raw), Silver (cleansed), and Gold (curated). Originated from Databricks circa 2020, building on traditional data warehousing concepts. **PH application**: Maps to surveillance data flow from ingestion through standardization to reporting.
 
 **Milestone** (Both)
 : Significant point in project timeline. In PH, often aligned with grant reporting.
@@ -348,6 +372,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Service-User Scenario** (PH-adapted)
 : Narrative description of user journey. **BA equivalent**: User story, use case narrative.
 
+**Silver Layer** (Data Architecture)
+: The middle layer in medallion architecture containing cleansed, validated, and standardized data. Transformations include deduplication, format normalization, and quality checks. **PH equivalent**: Harmonization layer, FHIR/OMOP standardized datasets, de-identified data.
+
 **SME (Subject Matter Expert)** (BA)
 : Person with domain expertise. **PH equivalent**: Key informant, clinical expert.
 
@@ -433,3 +460,7 @@ This glossary provides comprehensive terminology mapping between Business Analys
 | "MVP" | Minimal product | Pilot intervention |
 | "Go-live" | System deployment | Program launch |
 | "Bug" | Software defect | Protocol variance |
+| "Bronze layer" | Raw data ingestion | Source data, ingestion |
+| "Silver layer" | Cleansed/validated data | Standardized, harmonized data |
+| "Gold layer" | Analytics-ready data | Reporting datasets, CDC submissions |
+| "Data lakehouse" | Unified data platform | Integrated surveillance data repository |

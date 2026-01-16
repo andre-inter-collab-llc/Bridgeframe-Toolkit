@@ -106,6 +106,9 @@ Bridgeframe-Toolkit/
 │   ├── E-career-navigation.qmd  # Finding hybrid roles in the job market
 │   └── C-glossary.qmd        # Complete BA ↔ PH Glossary (last appendix)
 ├── references.qmd            # Bibliography page
+├── communications/           # LinkedIn posts, articles, social media content
+│   ├── linkedin-article.qmd  # Thought leadership articles (Quarto format)
+│   └── linkedin-*.md         # Social media post drafts
 ├── data/                     # Sample epidemiological datasets
 │   └── cancersurv/           # CancerSurv example data
 ├── analysis/                 # R/Python scripts (tidyverse, survival analysis)
@@ -572,6 +575,27 @@ When creating or updating chapters, **always update the glossary** (`chapters/C-
 - Certifications and Programs (PHIFP, CAHIMS, PHIT)
 
 **Glossary organization:** Terms are alphabetized within lettered sections. When adding terms, insert them in the correct alphabetical position within the appropriate section.
+
+## Communications Folder
+
+The `communications/` folder contains LinkedIn posts, articles, and other social media content for professional outreach. This content is **separate from the book** and not included in the Quarto build.
+
+### Folder Contents
+- **`linkedin-article.qmd`**: Long-form thought leadership articles (Quarto format for optional HTML rendering)
+- **`linkedin-*.md`**: Social media post drafts (plain Markdown for easy copy/paste)
+- **Generated files**: `*.html` and `*_files/` directories from rendered Quarto articles
+
+### File Naming Conventions
+- **Articles**: `linkedin-article-[topic].qmd` (e.g., `linkedin-article-translation-gap.qmd`)
+- **Posts**: `linkedin-[chapter-or-topic]-post.md` (e.g., `linkedin-career-navigation-post.md`)
+- **Platform variants**: Append platform if needed (e.g., `linkedin-article.qmd`, `twitter-thread.md`)
+
+### Content Guidelines
+Communications content should:
+- Promote Bridgeframe and Intersect Collaborations thought leadership
+- Reference specific chapters or concepts from the toolkit
+- Include relevant hashtags and calls to action
+- Follow the tone guidance in "Content Synthesis & Social Media" section below
 
 ## Content Synthesis & Social Media
 

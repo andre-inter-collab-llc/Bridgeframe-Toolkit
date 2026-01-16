@@ -190,6 +190,79 @@ In public health IT, data standards are non-negotiable requirements, not optiona
 | **SNOMED CT** | Clinical terminology | Concept mapping specifications |
 | **LOINC** | Lab test coding | Interface specifications |
 
+### Data Architecture: Medallion Architecture for Public Health
+
+Modern data platforms often use a **medallion architecture**, a design pattern that organizes data into progressively refined layers: Bronze, Silver, and Gold. Originally popularized by Databricks around 2020 for their "Lakehouse" architecture, the term uses the metaphor of precious metal refinement to represent the purification of raw data into actionable insights.
+
+While the specific "medallion" terminology is relatively new, the underlying concept evolved from traditional data warehousing layers (staging → cleansed → presentation) used since the late 1990s. Although often discussed in cloud computing contexts, medallion architecture applies equally to desktop and local server environments.
+
+#### Mapping Medallion Layers to Public Health
+
+The medallion layers map directly to standard stages of public health surveillance and clinical data management:
+
+| Medallion Layer | Cloud Concept | Desktop/Local Equivalent | Public Health Equivalent | Practical Application |
+|:----------------|:--------------|:-------------------------|:-------------------------|:----------------------|
+| **Bronze (Raw)** | Data Lake, blob storage | Raw data folder, incoming file directory, source database tables | Ingestion / Source Systems | Original, unprocessed data from EHRs, medical devices, lab results, vital records, and external APIs |
+| **Silver (Cleansed)** | Data warehouse staging, transformed datasets | Cleaned spreadsheets, normalized database tables, staging folders | Normalization / Harmonization | Standardizing data to common formats (FHIR, OMOP), de-identifying PHI for HIPAA compliance, harmonizing lab units and coding schemes |
+| **Gold (Curated)** | Analytics layer, data marts, OLAP cubes | Final reports, pivot tables, analysis-ready datasets, exported summaries | Actionable Insights / Reporting | Line lists for contact tracing, outbreak predictive models, patient cohorts for research, operational dashboards, CDC/NPCR submissions |
+
+::: {.callout-tip title="Desktop Analogy"}
+Think of medallion architecture like organizing files on your computer:
+
+- **Bronze** = Your "Downloads" or "Inbox" folder with raw files exactly as received
+- **Silver** = A "Working" folder where you've cleaned up, renamed, and standardized files
+- **Gold** = Your "Final Reports" folder with polished, ready-to-share documents
+
+Even an Excel workbook can implement this pattern: raw data on a "Source" tab (Bronze), cleaned data on a "Processed" tab (Silver), and summary tables/charts on a "Dashboard" tab (Gold).
+:::
+
+#### User Roles by Layer
+
+Different team members interact with different layers based on their roles and responsibilities:
+
+| Layer | BA/IT Users | Public Health Users |
+|:------|:------------|:--------------------|
+| **Bronze** | Data engineers, operations teams, compliance/audit | Data managers, data stewards, IT operations, security officers |
+| **Silver** | Data engineers, data analysts, data scientists | Epidemiologists (detailed analysis), cancer registrars, data quality analysts |
+| **Gold** | BI developers, ML engineers, executives | Contact tracers, program managers, leadership, partner agencies, the public (via dashboards) |
+
+#### What Layer Does a Line List Belong To?
+
+A **line list**, the tabular record of cases used for outbreak investigation and contact tracing, is a **Gold layer artifact**. Here's why:
+
+- It serves a specific operational purpose (contact tracing, outbreak response)
+- It draws from cleansed, deduplicated Silver layer data
+- It is structured for end-user consumption by epidemiologists and contact tracers
+- It represents a curated, analysis-ready dataset rather than raw source data
+
+The raw lab reports and case notifications are Bronze; the standardized, deduplicated case records are Silver; the line list exported for the contact tracing team is Gold.
+
+#### Strategic Benefits for Public Health
+
+**Improved Data Quality and Trust**
+
+:   Each layer acts as a governance checkpoint. Data in the Bronze layer may contain duplicates, inconsistencies, and errors. By the time data reaches Gold, it has been validated, deduplicated, and enriched. This is critical for clinical decision-making and regulatory reporting.
+
+**Security and Compliance**
+
+:   The layered architecture supports role-based access control. Data engineers may access Bronze (raw PHI for integration work), while analysts work primarily in Silver (de-identified or limited datasets), and program staff view only Gold (aggregated, anonymized dashboards). This minimizes unnecessary exposure of sensitive patient information.
+
+**Scalability for Outbreak Response**
+
+:   The architecture handles varying data volumes, from routine surveillance to pandemic surge. Bronze ingests high-velocity real-time streams; Silver performs complex transformations at scale; Gold delivers rapid insights to decision-makers.
+
+::: {.callout-note title="CancerSurv Example"}
+In CancerSurv, the medallion architecture maps to existing workflows:
+
+- **Bronze**: Raw HL7 messages from hospital pathology systems, vital records death certificates, lab reports
+- **Silver**: Deduplicated patient records, standardized ICD-O-3 codes, NAACCR-compliant case abstracts
+- **Gold**: Annual incidence reports for NPCR, survival analysis dashboards, geographic cancer cluster maps for epidemiologists
+:::
+
+::: {.callout-tip title="Translation Tip"}
+When a data engineer says "we need to land this in Bronze first," they mean the data should be ingested in its raw form before any processing. This is equivalent to a public health analyst saying "we need to see the source data before any transformations."
+:::
+
 ### Quick Reference Card
 
 For easy access during meetings, here are the most commonly needed translations:
@@ -204,3 +277,5 @@ For easy access during meetings, here are the most commonly needed translations:
 | "Acceptance criteria" | "Evaluation protocol measures" |
 | "Technical debt" | "System sustainability issues" |
 | "MVP (Minimum Viable Product)" | "Pilot intervention" |
+| "Land it in Bronze" | "Ingest raw data before any processing" |
+| "Promote to Gold" | "Data is ready for reporting and analytics" |

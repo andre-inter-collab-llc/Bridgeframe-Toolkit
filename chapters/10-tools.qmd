@@ -140,6 +140,85 @@ cancer_data %>%
   ageadjust.direct(count = cases, pop = population, stdpop = us_std_pop)
 ```
 
+#### Data Platform Architecture
+
+Modern public health data systems benefit from structured data architectures that organize information from raw ingestion through analytics-ready outputs. The **medallion architecture** (Bronze → Silver → Gold) provides a framework for designing scalable, maintainable data platforms.
+
+While often discussed in cloud contexts, medallion architecture works equally well on desktop computers and local servers. The key is the logical separation of data by refinement stage, not the specific technology.
+
+**Commercial vs. Open Source Data Platforms**
+
+| Capability | Commercial Options | OSS/PH Options |
+|:-----------|:-------------------|:---------------|
+| **Data Lake / Lakehouse** | Databricks, Snowflake, Azure Synapse | Apache Spark + Delta Lake, Apache Iceberg, DuckDB |
+| **ETL/Orchestration** | Azure Data Factory, Informatica, Talend | Apache Airflow, Dagster, Prefect, dbt |
+| **Data Catalog** | Alation, Collibra | Apache Atlas, DataHub, Amundsen |
+| **Data Quality** | Informatica DQ, Talend | Great Expectations, dbt tests, Soda |
+
+**Implementing Medallion Architecture**
+
+The medallion architecture can be implemented with various tool combinations, from enterprise cloud platforms to desktop applications:
+
+| Layer | Purpose | Cloud/Server Options | Desktop/Local Options |
+|:------|:--------|:---------------------|:----------------------|
+| **Bronze** | Raw data landing, preserve source fidelity | Object storage (S3, Azure Blob), PostgreSQL staging tables | File folders, SQLite database, Excel "Raw Data" sheets |
+| **Silver** | Cleansing, standardization, deduplication | dbt transformations, Apache Spark, Python/pandas | Excel Power Query, Python scripts, Access queries |
+| **Gold** | Analytics-ready datasets, aggregations | Dimensional models, materialized views, OLAP cubes | Pivot tables, final Excel reports, exported CSVs for tools |
+
+::: {.callout-tip title="Starting Small"}
+You don't need Databricks or Snowflake to implement medallion architecture. Even a well-organized folder structure with clear naming conventions implements the same principle:
+
+```
+project/
+├── 01_bronze/          # Raw files as received
+│   ├── lab_results_2024-01-15.csv
+│   └── ehr_export_raw.xlsx
+├── 02_silver/          # Cleaned and standardized
+│   ├── cases_cleaned.csv
+│   └── patients_deduplicated.xlsx
+└── 03_gold/            # Ready for analysis/reporting
+    ├── outbreak_line_list.xlsx
+    └── monthly_summary_report.xlsx
+```
+
+Many state health departments successfully run medallion architectures on modest infrastructure, including single PostgreSQL databases with three schemas or even organized Excel workbooks.
+:::
+
+**Open Source Lakehouse Stack for Public Health**
+
+For organizations seeking data sovereignty and cost control:
+
+| Component | Tool | Notes |
+|:----------|:-----|:------|
+| Storage | MinIO or local filesystem | S3-compatible object storage |
+| Table format | Delta Lake or Apache Iceberg | ACID transactions, time travel |
+| Compute | Apache Spark or DuckDB | DuckDB for smaller workloads |
+| Orchestration | Apache Airflow | Workflow scheduling |
+| Transformation | dbt | SQL-based transformations |
+| Quality | Great Expectations | Data validation |
+| Catalog | DataHub | Metadata management |
+
+**Data Architecture for Different Scales**
+
+| Organization Size | Recommended Approach | Key Tools |
+|:------------------|:---------------------|:----------|
+| **Individual analyst** | Organized folders with naming conventions | Excel, Python/R scripts, SQLite |
+| **Small program** | Single PostgreSQL database with layered schemas | PostgreSQL, dbt, Python |
+| **Medium health department** | Data warehouse with ETL pipeline | PostgreSQL/Snowflake, Airflow, dbt |
+| **Large state/federal** | Full lakehouse architecture | Spark/Databricks, Delta Lake, Airflow, dbt |
+
+::: {.callout-note title="CancerSurv Example"}
+CancerSurv implements a medallion architecture using open source tools:
+
+| Layer | Implementation | Gold Layer Outputs |
+|:------|:---------------|:-------------------|
+| **Bronze** | PostgreSQL `raw` schema; HL7 messages stored as JSON; CSV uploads preserved verbatim | — |
+| **Silver** | PostgreSQL `staging` schema; dbt models for deduplication and ICD-O-3 standardization | — |
+| **Gold** | PostgreSQL `analytics` schema; pre-computed incidence rates, survival metrics, NPCR submission tables | Line lists for case follow-up, incidence reports, survival dashboards |
+| **Orchestration** | Apache Airflow schedules daily Bronze→Silver→Gold pipeline | — |
+| **Quality** | Great Expectations validates data at Silver layer before promotion to Gold | — |
+:::
+
 #### Visualization
 
 | Capability | Commercial Options | OSS/PH Options |

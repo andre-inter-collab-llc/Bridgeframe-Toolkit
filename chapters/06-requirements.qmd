@@ -107,6 +107,81 @@ erDiagram
     }
 ```
 
+#### Data Architecture Requirements
+
+Modern public health data systems require architecture that handles data from ingestion through analytics. The **medallion architecture** provides a framework for specifying data flow requirements across three progressive layers.
+
+**Specifying Requirements by Layer**
+
+When documenting data requirements, specify which layer each requirement applies to:
+
+| Requirement Type | Bronze Layer | Silver Layer | Gold Layer |
+|:-----------------|:-------------|:-------------|:-----------|
+| **Primary Focus** | Completeness, lineage | Accuracy, consistency | Timeliness, usability |
+| **Data State** | Raw, as-received | Cleansed, standardized | Aggregated, analytics-ready |
+| **Schema** | Schema-on-read (flexible) | Enforced schema | Dimensional models |
+| **Retention** | Long-term archive | Medium-term | Purpose-specific |
+
+::: {.callout-note title="CancerSurv Example"}
+**Bronze Layer Requirements:**
+
+- REQ-DATA-001: The system shall ingest HL7 v2.x ADT messages from hospital interfaces within 15 minutes of receipt
+- REQ-DATA-002: The system shall preserve original message content with timestamp and source metadata for audit purposes
+- REQ-DATA-003: The system shall support ingestion of CSV files from facilities without HL7 capability
+
+**Silver Layer Requirements:**
+
+- REQ-DATA-010: The system shall deduplicate patient records using probabilistic matching (≥95% precision)
+- REQ-DATA-011: The system shall map incoming diagnosis codes to ICD-O-3 standard within 24 hours
+- REQ-DATA-012: The system shall apply NAACCR edit checks and flag records failing validation
+
+**Gold Layer Requirements:**
+
+- REQ-DATA-020: The system shall generate NPCR-compliant annual submission files by January 31
+- REQ-DATA-021: The system shall calculate age-adjusted incidence rates by county, updated monthly
+- REQ-DATA-022: The system shall provide self-service query access for approved epidemiologists
+:::
+
+**Data Lineage and Traceability**
+
+Public health reporting requires demonstrable data provenance. Requirements should specify:
+
+- How data flows from source to final output
+- Which transformations are applied at each layer
+- How to trace any Gold-layer value back to its Bronze-layer source
+
+This is equivalent to the "chain of custody" concept in laboratory settings.
+
+```{mermaid}
+%%| label: fig-medallion-flow
+%%| fig-cap: "Data Flow Through Medallion Layers"
+flowchart LR
+    subgraph Bronze["Bronze (Raw)"]
+        B1["HL7 Messages"]
+        B2["Lab Reports"]
+        B3["Vital Records"]
+    end
+    
+    subgraph Silver["Silver (Cleansed)"]
+        S1["Deduplicated<br/>Patient Records"]
+        S2["Standardized<br/>Case Abstracts"]
+    end
+    
+    subgraph Gold["Gold (Curated)"]
+        G1["Incidence<br/>Reports"]
+        G2["Analytics<br/>Dashboards"]
+        G3["Research<br/>Datasets"]
+    end
+    
+    B1 --> S1
+    B2 --> S1
+    B3 --> S1
+    S1 --> S2
+    S2 --> G1
+    S2 --> G2
+    S2 --> G3
+```
+
 #### Business Rules / Clinical Guidelines
 
 Rules governing system behavior and data processing:
