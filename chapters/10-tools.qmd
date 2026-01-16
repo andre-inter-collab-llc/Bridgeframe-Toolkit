@@ -146,6 +146,10 @@ Modern public health data systems benefit from structured data architectures tha
 
 While often discussed in cloud contexts, medallion architecture works equally well on desktop computers and local servers. The key is the logical separation of data by refinement stage, not the specific technology.
 
+::: {.callout-warning title="Communication Tip"}
+"Medallion architecture" and "Bronze/Silver/Gold" are IT jargon unfamiliar to most public health professionals. When discussing data workflows with epidemiologists or program staff, use terms like "raw data," "cleaned data," and "final reports" instead. See the [Terminology Dictionary](03-terminology.qmd#data-architecture-medallion-architecture-for-public-health) for a complete translation guide.
+:::
+
 **Commercial vs. Open Source Data Platforms**
 
 | Capability | Commercial Options | OSS/PH Options |
@@ -200,12 +204,12 @@ For organizations seeking data sovereignty and cost control:
 
 **Data Architecture for Different Scales**
 
-| Organization Size | Recommended Approach | Key Tools |
-|:------------------|:---------------------|:----------|
-| **Individual analyst** | Organized folders with naming conventions | Excel, Python/R scripts, SQLite |
-| **Small program** | Single PostgreSQL database with layered schemas | PostgreSQL, dbt, Python |
-| **Medium health department** | Data warehouse with ETL pipeline | PostgreSQL/Snowflake, Airflow, dbt |
-| **Large state/federal** | Full lakehouse architecture | Spark/Databricks, Delta Lake, Airflow, dbt |
+| Organization Size | Recommended Approach | Key Tools | Typical Staffing |
+|:------------------|:---------------------|:----------|:-----------------|
+| **Individual analyst** | Organized folders with naming conventions | Excel, Python/R scripts, SQLite | Single epidemiologist or data manager handles all layers |
+| **Small program** | Single PostgreSQL database with layered schemas | PostgreSQL, dbt, Python | 1-2 staff share responsibilities across layers |
+| **Medium health department** | Data warehouse with ETL pipeline | PostgreSQL/Snowflake, Airflow, dbt | Dedicated data team with some role specialization |
+| **Large state/federal** | Full lakehouse architecture | Spark/Databricks, Delta Lake, Airflow, dbt | Specialized roles: data engineers (Bronze/Silver), analysts (Silver/Gold), BI developers (Gold) |
 
 ::: {.callout-note title="CancerSurv Example"}
 CancerSurv implements a medallion architecture using open source tools:

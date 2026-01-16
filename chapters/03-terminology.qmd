@@ -196,6 +196,22 @@ Modern data platforms often use a **medallion architecture**, a design pattern t
 
 While the specific "medallion" terminology is relatively new, the underlying concept evolved from traditional data warehousing layers (staging → cleansed → presentation) used since the late 1990s. Although often discussed in cloud computing contexts, medallion architecture applies equally to desktop and local server environments.
 
+::: {.callout-warning title="Translation Required: Avoid 'Medallion' Jargon with Public Health Colleagues"}
+The terms "Bronze," "Silver," and "Gold" layers are **IT/data engineering jargon** that will cause confusion when speaking with public health professionals. Most epidemiologists and program staff have never encountered this terminology and will not understand what you mean.
+
+**When working with public health clients, use familiar terms instead:**
+
+| Instead of saying... | Say this... |
+|:---------------------|:------------|
+| "Bronze layer" | "Raw data," "source files," "incoming data" |
+| "Silver layer" | "Cleaned data," "standardized data," "processed data" |
+| "Gold layer" | "Final reports," "line lists," "analysis-ready data," "dashboards" |
+| "Land it in Bronze" | "Store the raw file first" |
+| "Promote to Gold" | "Move it to the final/reporting layer" |
+
+Reserve medallion terminology for conversations with data engineers, IT architects, and other technical staff who share this vocabulary. The underlying concepts are universal; only the labels differ.
+:::
+
 #### Mapping Medallion Layers to Public Health
 
 The medallion layers map directly to standard stages of public health surveillance and clinical data management:
@@ -218,13 +234,33 @@ Even an Excel workbook can implement this pattern: raw data on a "Source" tab (B
 
 #### User Roles by Layer
 
-Different team members interact with different layers based on their roles and responsibilities:
+Different team members interact with different layers based on their roles and responsibilities. In well-resourced organizations, distinct roles handle each layer; in smaller programs, a single person may be responsible for all three.
 
-| Layer | BA/IT Users | Public Health Users |
-|:------|:------------|:--------------------|
-| **Bronze** | Data engineers, operations teams, compliance/audit | Data managers, data stewards, IT operations, security officers |
-| **Silver** | Data engineers, data analysts, data scientists | Epidemiologists (detailed analysis), cancer registrars, data quality analysts |
-| **Gold** | BI developers, ML engineers, executives | Contact tracers, program managers, leadership, partner agencies, the public (via dashboards) |
+**Who Creates Each Layer?**
+
+| Layer | BA/IT Role (Creates) | Public Health Role (Creates) |
+|:------|:---------------------|:-----------------------------|
+| **Bronze** | Data engineers, ETL developers, integration specialists | Data managers, IT staff, interface analysts |
+| **Silver** | Data engineers, data analysts, data quality specialists | Epidemiologists, data quality analysts, cancer registrars |
+| **Gold** | BI developers, analytics engineers, data scientists | Epidemiologists, biostatisticians, program analysts |
+
+**Who Consumes Each Layer?**
+
+| Layer | BA/IT Role (Consumes) | Public Health Role (Consumes) |
+|:------|:----------------------|:------------------------------|
+| **Bronze** | Data engineers (for troubleshooting), compliance/audit teams | Data managers (validation), security officers, auditors |
+| **Silver** | Data analysts, data scientists (for detailed analysis) | Epidemiologists (case-level analysis), registrars, researchers |
+| **Gold** | Executives, business users, ML engineers (for models) | Contact tracers, program managers, leadership, partner agencies, the public |
+
+::: {.callout-warning title="Reality in Resource-Constrained Settings"}
+The role separation above represents an ideal state. In many public health settings, particularly local health departments or small programs, a single **epidemiologist** or **data manager** may be responsible for all three layers: receiving raw data files (Bronze), cleaning and standardizing them (Silver), and producing reports and line lists (Gold).
+
+This is common and acceptable. The medallion architecture is a logical framework, not an organizational mandate. What matters is maintaining the conceptual separation of data stages, even when one person performs all the work. This separation enables:
+
+- Clear documentation of what transformations occurred
+- Ability to reprocess from raw data if errors are discovered
+- Easier handoff if responsibilities change
+:::
 
 #### What Layer Does a Line List Belong To?
 
