@@ -614,6 +614,164 @@ For every process, ask: **"Could I explain to a taxpayer why this is necessary a
 If the answer is no, the process should be eliminated, automated, or fundamentally redesigned.
 :::
 
+## Visual Framework: Factors Influencing Program Efficiency
+
+The following directed acyclic graph (DAG) synthesizes the key enablers and barriers discussed throughout this chapter, illustrating how foundational factors flow through organizational processes to ultimately affect public health program impact.
+
+```{mermaid}
+%%| label: fig-optimization-dag
+%%| fig-cap: "DAG: Supporting Factors and Barriers to Public Health Program Optimization"
+%%| fig-width: 10
+flowchart TB
+    subgraph Foundations["<b>Foundational Factors</b>"]
+        direction TB
+        PSY["<b>Psychological<br/>Foundations</b><br/>• SDT (Autonomy,<br/>Competence, Relatedness)<br/>• Psychological Safety<br/>• JD-R Balance"]
+        SOC["<b>Sociological<br/>Foundations</b><br/>• Organizational Culture<br/>• Communities of Practice<br/>• Power Structures"]
+        EDU["<b>Educational<br/>Foundations</b><br/>• Adult Learning (Andragogy)<br/>• Technical Capacity<br/>• Knowledge Management"]
+    end
+
+    subgraph Enablers["<b>Enabling Factors</b>"]
+        direction TB
+        E1["Clear Governance<br/>& Accountability"]
+        E2["Transparent<br/>Communication"]
+        E3["Iterative<br/>Development"]
+        E4["Centralized<br/>Core Functions"]
+        E5["Thoughtful<br/>Automation"]
+        E6["Scripted<br/>Workflows"]
+    end
+
+    subgraph Barriers["<b>Barriers & Risks</b>"]
+        direction TB
+        B1["Bullying &<br/>Intimidation"]
+        B2["Political<br/>Interference"]
+        B3["Knowledge<br/>Silos"]
+        B4["Duplicated<br/>Effort"]
+        B5["Rigid or Opaque<br/>Automation"]
+        B6["Ambiguous<br/>Accountability"]
+        B7["Goal Drift &<br/>Scope Creep"]
+        B8["Resistance<br/>to Change"]
+    end
+
+    subgraph Processes["<b>Organizational Processes</b>"]
+        direction TB
+        P1["Project<br/>Management"]
+        P2["Change<br/>Management"]
+        P3["Data<br/>Management"]
+        P4["Quality<br/>Improvement"]
+    end
+
+    subgraph Outcomes["<b>Intermediate Outcomes</b>"]
+        direction TB
+        O1["Operational<br/>Efficiency"]
+        O2["Data<br/>Quality"]
+        O3["Staff<br/>Well-being"]
+        O4["System<br/>Adoption"]
+    end
+
+    subgraph Impact["<b>Ultimate Impact</b>"]
+        direction TB
+        I1(["<b>Public Health<br/>Program Impact</b>"])
+        I2(["<b>Taxpayer<br/>Value</b>"])
+    end
+
+    %% Foundations to Enablers (positive paths)
+    PSY -->|supports| E1
+    PSY -->|supports| E2
+    SOC -->|enables| E4
+    SOC -->|enables| E2
+    EDU -->|builds| E6
+    EDU -->|builds| E5
+
+    %% Foundations to Barriers (when absent/weak)
+    PSY -.->|when absent| B1
+    PSY -.->|when absent| B8
+    SOC -.->|dysfunction| B2
+    SOC -.->|dysfunction| B3
+    EDU -.->|gaps cause| B4
+    EDU -.->|gaps cause| B8
+
+    %% Enablers to Processes
+    E1 --> P1
+    E1 --> P4
+    E2 --> P1
+    E2 --> P2
+    E3 --> P1
+    E3 --> P4
+    E4 --> P3
+    E5 --> P3
+    E5 --> P4
+    E6 --> P3
+
+    %% Barriers block Processes
+    B1 -.->|undermines| P2
+    B2 -.->|disrupts| P1
+    B3 -.->|fragments| P3
+    B4 -.->|wastes| P1
+    B5 -.->|rigidity| P3
+    B6 -.->|gaps in| P1
+    B7 -.->|derails| P1
+    B8 -.->|slows| P2
+
+    %% Processes to Outcomes
+    P1 --> O1
+    P2 --> O3
+    P2 --> O4
+    P3 --> O2
+    P4 --> O1
+    P4 --> O2
+
+    %% Outcomes to Impact
+    O1 --> I1
+    O1 --> I2
+    O2 --> I1
+    O3 --> I1
+    O4 --> I1
+    I1 --> I2
+
+    %% Styling
+    classDef foundation fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+    classDef enabler fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    classDef barrier fill:#ffebee,stroke:#c62828,stroke-width:2px
+    classDef process fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    classDef outcome fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    classDef impact fill:#1565c0,stroke:#0d47a1,stroke-width:3px,color:#fff
+
+    class PSY,SOC,EDU foundation
+    class E1,E2,E3,E4,E5,E6 enabler
+    class B1,B2,B3,B4,B5,B6,B7,B8 barrier
+    class P1,P2,P3,P4 process
+    class O1,O2,O3,O4 outcome
+    class I1,I2 impact
+```
+
+### Reading the DAG
+
+The diagram above illustrates the causal pathways between factors affecting public health program optimization:
+
+| Layer | Description |
+|:------|:------------|
+| **Foundational Factors** (blue) | Psychological, sociological, and educational foundations that underpin all organizational activity. When strong, they enable positive factors; when weak or absent, they create barriers. |
+| **Enabling Factors** (green) | Organizational capabilities and practices that drive efficiency. These include governance, communication, iterative development, centralization, and automation. |
+| **Barriers & Risks** (red) | Dysfunction patterns that impede optimization. These arise from foundational weaknesses or poor organizational choices. |
+| **Organizational Processes** (orange) | Core operational activities where enablers and barriers interact: project management, change management, data management, and quality improvement. |
+| **Intermediate Outcomes** (purple) | Measurable results of effective processes: operational efficiency, data quality, staff well-being, and system adoption. |
+| **Ultimate Impact** (dark blue) | The end goals: public health program impact and demonstrated taxpayer value. |
+
+**Key relationships:**
+
+- **Solid arrows** (→) represent positive causal pathways where one factor supports or enables another
+- **Dashed arrows** (-..->) represent negative pathways where absence, dysfunction, or barriers undermine processes
+
+::: {.callout-tip title="Using This Framework"}
+This DAG can serve as a diagnostic tool when assessing program optimization opportunities:
+
+1. **Assess foundations**: Are psychological safety, healthy culture, and technical capacity in place?
+2. **Inventory enablers**: Which enabling factors are present? Which are missing?
+3. **Identify barriers**: Which barriers are actively impeding progress?
+4. **Trace pathways**: Follow the arrows to understand how barriers affect outcomes
+5. **Prioritize interventions**: Address foundational gaps and high-impact barriers first
+:::
+
 ## Summary
 
 Process optimization requires a multidisciplinary approach that addresses both technical systems and human factors:
