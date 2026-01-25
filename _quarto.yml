@@ -39,6 +39,7 @@ book:
       chapters:
         - chapters/10-tools.qmd
         - chapters/11-implementation-science.qmd
+        - chapters/12-process-optimization.qmd
     - part: "Appendices"
       chapters:
         - chapters/A-templates.qmd

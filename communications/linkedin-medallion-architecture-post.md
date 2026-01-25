@@ -4,9 +4,9 @@
 
 **Why Your "Bronze, Silver, Gold" Data Talk Is Losing Your Public Health Clients**
 
-Last week, I watched a data engineer enthusiastically explain their "medallion architecture" to a room of epidemiologists.
+I've watched data engineers enthusiastically explain their "medallion architecture" to rooms of epidemiologists.
 
-The blank stares said it all.
+The blank stares always say it all.
 
 "We'll land the lab feeds in Bronze, transform them in Silver, and expose the line lists from Gold."
 
@@ -20,9 +20,9 @@ But most public health professionals have never heard these terms.
 
 And why would they? They've been doing the *same work* for decades using different language:
 
-📥 **Bronze** = Raw data, source files, incoming data
-🔄 **Silver** = Cleaned data, standardized data, processed data  
-📊 **Gold** = Final reports, line lists, dashboards
+📥 **Bronze** = **Raw data**, source files, incoming data  
+🔄 **Silver** = **Cleaned data**, standardized data, processed data  
+📊 **Gold** = **Final reports**, line lists, dashboards
 
 The concepts are identical. Only the jargon differs.
 
@@ -46,20 +46,20 @@ Translation is the bridge professional's superpower. Use it.
 
 ---
 
-📖 I've written a detailed translation guide mapping medallion architecture to public health data workflows in the Bridgeframe Toolkit: [link to chapter]
+📖 I've written a detailed translation guide mapping medallion architecture to public health data workflows in the Bridgeframe Toolkit: https://andre-inter-collab-llc.github.io/Bridgeframe-Toolkit/chapters/03-terminology.html#data-architecture-medallion-architecture-for-public-health
 
 **What terminology gaps have you encountered between IT and public health teams?**
 
 ---
 
-#PublicHealth #DataEngineering #HealthInformatics #BusinessAnalysis #DataArchitecture #Bridgeframe #HealthIT #Epidemiology #DataManagement
+#PublicHealth #DataEngineering #HealthInformatics #BusinessAnalysis #DataArchitecture #Bridgeframe #HealthIT #Epidemiology #DataManagement #Databricks 
 
 ---
 
 ## Posting Notes
 
 - **Target audience:** BAs, data engineers, health informaticists working in public health
-- **Link:** https://[your-github-pages-url]/chapters/03-terminology.html#data-architecture-medallion-architecture-for-public-health
+- **Link:** https://andre-inter-collab-llc.github.io/Bridgeframe-Toolkit/chapters/03-terminology.html#data-architecture-medallion-architecture-for-public-health
 - **Best posting times:** Tuesday-Thursday, 8-10 AM or 12-1 PM
 - **Engagement strategy:** Ask a question at the end to encourage comments
 - **Image suggestion:** A simple diagram showing Bronze/Silver/Gold with PH equivalent terms, or a "translation card" graphic
@@ -78,6 +78,6 @@ The concepts aren't new. Data managers have organized files this way for decades
 
 Your job isn't to teach IT vocabulary. It's to build systems that serve public health.
 
-📖 Full translation guide: [Bridgeframe Toolkit link]
+📖 Full translation guide: https://andre-inter-collab-llc.github.io/Bridgeframe-Toolkit/chapters/03-terminology.html
 
 #PublicHealth #HealthInformatics #DataEngineering #BusinessAnalysis

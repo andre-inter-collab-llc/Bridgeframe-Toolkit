@@ -24,11 +24,20 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Agile** (BA)
 : Iterative development methodology emphasizing flexibility and stakeholder collaboration. **PH parallel**: Adaptive management, PDSA cycles.
 
+**Accountability Structures** (Organizational)
+: Governance mechanisms ensuring responsibility and ownership for processes and outcomes. Includes process owners, steering committees, escalation paths, and service-level agreements (SLAs). **Application**: Both BA and PH require clear accountability to prevent process drift.
+
+**Andragogy** (Education)
+: Theory of adult learning emphasizing self-direction, experience-based learning, and relevance. Key principles include connecting training to real problems and appealing to internal motivation rather than compliance.
+
 **Applicant Tracking System (ATS)** (Workforce)
 : Automated software used by employers to filter job applications by keywords and qualifications. Hybrid professionals must tailor resumes to pass ATS filters in both technical and public health domains.
 
 **Award Notice** (Government Procurement)
 : Public announcement of which vendor won a government contract. Job seekers can use award notices to identify employers who are actively staffing new projects.
+
+**Automation Spectrum** (Process Optimization)
+: Range of automation levels from manual through assisted, partial, conditional, to full automation. Each level defines different human-machine collaboration and oversight requirements.
 
 ## B
 
@@ -56,6 +65,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Bug** (BA)
 : Defect in software. **PH equivalent**: Adverse event, variance from protocol.
 
+**Bullying (Organizational)** (Organizational)
+: Harmful behaviors that intimidate or belittle staff, leading to silence and errors. **Response**: Enforce anti-bullying policies, focus on behaviors, provide anonymous reporting and HR escalation.
+
 **Business Case** (BA)
 : Justification for a project based on expected benefits. **PH equivalent**: Needs assessment, funding proposal.
 
@@ -81,6 +93,12 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Change Management** (BA)
 : Approach for transitioning organizations to new systems/processes. **PH equivalent**: Implementation strategy, adoption support.
+
+**Centralization** (Organizational)
+: Strategy of consolidating core functions (e.g., data cleaning, report generation) into shared services to reduce duplication, ensure consistency, and build specialized expertise. **Application**: When multiple teams rely on the same data, that data should be centrally stored and cleaned.
+
+**Change Resistance** (Organizational)
+: Reluctance to adopt new tools or approaches due to fear, uncertainty, or perceived loss of control. **Mitigation**: Co-design, pilots, training, incentives, and visible leadership support.
 
 **CAHIMS / CPHIMS** (Workforce)
 : Certified Associate/Professional in Healthcare Information and Management Systems. HIMSS certifications demonstrating health IT competency; valuable credentials for BA professionals entering the health sector.
@@ -135,6 +153,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Demo** (BA/Agile)
 : Presentation of completed work. **PH equivalent**: Progress presentation, milestone review.
 
+**Deduplication of Effort** (Organizational)
+: Identifying and eliminating redundant work across teams. Mechanisms include shared data layers, internal tool registries, and knowledge bases with reusable templates.
+
 **Dual-Framework Thinking** (Workforce)
 : Core competency of hybrid professionals: the ability to map Agile artifacts (user stories, sprints) to Logic Model outcomes (activities, outputs) and vice versa.
 
@@ -154,6 +175,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Evaluation** (Both)
 : Assessment of value, outcomes, or quality. In BA, solution evaluation. In PH, program evaluation.
+
+**Expectation Management** (Organizational/PM)
+: Practice of aligning goals and delivery commitments with capacity, constraints, and evidence. **Techniques**: Evidence-based estimation, transparent SLAs/OLAs, and frequent re-baselining when scope or resources change.
 
 ## F
 
@@ -235,6 +259,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Iteration** (BA/Agile)
 : Fixed time period for development work. **PH equivalent**: PDSA cycle, program phase.
 
+**Iterative Development** (Process Optimization)
+: Approach to building systems incrementally, assessing priority functionality at each step rather than developing complete solutions before user feedback. Prevents months of work on systems that do not meet critical needs.
+
 ## K
 
 **Key Informant** (PH)
@@ -248,7 +275,13 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Job Series** (Federal Employment)
 : Numerical classification system for federal positions. Key series for hybrid professionals include 0601 (General Health Science), 0685 (Public Health Program Specialist), and 2210 (IT Management).
 
+**Job Demands-Resources Model (JD-R)** (Psychology)
+: Model explaining that job stress results from imbalance between demands (workload, time pressure, complexity) and resources (autonomy, support, feedback). Process optimization should reduce demands while maintaining or increasing resources.
+
 ## L
+
+**Leadership Competence** (Organizational)
+: Adequate domain understanding by leaders to guide priorities and decisions. **Remedy**: Pair with SMEs, establish decision review gates, and continuous domain briefings.
 
 **Lessons Learned** (BA)
 : Knowledge gained from experience. **PH equivalent**: After-action review findings.
@@ -281,6 +314,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **NFR (Non-Functional Requirement)** (BA)
 : Quality attribute or constraint. **PH equivalent**: Implementation characteristic (CFIR).
 
+**Nonviolent Communication (NVC)** (Communication)
+: Communication approach focusing on observations, feelings, needs, and requests. **Use**: Reduces conflict and supports psychological safety.
+
 ## O
 
 **Outcome** (PH)
@@ -294,6 +330,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Output** (PH Logic Model)
 : Direct products of program activities. **BA equivalent**: Deliverables, features.
+
+**Organizational Misalignment** (Organizational)
+: Disconnect between goals, priorities, or definitions across teams leading to duplication and conflict. **Remedy**: Cascading OKRs, shared roadmaps, single prioritized backlog.
 
 ## P
 
@@ -309,6 +348,12 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Pilot** (Both)
 : Small-scale test of a solution or intervention. Similar usage.
 
+**Personality Pathology (Organizational Risk)** (Organizational)
+: Concerns about maladaptive patterns impacting decisions and team health. Avoid diagnosing in workplace contexts; focus on observable behaviors and enforce conduct standards. Use HR processes and governance to protect staff and operations.
+
+**Political Factors** (Organizational)
+: Formal and informal power dynamics that influence decisions beyond evidence considerations. **Guardrails**: Transparent criteria, decision logs, conflict-of-interest declarations, external review.
+
 **Process Evaluation** (PH)
 : Assessment of how an intervention was implemented. **BA equivalent**: Implementation review.
 
@@ -318,11 +363,20 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Protocol** (PH)
 : Standardized procedure or guideline. **BA equivalent**: Business rule, procedure specification.
 
+**Process Optimization** (Both)
+: Systematic approach to improving efficiency and effectiveness by eliminating unnecessary processes, automating mission-critical ones, and ensuring demonstrable value. Goal is maximizing impact with available resources.
+
+**Process Owner** (Organizational)
+: Single point of accountability for a process. Responsible for performance, improvement, and governance of that process.
+
 **Prototype** (BA)
 : Early model for testing concepts. **PH equivalent**: Pilot, formative testing.
 
 **Public Trust** (Federal Employment)
 : Security clearance level commonly required for federal contractor positions in health IT. Lower than Secret/Top Secret but still requires background investigation.
+
+**Psychological Safety** (Organizational)
+: Environment where team members feel safe to take risks, ask questions, and admit mistakes without fear of punishment. Essential for sustainable process improvement and innovation. Research by Amy Edmondson demonstrates that psychologically safe teams perform better.
 
 ## Q
 
@@ -337,11 +391,17 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **RE-AIM** (PH)
 : Framework for evaluating public health impact (Reach, Effectiveness, Adoption, Implementation, Maintenance).
 
+**RACI Matrix** (Project Management)
+: Framework defining roles for each activity: Responsible (does the work), Accountable (ultimately answerable, one person only), Consulted (provides input), Informed (kept updated). Prevents gaps and overlaps in responsibility.
+
 **Reach** (RE-AIM)
 : Proportion of target population participating. **BA equivalent**: Adoption rate, market penetration.
 
 **Readiness** (Both)
 : Preparedness for change. Implementation readiness (PH) or organizational readiness (BA).
+
+**Red Teaming** (Organizational)
+: Structured practice of challenging assumptions by assigning a team to critique plans and surface risks. **Use**: Improves decisions by integrating opposing perspectives.
 
 **Relative Advantage** (CFIR)
 : Perception that intervention is better than current practice. **BA equivalent**: Value proposition.
@@ -369,8 +429,20 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Scope** (Both)
 : Boundaries of what is included. Similar usage in both domains.
 
+**Scope Creep** (BA)
+: Uncontrolled expansion or shifting of scope that leads to churn and rework. **PH equivalent**: Program drift. **Controls**: Change control process, backlog refinement, decision logs, and re-baselining.
+
 **Service-User Scenario** (PH-adapted)
 : Narrative description of user journey. **BA equivalent**: User story, use case narrative.
+
+**SBAR (Communication)** (Both)
+: Structured communication framework: Situation, Background, Assessment, Recommendation. Improves clarity and reduces misunderstandings in technical and clinical contexts.
+
+**Self-Determination Theory (SDT)** (Psychology)
+: Theory identifying three innate psychological needs that drive motivation: autonomy (control over one's work), competence (mastery and effectiveness), and relatedness (connection to others). Process design should support all three.
+
+**Shared Services** (Organizational)
+: Model where core functions (data cleaning, reporting, training development, compliance) are centralized to serve multiple teams. Reduces duplication and builds specialized expertise.
 
 **Silver Layer** (Data Architecture)
 : The middle layer in medallion architecture containing cleansed, validated, and standardized data. Transformations include deduplication, format normalization, and quality checks. **PH equivalent**: Harmonization layer, FHIR/OMOP standardized datasets, de-identified data.
@@ -386,6 +458,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Stakeholder** (BA)
 : Person with interest in a project. **PH alternatives**: Interest holder, community partner, rights holder.
+
+**Structured Dissent** (Organizational)
+: Formal inclusion of opposing views in decision-making through methods like devil's advocate roles, red teaming, and dissent summaries.
 
 **Summative Evaluation** (PH)
 : Assessment of overall outcomes after implementation. **BA equivalent**: Post-implementation review.
@@ -426,6 +501,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **User Story** (BA/Agile)
 : Brief requirement from user perspective. **PH equivalents**: Service-user scenario, GPS format.
+
+**Unhealthy Competition** (Organizational)
+: Internal rivalry that undermines collaboration and information sharing. **Remedy**: Team-based incentives, shared goals, cross-team reviews, and transparency.
 
 ## V
 
