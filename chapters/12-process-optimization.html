@@ -2102,117 +2102,94 @@ Figure&nbsp;14.5: Process Optimization Lifecycle
 <section id="visual-framework-factors-influencing-program-efficiency" class="level2" data-number="14.7">
 <h2 data-number="14.7" class="anchored" data-anchor-id="visual-framework-factors-influencing-program-efficiency"><span class="header-section-number">14.7</span> Visual Framework: Factors Influencing Program Efficiency</h2>
 <p>The following directed acyclic graph (DAG) synthesizes the key enablers and barriers discussed throughout this chapter, illustrating how foundational factors flow through organizational processes to ultimately affect public health program impact.</p>
-<div class="cell" data-fig-width="10" data-layout-align="default">
+<div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div id="fig-optimization-dag" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-optimization-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-optimization-dag">flowchart TB
-    subgraph Foundations["&lt;b&gt;Foundational Factors&lt;/b&gt;"]
-        direction TB
-        PSY["&lt;b&gt;Psychological&lt;br/&gt;Foundations&lt;/b&gt;&lt;br/&gt;• SDT (Autonomy,&lt;br/&gt;Competence, Relatedness)&lt;br/&gt;• Psychological Safety&lt;br/&gt;• JD-R Balance"]
-        SOC["&lt;b&gt;Sociological&lt;br/&gt;Foundations&lt;/b&gt;&lt;br/&gt;• Organizational Culture&lt;br/&gt;• Communities of Practice&lt;br/&gt;• Power Structures"]
-        EDU["&lt;b&gt;Educational&lt;br/&gt;Foundations&lt;/b&gt;&lt;br/&gt;• Adult Learning (Andragogy)&lt;br/&gt;• Technical Capacity&lt;br/&gt;• Knowledge Management"]
+<pre class="mermaid mermaid-js" data-label="fig-optimization-dag">flowchart TD
+    %% LAYER 1: Foundations
+    PSY[Psychological&lt;br/&gt;Foundations]
+    SOC[Sociological&lt;br/&gt;Foundations]
+    EDU[Educational&lt;br/&gt;Foundations]
+
+    %% LAYER 2: Enablers and Barriers side by side
+    subgraph Layer2[" "]
+        direction LR
+        subgraph Enablers[Enabling Factors]
+            E1[Governance]
+            E2[Communication]
+            E3[Iteration]
+            E4[Centralization]
+            E5[Automation]
+        end
+        subgraph Barriers[Barriers]
+            B1[Intimidation]
+            B2[Politics]
+            B3[Silos]
+            B4[Duplication]
+            B5[Rigidity]
+            B6[Ambiguity]
+            B7[Scope Creep]
+        end
     end
 
-    subgraph Enablers["&lt;b&gt;Enabling Factors&lt;/b&gt;"]
-        direction TB
-        E1["Clear Governance&lt;br/&gt;&amp; Accountability"]
-        E2["Transparent&lt;br/&gt;Communication"]
-        E3["Iterative&lt;br/&gt;Development"]
-        E4["Centralized&lt;br/&gt;Core Functions"]
-        E5["Thoughtful&lt;br/&gt;Automation"]
-        E6["Scripted&lt;br/&gt;Workflows"]
+    %% LAYER 3: Processes
+    subgraph Processes[Organizational Processes]
+        direction LR
+        P1[Project Mgmt]
+        P2[Change Mgmt]
+        P3[Data Mgmt]
+        P4[Quality Improvement]
     end
 
-    subgraph Barriers["&lt;b&gt;Barriers &amp; Risks&lt;/b&gt;"]
-        direction TB
-        B1["Bullying &amp;&lt;br/&gt;Intimidation"]
-        B2["Political&lt;br/&gt;Interference"]
-        B3["Knowledge&lt;br/&gt;Silos"]
-        B4["Duplicated&lt;br/&gt;Effort"]
-        B5["Rigid or Opaque&lt;br/&gt;Automation"]
-        B6["Ambiguous&lt;br/&gt;Accountability"]
-        B7["Goal Drift &amp;&lt;br/&gt;Scope Creep"]
-        B8["Resistance&lt;br/&gt;to Change"]
+    %% LAYER 4: Outcomes
+    subgraph Outcomes[Intermediate Outcomes]
+        direction LR
+        O1[Efficiency]
+        O2[Data Quality]
+        O3[Well-being]
+        O4[Adoption]
     end
 
-    subgraph Processes["&lt;b&gt;Organizational Processes&lt;/b&gt;"]
-        direction TB
-        P1["Project&lt;br/&gt;Management"]
-        P2["Change&lt;br/&gt;Management"]
-        P3["Data&lt;br/&gt;Management"]
-        P4["Quality&lt;br/&gt;Improvement"]
-    end
+    %% LAYER 5: Impact
+    IMPACT([Program Impact &amp;&lt;br/&gt;Taxpayer Value])
 
-    subgraph Outcomes["&lt;b&gt;Intermediate Outcomes&lt;/b&gt;"]
-        direction TB
-        O1["Operational&lt;br/&gt;Efficiency"]
-        O2["Data&lt;br/&gt;Quality"]
-        O3["Staff&lt;br/&gt;Well-being"]
-        O4["System&lt;br/&gt;Adoption"]
-    end
+    %% Foundations to Enablers
+    PSY --&gt; E1 &amp; E2
+    SOC --&gt; E2 &amp; E4
+    EDU --&gt; E3 &amp; E5
 
-    subgraph Impact["&lt;b&gt;Ultimate Impact&lt;/b&gt;"]
-        direction TB
-        I1(["&lt;b&gt;Public Health&lt;br/&gt;Program Impact&lt;/b&gt;"])
-        I2(["&lt;b&gt;Taxpayer&lt;br/&gt;Value&lt;/b&gt;"])
-    end
-
-    %% Foundations to Enablers (positive paths)
-    PSY --&gt;|supports| E1
-    PSY --&gt;|supports| E2
-    SOC --&gt;|enables| E4
-    SOC --&gt;|enables| E2
-    EDU --&gt;|builds| E6
-    EDU --&gt;|builds| E5
-
-    %% Foundations to Barriers (when absent/weak)
-    PSY -.-&gt;|when absent| B1
-    PSY -.-&gt;|when absent| B8
-    SOC -.-&gt;|dysfunction| B2
-    SOC -.-&gt;|dysfunction| B3
-    EDU -.-&gt;|gaps cause| B4
-    EDU -.-&gt;|gaps cause| B8
+    %% Foundations to Barriers (when weak)
+    PSY -.-&gt; B1
+    SOC -.-&gt; B2 &amp; B3
+    EDU -.-&gt; B4
 
     %% Enablers to Processes
-    E1 --&gt; P1
-    E1 --&gt; P4
-    E2 --&gt; P1
-    E2 --&gt; P2
+    E1 --&gt; P1 &amp; P4
+    E2 --&gt; P1 &amp; P2
     E3 --&gt; P1
-    E3 --&gt; P4
     E4 --&gt; P3
-    E5 --&gt; P3
-    E5 --&gt; P4
-    E6 --&gt; P3
+    E5 --&gt; P3 &amp; P4
 
     %% Barriers block Processes
-    B1 -.-&gt;|undermines| P2
-    B2 -.-&gt;|disrupts| P1
-    B3 -.-&gt;|fragments| P3
-    B4 -.-&gt;|wastes| P1
-    B5 -.-&gt;|rigidity| P3
-    B6 -.-&gt;|gaps in| P1
-    B7 -.-&gt;|derails| P1
-    B8 -.-&gt;|slows| P2
+    B1 -.-&gt; P2
+    B2 -.-&gt; P1
+    B3 -.-&gt; P3
+    B4 -.-&gt; P1
+    B5 -.-&gt; P3
+    B6 -.-&gt; P1
+    B7 -.-&gt; P1
 
     %% Processes to Outcomes
     P1 --&gt; O1
-    P2 --&gt; O3
-    P2 --&gt; O4
+    P2 --&gt; O3 &amp; O4
     P3 --&gt; O2
-    P4 --&gt; O1
-    P4 --&gt; O2
+    P4 --&gt; O1 &amp; O2
 
     %% Outcomes to Impact
-    O1 --&gt; I1
-    O1 --&gt; I2
-    O2 --&gt; I1
-    O3 --&gt; I1
-    O4 --&gt; I1
-    I1 --&gt; I2
+    O1 &amp; O2 &amp; O3 &amp; O4 --&gt; IMPACT
 
     %% Styling
     classDef foundation fill:#e1f5fe,stroke:#01579b,stroke-width:2px
@@ -2221,13 +2198,15 @@ Figure&nbsp;14.5: Process Optimization Lifecycle
     classDef process fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
     classDef outcome fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
     classDef impact fill:#1565c0,stroke:#0d47a1,stroke-width:3px,color:#fff
+    classDef invisible fill:none,stroke:none
 
     class PSY,SOC,EDU foundation
-    class E1,E2,E3,E4,E5,E6 enabler
-    class B1,B2,B3,B4,B5,B6,B7,B8 barrier
+    class E1,E2,E3,E4,E5 enabler
+    class B1,B2,B3,B4,B5,B6,B7 barrier
     class P1,P2,P3,P4 process
     class O1,O2,O3,O4 outcome
-    class I1,I2 impact
+    class IMPACT impact
+    class Layer2 invisible
 </pre>
 </div>
 </div>
@@ -2240,49 +2219,57 @@ Figure&nbsp;14.6: DAG: Supporting Factors and Barriers to Public Health Program 
 </div>
 <section id="reading-the-dag" class="level3" data-number="14.7.1">
 <h3 data-number="14.7.1" class="anchored" data-anchor-id="reading-the-dag"><span class="header-section-number">14.7.1</span> Reading the DAG</h3>
-<p>The diagram above illustrates the causal pathways between factors affecting public health program optimization:</p>
+<p>The diagram illustrates causal pathways between factors affecting public health program optimization:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 35%">
-<col style="width: 65%">
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 46%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Layer</th>
-<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Color</th>
+<th style="text-align: left;">Components</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Foundational Factors</strong> (blue)</td>
-<td style="text-align: left;">Psychological, sociological, and educational foundations that underpin all organizational activity. When strong, they enable positive factors; when weak or absent, they create barriers.</td>
+<td style="text-align: left;"><strong>Foundations</strong></td>
+<td style="text-align: left;">Blue</td>
+<td style="text-align: left;">Psychological (SDT, safety, JD-R), Sociological (culture, CoPs, power), Educational (andragogy, capacity, knowledge)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Enabling Factors</strong> (green)</td>
-<td style="text-align: left;">Organizational capabilities and practices that drive efficiency. These include governance, communication, iterative development, centralization, and automation.</td>
+<td style="text-align: left;"><strong>Enablers</strong></td>
+<td style="text-align: left;">Green</td>
+<td style="text-align: left;">Governance, Communication, Iteration, Centralization, Automation</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Barriers &amp; Risks</strong> (red)</td>
-<td style="text-align: left;">Dysfunction patterns that impede optimization. These arise from foundational weaknesses or poor organizational choices.</td>
+<td style="text-align: left;"><strong>Barriers</strong></td>
+<td style="text-align: left;">Red</td>
+<td style="text-align: left;">Intimidation, Politics, Silos, Duplication, Rigidity, Ambiguity, Scope Creep</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Organizational Processes</strong> (orange)</td>
-<td style="text-align: left;">Core operational activities where enablers and barriers interact: project management, change management, data management, and quality improvement.</td>
+<td style="text-align: left;"><strong>Processes</strong></td>
+<td style="text-align: left;">Orange</td>
+<td style="text-align: left;">Project Management, Change Management, Data Management, Quality Improvement</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Intermediate Outcomes</strong> (purple)</td>
-<td style="text-align: left;">Measurable results of effective processes: operational efficiency, data quality, staff well-being, and system adoption.</td>
+<td style="text-align: left;"><strong>Outcomes</strong></td>
+<td style="text-align: left;">Purple</td>
+<td style="text-align: left;">Efficiency, Data Quality, Well-being, Adoption</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Ultimate Impact</strong> (dark blue)</td>
-<td style="text-align: left;">The end goals: public health program impact and demonstrated taxpayer value.</td>
+<td style="text-align: left;"><strong>Impact</strong></td>
+<td style="text-align: left;">Dark Blue</td>
+<td style="text-align: left;">Program Impact &amp; Taxpayer Value</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Key relationships:</strong></p>
+<p><strong>Arrow types:</strong></p>
 <ul>
-<li><strong>Solid arrows</strong> (→) represent positive causal pathways where one factor supports or enables another</li>
-<li><strong>Dashed arrows</strong> (-..-&gt;) represent negative pathways where absence, dysfunction, or barriers undermine processes</li>
+<li><strong>Solid arrows</strong> (→) represent positive causal pathways where factors support or enable downstream elements</li>
+<li><strong>Dashed arrows</strong> (⇢) represent negative pathways where foundational weaknesses create barriers that undermine processes</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled" title="Using This Framework">
 <div class="callout-header d-flex align-content-center">
@@ -3411,174 +3398,152 @@ Figure&nbsp;14.6: DAG: Supporting Factors and Barriers to Public Health Program 
 <span id="cb1-633"><a href="#cb1-633" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
 <span id="cb1-634"><a href="#cb1-634" aria-hidden="true" tabindex="-1"></a>%%| label: fig-optimization-dag</span>
 <span id="cb1-635"><a href="#cb1-635" aria-hidden="true" tabindex="-1"></a>%%| fig-cap: <span class="ot">"</span><span class="st">DAG: Supporting Factors and Barriers to Public Health Program Optimization</span><span class="ot">"</span></span>
-<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a>%%| fig-width: <span class="dv">10</span></span>
-<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
-<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a>    subgraph Foundations[<span class="ot">"</span><span class="st">&lt;b&gt;Foundational Factors&lt;/b&gt;</span><span class="ot">"</span>]</span>
-<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a>        direction TB</span>
-<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a>        PSY[<span class="ot">"</span><span class="st">&lt;b&gt;Psychological&lt;br/&gt;Foundations&lt;/b&gt;&lt;br/&gt;• SDT (Autonomy,&lt;br/&gt;Competence, Relatedness)&lt;br/&gt;• Psychological Safety&lt;br/&gt;• JD-R Balance</span><span class="ot">"</span>]</span>
-<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a>        SOC[<span class="ot">"</span><span class="st">&lt;b&gt;Sociological&lt;br/&gt;Foundations&lt;/b&gt;&lt;br/&gt;• Organizational Culture&lt;br/&gt;• Communities of Practice&lt;br/&gt;• Power Structures</span><span class="ot">"</span>]</span>
-<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a>        EDU[<span class="ot">"</span><span class="st">&lt;b&gt;Educational&lt;br/&gt;Foundations&lt;/b&gt;&lt;br/&gt;• Adult Learning (Andragogy)&lt;br/&gt;• Technical Capacity&lt;br/&gt;• Knowledge Management</span><span class="ot">"</span>]</span>
-<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a>    subgraph Enablers[<span class="ot">"</span><span class="st">&lt;b&gt;Enabling Factors&lt;/b&gt;</span><span class="ot">"</span>]</span>
-<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a>        direction TB</span>
-<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>        E1[<span class="ot">"</span><span class="st">Clear Governance&lt;br/&gt;&amp; Accountability</span><span class="ot">"</span>]</span>
-<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>        E2[<span class="ot">"</span><span class="st">Transparent&lt;br/&gt;Communication</span><span class="ot">"</span>]</span>
-<span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a>        E3[<span class="ot">"</span><span class="st">Iterative&lt;br/&gt;Development</span><span class="ot">"</span>]</span>
-<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>        E4[<span class="ot">"</span><span class="st">Centralized&lt;br/&gt;Core Functions</span><span class="ot">"</span>]</span>
-<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>        E5[<span class="ot">"</span><span class="st">Thoughtful&lt;br/&gt;Automation</span><span class="ot">"</span>]</span>
-<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a>        E6[<span class="ot">"</span><span class="st">Scripted&lt;br/&gt;Workflows</span><span class="ot">"</span>]</span>
-<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a>    subgraph Barriers[<span class="ot">"</span><span class="st">&lt;b&gt;Barriers &amp; Risks&lt;/b&gt;</span><span class="ot">"</span>]</span>
-<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a>        direction TB</span>
-<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a>        B1[<span class="ot">"</span><span class="st">Bullying &amp;&lt;br/&gt;Intimidation</span><span class="ot">"</span>]</span>
-<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a>        B2[<span class="ot">"</span><span class="st">Political&lt;br/&gt;Interference</span><span class="ot">"</span>]</span>
-<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a>        B3[<span class="ot">"</span><span class="st">Knowledge&lt;br/&gt;Silos</span><span class="ot">"</span>]</span>
-<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a>        B4[<span class="ot">"</span><span class="st">Duplicated&lt;br/&gt;Effort</span><span class="ot">"</span>]</span>
-<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a>        B5[<span class="ot">"</span><span class="st">Rigid or Opaque&lt;br/&gt;Automation</span><span class="ot">"</span>]</span>
-<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a>        B6[<span class="ot">"</span><span class="st">Ambiguous&lt;br/&gt;Accountability</span><span class="ot">"</span>]</span>
-<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a>        B7[<span class="ot">"</span><span class="st">Goal Drift &amp;&lt;br/&gt;Scope Creep</span><span class="ot">"</span>]</span>
-<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a>        B8[<span class="ot">"</span><span class="st">Resistance&lt;br/&gt;to Change</span><span class="ot">"</span>]</span>
-<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a>    subgraph Processes[<span class="ot">"</span><span class="st">&lt;b&gt;Organizational Processes&lt;/b&gt;</span><span class="ot">"</span>]</span>
-<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a>        direction TB</span>
-<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a>        P1[<span class="ot">"</span><span class="st">Project&lt;br/&gt;Management</span><span class="ot">"</span>]</span>
-<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a>        P2[<span class="ot">"</span><span class="st">Change&lt;br/&gt;Management</span><span class="ot">"</span>]</span>
-<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a>        P3[<span class="ot">"</span><span class="st">Data&lt;br/&gt;Management</span><span class="ot">"</span>]</span>
-<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a>        P4[<span class="ot">"</span><span class="st">Quality&lt;br/&gt;Improvement</span><span class="ot">"</span>]</span>
-<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>    subgraph Outcomes[<span class="ot">"</span><span class="st">&lt;b&gt;Intermediate Outcomes&lt;/b&gt;</span><span class="ot">"</span>]</span>
-<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a>        direction TB</span>
-<span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a>        O1[<span class="ot">"</span><span class="st">Operational&lt;br/&gt;Efficiency</span><span class="ot">"</span>]</span>
-<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>        O2[<span class="ot">"</span><span class="st">Data&lt;br/&gt;Quality</span><span class="ot">"</span>]</span>
-<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a>        O3[<span class="ot">"</span><span class="st">Staff&lt;br/&gt;Well-being</span><span class="ot">"</span>]</span>
-<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a>        O4[<span class="ot">"</span><span class="st">System&lt;br/&gt;Adoption</span><span class="ot">"</span>]</span>
-<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>    end</span>
-<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a>    subgraph Impact[<span class="ot">"</span><span class="st">&lt;b&gt;Ultimate Impact&lt;/b&gt;</span><span class="ot">"</span>]</span>
-<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a>        direction TB</span>
-<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a>        I1([<span class="ot">"</span><span class="st">&lt;b&gt;Public Health&lt;br/&gt;Program Impact&lt;/b&gt;</span><span class="ot">"</span>])</span>
-<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a>        I2([<span class="ot">"</span><span class="st">&lt;b&gt;Taxpayer&lt;br/&gt;Value&lt;/b&gt;</span><span class="ot">"</span>])</span>
-<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a>    end</span>
+<span id="cb1-636"><a href="#cb1-636" aria-hidden="true" tabindex="-1"></a>flowchart TD</span>
+<span id="cb1-637"><a href="#cb1-637" aria-hidden="true" tabindex="-1"></a>    %% LAYER <span class="dv">1</span>: Foundations</span>
+<span id="cb1-638"><a href="#cb1-638" aria-hidden="true" tabindex="-1"></a>    PSY[Psychological&lt;br/&gt;Foundations]</span>
+<span id="cb1-639"><a href="#cb1-639" aria-hidden="true" tabindex="-1"></a>    SOC[Sociological&lt;br/&gt;Foundations]</span>
+<span id="cb1-640"><a href="#cb1-640" aria-hidden="true" tabindex="-1"></a>    EDU[Educational&lt;br/&gt;Foundations]</span>
+<span id="cb1-641"><a href="#cb1-641" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-642"><a href="#cb1-642" aria-hidden="true" tabindex="-1"></a>    %% LAYER <span class="dv">2</span>: Enablers <span class="ot">and</span> Barriers side by side</span>
+<span id="cb1-643"><a href="#cb1-643" aria-hidden="true" tabindex="-1"></a>    subgraph Layer2[<span class="ot">"</span><span class="st"> </span><span class="ot">"</span>]</span>
+<span id="cb1-644"><a href="#cb1-644" aria-hidden="true" tabindex="-1"></a>        direction LR</span>
+<span id="cb1-645"><a href="#cb1-645" aria-hidden="true" tabindex="-1"></a>        subgraph Enablers[Enabling Factors]</span>
+<span id="cb1-646"><a href="#cb1-646" aria-hidden="true" tabindex="-1"></a>            E1[Governance]</span>
+<span id="cb1-647"><a href="#cb1-647" aria-hidden="true" tabindex="-1"></a>            E2[Communication]</span>
+<span id="cb1-648"><a href="#cb1-648" aria-hidden="true" tabindex="-1"></a>            E3[Iteration]</span>
+<span id="cb1-649"><a href="#cb1-649" aria-hidden="true" tabindex="-1"></a>            E4[Centralization]</span>
+<span id="cb1-650"><a href="#cb1-650" aria-hidden="true" tabindex="-1"></a>            E5[Automation]</span>
+<span id="cb1-651"><a href="#cb1-651" aria-hidden="true" tabindex="-1"></a>        end</span>
+<span id="cb1-652"><a href="#cb1-652" aria-hidden="true" tabindex="-1"></a>        subgraph Barriers[Barriers]</span>
+<span id="cb1-653"><a href="#cb1-653" aria-hidden="true" tabindex="-1"></a>            B1[Intimidation]</span>
+<span id="cb1-654"><a href="#cb1-654" aria-hidden="true" tabindex="-1"></a>            B2[Politics]</span>
+<span id="cb1-655"><a href="#cb1-655" aria-hidden="true" tabindex="-1"></a>            B3[Silos]</span>
+<span id="cb1-656"><a href="#cb1-656" aria-hidden="true" tabindex="-1"></a>            B4[Duplication]</span>
+<span id="cb1-657"><a href="#cb1-657" aria-hidden="true" tabindex="-1"></a>            B5[Rigidity]</span>
+<span id="cb1-658"><a href="#cb1-658" aria-hidden="true" tabindex="-1"></a>            B6[Ambiguity]</span>
+<span id="cb1-659"><a href="#cb1-659" aria-hidden="true" tabindex="-1"></a>            B7[Scope Creep]</span>
+<span id="cb1-660"><a href="#cb1-660" aria-hidden="true" tabindex="-1"></a>        end</span>
+<span id="cb1-661"><a href="#cb1-661" aria-hidden="true" tabindex="-1"></a>    end</span>
+<span id="cb1-662"><a href="#cb1-662" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-663"><a href="#cb1-663" aria-hidden="true" tabindex="-1"></a>    %% LAYER <span class="dv">3</span>: Processes</span>
+<span id="cb1-664"><a href="#cb1-664" aria-hidden="true" tabindex="-1"></a>    subgraph Processes[Organizational Processes]</span>
+<span id="cb1-665"><a href="#cb1-665" aria-hidden="true" tabindex="-1"></a>        direction LR</span>
+<span id="cb1-666"><a href="#cb1-666" aria-hidden="true" tabindex="-1"></a>        P1[Project Mgmt]</span>
+<span id="cb1-667"><a href="#cb1-667" aria-hidden="true" tabindex="-1"></a>        P2[Change Mgmt]</span>
+<span id="cb1-668"><a href="#cb1-668" aria-hidden="true" tabindex="-1"></a>        P3[Data Mgmt]</span>
+<span id="cb1-669"><a href="#cb1-669" aria-hidden="true" tabindex="-1"></a>        P4[Quality Improvement]</span>
+<span id="cb1-670"><a href="#cb1-670" aria-hidden="true" tabindex="-1"></a>    end</span>
+<span id="cb1-671"><a href="#cb1-671" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-672"><a href="#cb1-672" aria-hidden="true" tabindex="-1"></a>    %% LAYER <span class="dv">4</span>: Outcomes</span>
+<span id="cb1-673"><a href="#cb1-673" aria-hidden="true" tabindex="-1"></a>    subgraph Outcomes[Intermediate Outcomes]</span>
+<span id="cb1-674"><a href="#cb1-674" aria-hidden="true" tabindex="-1"></a>        direction LR</span>
+<span id="cb1-675"><a href="#cb1-675" aria-hidden="true" tabindex="-1"></a>        O1[Efficiency]</span>
+<span id="cb1-676"><a href="#cb1-676" aria-hidden="true" tabindex="-1"></a>        O2[Data Quality]</span>
+<span id="cb1-677"><a href="#cb1-677" aria-hidden="true" tabindex="-1"></a>        O3[Well-being]</span>
+<span id="cb1-678"><a href="#cb1-678" aria-hidden="true" tabindex="-1"></a>        O4[Adoption]</span>
+<span id="cb1-679"><a href="#cb1-679" aria-hidden="true" tabindex="-1"></a>    end</span>
+<span id="cb1-680"><a href="#cb1-680" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-681"><a href="#cb1-681" aria-hidden="true" tabindex="-1"></a>    %% LAYER <span class="dv">5</span>: Impact</span>
+<span id="cb1-682"><a href="#cb1-682" aria-hidden="true" tabindex="-1"></a>    IMPACT([Program Impact &amp;&lt;br/&gt;Taxpayer Value])</span>
+<span id="cb1-683"><a href="#cb1-683" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-684"><a href="#cb1-684" aria-hidden="true" tabindex="-1"></a>    %% Foundations to Enablers</span>
+<span id="cb1-685"><a href="#cb1-685" aria-hidden="true" tabindex="-1"></a>    PSY --&gt; E1 &amp; E2</span>
+<span id="cb1-686"><a href="#cb1-686" aria-hidden="true" tabindex="-1"></a>    SOC --&gt; E2 &amp; E4</span>
+<span id="cb1-687"><a href="#cb1-687" aria-hidden="true" tabindex="-1"></a>    EDU --&gt; E3 &amp; E5</span>
 <span id="cb1-688"><a href="#cb1-688" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a>    %% Foundations to Enablers (positive paths)</span>
-<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a>    PSY --&gt;|supports| E1</span>
-<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a>    PSY --&gt;|supports| E2</span>
-<span id="cb1-692"><a href="#cb1-692" aria-hidden="true" tabindex="-1"></a>    SOC --&gt;|enables| E4</span>
-<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a>    SOC --&gt;|enables| E2</span>
-<span id="cb1-694"><a href="#cb1-694" aria-hidden="true" tabindex="-1"></a>    EDU --&gt;|builds| E6</span>
-<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a>    EDU --&gt;|builds| E5</span>
-<span id="cb1-696"><a href="#cb1-696" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-697"><a href="#cb1-697" aria-hidden="true" tabindex="-1"></a>    %% Foundations to Barriers (<span class="kw">when</span> absent/weak)</span>
-<span id="cb1-698"><a href="#cb1-698" aria-hidden="true" tabindex="-1"></a>    PSY -.-&gt;|<span class="kw">when</span> absent| B1</span>
-<span id="cb1-699"><a href="#cb1-699" aria-hidden="true" tabindex="-1"></a>    PSY -.-&gt;|<span class="kw">when</span> absent| B8</span>
-<span id="cb1-700"><a href="#cb1-700" aria-hidden="true" tabindex="-1"></a>    SOC -.-&gt;|dysfunction| B2</span>
-<span id="cb1-701"><a href="#cb1-701" aria-hidden="true" tabindex="-1"></a>    SOC -.-&gt;|dysfunction| B3</span>
-<span id="cb1-702"><a href="#cb1-702" aria-hidden="true" tabindex="-1"></a>    EDU -.-&gt;|gaps cause| B4</span>
-<span id="cb1-703"><a href="#cb1-703" aria-hidden="true" tabindex="-1"></a>    EDU -.-&gt;|gaps cause| B8</span>
-<span id="cb1-704"><a href="#cb1-704" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-705"><a href="#cb1-705" aria-hidden="true" tabindex="-1"></a>    %% Enablers to Processes</span>
-<span id="cb1-706"><a href="#cb1-706" aria-hidden="true" tabindex="-1"></a>    E1 --&gt; P1</span>
-<span id="cb1-707"><a href="#cb1-707" aria-hidden="true" tabindex="-1"></a>    E1 --&gt; P4</span>
-<span id="cb1-708"><a href="#cb1-708" aria-hidden="true" tabindex="-1"></a>    E2 --&gt; P1</span>
-<span id="cb1-709"><a href="#cb1-709" aria-hidden="true" tabindex="-1"></a>    E2 --&gt; P2</span>
-<span id="cb1-710"><a href="#cb1-710" aria-hidden="true" tabindex="-1"></a>    E3 --&gt; P1</span>
-<span id="cb1-711"><a href="#cb1-711" aria-hidden="true" tabindex="-1"></a>    E3 --&gt; P4</span>
-<span id="cb1-712"><a href="#cb1-712" aria-hidden="true" tabindex="-1"></a>    E4 --&gt; P3</span>
-<span id="cb1-713"><a href="#cb1-713" aria-hidden="true" tabindex="-1"></a>    E5 --&gt; P3</span>
-<span id="cb1-714"><a href="#cb1-714" aria-hidden="true" tabindex="-1"></a>    E5 --&gt; P4</span>
-<span id="cb1-715"><a href="#cb1-715" aria-hidden="true" tabindex="-1"></a>    E6 --&gt; P3</span>
-<span id="cb1-716"><a href="#cb1-716" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-717"><a href="#cb1-717" aria-hidden="true" tabindex="-1"></a>    %% Barriers block Processes</span>
-<span id="cb1-718"><a href="#cb1-718" aria-hidden="true" tabindex="-1"></a>    B1 -.-&gt;|undermines| P2</span>
-<span id="cb1-719"><a href="#cb1-719" aria-hidden="true" tabindex="-1"></a>    B2 -.-&gt;|disrupts| P1</span>
-<span id="cb1-720"><a href="#cb1-720" aria-hidden="true" tabindex="-1"></a>    B3 -.-&gt;|fragments| P3</span>
-<span id="cb1-721"><a href="#cb1-721" aria-hidden="true" tabindex="-1"></a>    B4 -.-&gt;|wastes| P1</span>
-<span id="cb1-722"><a href="#cb1-722" aria-hidden="true" tabindex="-1"></a>    B5 -.-&gt;|rigidity| P3</span>
-<span id="cb1-723"><a href="#cb1-723" aria-hidden="true" tabindex="-1"></a>    B6 -.-&gt;|gaps in| P1</span>
-<span id="cb1-724"><a href="#cb1-724" aria-hidden="true" tabindex="-1"></a>    B7 -.-&gt;|derails| P1</span>
-<span id="cb1-725"><a href="#cb1-725" aria-hidden="true" tabindex="-1"></a>    B8 -.-&gt;|slows| P2</span>
-<span id="cb1-726"><a href="#cb1-726" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-727"><a href="#cb1-727" aria-hidden="true" tabindex="-1"></a>    %% Processes to Outcomes</span>
-<span id="cb1-728"><a href="#cb1-728" aria-hidden="true" tabindex="-1"></a>    P1 --&gt; O1</span>
-<span id="cb1-729"><a href="#cb1-729" aria-hidden="true" tabindex="-1"></a>    P2 --&gt; O3</span>
-<span id="cb1-730"><a href="#cb1-730" aria-hidden="true" tabindex="-1"></a>    P2 --&gt; O4</span>
-<span id="cb1-731"><a href="#cb1-731" aria-hidden="true" tabindex="-1"></a>    P3 --&gt; O2</span>
-<span id="cb1-732"><a href="#cb1-732" aria-hidden="true" tabindex="-1"></a>    P4 --&gt; O1</span>
-<span id="cb1-733"><a href="#cb1-733" aria-hidden="true" tabindex="-1"></a>    P4 --&gt; O2</span>
-<span id="cb1-734"><a href="#cb1-734" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-735"><a href="#cb1-735" aria-hidden="true" tabindex="-1"></a>    %% Outcomes to Impact</span>
-<span id="cb1-736"><a href="#cb1-736" aria-hidden="true" tabindex="-1"></a>    O1 --&gt; I1</span>
-<span id="cb1-737"><a href="#cb1-737" aria-hidden="true" tabindex="-1"></a>    O1 --&gt; I2</span>
-<span id="cb1-738"><a href="#cb1-738" aria-hidden="true" tabindex="-1"></a>    O2 --&gt; I1</span>
-<span id="cb1-739"><a href="#cb1-739" aria-hidden="true" tabindex="-1"></a>    O3 --&gt; I1</span>
-<span id="cb1-740"><a href="#cb1-740" aria-hidden="true" tabindex="-1"></a>    O4 --&gt; I1</span>
-<span id="cb1-741"><a href="#cb1-741" aria-hidden="true" tabindex="-1"></a>    I1 --&gt; I2</span>
-<span id="cb1-742"><a href="#cb1-742" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-743"><a href="#cb1-743" aria-hidden="true" tabindex="-1"></a>    %% Styling</span>
-<span id="cb1-744"><a href="#cb1-744" aria-hidden="true" tabindex="-1"></a>    classDef foundation fill:<span class="co">#e1f5fe,stroke:#01579b,stroke-width:2px</span></span>
-<span id="cb1-745"><a href="#cb1-745" aria-hidden="true" tabindex="-1"></a>    classDef enabler fill:<span class="co">#e8f5e9,stroke:#2e7d32,stroke-width:2px</span></span>
-<span id="cb1-746"><a href="#cb1-746" aria-hidden="true" tabindex="-1"></a>    classDef barrier fill:<span class="co">#ffebee,stroke:#c62828,stroke-width:2px</span></span>
-<span id="cb1-747"><a href="#cb1-747" aria-hidden="true" tabindex="-1"></a>    classDef process fill:<span class="co">#fff3e0,stroke:#ef6c00,stroke-width:2px</span></span>
-<span id="cb1-748"><a href="#cb1-748" aria-hidden="true" tabindex="-1"></a>    classDef outcome fill:<span class="co">#f3e5f5,stroke:#7b1fa2,stroke-width:2px</span></span>
-<span id="cb1-749"><a href="#cb1-749" aria-hidden="true" tabindex="-1"></a>    classDef impact fill:<span class="co">#1565c0,stroke:#0d47a1,stroke-width:3px,color:#fff</span></span>
-<span id="cb1-750"><a href="#cb1-750" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-751"><a href="#cb1-751" aria-hidden="true" tabindex="-1"></a>    class PSY,SOC,EDU foundation</span>
-<span id="cb1-752"><a href="#cb1-752" aria-hidden="true" tabindex="-1"></a>    class E1,E2,E3,E4,E5,E6 enabler</span>
-<span id="cb1-753"><a href="#cb1-753" aria-hidden="true" tabindex="-1"></a>    class B1,B2,B3,B4,B5,B6,B7,B8 barrier</span>
-<span id="cb1-754"><a href="#cb1-754" aria-hidden="true" tabindex="-1"></a>    class P1,P2,P3,P4 process</span>
-<span id="cb1-755"><a href="#cb1-755" aria-hidden="true" tabindex="-1"></a>    class O1,O2,O3,O4 outcome</span>
-<span id="cb1-756"><a href="#cb1-756" aria-hidden="true" tabindex="-1"></a>    class I1,I2 impact</span>
-<span id="cb1-757"><a href="#cb1-757" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-758"><a href="#cb1-758" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-759"><a href="#cb1-759" aria-hidden="true" tabindex="-1"></a><span class="fu">### Reading the DAG</span></span>
-<span id="cb1-760"><a href="#cb1-760" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-761"><a href="#cb1-761" aria-hidden="true" tabindex="-1"></a>The diagram above illustrates the causal pathways between factors affecting public health program optimization:</span>
-<span id="cb1-762"><a href="#cb1-762" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-763"><a href="#cb1-763" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Layer <span class="pp">|</span> Description <span class="pp">|</span></span>
-<span id="cb1-764"><a href="#cb1-764" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------|:------------|</span></span>
-<span id="cb1-765"><a href="#cb1-765" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Foundational Factors** (blue) <span class="pp">|</span> Psychological, sociological, and educational foundations that underpin all organizational activity. When strong, they enable positive factors; when weak or absent, they create barriers. <span class="pp">|</span></span>
-<span id="cb1-766"><a href="#cb1-766" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Enabling Factors** (green) <span class="pp">|</span> Organizational capabilities and practices that drive efficiency. These include governance, communication, iterative development, centralization, and automation. <span class="pp">|</span></span>
-<span id="cb1-767"><a href="#cb1-767" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Barriers &amp; Risks** (red) <span class="pp">|</span> Dysfunction patterns that impede optimization. These arise from foundational weaknesses or poor organizational choices. <span class="pp">|</span></span>
-<span id="cb1-768"><a href="#cb1-768" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Organizational Processes** (orange) <span class="pp">|</span> Core operational activities where enablers and barriers interact: project management, change management, data management, and quality improvement. <span class="pp">|</span></span>
-<span id="cb1-769"><a href="#cb1-769" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Intermediate Outcomes** (purple) <span class="pp">|</span> Measurable results of effective processes: operational efficiency, data quality, staff well-being, and system adoption. <span class="pp">|</span></span>
-<span id="cb1-770"><a href="#cb1-770" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Ultimate Impact** (dark blue) <span class="pp">|</span> The end goals: public health program impact and demonstrated taxpayer value. <span class="pp">|</span></span>
-<span id="cb1-771"><a href="#cb1-771" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-772"><a href="#cb1-772" aria-hidden="true" tabindex="-1"></a>**Key relationships:**</span>
-<span id="cb1-773"><a href="#cb1-773" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-774"><a href="#cb1-774" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Solid arrows** (→) represent positive causal pathways where one factor supports or enables another</span>
-<span id="cb1-775"><a href="#cb1-775" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Dashed arrows** (-..-&gt;) represent negative pathways where absence, dysfunction, or barriers undermine processes</span>
+<span id="cb1-689"><a href="#cb1-689" aria-hidden="true" tabindex="-1"></a>    %% Foundations to Barriers (<span class="kw">when</span> weak)</span>
+<span id="cb1-690"><a href="#cb1-690" aria-hidden="true" tabindex="-1"></a>    PSY -.-&gt; B1</span>
+<span id="cb1-691"><a href="#cb1-691" aria-hidden="true" tabindex="-1"></a>    SOC -.-&gt; B2 &amp; B3</span>
+<span id="cb1-692"><a href="#cb1-692" aria-hidden="true" tabindex="-1"></a>    EDU -.-&gt; B4</span>
+<span id="cb1-693"><a href="#cb1-693" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-694"><a href="#cb1-694" aria-hidden="true" tabindex="-1"></a>    %% Enablers to Processes</span>
+<span id="cb1-695"><a href="#cb1-695" aria-hidden="true" tabindex="-1"></a>    E1 --&gt; P1 &amp; P4</span>
+<span id="cb1-696"><a href="#cb1-696" aria-hidden="true" tabindex="-1"></a>    E2 --&gt; P1 &amp; P2</span>
+<span id="cb1-697"><a href="#cb1-697" aria-hidden="true" tabindex="-1"></a>    E3 --&gt; P1</span>
+<span id="cb1-698"><a href="#cb1-698" aria-hidden="true" tabindex="-1"></a>    E4 --&gt; P3</span>
+<span id="cb1-699"><a href="#cb1-699" aria-hidden="true" tabindex="-1"></a>    E5 --&gt; P3 &amp; P4</span>
+<span id="cb1-700"><a href="#cb1-700" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-701"><a href="#cb1-701" aria-hidden="true" tabindex="-1"></a>    %% Barriers block Processes</span>
+<span id="cb1-702"><a href="#cb1-702" aria-hidden="true" tabindex="-1"></a>    B1 -.-&gt; P2</span>
+<span id="cb1-703"><a href="#cb1-703" aria-hidden="true" tabindex="-1"></a>    B2 -.-&gt; P1</span>
+<span id="cb1-704"><a href="#cb1-704" aria-hidden="true" tabindex="-1"></a>    B3 -.-&gt; P3</span>
+<span id="cb1-705"><a href="#cb1-705" aria-hidden="true" tabindex="-1"></a>    B4 -.-&gt; P1</span>
+<span id="cb1-706"><a href="#cb1-706" aria-hidden="true" tabindex="-1"></a>    B5 -.-&gt; P3</span>
+<span id="cb1-707"><a href="#cb1-707" aria-hidden="true" tabindex="-1"></a>    B6 -.-&gt; P1</span>
+<span id="cb1-708"><a href="#cb1-708" aria-hidden="true" tabindex="-1"></a>    B7 -.-&gt; P1</span>
+<span id="cb1-709"><a href="#cb1-709" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-710"><a href="#cb1-710" aria-hidden="true" tabindex="-1"></a>    %% Processes to Outcomes</span>
+<span id="cb1-711"><a href="#cb1-711" aria-hidden="true" tabindex="-1"></a>    P1 --&gt; O1</span>
+<span id="cb1-712"><a href="#cb1-712" aria-hidden="true" tabindex="-1"></a>    P2 --&gt; O3 &amp; O4</span>
+<span id="cb1-713"><a href="#cb1-713" aria-hidden="true" tabindex="-1"></a>    P3 --&gt; O2</span>
+<span id="cb1-714"><a href="#cb1-714" aria-hidden="true" tabindex="-1"></a>    P4 --&gt; O1 &amp; O2</span>
+<span id="cb1-715"><a href="#cb1-715" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-716"><a href="#cb1-716" aria-hidden="true" tabindex="-1"></a>    %% Outcomes to Impact</span>
+<span id="cb1-717"><a href="#cb1-717" aria-hidden="true" tabindex="-1"></a>    O1 &amp; O2 &amp; O3 &amp; O4 --&gt; IMPACT</span>
+<span id="cb1-718"><a href="#cb1-718" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-719"><a href="#cb1-719" aria-hidden="true" tabindex="-1"></a>    %% Styling</span>
+<span id="cb1-720"><a href="#cb1-720" aria-hidden="true" tabindex="-1"></a>    classDef foundation fill:<span class="co">#e1f5fe,stroke:#01579b,stroke-width:2px</span></span>
+<span id="cb1-721"><a href="#cb1-721" aria-hidden="true" tabindex="-1"></a>    classDef enabler fill:<span class="co">#e8f5e9,stroke:#2e7d32,stroke-width:2px</span></span>
+<span id="cb1-722"><a href="#cb1-722" aria-hidden="true" tabindex="-1"></a>    classDef barrier fill:<span class="co">#ffebee,stroke:#c62828,stroke-width:2px</span></span>
+<span id="cb1-723"><a href="#cb1-723" aria-hidden="true" tabindex="-1"></a>    classDef process fill:<span class="co">#fff3e0,stroke:#ef6c00,stroke-width:2px</span></span>
+<span id="cb1-724"><a href="#cb1-724" aria-hidden="true" tabindex="-1"></a>    classDef outcome fill:<span class="co">#f3e5f5,stroke:#7b1fa2,stroke-width:2px</span></span>
+<span id="cb1-725"><a href="#cb1-725" aria-hidden="true" tabindex="-1"></a>    classDef impact fill:<span class="co">#1565c0,stroke:#0d47a1,stroke-width:3px,color:#fff</span></span>
+<span id="cb1-726"><a href="#cb1-726" aria-hidden="true" tabindex="-1"></a>    classDef invisible fill:none,stroke:none</span>
+<span id="cb1-727"><a href="#cb1-727" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-728"><a href="#cb1-728" aria-hidden="true" tabindex="-1"></a>    class PSY,SOC,EDU foundation</span>
+<span id="cb1-729"><a href="#cb1-729" aria-hidden="true" tabindex="-1"></a>    class E1,E2,E3,E4,E5 enabler</span>
+<span id="cb1-730"><a href="#cb1-730" aria-hidden="true" tabindex="-1"></a>    class B1,B2,B3,B4,B5,B6,B7 barrier</span>
+<span id="cb1-731"><a href="#cb1-731" aria-hidden="true" tabindex="-1"></a>    class P1,P2,P3,P4 process</span>
+<span id="cb1-732"><a href="#cb1-732" aria-hidden="true" tabindex="-1"></a>    class O1,O2,O3,O4 outcome</span>
+<span id="cb1-733"><a href="#cb1-733" aria-hidden="true" tabindex="-1"></a>    class IMPACT impact</span>
+<span id="cb1-734"><a href="#cb1-734" aria-hidden="true" tabindex="-1"></a>    class Layer2 invisible</span>
+<span id="cb1-735"><a href="#cb1-735" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-736"><a href="#cb1-736" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-737"><a href="#cb1-737" aria-hidden="true" tabindex="-1"></a><span class="fu">### Reading the DAG</span></span>
+<span id="cb1-738"><a href="#cb1-738" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-739"><a href="#cb1-739" aria-hidden="true" tabindex="-1"></a>The diagram illustrates causal pathways between factors affecting public health program optimization:</span>
+<span id="cb1-740"><a href="#cb1-740" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-741"><a href="#cb1-741" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Layer <span class="pp">|</span> Color <span class="pp">|</span> Components <span class="pp">|</span></span>
+<span id="cb1-742"><a href="#cb1-742" aria-hidden="true" tabindex="-1"></a><span class="pp">|:------|:------|:-----------|</span></span>
+<span id="cb1-743"><a href="#cb1-743" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Foundations** <span class="pp">|</span> Blue <span class="pp">|</span> Psychological (SDT, safety, JD-R), Sociological (culture, CoPs, power), Educational (andragogy, capacity, knowledge) <span class="pp">|</span></span>
+<span id="cb1-744"><a href="#cb1-744" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Enablers** <span class="pp">|</span> Green <span class="pp">|</span> Governance, Communication, Iteration, Centralization, Automation <span class="pp">|</span></span>
+<span id="cb1-745"><a href="#cb1-745" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Barriers** <span class="pp">|</span> Red <span class="pp">|</span> Intimidation, Politics, Silos, Duplication, Rigidity, Ambiguity, Scope Creep <span class="pp">|</span></span>
+<span id="cb1-746"><a href="#cb1-746" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Processes** <span class="pp">|</span> Orange <span class="pp">|</span> Project Management, Change Management, Data Management, Quality Improvement <span class="pp">|</span></span>
+<span id="cb1-747"><a href="#cb1-747" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Outcomes** <span class="pp">|</span> Purple <span class="pp">|</span> Efficiency, Data Quality, Well-being, Adoption <span class="pp">|</span></span>
+<span id="cb1-748"><a href="#cb1-748" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **Impact** <span class="pp">|</span> Dark Blue <span class="pp">|</span> Program Impact &amp; Taxpayer Value <span class="pp">|</span></span>
+<span id="cb1-749"><a href="#cb1-749" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-750"><a href="#cb1-750" aria-hidden="true" tabindex="-1"></a>**Arrow types:**</span>
+<span id="cb1-751"><a href="#cb1-751" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-752"><a href="#cb1-752" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Solid arrows** (→) represent positive causal pathways where factors support or enable downstream elements</span>
+<span id="cb1-753"><a href="#cb1-753" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Dashed arrows** (⇢) represent negative pathways where foundational weaknesses create barriers that undermine processes</span>
+<span id="cb1-754"><a href="#cb1-754" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-755"><a href="#cb1-755" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Using This Framework"}</span>
+<span id="cb1-756"><a href="#cb1-756" aria-hidden="true" tabindex="-1"></a>This DAG can serve as a diagnostic tool when assessing program optimization opportunities:</span>
+<span id="cb1-757"><a href="#cb1-757" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-758"><a href="#cb1-758" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Assess foundations**: Are psychological safety, healthy culture, and technical capacity in place?</span>
+<span id="cb1-759"><a href="#cb1-759" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Inventory enablers**: Which enabling factors are present? Which are missing?</span>
+<span id="cb1-760"><a href="#cb1-760" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Identify barriers**: Which barriers are actively impeding progress?</span>
+<span id="cb1-761"><a href="#cb1-761" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Trace pathways**: Follow the arrows to understand how barriers affect outcomes</span>
+<span id="cb1-762"><a href="#cb1-762" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Prioritize interventions**: Address foundational gaps and high-impact barriers first</span>
+<span id="cb1-763"><a href="#cb1-763" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-764"><a href="#cb1-764" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-765"><a href="#cb1-765" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb1-766"><a href="#cb1-766" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-767"><a href="#cb1-767" aria-hidden="true" tabindex="-1"></a>Process optimization requires a multidisciplinary approach that addresses both technical systems and human factors:</span>
+<span id="cb1-768"><a href="#cb1-768" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-769"><a href="#cb1-769" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Understand human factors**: Motivation, psychological safety, and well-being are prerequisites for sustainable improvement. Processes that ignore people will fail.</span>
+<span id="cb1-770"><a href="#cb1-770" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-771"><a href="#cb1-771" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Address organizational dynamics**: Culture, power structures, and communication patterns can enable or obstruct change. Work with these forces, not against them.</span>
+<span id="cb1-772"><a href="#cb1-772" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-773"><a href="#cb1-773" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Apply disciplined management**: Iterative development, clear accountability, and appropriate tools prevent wasted effort. Set realistic expectations and manage scope actively.</span>
+<span id="cb1-774"><a href="#cb1-774" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-775"><a href="#cb1-775" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Automate thoughtfully**: Prioritize scalability and flexibility over perfection. Maintain human oversight, especially for AI-assisted processes that lack inherent accountability.</span>
 <span id="cb1-776"><a href="#cb1-776" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-777"><a href="#cb1-777" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Using This Framework"}</span>
-<span id="cb1-778"><a href="#cb1-778" aria-hidden="true" tabindex="-1"></a>This DAG can serve as a diagnostic tool when assessing program optimization opportunities:</span>
-<span id="cb1-779"><a href="#cb1-779" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-780"><a href="#cb1-780" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Assess foundations**: Are psychological safety, healthy culture, and technical capacity in place?</span>
-<span id="cb1-781"><a href="#cb1-781" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Inventory enablers**: Which enabling factors are present? Which are missing?</span>
-<span id="cb1-782"><a href="#cb1-782" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Identify barriers**: Which barriers are actively impeding progress?</span>
-<span id="cb1-783"><a href="#cb1-783" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Trace pathways**: Follow the arrows to understand how barriers affect outcomes</span>
-<span id="cb1-784"><a href="#cb1-784" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Prioritize interventions**: Address foundational gaps and high-impact barriers first</span>
-<span id="cb1-785"><a href="#cb1-785" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-786"><a href="#cb1-786" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-787"><a href="#cb1-787" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
-<span id="cb1-788"><a href="#cb1-788" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-789"><a href="#cb1-789" aria-hidden="true" tabindex="-1"></a>Process optimization requires a multidisciplinary approach that addresses both technical systems and human factors:</span>
-<span id="cb1-790"><a href="#cb1-790" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-791"><a href="#cb1-791" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Understand human factors**: Motivation, psychological safety, and well-being are prerequisites for sustainable improvement. Processes that ignore people will fail.</span>
-<span id="cb1-792"><a href="#cb1-792" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-793"><a href="#cb1-793" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Address organizational dynamics**: Culture, power structures, and communication patterns can enable or obstruct change. Work with these forces, not against them.</span>
-<span id="cb1-794"><a href="#cb1-794" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-795"><a href="#cb1-795" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Apply disciplined management**: Iterative development, clear accountability, and appropriate tools prevent wasted effort. Set realistic expectations and manage scope actively.</span>
-<span id="cb1-796"><a href="#cb1-796" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-797"><a href="#cb1-797" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>**Automate thoughtfully**: Prioritize scalability and flexibility over perfection. Maintain human oversight, especially for AI-assisted processes that lack inherent accountability.</span>
-<span id="cb1-798"><a href="#cb1-798" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-799"><a href="#cb1-799" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Centralize core functions**: Reduce duplication by sharing data, tools, and expertise. Build specialized capability where it matters most.</span>
-<span id="cb1-800"><a href="#cb1-800" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-801"><a href="#cb1-801" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Demonstrate value**: Connect every optimization to measurable outcomes. In public health, that means taxpayer value and improved health for the populations we serve.</span>
-<span id="cb1-802"><a href="#cb1-802" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-803"><a href="#cb1-803" aria-hidden="true" tabindex="-1"></a>The goal is not efficiency for its own sake, but rather **maximizing public health impact with the resources entrusted to us**.</span>
+<span id="cb1-777"><a href="#cb1-777" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>**Centralize core functions**: Reduce duplication by sharing data, tools, and expertise. Build specialized capability where it matters most.</span>
+<span id="cb1-778"><a href="#cb1-778" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-779"><a href="#cb1-779" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Demonstrate value**: Connect every optimization to measurable outcomes. In public health, that means taxpayer value and improved health for the populations we serve.</span>
+<span id="cb1-780"><a href="#cb1-780" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-781"><a href="#cb1-781" aria-hidden="true" tabindex="-1"></a>The goal is not efficiency for its own sake, but rather **maximizing public health impact with the resources entrusted to us**.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
