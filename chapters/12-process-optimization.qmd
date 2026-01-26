@@ -51,6 +51,27 @@ Each section below identifies common barriers alongside practical remedies. Thes
 
 Understanding human motivation and well-being is essential for sustainable process improvement. Optimizing systems without considering the people who operate them leads to burnout, resistance, and ultimately failure.
 
+#### Meaning and Purpose (Frankl)
+
+Victor Frankl's logotherapy, developed from his experiences surviving Nazi concentration camps, posits that the primary human drive is the search for meaning. People who find purpose in their work can overcome extraordinary barriers; those who do not will struggle to sustain motivation beyond basic needs.
+
+| Principle | Workplace Implication |
+|:----------|:----------------------|
+| **Will to meaning** | People seek work that matters, not just paychecks |
+| **Meaning through contribution** | Staff must see how their work affects outcomes |
+| **Suffering with purpose** | Difficult work becomes tolerable when meaningful |
+| **Choice of attitude** | Even constrained roles allow choice in how we engage |
+
+**Application to Public Health Programs:**
+
+Public health work is inherently meaningful: protecting communities, preventing disease, saving lives. Yet this meaning can become invisible when staff are buried in data entry, compliance paperwork, or bureaucratic processes. Leaders must actively connect daily tasks to population-level impact.
+
+::: {.callout-important title="The Meaning Imperative"}
+People who experience a strong sense of meaning at work can overcome many barriers to achieve impact. Conversely, if staff feel their contributions lack purpose, motivation will not exceed what is required to pay bills and care for family.
+
+**Make impact direct and observable.** Ensure your team understands not just *what* they do, but *why it matters* and *who benefits*.
+:::
+
 #### Self-Determination Theory (SDT)
 
 Deci and Ryan's Self-Determination Theory identifies three innate psychological needs that drive motivation:
@@ -60,6 +81,8 @@ Deci and Ryan's Self-Determination Theory identifies three innate psychological 
 | **Autonomy** | Control over one's work | Allow flexibility in *how* tasks are completed |
 | **Competence** | Mastery and effectiveness | Provide training, feedback, and achievable challenges |
 | **Relatedness** | Connection to others | Foster team collaboration and shared purpose |
+
+SDT complements Frankl's insights: autonomy, competence, and relatedness are the conditions under which meaningful work flourishes. Without these, even purposeful work becomes draining.
 
 **Application to Process Design:**
 
@@ -73,11 +96,29 @@ Common human-factor barriers that undermine optimization and efficiency, with pr
 
 | Barrier | Impact | Productive Alternative |
 |:--------|:-------|:-----------------------|
+| **Invisible impact** | Work feels meaningless, motivation limited to extrinsic rewards | Make outcomes visible; share success stories; connect tasks to beneficiaries; celebrate contributions to mission |
 | **Bullying or intimidation** | Staff silence concerns, errors go unreported, talent leaves | Establish psychological safety as a core value; enforce clear anti-bullying policies; provide anonymous reporting channels; train managers to recognize and address harmful behaviors |
 | **Poor communication styles** | Misunderstandings, duplicated effort, delayed decisions | Adopt structured formats (SBAR for updates, decision logs for choices); practice active listening; summarize and confirm understanding before acting |
 | **Disruptive interpersonal patterns** | Unpredictable decisions, fear-based culture, high turnover | Address observable behaviors rather than speculating on motives; document conduct expectations; use HR processes and governance to protect team function |
 | **Leadership lacking domain expertise** | Misprioritized work, unrealistic timelines, poor resource allocation | Pair leaders with subject matter experts; require decision review gates for technical choices; schedule regular domain briefings |
+| **Absence of visionary leadership** | No compelling narrative, team drifts, purpose erodes over time | Articulate clear vision; regularly connect work to mission; share impact stories; model commitment |
 | **Resistance to change** | Slow adoption, workarounds, shadow systems | Co-design solutions with end users; run small pilots before full rollout; provide training and support; align incentives with adoption |
+
+#### Visionary Leadership
+
+Visionary leadership plays a critical role in sustaining meaning and motivation. Leaders who articulate a compelling vision of impact help teams persist through challenges that would otherwise lead to disengagement.
+
+| Leadership Behavior | Effect on Team |
+|:--------------------|:---------------|
+| **Articulates purpose** | Connects daily work to mission |
+| **Makes impact visible** | Shares outcomes, success stories, beneficiary feedback |
+| **Models commitment** | Demonstrates personal investment in the work |
+| **Celebrates contributions** | Recognizes how individual efforts advance the mission |
+| **Provides context** | Explains decisions in terms of program goals |
+
+::: {.callout-note title="CancerSurv Example"}
+The CancerSurv project lead began each sprint review by sharing one story: a cancer cluster identified early, a disparity revealed by the data, or a researcher whose study was enabled by registry completeness. These brief moments connected the team's technical work to real public health impact, sustaining motivation through difficult implementation challenges.
+:::
 
 #### Psychological Safety
 
@@ -188,11 +229,69 @@ Deduplication fails when:
 Remedies: establish taxonomy and metadata standards, maintain an internal tool registry, and set a review cadence for shared assets.
 :::
 
-### Project Management Frameworks
+### Project Management
 
-Effective process optimization requires disciplined project management. Choose frameworks appropriate to your context.
+Effective process optimization requires disciplined project management. However, organizations often struggle not just with *which* framework to use, but with fundamental questions about *who* should manage projects and *what* project management actually entails.
 
-#### Framework Comparison
+#### The Project Manager Role
+
+One of the most significant inefficiencies in public health and research organizations is role confusion between project managers, subject matter experts (SMEs), and leaders. Each role serves a distinct function, but organizations frequently conflate them, leading to wasted expertise and frustrated professionals.
+
+| Role | Primary Function | Core Skills | Decision Authority |
+|:-----|:-----------------|:------------|:-------------------|
+| **Project Manager** | Coordinate execution | Planning, scheduling, risk management, stakeholder communication | *How* and *when* work gets done |
+| **Subject Matter Expert** | Provide technical direction | Domain expertise, scientific judgment, methodological rigor | *What* work should be done and *why* |
+| **Leader** | Set vision and strategy | Inspiring others, resource allocation, organizational navigation | *Where* the program is going |
+
+**Common Anti-Patterns:**
+
+| Anti-Pattern | What Happens | Impact |
+|:-------------|:-------------|:-------|
+| **SME as PM** | Scientists or epidemiologists spend time scheduling meetings, tracking tasks, and chasing deliverables | Domain expertise wasted on administration; scientific work suffers; SME frustration and burnout |
+| **PM as SME** | Project managers attempt to make technical decisions or navigate scientific nuances they do not understand | Poor technical choices; SMEs must re-explain concepts repeatedly; project delays from misunderstanding requirements |
+| **PM as Leader** | Project managers expected to set strategic direction without authority or organizational perspective | Scope confusion; PMs blamed for decisions outside their control; actual leaders abdicate responsibility |
+| **Leader without domain grounding** | Executives set direction without understanding technical constraints or scientific realities | Unrealistic expectations; misprioritized work; staff demoralization when told to "just make it happen" |
+
+::: {.callout-important title="The Expertise Investment Problem"}
+Scientific and technical expertise takes years to develop. When organizations require SMEs to perform project management tasks, they effectively pay expert rates for administrative work that could be done by dedicated coordinators. Simultaneously, the scientific work that *only* the SME can do goes undone or is rushed.
+
+**The math is stark:** An epidemiologist spending 20 hours per week on project coordination is not doing 20 hours of epidemiology. That expertise gap cannot be filled by anyone else on the team.
+:::
+
+**Productive Role Separation:**
+
+| Function | Assigned To | Examples |
+|:---------|:------------|:---------|
+| **Scheduling and logistics** | Project Manager | Meeting coordination, timeline tracking, resource scheduling |
+| **Stakeholder communication** | Project Manager (with SME input) | Status updates, risk escalation, expectation management |
+| **Technical decisions** | SME | Methodology selection, data interpretation, scientific quality |
+| **Strategic direction** | Leader (often SME or Sponsor) | Program priorities, resource allocation, vision articulation |
+| **Process improvement** | Collaborative | PM identifies bottlenecks; SME validates solutions; Leader authorizes changes |
+
+::: {.callout-note title="CancerSurv Example"}
+The CancerSurv implementation initially struggled because the lead epidemiologist was expected to manage the project while also defining data quality standards, training registrars, and conducting analyses. After three months of missed deadlines and staff frustration, the team restructured:
+
+- **Project Manager**: Hired a dedicated PM to handle vendor coordination, sprint planning, and stakeholder reporting
+- **Lead Epidemiologist**: Focused on data quality specifications, NAACCR standards compliance, and analytic methodology
+- **Program Director**: Provided strategic direction, secured resources, and resolved organizational barriers
+
+Result: The epidemiologist's scientific output increased by 60%, sprint velocity improved by 40%, and team satisfaction scores rose from 2.8 to 4.2 (on a 5-point scale).
+:::
+
+::: {.callout-tip title="Right-Sizing Project Management"}
+Not every project needs a full-time PM. Consider these models:
+
+- **Small projects**: SME leads with lightweight PM support (administrative assistant, shared coordinator)
+- **Medium projects**: Dedicated part-time PM or PM supporting multiple related projects
+- **Large/complex projects**: Full-time PM with clear authority over coordination; SMEs retained for technical direction
+- **Programs**: Program manager coordinates across projects; individual PMs or coordinators for each workstream
+
+The key is ensuring *someone* is responsible for coordination so that SMEs can focus on what only they can do.
+:::
+
+#### Project Management Frameworks
+
+Choose frameworks appropriate to your context. The framework matters less than consistent application and clear role definition.
 
 | Framework | Best For | Key Features |
 |:----------|:---------|:-------------|
@@ -255,6 +354,8 @@ flowchart LR
 | **Overemphasis on aesthetics** | Delayed value delivery, resources diverted from core function | Prioritize scalability and reliability first; defer visual polish until core functionality proven; measure success by outcomes, not appearance |
 | **Unrealistic expectations** | Burnout, quality shortcuts, failed delivery, eroded trust | Use evidence-based estimation (historical velocity, throughput data); align commitments to actual capacity; set SLAs based on demonstrated capability |
 | **Shifting expectations (scope creep)** | Constant rework, team churn, inability to complete anything | Implement formal change control process; refine backlog regularly with stakeholders; document scope decisions; re-baseline schedules with explicit stakeholder sign-off when scope changes |
+
+*Note: Role confusion between PMs, SMEs, and leaders is addressed in detail in [The Project Manager Role] section above.*
 
 ### Communication and Transparency
 
@@ -447,6 +548,116 @@ flowchart LR
 | **Error reduction** | Eliminates copy-paste mistakes |
 | **Knowledge transfer** | New staff can run existing scripts |
 
+## Informatics Systems: Enabler or Barrier
+
+Informatics systems are the backbone of modern public health operations. When well-designed and implemented, they accelerate every aspect of program delivery. When poorly conceived or executed, they become obstacles that consume resources, frustrate staff, and ultimately harm the populations they were meant to serve.
+
+### The Dual Nature of Informatics
+
+The same system can be an enabler or barrier depending on design choices, implementation quality, and organizational context:
+
+| Dimension | Informatics as Enabler | Informatics as Barrier |
+|:----------|:-----------------------|:-----------------------|
+| **Data access** | Self-service queries empower analysts | Locked-down systems require IT tickets for every request |
+| **Workflow integration** | Systems fit existing work patterns | Staff must adapt to rigid, unintuitive interfaces |
+| **Interoperability** | Standards-based data exchange (HL7, FHIR) | Proprietary formats create data silos |
+| **Scalability** | Architecture handles growth and surges | Systems buckle under increased load |
+| **Adaptability** | Configurable rules accommodate change | Hard-coded logic requires vendor involvement |
+| **Usability** | Intuitive design reduces training burden | Complex interfaces increase error rates |
+| **Documentation** | Clear specifications enable troubleshooting | Undocumented systems create key-person dependencies |
+| **Maintenance** | Modular design allows incremental updates | Monolithic systems require risky big-bang changes |
+
+### Design Principles for Enabling Systems
+
+Informatics systems that enable efficiency share common characteristics:
+
+#### User-Centered Design
+
+| Principle | Implementation |
+|:----------|:---------------|
+| **Involve end users early** | Conduct contextual inquiry; observe actual workflows before designing |
+| **Prototype iteratively** | Show working software, not just specifications; gather feedback continuously |
+| **Minimize cognitive load** | Reduce clicks, eliminate redundant data entry, provide smart defaults |
+| **Design for errors** | Assume mistakes happen; make recovery easy; prevent catastrophic actions |
+| **Support diverse users** | Accommodate varying technical skill levels; provide progressive complexity |
+
+#### Technical Architecture
+
+| Principle | Implementation |
+|:----------|:---------------|
+| **Modular design** | Separate concerns; allow components to be updated independently |
+| **API-first approach** | Expose functionality through well-documented interfaces |
+| **Standards compliance** | Adopt industry standards (HL7 FHIR, USCDI) for interoperability |
+| **Scalable infrastructure** | Design for 10x expected load; plan for surge capacity |
+| **Security by design** | Build authentication, authorization, and audit into the foundation |
+
+::: {.callout-note title="CancerSurv Example"}
+The CancerSurv system was designed with a clear separation between:
+
+- **Data layer**: Centralized data warehouse with Bronze/Silver/Gold architecture
+- **Business logic layer**: Configurable rules engine for edits and validations
+- **Presentation layer**: Role-based interfaces for registrars, epidemiologists, and administrators
+- **Integration layer**: HL7 FHIR APIs for hospital and lab connectivity
+
+This modular approach allowed the team to update the duplicate detection algorithm without touching case abstraction screens, and to add new hospital integrations without modifying the core data model.
+:::
+
+### Common Informatics Barriers
+
+Recognize and address these patterns that transform systems into obstacles:
+
+#### System-Level Barriers
+
+| Barrier | Impact | Remedy |
+|:--------|:-------|:-------|
+| **Legacy system lock-in** | Cannot adopt modern approaches; vendor dependency | Plan migration paths; negotiate data portability; avoid proprietary formats |
+| **Technical debt accumulation** | Increasing fragility; slower development; higher maintenance costs | Allocate time for refactoring; track and prioritize debt reduction |
+| **Integration failures** | Data silos persist; manual reconciliation required | Invest in middleware; adopt standards; establish data governance |
+| **Performance degradation** | Staff workarounds; delayed operations; missed deadlines | Monitor proactively; plan capacity; optimize before crisis |
+| **Security vulnerabilities** | Data breaches; compliance failures; loss of public trust | Regular assessments; patch management; security-aware development |
+
+#### Organizational Barriers
+
+| Barrier | Impact | Remedy |
+|:--------|:-------|:-------|
+| **Misaligned procurement** | Systems selected for features not used; actual needs unmet | Involve end users in selection; weight usability heavily; pilot before commitment |
+| **Insufficient training** | Powerful features unused; errors from misunderstanding | Budget for training; provide ongoing support; create user communities |
+| **Change resistance** | New systems underutilized; parallel manual processes persist | Co-design with users; demonstrate value; provide transition support |
+| **Vendor over-dependence** | Slow response to needs; high costs for changes; strategic constraints | Maintain internal expertise; document configurations; plan exit strategies |
+| **Governance gaps** | No clear ownership; conflicting priorities; stalled decisions | Assign system owners; establish steering committees; define decision rights |
+
+### Informatics Maturity Model
+
+Assess your organization's informatics capability to identify improvement priorities:
+
+| Level | Characteristics | Indicators |
+|:------|:----------------|:-----------|
+| **1. Ad-hoc** | No formal systems; spreadsheet-based; individual solutions | Data inconsistency; key-person dependencies; no audit trail |
+| **2. Defined** | Standard tools selected; basic documentation; some training | Consistent formats; documented procedures; identifiable system owners |
+| **3. Managed** | Integrated systems; performance monitoring; governance structures | Automated workflows; SLAs tracked; regular reviews |
+| **4. Optimized** | Continuous improvement; advanced analytics; predictive capabilities | Data-driven decisions; proactive issue detection; measurable outcomes |
+| **5. Transformative** | Systems enable new capabilities; strategic asset; innovation driver | New programs enabled; cross-program insights; national leadership |
+
+::: {.callout-tip title="Maturity Assessment"}
+Most public health programs operate between levels 2 and 3. Advancing maturity requires sustained investment in:
+
+- **People**: Training, hiring, retention of informatics talent
+- **Process**: Governance, standards, continuous improvement practices
+- **Technology**: Modern architecture, interoperability, maintainability
+
+Focus on foundational capabilities before pursuing advanced features. A well-implemented level 3 system delivers more value than a poorly implemented level 4 system.
+:::
+
+### Barriers and Remedies Summary
+
+| Barrier | Impact | Productive Alternative |
+|:--------|:-------|:-----------------------|
+| **Poorly designed systems** | User frustration, workarounds, data quality issues, wasted effort | Apply user-centered design; prototype iteratively; conduct usability testing; involve end users throughout |
+| **Legacy system constraints** | Inability to modernize, vendor lock-in, accumulating technical debt | Plan migration incrementally; negotiate data portability; maintain internal expertise; document thoroughly |
+| **Interoperability failures** | Data silos, manual reconciliation, incomplete picture, duplicated effort | Adopt standards (HL7 FHIR, USCDI); invest in integration infrastructure; establish data governance |
+| **Insufficient informatics capacity** | Over-reliance on vendors, slow response to needs, inability to optimize | Build internal team; provide career paths; partner with academic programs; cross-train existing staff |
+| **Misaligned system selection** | Features unused, actual needs unmet, costly customization | Involve users in procurement; weight usability; pilot before committing; define requirements clearly |
+
 ## Centralization and Shared Services
 
 ### The Medallion Architecture for Shared Data
@@ -621,112 +832,99 @@ The following directed acyclic graph (DAG) synthesizes the key enablers and barr
 ```{mermaid}
 %%| label: fig-optimization-dag
 %%| fig-cap: "DAG: Supporting Factors and Barriers to Public Health Program Optimization"
-%%| fig-width: 10
-flowchart TB
-    subgraph Foundations["<b>Foundational Factors</b>"]
-        direction TB
-        PSY["<b>Psychological<br/>Foundations</b><br/>• SDT (Autonomy,<br/>Competence, Relatedness)<br/>• Psychological Safety<br/>• JD-R Balance"]
-        SOC["<b>Sociological<br/>Foundations</b><br/>• Organizational Culture<br/>• Communities of Practice<br/>• Power Structures"]
-        EDU["<b>Educational<br/>Foundations</b><br/>• Adult Learning (Andragogy)<br/>• Technical Capacity<br/>• Knowledge Management"]
+flowchart TD
+    %% LAYER 1: Foundations
+    PSY[Psychological<br/>Foundations]
+    SOC[Sociological<br/>Foundations]
+    EDU[Educational<br/>Foundations]
+
+    %% LAYER 2: Enablers and Barriers side by side
+    subgraph Layer2[" "]
+        direction LR
+        subgraph Enablers[Enabling Factors]
+            E1[Governance]
+            E2[Communication]
+            E3[Iteration]
+            E4[Centralization]
+            E5[Automation]
+            E6[Visionary Leadership]
+            E7[Visible Impact]
+            E8[Enabling Informatics]
+        end
+        subgraph Barriers[Barriers]
+            B1[Intimidation]
+            B2[Politics]
+            B3[Silos]
+            B4[Duplication]
+            B5[Rigidity]
+            B6[Ambiguity]
+            B7[Scope Creep]
+            B8[Invisible Impact]
+            B9[Poor Informatics]
+        end
     end
 
-    subgraph Enablers["<b>Enabling Factors</b>"]
-        direction TB
-        E1["Clear Governance<br/>& Accountability"]
-        E2["Transparent<br/>Communication"]
-        E3["Iterative<br/>Development"]
-        E4["Centralized<br/>Core Functions"]
-        E5["Thoughtful<br/>Automation"]
-        E6["Scripted<br/>Workflows"]
+    %% LAYER 3: Processes
+    subgraph Processes[Organizational Processes]
+        direction LR
+        P1[Project Mgmt]
+        P2[Change Mgmt]
+        P3[Data Mgmt]
+        P4[Quality Improvement]
     end
 
-    subgraph Barriers["<b>Barriers & Risks</b>"]
-        direction TB
-        B1["Bullying &<br/>Intimidation"]
-        B2["Political<br/>Interference"]
-        B3["Knowledge<br/>Silos"]
-        B4["Duplicated<br/>Effort"]
-        B5["Rigid or Opaque<br/>Automation"]
-        B6["Ambiguous<br/>Accountability"]
-        B7["Goal Drift &<br/>Scope Creep"]
-        B8["Resistance<br/>to Change"]
+    %% LAYER 4: Outcomes
+    subgraph Outcomes[Intermediate Outcomes]
+        direction LR
+        O1[Efficiency]
+        O2[Data Quality]
+        O3[Well-being]
+        O4[Adoption]
+        O5[Meaning]
     end
 
-    subgraph Processes["<b>Organizational Processes</b>"]
-        direction TB
-        P1["Project<br/>Management"]
-        P2["Change<br/>Management"]
-        P3["Data<br/>Management"]
-        P4["Quality<br/>Improvement"]
-    end
+    %% LAYER 5: Impact
+    IMPACT([Program Impact &<br/>Taxpayer Value])
 
-    subgraph Outcomes["<b>Intermediate Outcomes</b>"]
-        direction TB
-        O1["Operational<br/>Efficiency"]
-        O2["Data<br/>Quality"]
-        O3["Staff<br/>Well-being"]
-        O4["System<br/>Adoption"]
-    end
+    %% Foundations to Enablers
+    PSY --> E1 & E2 & E6 & E7
+    SOC --> E2 & E4
+    EDU --> E3 & E5 & E8
 
-    subgraph Impact["<b>Ultimate Impact</b>"]
-        direction TB
-        I1(["<b>Public Health<br/>Program Impact</b>"])
-        I2(["<b>Taxpayer<br/>Value</b>"])
-    end
-
-    %% Foundations to Enablers (positive paths)
-    PSY -->|supports| E1
-    PSY -->|supports| E2
-    SOC -->|enables| E4
-    SOC -->|enables| E2
-    EDU -->|builds| E6
-    EDU -->|builds| E5
-
-    %% Foundations to Barriers (when absent/weak)
-    PSY -.->|when absent| B1
-    PSY -.->|when absent| B8
-    SOC -.->|dysfunction| B2
-    SOC -.->|dysfunction| B3
-    EDU -.->|gaps cause| B4
-    EDU -.->|gaps cause| B8
+    %% Foundations to Barriers (when weak)
+    PSY -.-> B1 & B8
+    SOC -.-> B2 & B3
+    EDU -.-> B4 & B9
 
     %% Enablers to Processes
-    E1 --> P1
-    E1 --> P4
-    E2 --> P1
-    E2 --> P2
+    E1 --> P1 & P4
+    E2 --> P1 & P2
     E3 --> P1
-    E3 --> P4
     E4 --> P3
-    E5 --> P3
-    E5 --> P4
-    E6 --> P3
+    E5 --> P3 & P4
+    E6 --> P2
+    E7 --> P2 & P4
+    E8 --> P1 & P3 & P4
 
     %% Barriers block Processes
-    B1 -.->|undermines| P2
-    B2 -.->|disrupts| P1
-    B3 -.->|fragments| P3
-    B4 -.->|wastes| P1
-    B5 -.->|rigidity| P3
-    B6 -.->|gaps in| P1
-    B7 -.->|derails| P1
-    B8 -.->|slows| P2
+    B1 -.-> P2
+    B2 -.-> P1
+    B3 -.-> P3
+    B4 -.-> P1
+    B5 -.-> P3
+    B6 -.-> P1
+    B7 -.-> P1
+    B8 -.-> P2 & P4
+    B9 -.-> P1 & P3 & P4
 
     %% Processes to Outcomes
     P1 --> O1
-    P2 --> O3
-    P2 --> O4
+    P2 --> O3 & O4 & O5
     P3 --> O2
-    P4 --> O1
-    P4 --> O2
+    P4 --> O1 & O2
 
     %% Outcomes to Impact
-    O1 --> I1
-    O1 --> I2
-    O2 --> I1
-    O3 --> I1
-    O4 --> I1
-    I1 --> I2
+    O1 & O2 & O3 & O4 & O5 --> IMPACT
 
     %% Styling
     classDef foundation fill:#e1f5fe,stroke:#01579b,stroke-width:2px
@@ -735,32 +933,34 @@ flowchart TB
     classDef process fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
     classDef outcome fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
     classDef impact fill:#1565c0,stroke:#0d47a1,stroke-width:3px,color:#fff
+    classDef invisible fill:none,stroke:none
 
     class PSY,SOC,EDU foundation
-    class E1,E2,E3,E4,E5,E6 enabler
-    class B1,B2,B3,B4,B5,B6,B7,B8 barrier
+    class E1,E2,E3,E4,E5,E6,E7,E8 enabler
+    class B1,B2,B3,B4,B5,B6,B7,B8,B9 barrier
     class P1,P2,P3,P4 process
-    class O1,O2,O3,O4 outcome
-    class I1,I2 impact
+    class O1,O2,O3,O4,O5 outcome
+    class IMPACT impact
+    class Layer2 invisible
 ```
 
 ### Reading the DAG
 
-The diagram above illustrates the causal pathways between factors affecting public health program optimization:
+The diagram illustrates causal pathways between factors affecting public health program optimization:
 
-| Layer | Description |
-|:------|:------------|
-| **Foundational Factors** (blue) | Psychological, sociological, and educational foundations that underpin all organizational activity. When strong, they enable positive factors; when weak or absent, they create barriers. |
-| **Enabling Factors** (green) | Organizational capabilities and practices that drive efficiency. These include governance, communication, iterative development, centralization, and automation. |
-| **Barriers & Risks** (red) | Dysfunction patterns that impede optimization. These arise from foundational weaknesses or poor organizational choices. |
-| **Organizational Processes** (orange) | Core operational activities where enablers and barriers interact: project management, change management, data management, and quality improvement. |
-| **Intermediate Outcomes** (purple) | Measurable results of effective processes: operational efficiency, data quality, staff well-being, and system adoption. |
-| **Ultimate Impact** (dark blue) | The end goals: public health program impact and demonstrated taxpayer value. |
+| Layer | Color | Components |
+|:------|:------|:-----------|
+| **Foundations** | Blue | Psychological (meaning, SDT, safety, JD-R, leadership), Sociological (culture, CoPs, power), Educational (andragogy, capacity, knowledge) |
+| **Enablers** | Green | Governance, Communication, Iteration, Centralization, Automation, Visionary Leadership, Visible Impact, Enabling Informatics |
+| **Barriers** | Red | Intimidation, Politics, Silos, Duplication, Rigidity, Ambiguity, Scope Creep, Invisible Impact, Poor Informatics |
+| **Processes** | Orange | Project Management, Change Management, Data Management, Quality Improvement |
+| **Outcomes** | Purple | Efficiency, Data Quality, Well-being, Adoption, Meaning |
+| **Impact** | Dark Blue | Program Impact & Taxpayer Value |
 
-**Key relationships:**
+**Arrow types:**
 
-- **Solid arrows** (→) represent positive causal pathways where one factor supports or enables another
-- **Dashed arrows** (-..->) represent negative pathways where absence, dysfunction, or barriers undermine processes
+- **Solid arrows** (→) represent positive causal pathways where factors support or enable downstream elements
+- **Dashed arrows** (⇢) represent negative pathways where foundational weaknesses create barriers that undermine processes
 
 ::: {.callout-tip title="Using This Framework"}
 This DAG can serve as a diagnostic tool when assessing program optimization opportunities:

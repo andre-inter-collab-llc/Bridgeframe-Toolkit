@@ -1,0 +1,114 @@
+---
+title: "LinkedIn Post: Process Optimization Chapter Introduction"
+format: html
+---
+
+## Diagram for Post
+
+```{mermaid}
+%%| label: fig-optimization-flow
+%%| fig-cap: "Process Optimization Framework"
+flowchart TD
+    subgraph Foundations["Foundations"]
+        F1[Meaning]
+        F2[Safety]
+        F3[Culture]
+    end
+    
+    subgraph Enablers["Enablers"]
+        E1[Clear Roles]
+        E2[Automation]
+        E3[Centralization]
+    end
+    
+    subgraph Outcomes["Outcomes"]
+        O1[Efficiency]
+        O2[Quality]
+        O3[Well-being]
+    end
+    
+    IMPACT([Public Health Impact])
+    
+    Foundations --> Enablers --> Outcomes --> IMPACT
+    
+    style IMPACT fill:#1565c0,stroke:#0d47a1,color:#fff
+    style Foundations fill:#e3f2fd,stroke:#1976d2
+    style Enablers fill:#e8f5e9,stroke:#388e3c
+    style Outcomes fill:#f3e5f5,stroke:#7b1fa2
+```
+
+**Alt text for accessibility:** A flowchart showing process optimization moving from Foundations (Meaning, Safety, Culture) through Enablers (Clear Roles, Automation, Centralization) to Outcomes (Efficiency, Quality, Well-being) and ultimately to Public Health Impact.
+
+---
+
+## Post Draft
+
+**Process optimization isn't about tools. It's about people.**
+
+I've spent years watching well-intentioned efficiency initiatives fail. Not because of bad technology or poor frameworks, but because they ignored something fundamental:
+
+**Processes are run by humans.**
+
+In my latest chapter on Process Optimization for the Bridgeframe Toolkit, I explore what it actually takes to improve how public health programs operate. Spoiler: it's not another Gantt chart.
+
+---
+
+**The chapter covers:**
+
+🧠 **Psychological Foundations**
+Why meaning, autonomy, and psychological safety matter more than any workflow diagram
+
+👥 **Organizational Dynamics**
+How culture, politics, and role confusion silently sabotage even the best plans
+
+📊 **Disciplined Project Management**
+When to use Agile vs. Waterfall vs. Hybrid (hint: the framework matters less than you think)
+
+🤖 **Automation with Accountability**
+Why AI needs human oversight, and how to build systems that scale without breaking
+
+🏛️ **Centralization Done Right**
+The Medallion Architecture for shared data, and when NOT to centralize
+
+📈 **Demonstrating Value**
+The taxpayer accountability test every public health process should pass
+
+---
+
+The core insight? **Efficiency for its own sake is worthless.**
+
+In public health, every optimization must connect to a tangible outcome: earlier outbreak detection, more accurate surveillance, better use of limited resources.
+
+If you can't explain to a taxpayer why a process exists and how it improves health, that process should be eliminated, automated, or fundamentally redesigned.
+
+---
+
+This chapter synthesizes lessons from psychology (Frankl, SDT, Edmondson), sociology (Schein, Wenger), project management, and informatics into a practical framework for analysts working at the intersection of technology and public health.
+
+Whether you're a business analyst entering healthcare or an epidemiologist drowning in administrative work, the goal is the same: **maximize impact with the resources entrusted to us.**
+
+**Read the full chapter here:** https://andre-inter-collab-llc.github.io/Bridgeframe-Toolkit/chapters/12-process-optimization.html
+
+What's the biggest barrier to efficiency you've encountered in your organization?
+
+#PublicHealth #HealthInformatics #ProcessOptimization #BusinessAnalysis #DataScience #ProjectManagement #ImplementationScience #Bridgeframe
+
+---
+
+## Key Themes to Highlight
+- Interdisciplinary approach (psychology + sociology + informatics + PM)
+- Human-centered optimization
+- Taxpayer accountability in public health
+- Practical frameworks, not just theory
+
+## Hashtags
+- #PublicHealth
+- #HealthInformatics
+- #ProcessOptimization
+- #BusinessAnalysis
+- #DataScience
+- #ProjectManagement
+- #ImplementationScience
+- #Bridgeframe
+- #ChangeManagement
+- #Leadership
