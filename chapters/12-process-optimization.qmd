@@ -18,7 +18,7 @@ This chapter synthesizes strategies from psychology, sociology, project manageme
 | Automation Strategy | Scalable Interventions |
 | Change Management | Implementation Science |
 
-### The Optimization Hierarchy
+### The Optimization Hierarchy {#sec-optimization-hierarchy}
 
 Before optimizing a process, apply this decision framework:
 

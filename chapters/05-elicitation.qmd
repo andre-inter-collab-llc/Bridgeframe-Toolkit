@@ -262,7 +262,7 @@ For hybrid projects, consider dual documentation:
 | Funders (CDC, grants) | Logic Model | Inputs, activities, outputs, outcomes |
 | Governance | Requirements Traceability Matrix | Links requirements to objectives |
 
-#### When Standard User Stories Fall Short
+#### When Standard User Stories Fall Short {#sec-when-standard-user-stories-fall-short}
 
 The standard Agile user story format ("As a [user], I want [feature], so that [benefit]") works well for many software contexts. However, it often fails to capture the nuances of clinical workflows, regulatory requirements, and public health scenarios.
 

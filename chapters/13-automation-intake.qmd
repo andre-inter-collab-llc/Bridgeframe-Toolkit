@@ -122,7 +122,7 @@ You do not need to use these exact formats. But the more clearly you describe th
 ```{mermaid}
 %%| label: fig-automation-clinic-flow
 %%| fig-cap: "Public Health Automation Clinic Workflow"
-flowchart LR
+flowchart TD
     A[Submit Intake Form] --> B[Review & Triage]
     B --> C{Feasible?}
     C -->|Yes| D[Develop Solution]
@@ -136,7 +136,7 @@ flowchart LR
 
 **Step 1: Submit the Intake Form**
 
-Complete the [Public Health Automation Clinic Intake Form](https://forms.gle/PLACEHOLDER){target="_blank"} describing your problem. You can submit anonymously or provide contact information for follow-up. The more detail you provide, the faster and more accurately we can develop a solution.
+Complete the [Public Health Automation Clinic Intake Form](https://forms.gle/cmE2un2njSVPid8C9){target="_blank"} describing your problem. You can submit anonymously or provide contact information for follow-up. The more detail you provide, the faster and more accurately we can develop a solution.
 
 **Step 2: Review and Triage**
 
@@ -168,8 +168,14 @@ The intake form captures the information necessary to develop a practical soluti
 - **Volume and Frequency**: How often do you do this? How many records, files, or items are involved?
 - **Tools Available**: What software do you have access to? (R/RStudio, Python, Quarto, Microsoft Office, Google Workspace, etc.)
 - **Technical Environment**: Can you install software on your machine, or do you need IT administrator approval?
-- **Sample Data**: Can you provide a de-identified example of the input and expected output?
+- **Sample Data**: Can you point us to a publicly available dataset or file that resembles your data? (See the note below on sharing examples.)
 - **Contact Preference**: Anonymous submission, or would you like follow-up?
+
+::: {.callout-note title="Sharing Example Data"}
+To help us understand your problem, find a **publicly available** dataset or file online that resembles the structure of your data. This could be a sample dataset from a government open data portal, a dataset on [Kaggle](https://www.kaggle.com/datasets), a CDC data download, or any publicly accessible file. Paste the URL in the intake form.
+
+Do **not** upload or share your actual data, even if de-identified. Linking to a public example keeps your submission anonymous and avoids any risk of exposing sensitive information. If no public example exists, describe the data structure in your problem description (column names, data types, number of rows, file format).
+:::
 
 ### Setting Expectations
 
@@ -191,7 +197,7 @@ If you have a task that is time-sensitive, requires dedicated attention, or invo
 - **Ongoing support** and maintenance
 - **Training** for your team to maintain and extend the solution
 
-To inquire about paid services, contact André van Zyl directly through [Intersect Collaborations](https://www.intersectcollaborations.com/) or [LinkedIn](https://www.linkedin.com/in/andre-van-zyl/).
+To inquire about paid services, contact André van Zyl directly through the [Intersect Collaborations website](https://www.intersectcollaborations.com/contact) or [LinkedIn](https://www.linkedin.com/company/intersect-collaborations-llc).
 
 ## The Automation Mindset
 
@@ -230,9 +236,9 @@ Each of these solutions required less than a day to develop and saved the regist
 Ready to reclaim your time? Complete the intake form:
 
 ::: {.callout-tip title="Submit to the Public Health Automation Clinic"}
-**[Complete the Intake Form](https://forms.gle/PLACEHOLDER){target="_blank"}**
+**[Complete the Intake Form](https://forms.gle/cmE2un2njSVPid8C9){target="_blank"}**
 
 Submissions are anonymous by default. Provide your contact information only if you would like follow-up on your specific problem.
 :::
 
-If your need is urgent or involves complex systems integration, [contact Intersect Collaborations](https://www.intersectcollaborations.com/) for paid consulting services.
+If your need is urgent or involves complex systems integration, [contact Intersect Collaborations](https://www.intersectcollaborations.com/contact) for paid consulting services.

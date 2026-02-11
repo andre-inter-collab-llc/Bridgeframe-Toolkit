@@ -17,9 +17,11 @@ Use this document as a blueprint to create the Google Form. Each section below m
 >
 > All solutions run on your computer. No cloud AI subscriptions required.
 >
+> **Before submitting**, please read the full initiative description here: https://andre-inter-collab-llc.github.io/Bridgeframe-Toolkit/chapters/13-automation-intake.html
+>
 > Submissions are anonymous by default. All fields marked with * are required.
 >
-> **Need urgent help?** Contact Intersect Collaborations directly for paid consulting: https://www.intersectcollaborations.com/
+> **Need urgent help?** Contact Intersect Collaborations directly for paid consulting: https://www.intersectcollaborations.com/contact
 
 - **Collect email addresses**: No (anonymous by default)
 - **Limit to 1 response**: No
@@ -36,22 +38,22 @@ Use this document as a blueprint to create the Google Form. Each section below m
 ### Q1: Name
 - **Type**: Short text
 - **Required**: No
-- **Placeholder**: "Your name (optional)"
+- **Description**: "Your name (optional)"
 
 ### Q2: Email Address
 - **Type**: Short text (email validation)
 - **Required**: No
-- **Placeholder**: "your.email@example.com"
+- **Description**: "e.g., your.email@example.com"
 
 ### Q3: Organization / Agency
 - **Type**: Short text
 - **Required**: No
-- **Placeholder**: "e.g., State Department of Health, County Health District"
+- **Description**: "e.g., State Department of Health, County Health District"
 
 ### Q4: Role / Job Title
 - **Type**: Short text
 - **Required**: No
-- **Placeholder**: "e.g., Epidemiologist, Cancer Registrar, Data Analyst, Program Manager"
+- **Description**: "e.g., Epidemiologist, Cancer Registrar, Data Analyst, Program Manager"
 
 ---
 
@@ -63,13 +65,12 @@ Use this document as a blueprint to create the Google Form. Each section below m
 ### Q5: Problem Title *
 - **Type**: Short text
 - **Required**: Yes
-- **Placeholder**: "Give your problem a brief title (e.g., 'Monthly lab report data extraction')"
+- **Description**: "Give your problem a brief title (e.g., 'Monthly lab report data extraction')"
 
 ### Q6: Problem Description *
 - **Type**: Long text (paragraph)
 - **Required**: Yes
-- **Help text**: "Describe the task in detail. What are you doing? What makes it tedious or error-prone? What would the ideal outcome look like?"
-- **Placeholder**: "e.g., Every month I receive ~200 PDF lab reports and manually type patient demographics into a spreadsheet. It takes about 8 hours and I frequently make typos..."
+- **Description**: "Describe the task in detail. What are you doing? What makes it tedious or error-prone? What would the ideal outcome look like? Example: Every month I receive ~200 PDF lab reports and manually type patient demographics into a spreadsheet. It takes about 8 hours and I frequently make typos..."
 
 ### Q7: Problem Category *
 - **Type**: Checkboxes (select all that apply)
@@ -89,8 +90,7 @@ Use this document as a blueprint to create the Google Form. Each section below m
 ### Q8: Current Workflow Steps *
 - **Type**: Long text (paragraph)
 - **Required**: Yes
-- **Help text**: "Walk us through the steps you currently follow. Number each step if possible."
-- **Placeholder**: "1. Download PDF reports from the portal\n2. Open each PDF and locate patient name, DOB, diagnosis...\n3. Type each field into Excel spreadsheet...\n4. Repeat for each report..."
+- **Description**: "Walk us through the steps you currently follow. Number each step if possible. Example: 1. Download PDF reports from the portal, 2. Open each PDF and locate patient name, DOB, diagnosis, 3. Type each field into Excel spreadsheet, 4. Repeat for each report..."
 
 ---
 
@@ -126,7 +126,7 @@ Use this document as a blueprint to create the Google Form. Each section below m
 ### Q11: Approximately how many records, files, or items are involved per cycle?
 - **Type**: Short text
 - **Required**: No
-- **Placeholder**: "e.g., 200 PDF files, 5,000 rows, 15 spreadsheets"
+- **Description**: "e.g., 200 PDF files, 5,000 rows, 15 spreadsheets"
 
 ---
 
@@ -171,7 +171,7 @@ Use this document as a blueprint to create the Google Form. Each section below m
 ### Q13b: Does your agency permit use of AI/LLM tools?
 - **Type**: Multiple choice
 - **Required**: No
-- **Help text**: "Solutions from the clinic run locally and do not require AI access. However, knowing your environment helps us understand your constraints."
+- **Description**: "Solutions from the clinic run locally and do not require AI access. However, knowing your environment helps us understand your constraints."
 - **Options**:
   - Yes, we have approved AI tools (e.g., ChatGPT, Copilot, Claude, Gemini)
   - Yes, but only specific approved tools (please specify in 'Anything else' at the end)
@@ -206,27 +206,15 @@ Use this document as a blueprint to create the Google Form. Each section below m
 **Section Header**: Sample Data
 **Section Description**: A de-identified example of your input and expected output dramatically speeds up solution development. Do NOT send real patient data or personally identifiable information (PII).
 
-### Q16: Can you provide a de-identified sample of the input data?
-- **Type**: Multiple choice
-- **Required**: No
-- **Options**:
-  - Yes, I will upload a sample with this form
-  - Yes, but I would need to create a mock/de-identified version first
-  - No, the data is too sensitive even in de-identified form
-  - Not applicable
-
-### Q17: Upload a sample file (de-identified only)
-- **Type**: File upload
-- **Required**: No
-- **Help text**: "Upload a small, de-identified example of the data you work with. Remove ALL real names, dates of birth, SSNs, medical record numbers, and other PII. Accepted formats: CSV, XLSX, PDF, TXT, PNG (screenshot)."
-- **Allowed file types**: CSV, XLSX, XLS, PDF, TXT, PNG, JPG, DOCX
-- **Max file size**: 10 MB
-
-### Q18: Can you describe what the output should look like?
+### Q16: Can you point us to a publicly available example that resembles your data?
 - **Type**: Long text (paragraph)
 - **Required**: No
-- **Help text**: "Describe the expected result. If possible, also upload an example of the desired output using the file upload above."
-- **Placeholder**: "e.g., A clean Excel spreadsheet with columns: PatientID, Facility, DiagnosisDate, CancerSite, Stage..."
+- **Description**: "Find a publicly available dataset or file online that resembles the structure of your data. This could be a sample dataset from a government open data portal (e.g., data.gov, CDC WONDER), Kaggle, or any publicly accessible file. Paste the URL here. Do NOT share your actual data, even if de-identified. If no public example exists, describe the data structure (column names, data types, number of rows, file format). Example: https://data.cdc.gov/... or 'My data has columns: FacilityID, ReportDate, CancerSite, Stage, PatientAge, Gender, with ~5,000 rows per quarter in CSV format'"
+
+### Q17: Can you describe what the output should look like?
+- **Type**: Long text (paragraph)
+- **Required**: No
+- **Description**: "Describe the expected result. Example: A clean Excel spreadsheet with columns: PatientID, Facility, DiagnosisDate, CancerSite, Stage..."
 
 ---
 
@@ -235,7 +223,7 @@ Use this document as a blueprint to create the Google Form. Each section below m
 **Section Header**: Follow-Up
 **Section Description**: All solutions from the free service are anonymized, generalized, and published publicly. No identifying details about you or your organization are included. If you need a private solution, contact Intersect Collaborations for paid consulting.
 
-### Q19: Would you be willing to test a proposed solution and provide feedback?
+### Q18: Would you be willing to test a proposed solution and provide feedback?
 - **Type**: Multiple choice
 - **Required**: No
 - **Options**:
@@ -243,10 +231,10 @@ Use this document as a blueprint to create the Google Form. Each section below m
   - No, just publish the solution when it is ready
   - I submitted anonymously
 
-### Q20: Anything else we should know?
+### Q19: Anything else we should know?
 - **Type**: Long text (paragraph)
 - **Required**: No
-- **Placeholder**: "Any additional context, constraints, deadlines, or details that would help us understand your problem."
+- **Description**: "Any additional context, constraints, deadlines, or details that would help us understand your problem."
 
 ---
 
@@ -254,7 +242,7 @@ Use this document as a blueprint to create the Google Form. Each section below m
 
 - If Q16 = "Yes, I will upload a sample with this form" → Show Q17
 - If Q16 = any other option → Hide Q17 (optional: still show but note it is optional)
-- If Q19 = "Yes" but Q2 (email) is blank → Show validation message: "Please provide your email address in Section 1 if you would like to test solutions and provide feedback."
+- If Q18 = "Yes" but Q2 (email) is blank → Show validation message: "Please provide your email address in Section 1 if you would like to test solutions and provide feedback."
 
 ---
 
@@ -265,7 +253,7 @@ Use this document as a blueprint to create the Google Form. Each section below m
 - [ ] Create all 6 sections with headers and descriptions
 - [ ] Add all questions with correct types and options (including Q13b for AI/LLM)
 - [ ] Mark required fields (Q5, Q6, Q7, Q8, Q9, Q12, Q14)
-- [ ] Enable file upload for Q17 (requires respondents to sign in to Google; consider noting this)
+- [ ] Enable file upload for Q17 is no longer needed (replaced with URL/text field)
 - [ ] Configure confirmation message
 - [ ] Set response destination (Google Sheets for tracking)
 - [ ] Test form end-to-end

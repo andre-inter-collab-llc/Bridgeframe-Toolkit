@@ -1,0 +1,10 @@
+flowchart TD
+    A[Submit Intake Form] --> B[Review & Triage]
+    B --> C{Feasible?}
+    C -->|Yes| D[Develop Solution]
+    C -->|Needs Info| E[Follow Up]
+    C -->|Out of Scope| F[Provide Guidance]
+    E --> B
+    D --> G[Test & Document]
+    G --> H[Anonymize & Generalize]
+    H --> I[Publish to Library]
