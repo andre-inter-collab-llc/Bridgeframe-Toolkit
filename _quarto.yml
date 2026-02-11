@@ -40,6 +40,7 @@ book:
         - chapters/10-tools.qmd
         - chapters/11-implementation-science.qmd
         - chapters/12-process-optimization.qmd
+        - chapters/13-automation-intake.qmd
     - part: "Appendices"
       chapters:
         - chapters/A-templates.qmd

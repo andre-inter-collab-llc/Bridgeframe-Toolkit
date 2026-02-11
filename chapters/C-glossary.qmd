@@ -36,6 +36,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Award Notice** (Government Procurement)
 : Public announcement of which vendor won a government contract. Job seekers can use award notices to identify employers who are actively staffing new projects.
 
+**Automation Clinic** (Community Resource)
+: A free, community-driven service where public health professionals submit repetitive, manual tasks and receive automation solutions (scripts, tool recommendations, workflow redesigns) developed using open source tools. Builds a shared library of reusable solutions.
+
 **Automation Spectrum** (Process Optimization)
 : Range of automation levels from manual through assisted, partial, conditional, to full automation. Each level defines different human-machine collaboration and oversight requirements.
 
@@ -238,6 +241,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 **Impact** (PH)
 : Long-term effects of an intervention. **BA equivalent**: Business value, strategic outcomes.
 
+**Intake Form** (Process/Community Resource)
+: Structured data collection instrument used to capture enough detail about a problem or request to enable triage and solution development. In the Automation Clinic context, captures the task description, current workflow, tools available, and technical environment.
+
 **Implementation** (Both)
 : Putting a solution or intervention into practice. Similar usage.
 
@@ -380,6 +386,9 @@ This glossary provides comprehensive terminology mapping between Business Analys
 
 **Protocol** (PH)
 : Standardized procedure or guideline. **BA equivalent**: Business rule, procedure specification.
+
+**Pattern Library** (Both)
+: Curated collection of reusable solutions to commonly recurring problems. In the Automation Clinic context, a growing repository of scripts, workflows, and tool recommendations addressing frequent public health automation needs.
 
 **Process Optimization** (Both)
 : Systematic approach to improving efficiency and effectiveness by eliminating unnecessary processes, automating mission-critical ones, and ensuring demonstrable value. Goal is maximizing impact with available resources.
