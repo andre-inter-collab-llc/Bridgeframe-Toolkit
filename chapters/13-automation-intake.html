@@ -560,7 +560,7 @@ background-size: cover;
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-automation-clinic-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-automation-clinic-flow">flowchart LR
+<pre class="mermaid mermaid-js" data-label="fig-automation-clinic-flow">flowchart TD
     A[Submit Intake Form] --&gt; B[Review &amp; Triage]
     B --&gt; C{Feasible?}
     C --&gt;|Yes| D[Develop Solution]
@@ -581,7 +581,7 @@ Figure&nbsp;15.1: Public Health Automation Clinic Workflow
 </div>
 </div>
 <p><strong>Step 1: Submit the Intake Form</strong></p>
-<p>Complete the <a href="https://forms.gle/PLACEHOLDER" target="_blank">Public Health Automation Clinic Intake Form</a> describing your problem. You can submit anonymously or provide contact information for follow-up. The more detail you provide, the faster and more accurately we can develop a solution.</p>
+<p>Complete the <a href="https://forms.gle/cmE2un2njSVPid8C9" target="_blank">Public Health Automation Clinic Intake Form</a> describing your problem. You can submit anonymously or provide contact information for follow-up. The more detail you provide, the faster and more accurately we can develop a solution.</p>
 <p><strong>Step 2: Review and Triage</strong></p>
 <p>Submissions are reviewed based on feasibility, impact (how many people face this problem), and clarity of the description. Problems that are well-defined and broadly applicable are prioritized.</p>
 <p><strong>Step 3: Solution Development</strong></p>
@@ -607,9 +607,23 @@ Figure&nbsp;15.1: Public Health Automation Clinic Workflow
 <li><strong>Volume and Frequency</strong>: How often do you do this? How many records, files, or items are involved?</li>
 <li><strong>Tools Available</strong>: What software do you have access to? (R/RStudio, Python, Quarto, Microsoft Office, Google Workspace, etc.)</li>
 <li><strong>Technical Environment</strong>: Can you install software on your machine, or do you need IT administrator approval?</li>
-<li><strong>Sample Data</strong>: Can you provide a de-identified example of the input and expected output?</li>
+<li><strong>Sample Data</strong>: Can you point us to a publicly available dataset or file that resembles your data? (See the note below on sharing examples.)</li>
 <li><strong>Contact Preference</strong>: Anonymous submission, or would you like follow-up?</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Sharing Example Data">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Sharing Example Data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To help us understand your problem, find a <strong>publicly available</strong> dataset or file online that resembles the structure of your data. This could be a sample dataset from a government open data portal, a dataset on <a href="https://www.kaggle.com/datasets">Kaggle</a>, a CDC data download, or any publicly accessible file. Paste the URL in the intake form.</p>
+<p>Do <strong>not</strong> upload or share your actual data, even if de-identified. Linking to a public example keeps your submission anonymous and avoids any risk of exposing sensitive information. If no public example exists, describe the data structure in your problem description (column names, data types, number of rows, file format).</p>
+</div>
+</div>
 </section>
 <section id="setting-expectations" class="level3" data-number="15.4.4">
 <h3 data-number="15.4.4" class="anchored" data-anchor-id="setting-expectations"><span class="header-section-number">15.4.4</span> Setting Expectations</h3>
@@ -643,7 +657,7 @@ Figure&nbsp;15.1: Public Health Automation Clinic Workflow
 <li><strong>Ongoing support</strong> and maintenance</li>
 <li><strong>Training</strong> for your team to maintain and extend the solution</li>
 </ul>
-<p>To inquire about paid services, contact André van Zyl directly through <a href="https://www.intersectcollaborations.com/">Intersect Collaborations</a> or <a href="https://www.linkedin.com/in/andre-van-zyl/">LinkedIn</a>.</p>
+<p>To inquire about paid services, contact André van Zyl directly through the <a href="https://www.intersectcollaborations.com/contact">Intersect Collaborations website</a> or <a href="https://www.linkedin.com/company/intersect-collaborations-llc">LinkedIn</a>.</p>
 </section>
 </section>
 <section id="the-automation-mindset" class="level2" data-number="15.5">
@@ -702,11 +716,11 @@ Figure&nbsp;15.1: Public Health Automation Clinic Workflow
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong><a href="https://forms.gle/PLACEHOLDER" target="_blank">Complete the Intake Form</a></strong></p>
+<p><strong><a href="https://forms.gle/cmE2un2njSVPid8C9" target="_blank">Complete the Intake Form</a></strong></p>
 <p>Submissions are anonymous by default. Provide your contact information only if you would like follow-up on your specific problem.</p>
 </div>
 </div>
-<p>If your need is urgent or involves complex systems integration, <a href="https://www.intersectcollaborations.com/">contact Intersect Collaborations</a> for paid consulting services.</p>
+<p>If your need is urgent or involves complex systems integration, <a href="https://www.intersectcollaborations.com/contact">contact Intersect Collaborations</a> for paid consulting services.</p>
 
 
 <!-- -->
@@ -1301,7 +1315,7 @@ Figure&nbsp;15.1: Public Health Automation Clinic Workflow
 <span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
 <span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>%%| label: fig-automation-clinic-flow</span>
 <span id="cb1-126"><a href="#cb1-126" aria-hidden="true" tabindex="-1"></a>%%| fig-cap: <span class="ot">"</span><span class="st">Public Health Automation Clinic Workflow</span><span class="ot">"</span></span>
-<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb1-127"><a href="#cb1-127" aria-hidden="true" tabindex="-1"></a>flowchart TD</span>
 <span id="cb1-128"><a href="#cb1-128" aria-hidden="true" tabindex="-1"></a>    A[Submit Intake Form] --&gt; B[Review &amp; Triage]</span>
 <span id="cb1-129"><a href="#cb1-129" aria-hidden="true" tabindex="-1"></a>    B --&gt; C{Feasible?}</span>
 <span id="cb1-130"><a href="#cb1-130" aria-hidden="true" tabindex="-1"></a>    C --&gt;|Yes| D[Develop Solution]</span>
@@ -1315,7 +1329,7 @@ Figure&nbsp;15.1: Public Health Automation Clinic Workflow
 <span id="cb1-138"><a href="#cb1-138" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-139"><a href="#cb1-139" aria-hidden="true" tabindex="-1"></a>**Step 1: Submit the Intake Form**</span>
 <span id="cb1-140"><a href="#cb1-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>Complete the <span class="co">[</span><span class="ot">Public Health Automation Clinic Intake Form</span><span class="co">](https://forms.gle/PLACEHOLDER)</span>{target="_blank"} describing your problem. You can submit anonymously or provide contact information for follow-up. The more detail you provide, the faster and more accurately we can develop a solution.</span>
+<span id="cb1-141"><a href="#cb1-141" aria-hidden="true" tabindex="-1"></a>Complete the <span class="co">[</span><span class="ot">Public Health Automation Clinic Intake Form</span><span class="co">](https://forms.gle/cmE2un2njSVPid8C9)</span>{target="_blank"} describing your problem. You can submit anonymously or provide contact information for follow-up. The more detail you provide, the faster and more accurately we can develop a solution.</span>
 <span id="cb1-142"><a href="#cb1-142" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-143"><a href="#cb1-143" aria-hidden="true" tabindex="-1"></a>**Step 2: Review and Triage**</span>
 <span id="cb1-144"><a href="#cb1-144" aria-hidden="true" tabindex="-1"></a></span>
@@ -1347,74 +1361,80 @@ Figure&nbsp;15.1: Public Health Automation Clinic Workflow
 <span id="cb1-170"><a href="#cb1-170" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Volume and Frequency**: How often do you do this? How many records, files, or items are involved?</span>
 <span id="cb1-171"><a href="#cb1-171" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Tools Available**: What software do you have access to? (R/RStudio, Python, Quarto, Microsoft Office, Google Workspace, etc.)</span>
 <span id="cb1-172"><a href="#cb1-172" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Technical Environment**: Can you install software on your machine, or do you need IT administrator approval?</span>
-<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sample Data**: Can you provide a de-identified example of the input and expected output?</span>
+<span id="cb1-173"><a href="#cb1-173" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Sample Data**: Can you point us to a publicly available dataset or file that resembles your data? (See the note below on sharing examples.)</span>
 <span id="cb1-174"><a href="#cb1-174" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Contact Preference**: Anonymous submission, or would you like follow-up?</span>
 <span id="cb1-175"><a href="#cb1-175" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a><span class="fu">### Setting Expectations</span></span>
-<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Free Service Guidelines"}</span>
-<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No guaranteed timelines.** Submissions are addressed as capacity allows.</span>
-<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No guaranteed solutions.** Some problems may be outside scope or require more context than can be provided through a form.</span>
-<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Solutions use free, local-first tools.** We prioritize R, Python, and the Posit ecosystem (RStudio, Quarto, Shiny). Solutions run on your computer and do not require cloud AI services. We will not develop solutions that require purchasing commercial software.</span>
-<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**All solutions are published.** Solutions from the free service are anonymized, generalized, and made publicly available. If you need a private, organization-specific solution, that falls under paid consulting.</span>
-<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Solutions are provided as-is.** Scripts and tools come with documentation but without ongoing support or maintenance commitments.</span>
-<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="fu">### Paid Services for Urgent Needs</span></span>
-<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a>If you have a task that is time-sensitive, requires dedicated attention, or involves more complex integration work, <span class="co">[</span><span class="ot">Intersect Collaborations</span><span class="co">](https://www.intersectcollaborations.com/)</span> offers paid consulting services. Paid engagements include:</span>
-<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Priority development** with agreed-upon timelines</span>
-<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Custom solutions** tailored to your specific environment and systems</span>
-<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Private deliverables** that remain confidential to your organization (unlike the free service, where all solutions are published)</span>
-<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ongoing support** and maintenance</span>
-<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Training** for your team to maintain and extend the solution</span>
+<span id="cb1-176"><a href="#cb1-176" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Sharing Example Data"}</span>
+<span id="cb1-177"><a href="#cb1-177" aria-hidden="true" tabindex="-1"></a>To help us understand your problem, find a **publicly available** dataset or file online that resembles the structure of your data. This could be a sample dataset from a government open data portal, a dataset on <span class="co">[</span><span class="ot">Kaggle</span><span class="co">](https://www.kaggle.com/datasets)</span>, a CDC data download, or any publicly accessible file. Paste the URL in the intake form.</span>
+<span id="cb1-178"><a href="#cb1-178" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-179"><a href="#cb1-179" aria-hidden="true" tabindex="-1"></a>Do **not** upload or share your actual data, even if de-identified. Linking to a public example keeps your submission anonymous and avoids any risk of exposing sensitive information. If no public example exists, describe the data structure in your problem description (column names, data types, number of rows, file format).</span>
+<span id="cb1-180"><a href="#cb1-180" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-181"><a href="#cb1-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-182"><a href="#cb1-182" aria-hidden="true" tabindex="-1"></a><span class="fu">### Setting Expectations</span></span>
+<span id="cb1-183"><a href="#cb1-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-184"><a href="#cb1-184" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="Free Service Guidelines"}</span>
+<span id="cb1-185"><a href="#cb1-185" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No guaranteed timelines.** Submissions are addressed as capacity allows.</span>
+<span id="cb1-186"><a href="#cb1-186" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**No guaranteed solutions.** Some problems may be outside scope or require more context than can be provided through a form.</span>
+<span id="cb1-187"><a href="#cb1-187" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Solutions use free, local-first tools.** We prioritize R, Python, and the Posit ecosystem (RStudio, Quarto, Shiny). Solutions run on your computer and do not require cloud AI services. We will not develop solutions that require purchasing commercial software.</span>
+<span id="cb1-188"><a href="#cb1-188" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**All solutions are published.** Solutions from the free service are anonymized, generalized, and made publicly available. If you need a private, organization-specific solution, that falls under paid consulting.</span>
+<span id="cb1-189"><a href="#cb1-189" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Solutions are provided as-is.** Scripts and tools come with documentation but without ongoing support or maintenance commitments.</span>
+<span id="cb1-190"><a href="#cb1-190" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-191"><a href="#cb1-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-192"><a href="#cb1-192" aria-hidden="true" tabindex="-1"></a><span class="fu">### Paid Services for Urgent Needs</span></span>
+<span id="cb1-193"><a href="#cb1-193" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-194"><a href="#cb1-194" aria-hidden="true" tabindex="-1"></a>If you have a task that is time-sensitive, requires dedicated attention, or involves more complex integration work, <span class="co">[</span><span class="ot">Intersect Collaborations</span><span class="co">](https://www.intersectcollaborations.com/)</span> offers paid consulting services. Paid engagements include:</span>
 <span id="cb1-195"><a href="#cb1-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a>To inquire about paid services, contact André van Zyl directly through <span class="co">[</span><span class="ot">Intersect Collaborations</span><span class="co">](https://www.intersectcollaborations.com/)</span> or <span class="co">[</span><span class="ot">LinkedIn</span><span class="co">](https://www.linkedin.com/in/andre-van-zyl/)</span>.</span>
-<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Automation Mindset</span></span>
-<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a>Submitting a problem to the clinic is valuable even if the solution is simple. The act of describing a manual process in structured terms is itself the first step toward optimization. As discussed in @sec-optimization-hierarchy, the optimization hierarchy applies here:</span>
+<span id="cb1-196"><a href="#cb1-196" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Priority development** with agreed-upon timelines</span>
+<span id="cb1-197"><a href="#cb1-197" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Custom solutions** tailored to your specific environment and systems</span>
+<span id="cb1-198"><a href="#cb1-198" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Private deliverables** that remain confidential to your organization (unlike the free service, where all solutions are published)</span>
+<span id="cb1-199"><a href="#cb1-199" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ongoing support** and maintenance</span>
+<span id="cb1-200"><a href="#cb1-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Training** for your team to maintain and extend the solution</span>
 <span id="cb1-201"><a href="#cb1-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Can the task be eliminated?** Sometimes the answer is yes, and the submission process reveals it.</span>
-<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Can it be automated?** Most submissions fall here: a script, a tool, a macro.</span>
-<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Can it be standardized?** Even if full automation is not feasible, documenting the process reduces variability and training time.</span>
+<span id="cb1-202"><a href="#cb1-202" aria-hidden="true" tabindex="-1"></a>To inquire about paid services, contact André van Zyl directly through the <span class="co">[</span><span class="ot">Intersect Collaborations website</span><span class="co">](https://www.intersectcollaborations.com/contact)</span> or <span class="co">[</span><span class="ot">LinkedIn</span><span class="co">](https://www.linkedin.com/company/intersect-collaborations-llc)</span>.</span>
+<span id="cb1-203"><a href="#cb1-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-204"><a href="#cb1-204" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Automation Mindset</span></span>
 <span id="cb1-205"><a href="#cb1-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a><span class="fu">### Building a Community of Practice</span></span>
+<span id="cb1-206"><a href="#cb1-206" aria-hidden="true" tabindex="-1"></a>Submitting a problem to the clinic is valuable even if the solution is simple. The act of describing a manual process in structured terms is itself the first step toward optimization. As discussed in @sec-optimization-hierarchy, the optimization hierarchy applies here:</span>
 <span id="cb1-207"><a href="#cb1-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a>The long-term vision for the Automation Clinic extends beyond individual problem-solving. Each submission and solution contributes to:</span>
-<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A pattern library** of common public health automation needs</span>
-<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Reusable code templates** that can be adapted across jurisdictions</span>
-<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Workforce development** by demonstrating what is possible with accessible tools</span>
-<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A feedback loop** that identifies the most impactful areas for tool development</span>
-<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a>Public health professionals who have solved their own automation challenges are encouraged to share those solutions as well. The clinic is not a one-way service; it is a community resource.</span>
-<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="fu">## CancerSurv Example</span></span>
-<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
-<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a>In the CancerSurv project, registrars identified several tasks ripe for the Automation Clinic model:</span>
-<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**File renaming**: Lab report PDFs arrived with system-generated filenames (e.g., <span class="in">`RPT_20260115_0847_A3F2.pdf`</span>). Registrars manually renamed each file to follow the convention <span class="in">`[PatientID]_[FacilityCode]_[ReportDate].pdf`</span>. An R script using string parsing and file system operations eliminated this entirely.</span>
-<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data quality checks**: Fifteen edit rules (e.g., "diagnosis date must precede treatment date," "age at diagnosis must be between 0 and 120") were checked manually in Excel. A Python script with <span class="in">`pandas`</span> automated all checks and generated an exception report in under two seconds.</span>
-<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Quarterly report assembly**: Data from three source workbooks was manually copied into a summary template. An R Markdown script automated the extraction, transformation, and report generation, reducing a full-day task to a five-minute execution.</span>
-<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Project status reporting**: The registry director tracked milestones in GanttProject. An R script parsed the GanttProject XML export, calculated completion rates by program area, and generated a formatted Quarto report for the monthly steering committee, replacing a half-day of manual slide preparation.</span>
-<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a>Each of these solutions required less than a day to develop and saved the registry team dozens of hours per quarter.</span>
-<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="fu">## Submit Your Problem</span></span>
-<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a>Ready to reclaim your time? Complete the intake form:</span>
-<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Submit to the Public Health Automation Clinic"}</span>
-<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a>**[Complete the Intake Form](https://forms.gle/PLACEHOLDER){target="_blank"}**</span>
-<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a>Submissions are anonymous by default. Provide your contact information only if you would like follow-up on your specific problem.</span>
-<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-208"><a href="#cb1-208" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>**Can the task be eliminated?** Sometimes the answer is yes, and the submission process reveals it.</span>
+<span id="cb1-209"><a href="#cb1-209" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>**Can it be automated?** Most submissions fall here: a script, a tool, a macro.</span>
+<span id="cb1-210"><a href="#cb1-210" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>**Can it be standardized?** Even if full automation is not feasible, documenting the process reduces variability and training time.</span>
+<span id="cb1-211"><a href="#cb1-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-212"><a href="#cb1-212" aria-hidden="true" tabindex="-1"></a><span class="fu">### Building a Community of Practice</span></span>
+<span id="cb1-213"><a href="#cb1-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-214"><a href="#cb1-214" aria-hidden="true" tabindex="-1"></a>The long-term vision for the Automation Clinic extends beyond individual problem-solving. Each submission and solution contributes to:</span>
+<span id="cb1-215"><a href="#cb1-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-216"><a href="#cb1-216" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A pattern library** of common public health automation needs</span>
+<span id="cb1-217"><a href="#cb1-217" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Reusable code templates** that can be adapted across jurisdictions</span>
+<span id="cb1-218"><a href="#cb1-218" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Workforce development** by demonstrating what is possible with accessible tools</span>
+<span id="cb1-219"><a href="#cb1-219" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**A feedback loop** that identifies the most impactful areas for tool development</span>
+<span id="cb1-220"><a href="#cb1-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-221"><a href="#cb1-221" aria-hidden="true" tabindex="-1"></a>Public health professionals who have solved their own automation challenges are encouraged to share those solutions as well. The clinic is not a one-way service; it is a community resource.</span>
+<span id="cb1-222"><a href="#cb1-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-223"><a href="#cb1-223" aria-hidden="true" tabindex="-1"></a><span class="fu">## CancerSurv Example</span></span>
+<span id="cb1-224"><a href="#cb1-224" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-225"><a href="#cb1-225" aria-hidden="true" tabindex="-1"></a>::: {.callout-note title="CancerSurv Example"}</span>
+<span id="cb1-226"><a href="#cb1-226" aria-hidden="true" tabindex="-1"></a>In the CancerSurv project, registrars identified several tasks ripe for the Automation Clinic model:</span>
+<span id="cb1-227"><a href="#cb1-227" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-228"><a href="#cb1-228" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**File renaming**: Lab report PDFs arrived with system-generated filenames (e.g., <span class="in">`RPT_20260115_0847_A3F2.pdf`</span>). Registrars manually renamed each file to follow the convention <span class="in">`[PatientID]_[FacilityCode]_[ReportDate].pdf`</span>. An R script using string parsing and file system operations eliminated this entirely.</span>
+<span id="cb1-229"><a href="#cb1-229" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Data quality checks**: Fifteen edit rules (e.g., "diagnosis date must precede treatment date," "age at diagnosis must be between 0 and 120") were checked manually in Excel. A Python script with <span class="in">`pandas`</span> automated all checks and generated an exception report in under two seconds.</span>
+<span id="cb1-230"><a href="#cb1-230" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Quarterly report assembly**: Data from three source workbooks was manually copied into a summary template. An R Markdown script automated the extraction, transformation, and report generation, reducing a full-day task to a five-minute execution.</span>
+<span id="cb1-231"><a href="#cb1-231" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Project status reporting**: The registry director tracked milestones in GanttProject. An R script parsed the GanttProject XML export, calculated completion rates by program area, and generated a formatted Quarto report for the monthly steering committee, replacing a half-day of manual slide preparation.</span>
+<span id="cb1-232"><a href="#cb1-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-233"><a href="#cb1-233" aria-hidden="true" tabindex="-1"></a>Each of these solutions required less than a day to develop and saved the registry team dozens of hours per quarter.</span>
+<span id="cb1-234"><a href="#cb1-234" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-235"><a href="#cb1-235" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-236"><a href="#cb1-236" aria-hidden="true" tabindex="-1"></a><span class="fu">## Submit Your Problem</span></span>
+<span id="cb1-237"><a href="#cb1-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-238"><a href="#cb1-238" aria-hidden="true" tabindex="-1"></a>Ready to reclaim your time? Complete the intake form:</span>
 <span id="cb1-239"><a href="#cb1-239" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>If your need is urgent or involves complex systems integration, <span class="co">[</span><span class="ot">contact Intersect Collaborations</span><span class="co">](https://www.intersectcollaborations.com/)</span> for paid consulting services.</span>
+<span id="cb1-240"><a href="#cb1-240" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Submit to the Public Health Automation Clinic"}</span>
+<span id="cb1-241"><a href="#cb1-241" aria-hidden="true" tabindex="-1"></a>**[Complete the Intake Form](https://forms.gle/cmE2un2njSVPid8C9){target="_blank"}**</span>
+<span id="cb1-242"><a href="#cb1-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-243"><a href="#cb1-243" aria-hidden="true" tabindex="-1"></a>Submissions are anonymous by default. Provide your contact information only if you would like follow-up on your specific problem.</span>
+<span id="cb1-244"><a href="#cb1-244" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-245"><a href="#cb1-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-246"><a href="#cb1-246" aria-hidden="true" tabindex="-1"></a>If your need is urgent or involves complex systems integration, <span class="co">[</span><span class="ot">contact Intersect Collaborations</span><span class="co">](https://www.intersectcollaborations.com/contact)</span> for paid consulting services.</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
