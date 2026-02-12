@@ -203,7 +203,9 @@ If you have a task that is time-sensitive, requires dedicated attention, needs o
 
 One thing I hope to build into paid engagements: where clients are willing, the generalizable portions of the work (anonymized, with no organization-specific details) would be published to the public library so that others facing similar problems can benefit. This is entirely at the client's discretion, but it is how the free and paid sides of this initiative can reinforce each other and grow the shared resource over time.
 
-To inquire about paid services, contact André van Zyl directly through the [Intersect Collaborations website](https://www.intersectcollaborations.com/contact) or [LinkedIn](https://www.linkedin.com/company/intersect-collaborations-llc).
+For those interested in getting started with automation, Intersect Collaborations also offers a training course: **"Automating Public Health Analytics with R, Quarto, and Windows Tools."** The course is designed to help public health professionals automate basic tasks and build the background, skills, and familiarity with tools needed to get the most out of the solutions the clinic provides. It is not a prerequisite for submitting to or using the clinic, but it can help participants hit the ground running when applying solutions to their own workflows.
+
+To inquire about paid services or training, contact André van Zyl directly through the [Intersect Collaborations website](https://www.intersectcollaborations.com/contact) or [LinkedIn](https://www.linkedin.com/company/intersect-collaborations-llc).
 
 ## The Automation Mindset
 
@@ -225,8 +227,6 @@ The long-term vision for the Automation Clinic extends beyond individual problem
 Public health professionals who have solved their own automation challenges are encouraged to share those solutions as well. The clinic is not a one-way service; it is a community resource.
 
 While this is currently a one-person effort, the plan is to make the solution library available as a public GitHub repository. This will allow others to contribute their own solutions, submit improvements to existing ones, and help build the library beyond what any single person could produce. The goal is for the repository to become a shared, community-maintained resource for public health automation.
-
-For those interested in getting started with automation, Intersect Collaborations offers a training course: **"Automating Public Health Analytics with R, Quarto, and Windows Tools."** The course is designed to help public health professionals automate basic tasks and build the background, skills, and familiarity with tools needed to get the most out of the solutions the clinic provides. It is not a prerequisite for submitting to or using the clinic, but it can help participants hit the ground running when applying solutions to their own workflows.
 
 ## CancerSurv Example
 
