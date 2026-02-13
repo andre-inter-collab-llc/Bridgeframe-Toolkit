@@ -1,5 +1,5 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal
 echo ========================================
 echo  Bridgeframe Toolkit - Publish to GitHub
 echo ========================================
@@ -40,8 +40,9 @@ echo.
 
 REM Use git to list tracked and untracked files respecting .gitignore, then zip them
 REM This includes communications/ (which is in .gitignore but we want it backed up)
+REM Uses -z flag to handle filenames with special characters
 pushd "%SOURCE%" >nul
-powershell -NoProfile -Command "(git ls-files --cached --others --exclude-standard) + (Get-ChildItem -Path 'communications' -Recurse -File -ErrorAction SilentlyContinue | Resolve-Path -Relative | ForEach-Object { $_ -replace '^\.\\','' }) | Sort-Object -Unique | Where-Object { $_ -and (Test-Path -LiteralPath $_) } | tar.exe -a -c -f '%ZIP_PATH%' -T -"
+powershell -NoProfile -Command "$gitFiles = (git ls-files --cached --others --exclude-standard -z) -split \"`0\" | Where-Object { $_ }; $commFiles = Get-ChildItem -Path 'communications' -Recurse -File -ErrorAction SilentlyContinue | Resolve-Path -Relative | ForEach-Object { $_ -replace '^\.\\','' }; ($gitFiles + $commFiles) | Sort-Object -Unique | Where-Object { $_ -and (Test-Path -LiteralPath $_) } | tar.exe -a -c -f '%ZIP_PATH%' -T -"
 popd >nul
 
 if not exist "%ZIP_PATH%" (
@@ -59,7 +60,7 @@ echo Copying to Google Drive...
 copy /Y "%ZIP_PATH%" "%FINAL_PATH%"
 if %ERRORLEVEL% neq 0 (
     echo.
-    echo ERROR: Backup to Google Drive failed!
+    echo ERROR: Backup to Google Drive failed.
     pause
     exit /b 1
 )
@@ -71,7 +72,7 @@ echo [2/3] Rendering the book...
 quarto render
 if %errorlevel% neq 0 (
     echo.
-    echo ERROR: Quarto render failed!
+    echo ERROR: Quarto render failed.
     pause
     exit /b 1
 )
@@ -81,7 +82,7 @@ echo [3/3] Publishing to GitHub Pages...
 quarto publish gh-pages --no-prompt
 if %errorlevel% neq 0 (
     echo.
-    echo ERROR: GitHub publish failed!
+    echo ERROR: GitHub publish failed.
     pause
     exit /b 1
 )
