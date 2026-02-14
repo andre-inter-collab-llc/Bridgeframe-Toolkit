@@ -37,7 +37,7 @@ This glossary provides comprehensive terminology mapping between Business Analys
 : Public announcement of which vendor won a government contract. Job seekers can use award notices to identify employers who are actively staffing new projects.
 
 **Automation Clinic** (Community Resource)
-: A free, community-driven service where public health professionals submit repetitive, manual tasks and receive automation solutions (scripts, tool recommendations, workflow redesigns) developed using open source tools. Builds a shared library of reusable solutions.
+: A free, community-driven service where public health professionals submit repetitive, manual tasks and receive automation solutions (scripts, tool recommendations, workflow redesigns) developed using open source tools. Builds a shared library of reusable solutions. See the [Public Health Automation Clinic](https://andre-inter-collab-llc.github.io/Public-Health-Automation-Clinic/){target="_blank"} for full details.
 
 **Automation Spectrum** (Process Optimization)
 : Range of automation levels from manual through assisted, partial, conditional, to full automation. Each level defines different human-machine collaboration and oversight requirements.
